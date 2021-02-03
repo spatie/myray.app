@@ -59,7 +59,7 @@
             lg:text-right lg:text-white text-lg font-medium leading-tight">
                 <ul class="grid gap-3">
                      <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in Wordpress or any PHP project…
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in WordPress or any PHP project…
                      </li>
                      <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> … or see models, mails, queries, and more in Laravel
@@ -131,7 +131,7 @@
                 <img alt="Screenshot with debug info" class="rounded shadow-md border border-gray-200" src="/images/features/good-lookin.png" />
             </p>
             <p class="text-sm max-w-sm">
-                Strings, array, objects, … you can send anything to Ray from Laravel, Wordpress or PHP. Ray formats the output and displays the origin of your calls.
+                Strings, array, objects, … you can send anything to Ray from Laravel, WordPress or PHP. Ray formats the output and displays the origin of your calls.
             </p>
         </div>
 
