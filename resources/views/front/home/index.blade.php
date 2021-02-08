@@ -56,7 +56,7 @@
 
             <div class="pt-6
             lg:col-span-2 lg:-ml-12
-            lg:text-right lg:text-white text-lg font-medium leading-tight">
+            lg:text-right lg:text-white font-medium leading-tight">
                 <ul class="grid gap-3">
                      <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in WordPress or any PHP project…
@@ -65,11 +65,11 @@
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> … or see models, mails, queries, and more in Laravel
                     </li>
                     <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i>
-                        <span>Quickly measure performance and set breakpoints</span>
-                    </li>
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> Works with Javascript and Node.js
+                     </li>
                     <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-700"></i>Work in a beautiful UI
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-700"></i>
+                        <span>Quickly measure performance and set breakpoints</span>
                     </li>
                 </ul>
             </div>
@@ -131,7 +131,8 @@
                 <img alt="Screenshot with debug info" class="rounded shadow-md border border-gray-200" src="/images/features/good-lookin.png" />
             </p>
             <p class="text-sm max-w-sm">
-                Strings, array, objects, … you can send anything to Ray from Laravel, WordPress or PHP. Ray formats the output and displays the origin of your calls.
+                Strings, array, objects, … you can send anything to Ray from PHP/Laravel/WordPress or from JavaScript/Node.js. 
+                Ray formats the output and displays the origin of your calls.
             </p>
         </div>
 
