@@ -28,7 +28,7 @@
                 text-indigo-100 text-left text-xs">
                 {{ $slot }}
 
-                <div @click.stop="tooltip = ''" class="absolute top-0 right-0 mt-1 mr-1.5 leading-none opacity-50 hover:opacity-75">
+                <div @click.stop="tooltip = ''" class="absolute top-0 right-0 mt-1 mr-1.5 leading-none opacity-50 hover:opacity-75 cursor-pointer">
                     &times;
                 </div>
             </div>
