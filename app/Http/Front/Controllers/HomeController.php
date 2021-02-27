@@ -13,9 +13,9 @@ class HomeController
         $prices = SpatiePriceApi::getPriceForPurchasable($purchasableId);
 
         return view('front.home.index', [
-            'downloadLinkMac' => 'https://spatie.be/products/ray/download/macos/latest',
-            'downloadLinkWindows' => 'https://spatie.be/products/ray/download/windows/latest',
-            'downloadLinkLinux' => 'https://spatie.be/products/ray/download/linux/latest',
+            'downloadLinkMac' => spatieUrl('https://spatie.be/products/ray/download/macos/latest'),
+            'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/download/windows/latest'),
+            'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/download/linux/latest'),
             'couldFetchPrice' => $prices['couldFetchPrice'],
             'price' => $prices['actual'],
             'priceWithoutDiscount' => $prices['withoutDiscount'],
