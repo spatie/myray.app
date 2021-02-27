@@ -80,13 +80,13 @@ class="">
 </div>
 
 <div class="mt-6 mb-4 text-sm text-indigo-900 text-opacity-50">
-    
-    <a class="group inline-flex items-center" target="_blank" href="https://spatie.be/products/ray">
+
+    <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
 
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
             Get an annual license
             @if($couldFetchPrice)
-                for 
+                for
                 @if($showDiscount)
                     <del class="font-bold whitespace-nowrap">{{ $priceWithoutDiscount->formattedPrice() }}</del>
                 @else

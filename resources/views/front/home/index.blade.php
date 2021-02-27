@@ -83,7 +83,7 @@
                 class="h-0
                 bg-gradient-to-r from-indigo-700 to-indigo-900">
                     <button class="absolute w-full h-full inset-0 group flex items-center justify-center" @click="open = true">
-                        <img class="absolute w-full h-full top-0 left-0 object-cover 
+                        <img class="absolute w-full h-full top-0 left-0 object-cover
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
                         " src="/images/intro-1200.png" alt="Intro screenshot">
@@ -131,7 +131,7 @@
                 <img alt="Screenshot with debug info" class="rounded shadow-md border border-gray-200" src="/images/features/good-lookin.png" />
             </p>
             <p class="text-sm max-w-sm">
-                Strings, array, objects, … you can send anything to Ray from PHP/Laravel/WordPress or from JavaScript/Node.js. 
+                Strings, array, objects, … you can send anything to Ray from PHP/Laravel/WordPress or from JavaScript/Node.js.
                 Ray formats the output and displays the origin of your calls.
             </p>
         </div>
@@ -204,11 +204,11 @@
     </div>
 </section>
 
-<section class="my-12 px-6 sm:px-12 pb-6 
+<section class="my-12 px-6 sm:px-12 pb-6
 bg-gradient-to-r from-indigo-100 to-indigo-200">
 
         <div class="max-w-md mx-auto lg:max-w-none
-        grid lg:grid-cols-3 gap-6 lg:gap-3 xl:gap-6"> 
+        grid lg:grid-cols-3 gap-6 lg:gap-3 xl:gap-6">
 
         <blockquote class="-mt-8 flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
             <img
@@ -380,7 +380,7 @@ bg-gradient-to-r from-indigo-100 to-indigo-200">
             </dl>
 
             <p class="mt-6">
-                <a href="https://spatie.be/docs/ray" class="font-semibold markup-link">Read the docs</a>
+                <a href="{{spatieUrl('https://spatie.be/docs/ray') }}" class="font-semibold markup-link">Read the docs</a>
             </p>
         </div>
 

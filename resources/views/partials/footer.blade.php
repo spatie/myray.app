@@ -20,7 +20,7 @@
                 <li><a class="markup-link" href="{{ route("termsOfUse") }}">Terms of Use</a></li>
                 <li><a class="block w-16
                 hover:text-spatie
-                transition-colors duration-300" href="https://spatie.be">
+                transition-colors duration-300" href="{{spatieUrl()}}">
                     @include('partials.logoSpatie')
                 </a></li>
             </ul>
