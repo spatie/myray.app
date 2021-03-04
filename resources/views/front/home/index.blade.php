@@ -59,7 +59,7 @@
             lg:text-right lg:text-white font-medium leading-tight">
                 <ul class="grid gap-3">
                      <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in WordPress or any PHP project…
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in WordPress or any PHP project locally or via SSH
                      </li>
                      <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> … or see models, mails, queries, and more in Laravel
