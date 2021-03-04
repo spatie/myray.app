@@ -65,7 +65,7 @@
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> … or see models, mails, queries, and more in Laravel
                     </li>
                     <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> Works with Javascript and Node.js
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> Works with Javascript, Node.js and Ruby
                      </li>
                     <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-700"></i>
