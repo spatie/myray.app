@@ -227,7 +227,7 @@ bg-gradient-to-r from-indigo-100 to-indigo-200">
                     <div class="text-xs ">
                         <div class="font-bold">Michael Dyrynda</div>
                         <div class="mt-0.5">
-                            Lead Software Developer at Superloop
+                            Senior Developer at MaxoTel
                         </div>
                     </div>
                 </a>
