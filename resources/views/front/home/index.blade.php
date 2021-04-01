@@ -54,22 +54,25 @@
 
 
 
-            <div class="pt-6
-            lg:col-span-2 lg:-ml-12
+            <div class="lg:-mt-6 xl:mt-6
+            lg:col-span-2 lg:-ml-12 lg:-mr-10
             lg:text-right lg:text-white font-medium leading-tight">
                 <ul class="grid gap-3">
                      <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> Use in WordPress or any PHP project locally or via SSH
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400 bg-opacity-75"></i> Use in WordPress or any PHP project
                      </li>
                      <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> … or see models, mails, queries, and more in Laravel
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> See models, mails, queries, … in Laravel
                     </li>
+                     <li class="flex lg:flex-row-reverse items-center">
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> Debug locally or via SSH
+                     </li>
                     <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> Works with Javascript, Node.js and Ruby
                      </li>
                     <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-700"></i>
-                        <span>Quickly measure performance and set breakpoints</span>
+                        <span>Measure performance &amp; set breakpoints</span>
                     </li>
                 </ul>
             </div>
