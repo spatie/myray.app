@@ -6,7 +6,7 @@
 <div
 x-data="{ download: false }"
 class="">
-    <a data-role='download-link' target="_blank" href="{{ $downloadLinkMac }}" @click.prevent="download = true">
+    <a data-role='download-link' target="_blank" href="{{ $downloadLinkMacIntel }}" @click.prevent="download = true">
         <x-button class="mt-4 lg:w-full">
             <span data-role="download-label">
                 Download free trial
