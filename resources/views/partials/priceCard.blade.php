@@ -26,7 +26,7 @@ class="">
                 ">×</button>
             <div class="bg-white p-12 markup" @click.away="download = false">
                 <h2>
-                    <span class="text-gradient">Thanks!</span>
+                    <span class="text-gradient">Thanks for downloading Ray!</span>
                 </h2>
                 <div>
                     Pick a version:
