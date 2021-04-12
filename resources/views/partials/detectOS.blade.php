@@ -1,6 +1,6 @@
 <script>
     var label = "Download free trial";
-    var downLoadLink = "{{ $downloadLinkMac }}";
+    var downLoadLink = "{{ $downloadLinkMacIntel }}";
 
     if (navigator.appVersion.indexOf("Win") !== -1) {
         label = 'Download free trial <span class="text-xs opacity-75">for <i class="fab fa-windows"></i></span>'
