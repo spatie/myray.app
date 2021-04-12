@@ -29,9 +29,10 @@ class="">
                     <span class="text-gradient">Thanks!</span>
                 </h2>
                 <div>
-                    Your download will start soon. If nothing happens, pick a version:
+                    Pick a version:
                     <ul class="mt-2 list-inside list-disc">
-                        <li><a class="markup-link" download href="{{ $downloadLinkMac }}">MacOS</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}">MacOS (Intel)</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacApple }}">MacOS (Apple Silicon) </a></li>
                         <li><a class="markup-link" download href="{{ $downloadLinkWindows }}">Windows</a></li>
                         <li><a class="markup-link" download href="{{ $downloadLinkLinux }}">Linux</a></li>
                     </ul>
@@ -70,11 +71,17 @@ class="">
                 </div>
             </div>
 
+            {{--
+
+            // Disabled for now as we can't detect M1 macs
+
             <script>
+
                 setTimeout(function(){
                     window.location = downLoadLink;
                 }, 1000);
             </script>
+            --}}
         </div>
     </template>
 </div>

@@ -9,7 +9,7 @@
 
     if (navigator.appVersion.indexOf("Mac") !== -1) {
         label = 'Download free trial <span class="text-xs opacity-75">for  <i class="fab fa-apple"></i></span>'
-        downLoadLink = "{{ $downloadLinkMac }}";
+        downLoadLink = "{{ $downloadLinkMacIntel }}";
     }
 
     if (navigator.appVersion.indexOf("Linux") !== -1) {
