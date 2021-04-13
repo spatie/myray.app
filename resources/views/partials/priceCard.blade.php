@@ -31,8 +31,8 @@ class="">
                 <div>
                     Pick a version:
                     <ul class="mt-2 list-inside list-disc">
-                        <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}">MacOS (Intel)</a></li>
-                        <li><a class="markup-link" download href="{{ $downloadLinkMacAppleSilicon }}">MacOS (Apple Silicon) </a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}">macOS (Intel)</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacAppleSilicon }}">macOS (Apple Silicon) </a></li>
                         <li><a class="markup-link" download href="{{ $downloadLinkWindows }}">Windows</a></li>
                         <li><a class="markup-link" download href="{{ $downloadLinkLinux }}">Linux</a></li>
                     </ul>
