@@ -16,6 +16,7 @@ module.exports = {
             transparent: 'transparent',
             current: 'currentColor',
             spatie: '#197593',
+            wordpress: '#007fa2',
 
             black: "#1e0063",
             white: colors.white,

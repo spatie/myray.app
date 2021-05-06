@@ -9,7 +9,7 @@
 <main>
 
     <section class="overflow-hidden pb-12">
-        <div class="background-01 absolute inset-0" >
+        <div class="background-01 absolute inset-0 pointer-events-none" >
             <img
                 alt=""
                 style="bottom: 3rem; height:700px"
@@ -59,7 +59,8 @@
             lg:text-right lg:text-white font-medium leading-tight">
                 <ul class="grid gap-3">
                      <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400 bg-opacity-75"></i> Use in WordPress or any PHP project
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400 bg-opacity-75"></i> <span>Use in <a
+                                 href="/wordpress" class="underline">WordPress</a> or any PHP project</span>
                      </li>
                      <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400"></i> See models, mails, queries, … in Laravel
@@ -68,7 +69,8 @@
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-500"></i> Debug locally or via SSH
                      </li>
                     <li class="flex lg:flex-row-reverse items-center">
-                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> Works with Javascript, Node.js and Ruby
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-600"></i> <span>Works with <a
+                                href="/javascript" class="underline">Javascript</a>, <a href="/javascript" class="underline">Node.js</a> and Ruby</span>
                      </li>
                     <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-700"></i>
@@ -207,198 +209,40 @@
     </div>
 </section>
 
-<section class="my-12 px-6 sm:px-12 pb-6
-bg-gradient-to-r from-indigo-100 to-indigo-200">
+<section class="my-12 px-6 sm:px-12 pb-6 bg-gradient-to-r from-indigo-100 to-indigo-200">
+    <div class="max-w-md mx-auto lg:max-w-none grid lg:grid-cols-3 gap-6 lg:gap-3 xl:gap-6">
+        @include('components.testimonial', [
+            'index' => 1,
+            'quote' => 'As an amateur developer that swears by <code>dd()</code>, I was thrilled to hear about Ray. Now I can <strong class="font-semibold">feel like a real developer</strong>, even without using \'real\' debugging tools!',
+            'avatar' => '/images/testimonials/michael.jpg',
+            'author' => 'Michael Dyrynda',
+            'title' => 'Senior Developer at MaxoTel',
+            'url' => 'https://twitter.com/michaeldyrynda',
+        ])
 
-        <div class="max-w-md mx-auto lg:max-w-none
-        grid lg:grid-cols-3 gap-6 lg:gap-3 xl:gap-6">
+        @include('components.testimonial', [
+            'index' => 2,
+            'quote' => 'Ray is a part of my <strong class="font-semibold">Essentials</strong> toolbox. It has the snapiness of a real debugger, but the simplicity of <code>dd()</code>',
+            'avatar' => '/images/testimonials/nuno.jpg',
+            'author' => 'Nuno Maduro',
+            'title' => 'Software Engineer at Laravel',
+            'url' => 'https://twitter.com/enunomaduro',
+        ])
 
-        <blockquote class="-mt-8 flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
-            <img
-                alt=""
-                class="hidden lg:block absolute opacity-25 w-full h-full object-cover"
-                src="/images/quote-01.svg"/>
-            <p class="flex-grow px-8 py-8 text-sm leading-relaxed">
-                As an amateur developer that swears by <code>dd()</code>, I was thrilled to hear about Ray. Now I can <strong class="font-semibold">feel like a real developer</strong>, even without using 'real' debugging tools!
-            </p>
-            <small class="block
-            bg-gray-200 bg-opacity-50 px-6 py-4">
-                <a href="https://twitter.com/michaeldyrynda" class="flex items-center space-x-3">
-                    <div class="flex-none w-10 h-10 rounded-full overflow-hidden shadow-sm">
-                        <img src="/images/testimonials/michael.jpg">
-                    </div>
-                    <div class="text-xs ">
-                        <div class="font-bold">Michael Dyrynda</div>
-                        <div class="mt-0.5">
-                            Senior Developer at MaxoTel
-                        </div>
-                    </div>
-                </a>
-            </small>
-        </blockquote>
-
-        <blockquote class="-ml-6 mr-6 lg:mx-0 lg:mt-6 lg:-mb-12 flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
-            <img
-                alt=""
-                class="hidden lg:block absolute opacity-25 w-full h-full object-cover"
-                src="/images/quote-02.svg"/>
-            <div class="flex-grow flex items-center px-8 py-8 text-sm lg:text-base leading-relaxed">
-                <p>Ray is a part of my <strong class="font-semibold">Essentials</strong> toolbox. It has the snapiness of a real debugger, but the simplicity of <code>dd()</code></p>
-            </div>
-            <small class="block
-            bg-gray-200 bg-opacity-50 px-6 py-4">
-                <a href="https://twitter.com/enunomaduro" class="flex items-center space-x-3">
-                    <div class="flex-none w-10 h-10 rounded-full overflow-hidden shadow-sm">
-                        <img src="/images/testimonials/nuno.jpg">
-                    </div>
-                    <div class="text-xs ">
-                        <div class="font-bold">Nuno Maduro</div>
-                        <div class="mt-0.5">
-                            Software Engineer at Laravel
-                        </div>
-                    </div>
-                </a>
-            </small>
-        </blockquote>
-
-        <blockquote class="ml-6 -mr-6 lg:mx-0 lg:-mt-4 flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
-            <img
-                alt=""
-                class="hidden lg:block absolute opacity-25 w-full h-full object-cover"
-                src="/images/quote-03.svg"/>
-            <div class="flex-grow flex items-center px-8 py-8 text-sm lg:text-base leading-relaxed">
-                <p>
-                    Ray is <strong class="font-semibold">the app I've been missing</strong> in my development toolkit. Debugging any sized application is now a breeze.
-                </p>
-            </div>
-            <small class="block
-            bg-gray-200 bg-opacity-50 px-6 py-4">
-                <a href="https://twitter.com/jbrooksuk" class="flex items-center space-x-3">
-                    <div class="flex-none w-10 h-10 rounded-full overflow-hidden shadow-sm">
-                        <img src="/images/testimonials/james.jpg">
-                    </div>
-                    <div class="text-xs ">
-                        <div class="font-bold">James Brooks</div>
-                        <div class="mt-0.5">
-                            Software Developer at Laravel
-                        </div>
-                    </div>
-                </a>
-            </small>
-        </blockquote>
-
-        </div>
-
+        @include('components.testimonial', [
+            'index' => 3,
+            'quote' => 'Ray is <strong class="font-semibold">the app I\'ve been missing</strong> in my development toolkit. Debugging any sized application is now a breeze.',
+            'avatar' => '/images/testimonials/james.jpg',
+            'author' => 'James Brooks',
+            'title' => 'Software Developer at Laravel',
+            'url' => 'https://twitter.com/jbrooksuk',
+        ])
+    </div>
 </section>
 
-    <section class="mt-24 pb-24 -mb-24 overflow-hidden">
-        <div class="background-02 absolute inset-0" >
-            <img
-                alt=""
-                style="bottom: 3%; height:650px"
-                class="absolute w-full opacity-25 lg:opacity-75"
-                src="/images/background-02.svg"/>
-        </div>
-
-        <div class="
-            mx-auto px-6 sm:px-12 md:px-16
-            max-w-4xl
-            markup
-        ">
-            <h2><span class="text-gradient">Simple syntax</span></h2>
-
-            <dl class="grid bg-white bg-opacity-25 md:grid-cols-auto-1fr">
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray($anything);
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Send a string, arrays, object, …  to Ray
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray($anything, $somethingElse);
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Send as much as you want
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray($anything)->green();
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Apply a color, so you can use Ray's color filters
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray()->queries();
-                    </code>
-                </dt>
-
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    See all queries executed by your Laravel app
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray()->measure();
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Check execution time and memory usage
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray()->trace();
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Find out where your code was called from
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray()->pause();
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Pause your code
-                </dd>
-
-                <dt class="pr-8 pt-3 md:py-3 md:border-b border-gray-400 border-opacity-25">
-                    <code class="text-indigo-500 text-sm font-semibold">
-                        ray()->ban();
-                    </code>
-                </dt>
-                <dd class="py-3 border-b border-gray-400 border-opacity-25">
-                    Keep it cool while debugging <i class="ml-1 fas fa-sunglasses"></i>
-                </dd>
-            </dl>
-
-            <p class="mt-6">
-                <a href="{{spatieUrl('https://spatie.be/docs/ray') }}" class="font-semibold markup-link">Read the docs</a>
-            </p>
-        </div>
-
-        <div class="flex justify-center">
-            <div class="flex flex-col items-center">
-                @include('partials.priceCard')
-            </div>
-        </div>
-    </section>
+@include('partials.syntax')
 </main>
 
 @include('partials.detectOS')
-
-
-
-
 
 @endsection
