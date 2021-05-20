@@ -22,7 +22,7 @@
             max-w-4xl
             grid gap-8 lg:gap-16 lg:grid-cols-5 items-start">
             <div class="lg:col-span-3 lg:-ml-12">
-                <img src="/images/ray-loves-wordpress.png" alt="Ray loves WordPress">
+                <img src="/images/features/wordpress.png" alt="Ray loves WordPress">
             </div>
 
             <div class="pt-8
@@ -40,13 +40,15 @@
                 </div>
             </div>
 
-
-
-            <div class="lg:-mt-6 xl:mt-20
+            <div class="lg:-mt-6 xl:mt-12
             lg:col-span-2 lg:-ml-12 lg:-mr-10
             lg:text-right lg:text-white font-medium leading-tight">
                 <ul class="grid gap-3">
-                     <li class="flex lg:flex-row-reverse items-center">
+                    <li class="flex lg:flex-row-reverse items-center">
+                        <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400 bg-opacity-50"></i> <span>Easy <a
+                                href="https://wordpress.org/plugins/spatie-ray/" class="underline">installation</a></span>
+                    </li>
+                    <li class="flex lg:flex-row-reverse items-center">
                         <i class="flex-shrink-0 mt-1 mx-3 w-2 h-2 rounded-full bg-indigo-400 bg-opacity-75"></i> Log queries
                      </li>
                      <li class="flex lg:flex-row-reverse items-center">
@@ -64,7 +66,40 @@
                 class="mt-12 lg:col-span-3 lg:mt-0 lg:-mr-12 shadow-xl rounded overflow-hidden
                 "
             >
-                <img alt="Screenshot with WordPress specific info" class="rounded shadow-md border border-gray-200" src="/images/features/wordpress.png" />
+                <div
+                    x-data="{ open: false }"
+                    style="padding-bottom: 75%;"
+                    class="h-0
+                bg-gradient-to-r from-indigo-700 to-indigo-900">
+                    <button class="absolute w-full h-full inset-0 group flex items-center justify-center" @click="open = true">
+                        <img class="absolute w-full h-full top-0 left-0 object-cover
+                        opacity-75 group-hover:opacity-50
+                        transition-opacity duration-300
+                        " src="/images/intro-wordpress.png" alt="Intro screenshot">
+                        <div class="
+                        px-4 py-2
+                        bg-indigo-500 rounded-sm
+                        text-white font-bold text-base
+                        group-hover:bg-indigo-600
+                        cursor-pointer transition-colors duration-300">
+                            Play <i class="ml-1.5 fas fas fa-play text-xs"></i>
+                        </div>
+                    </button>
+                    <template x-if="open">
+                        <div class="fixed inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center" @keydown.window.escape="open = false">
+                            <div class="
+                                absolute inset-0 opacity-75
+                                bg-gradient-to-r from-indigo-500 to-indigo-900">
+                            </div>
+                            <button class="
+                                absolute top-0 right-0 m-6
+                                leading-none text-white text-3xl
+                                ">×</button>
+                            <iframe src="https://player.vimeo.com/video/552853281?autoplay=1" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" @click.away="open = false">
+                            </iframe>
+                        </div>
+                    </template>
+                </div>
             </div>
         </div>
 </section>
