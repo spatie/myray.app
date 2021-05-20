@@ -22,7 +22,7 @@
             max-w-4xl
             grid gap-8 lg:gap-16 lg:grid-cols-5 items-start">
             <div class="lg:col-span-3 lg:-ml-12">
-                <img src="/images/features/wordpress.png" alt="Ray loves WordPress">
+                <img class="rounded-xl shadow" src="/images/features/wordpress.png" alt="Ray loves WordPress">
             </div>
 
             <div class="pt-8
