@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="dns-prefetch" href="//use.fontawesome.com">
         <link rel="dns-prefetch" href="//www.googletagmanager.com">
         @include('partials.gtm-head')
@@ -36,14 +36,13 @@
         <meta property="og:description"
             content="@yield('description')"/>
         <meta property="og:image" content="https://myray.app/images/social-card.png"/>
-        
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
         @bukStyles()
         @bukScripts()
     </head>
-    <body class="max-w-6xl mx-auto 
+    <body class="max-w-6xl mx-auto
     bg-white
     font-sans font-medium text-black">
         @include('partials.header')
@@ -51,7 +50,19 @@
         @yield('content')
 
         @include('partials.footer')
-        
+
         @include('partials.gtm-body')
+        @production
+            <!-- Twitter universal website tag code -->
+            <script>
+                !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+                },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+                    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+                // Insert Twitter Pixel ID and Standard Event data below
+                twq('init','o5ha5');
+                twq('track','PageView');
+            </script>
+            <!-- End Twitter universal website tag code -->
+        @endproduction
     </body>
 </html>
