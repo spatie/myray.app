@@ -86,12 +86,40 @@ class="">
     </template>
 </div>
 
-<div class="mt-6 mb-4 text-sm text-indigo-900 text-opacity-50">
+<div class="mt-1 mb-4 text-sm text-indigo-900 text-opacity-50">
+    <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
+        <button class="group
+    py-6 px-6 w-full
+    bg-gradient-to-r from-indigo-800 to-indigo-700
+    border-b border-r border-orange-900
+    shadow-lg rounded-sm
+    font-normal text-white text-xl
+    transform active:translate-y-px
+    focus:outline-none focus:ring-0
+    whitespace-nowrap
+    overflow-hidden">
+            <div class="text-sm">⚡️ Black Friday Flash</div>
+            Get a <strong>lifetime</strong> license!
+        </button>
+    </a>
+
+    <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
+            Today only for the next
+            @php
+                $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2021-11-26 09:00' );
+            @endphp
+            <x-countdown class="inline-block tabular-nums font-bold" :expires="$expirationDate">
+                <span x-text="timer.hours">{{ $component->hours() }}</span>h</span>
+                <span x-text="timer.minutes">{{ $component->minutes() }}</span>m</span>
+                <span x-text="timer.seconds">{{ $component->seconds() }}</span>s</span>
+            </x-countdown>
+        </div>
 
     <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
 
+        
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
-            Get an annual license
+            … or get an annual license
             @if($couldFetchPrice)
                 for
                 @if($showDiscount)
@@ -116,7 +144,7 @@ class="">
 
 
     @if($showDiscount)
-        <div class="text-xs text-indigo-900 text-opacity-50">
+        <div class="hidden text-xs text-indigo-900 text-opacity-50">
             {{ $discount->name }} ends in
             <x-countdown class="inline-block tabular-nums font-bold" :expires="$discount->expiresAt()">
                 <span x-text="timer.days">{{ $component->days() }}</span>d</span>
