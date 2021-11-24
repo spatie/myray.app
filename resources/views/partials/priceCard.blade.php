@@ -106,7 +106,7 @@ class="">
     <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
             Today only for the next
             @php
-                $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2021-11-26 09:00' );
+                $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2021-11-25 08:59' );
             @endphp
             <x-countdown class="inline-block tabular-nums font-bold" :expires="$expirationDate">
                 <span x-text="timer.hours">{{ $component->hours() }}</span>h</span>
