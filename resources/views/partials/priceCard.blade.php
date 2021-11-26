@@ -98,7 +98,7 @@
     focus:outline-none focus:ring-0
     whitespace-nowrap
     overflow-hidden">
-            <div class="text-sm">⚡️ Black Friday Flash</div>
+            <div class="text-sm">⚡️ Black Friday Offer</div>
             Get a <strong>lifetime</strong> license!
         </button>
     </a>

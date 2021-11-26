@@ -13,6 +13,9 @@
         }
     ],
     "license": "MIT",
+    "platform": {
+        "php": "8.0.8"
+    },
     "require": {
         "php": "^8.0",
         "ext-json": "*",
