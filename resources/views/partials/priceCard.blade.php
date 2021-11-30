@@ -86,8 +86,8 @@
     </template>
 </div>
 
-<div class="mt-1 mb-4 text-sm text-indigo-900 text-opacity-50">
-    <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
+<div class="mt-4 mb-4 text-sm text-indigo-900 text-opacity-50">
+    {{-- <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <button class="group
     py-6 px-6 w-full
     bg-gradient-to-r from-indigo-800 to-indigo-700
@@ -114,13 +114,13 @@
             <span x-text="timer.minutes">{{ $component->minutes() }}</span>m</span>
             <span x-text="timer.seconds">{{ $component->seconds() }}</span>s</span>
         </x-countdown>
-    </div>
+    </div> --}}
 
     <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
 
 
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
-            … or get an annual license
+            Get an annual license
             @if($couldFetchPrice)
                 for
                 @if($showDiscount)
