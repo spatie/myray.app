@@ -116,7 +116,12 @@
         </x-countdown>
     </div> --}}
 
+    <div class="mb-4">
+        🥳 Celebrating Ray's one year anniversary 🥳
+    </div>
+
     <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
+
 
 
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
