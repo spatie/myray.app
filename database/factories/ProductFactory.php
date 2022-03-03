@@ -22,12 +22,12 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
+            'name' => $this->faker->word(),
             'type' => $this->faker->randomElement([
                 Product::TYPE_VIDEOS,
             ]),
             'price' => $this->faker->numberBetween(50, 150),
-            'paddle_product_id' => $this->faker->word,
+            'paddle_product_id' => $this->faker->word(),
         ];
     }
 }

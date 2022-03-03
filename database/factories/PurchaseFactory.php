@@ -26,10 +26,10 @@ class PurchaseFactory extends Factory
         return [
             'product_id' => Product::factory(),
             'user_id' => User::factory(),
-            'receipt_url' => $this->faker->url,
-            'paddle_order_id' => $this->faker->word,
-            'paddle_product_id' => $this->faker->word,
-            'paddle_checkout_id' => $this->faker->word,
+            'receipt_url' => $this->faker->url(),
+            'paddle_order_id' => $this->faker->word(),
+            'paddle_product_id' => $this->faker->word(),
+            'paddle_checkout_id' => $this->faker->word(),
             'paddle_response' => '{}',
             'total' => 0,
         ];

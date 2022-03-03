@@ -22,8 +22,8 @@ class ChapterFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word,
-            'slug' => $this->faker->slug,
+            'title' => $this->faker->word(),
+            'slug' => $this->faker->slug(),
             'sort' => $this->faker->numberBetween(0, 10),
         ];
     }

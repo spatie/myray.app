@@ -25,9 +25,9 @@ class VideoFactory extends Factory
         return [
             'chapter_id' => Chapter::factory(),
             'vimeo_id' => $this->faker->unique()->randomNumber(),
-            'title' => $this->faker->word,
-            'slug' => $this->faker->slug,
-            'description' => $this->faker->paragraph,
+            'title' => $this->faker->word(),
+            'slug' => $this->faker->slug(),
+            'description' => $this->faker->paragraph(),
             'sort' => $this->faker->numberBetween(0, 10),
             'runtime' => $this->faker->numberBetween(100, 500),
             'thumbnail' => $this->faker->imageUrl(),
