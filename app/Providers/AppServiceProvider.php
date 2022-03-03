@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
             return new Vimeo(new Client([
                 'headers' => [
                     'Authorization' => 'Bearer '.config('services.vimeo.access'),
-                ]
+                ],
             ]));
         });
 
@@ -41,7 +41,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Blade::directive('endmarkdown', function () {
-            return "HEREDOC); ?>";
+            return 'HEREDOC); ?>';
         });
     }
 }

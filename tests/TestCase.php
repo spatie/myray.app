@@ -32,7 +32,7 @@ abstract class TestCase extends BaseTestCase
 
     public function getJsonStubContent(string $payloadName): array
     {
-        $path = __DIR__ . "/stubs/{$payloadName}.json";
+        $path = __DIR__."/stubs/{$payloadName}.json";
 
         $content = file_get_contents($path);
 
