@@ -17,14 +17,12 @@ class UserFactory
         return $this;
     }
 
-
     public function create(): User
     {
         $user = User::factory()->create();
 
         $purchase = Purchase::factory()
-            ->make(['product_id' =>
-                Product::factory()->create(['type' => $this->productType])
+            ->make(['product_id' => Product::factory()->create(['type' => $this->productType]),
             ]);
 
         $user->purchases()->save($purchase);
