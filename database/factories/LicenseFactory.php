@@ -25,10 +25,10 @@ class LicenseFactory extends Factory
     public function definition()
     {
         return [
-        'user_id' => User::factory(),
-        'product_id' => Product::factory(),
-        'key' => Str::random(64),
-        'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
-    ];
+            'user_id' => User::factory(),
+            'product_id' => Product::factory(),
+            'key' => Str::random(64),
+            'expires_at' => $this->faker->dateTimeBetween('now', '+1 year'),
+        ];
     }
 }

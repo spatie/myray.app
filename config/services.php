@@ -15,7 +15,7 @@ return [
     */
 
     'spatie_prices_api' => [
-        'purchasable_id' => env('PURCHASABLE_ID')
+        'purchasable_id' => env('PURCHASABLE_ID'),
     ],
 
     'mailgun' => [
@@ -49,10 +49,10 @@ return [
         'token' => env('GITHUB_TOKEN'),
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_SECRET'),
-        'redirect' => env('GITHUB_REDIRECT_URI')
+        'redirect' => env('GITHUB_REDIRECT_URI'),
     ],
     'mailcoach' => [
-        'subscription_uuid' => env('MAILCOACH_SUBSCRIPTION_UUID')
-    ]
+        'subscription_uuid' => env('MAILCOACH_SUBSCRIPTION_UUID'),
+    ],
 
 ];
