@@ -57,7 +57,10 @@
     @apply text-3xl;
     @apply leading-tight;
     @apply uppercase;
-    @apply markup-text-gradient;
+
+    background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .markup h2,
@@ -65,7 +68,9 @@
     @apply inline-block;
     @apply font-extrabold;
     @apply text-2xl;
-    @apply markup-text-gradient;
+    background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .markup h3,
@@ -276,8 +281,4 @@
     font-variant-numeric: tabular-nums;
 }
 
-.markup-text-gradient {
-    background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+

@@ -14,14 +14,11 @@
         "format": "prettier 'resources/**/*.{css,js,json,css,ts,tsx}' '*.{js,css}' --write"
     },
     "devDependencies": {
-        "@tailwindcss/postcss7-compat": "^2.0.2",
-        "autoprefixer": "^9",
         "cross-env": "^5.1",
         "husky": "^3.0.9",
         "laravel-mix": "^4.0.7",
         "laravel-mix-purgecss": "^4.2.0",
         "lint-staged": "^8.1.5",
-        "postcss": "^7",
         "prettier": "^1.18.2"
     },
     "husky": {
@@ -37,6 +34,8 @@
         }
     },
     "dependencies": {
-        "tailwindcss": "^2.0.1-compat"
+        "autoprefixer": "^9",
+        "postcss": "^8",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
     }
 }

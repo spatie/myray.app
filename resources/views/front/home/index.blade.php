@@ -209,8 +209,18 @@
     </div>
 </section>
 
-<section class="my-12 px-6 sm:px-12 pb-6 bg-gradient-to-r from-indigo-100 to-indigo-200">
-    <div class="max-w-md mx-auto lg:max-w-none grid lg:grid-cols-3 gap-6 lg:gap-3 xl:gap-6">
+<section class="my-12 px-6 sm:px-12 pb-6  w-full overflow-x-scroll overflow-y-hidden">
+    <div class="absolute lg:w-[120%] w-full h-full lg:h-[85%] left-0 bg-gradient-to-r from-indigo-100 to-indigo-200"></div>
+    <div class="max-w-md mx-auto pt-6 lg:pt-0 lg:max-w-none lg:w-[120%] grid lg:grid-cols-4 gap-6 lg:gap-3 xl:gap-6  ">
+
+        @include('components.testimonial', [
+            'index' => 0,
+            'quote' => 'Ray is <strong class="font-semibold">Life</strong>',
+            'avatar' => '/images/testimonials/taylor.jpg',
+            'author' => 'Taylor Otwell',
+            'title' => 'Laravel Founder & Creator',
+            'url' => 'https://twitter.com/taylorotwell',
+        ])
         @include('components.testimonial', [
             'index' => 1,
             'quote' => 'As an amateur developer that swears by <code>dd()</code>, I was thrilled to hear about Ray. Now I can <strong class="font-semibold">feel like a real developer</strong>, even without using \'real\' debugging tools!',

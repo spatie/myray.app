@@ -1,14 +1,15 @@
-@import "tailwindcss/base";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 @import "./bootstrap.css";
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
-
 @import "./utilities/markup.css";
 @import "./utilities/ray.css";
-
+ 
 .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
   -webkit-background-clip: text;
@@ -30,6 +31,8 @@
   transform-origin: 100% 50%;
   animation: background-appear-right .2s 0.6s ease-out forwards;
 }
+
+
 
 
 @keyframes background-appear-left {

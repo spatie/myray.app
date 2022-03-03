@@ -1,4 +1,4 @@
-<blockquote class="-ml-6 mr-6 lg:mx-0 lg:mt-6 lg:-mb-12 flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
+<blockquote class="-ml-6 mr-6 lg:mx-0 lg:mt-6  flex flex-col border border-indigo-300 border-opacity-50 bg-white rounded shadow-lg overflow-hidden">
     <img
         alt=""
         class="hidden lg:block absolute opacity-25 w-full h-full object-cover"
