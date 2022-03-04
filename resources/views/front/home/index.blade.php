@@ -215,7 +215,7 @@
 
         @include('components.testimonial', [
             'index' => 0,
-            'quote' => 'Ray is <strong class="font-semibold">Life</strong>',
+            'quote' => 'Ray is <strong class=" font-black text-2xl block">Life</strong>',
             'avatar' => '/images/testimonials/taylor.jpg',
             'author' => 'Taylor Otwell',
             'title' => 'Laravel Founder & Creator',
