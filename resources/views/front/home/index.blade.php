@@ -10,12 +10,12 @@
 
     <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16
     max-w-4xl  ">
-    
+
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
             <p class="w-full text-center lg:text-left font-black text-4xl leading-relaxed">
                 Debug with Ray <br>to fix problems faster
             </p>
-    
+
             <div class="w-full text-center lg:text-left ">
                 @include('partials.priceCard')
             </div>
@@ -69,14 +69,14 @@
 
 
 
-        
+
     </section>
 
     <section>
         <div class="
             mx-auto px-6 sm:px-0 flex justify-center items-start">
 
-        
+
             <div class="mt-12 w-full h-[30rem]  shadow-xl  overflow-hidden
                 ">
                 <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0 top-1/2 transform -translate-y-1/2
@@ -93,7 +93,7 @@
                         text-white font-bold text-base
                         group-hover:bg-indigo-600
                         cursor-pointer transition-colors duration-300">
-                            Play intro <i class="ml-1.5 fas fas fa-play text-xs"></i>
+                            Introducing Ray <i class="ml-1.5 fas fas fa-play text-xs"></i>
                         </div>
                     </button>
                     <template x-if="open">
@@ -118,90 +118,6 @@
         </div>
     </section>
 
-    <section class="">
-        <div class="mx-auto p-6 bg-gray-100 rounded sm:px-12 md:px-16
-        
-        markup
-          items-start">
-            <div class="col-span-2 mt-4">
-                <h3 class="text-left text-3xl font-bold">
-                    Use ray in your next project
-                </h3>
-                <p class="text-sm text-left  w-full ">
-                    Ray works perfectly using these frameworks
-                </p>
-            </div>
-
-
-            <div class="grid grid-cols-4 col-span-8 gap-x-16">
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/laravel.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Laravel</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/alpine.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Alpine</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/cms.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Cms</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/go.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Go</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/nodejs.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        NodeJS</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/rails.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Ruby</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/vue.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Vue</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/wordpress.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Wordpress</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/yii.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Yii2</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <section id="screenshots-wrapper"
         class="relative w-full h-96 mb-24 bg-gray-200 overflow-hidden flex items-center justify-center">
         <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
@@ -217,9 +133,8 @@
                 <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
                 Easy on the eyes
             </h3>
-
             <p class="text-sm max-w-sm w-full text-left">
-                By default, Ray will follow the theme of your OS. And yes, there's a dark mode.
+                Ray presents debugging information in a clean way. This will greatly help you understand and fix bugs faster.
             </p>
         </div>
     </section>
@@ -252,20 +167,22 @@
                 </p>
             </div>
 
-            <div class="mt-8">
+            <div>
                 <h3 class="flex items-center">
-                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-orange-400"></i>
-                    Ray loves Laravel
+                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full  bg-red-500"></i>
+                    Organize calls
                 </h3>
                 <p class="py-2">
-                    <img alt="Screenshot with laravel specific info" class="rounded shadow-md border border-gray-200"
-                        src="/images/features/laravel.png" />
+                    <img alt="Screenshot with colored calls" class="rounded shadow-md border border-gray-200"
+                         src="/images/features/organise-calls.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    When installed in a Laravel app, Ray can format models and queries, track events, and even render
-                    mailables.
+                    Collapse and expand calls, or group items that belong together. Assign Ray colors to your dumps, so
+                    you can make use of the color filters in the UI.
                 </p>
             </div>
+
+
         </div>
         <div class="
          bg-indigo-600
@@ -292,7 +209,7 @@
                     text-white font-bold text-base
                     group-hover:bg-indigo-600
                     cursor-pointer transition-colors duration-300">
-                            Play <i class="ml-1.5 fas fas fa-play text-xs "></i>
+                            Show Laravel features <i class="ml-1.5 fas fas fa-play text-xs "></i>
                         </div>
                     </button>
                     <template x-if="open">
@@ -338,32 +255,33 @@
 
             <div>
                 <h3 class="flex items-center">
-                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full  bg-red-500"></i>
-                    Organize calls
+                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-blue-500"></i>
+                    Setting breakpoints
                 </h3>
                 <p class="py-2">
-                    <img alt="Screenshot with colored calls" class="rounded shadow-md border border-gray-200"
-                        src="/images/features/organise-calls.png" />
+                    <img alt="Screenshot with breakpoints" class="rounded shadow-md border border-gray-200"
+                         src="/images/features/pause.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    Collapse and expand calls, or group items that belong together. Assign Ray colors to your dumps, so
-                    you can make use of the color filters in the UI.
+                    You can pause your code. No need to install a special PHP extension.
                 </p>
             </div>
 
             <div class="mt-8">
                 <h3 class="flex items-center">
-                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full  bg-purple-400"></i>
-                    Easy on the eyes
+                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-gray-500"></i>
+                    Your IDE's sidekick
                 </h3>
                 <p class="py-2">
-                    <img alt="Screenshot dark mode" class="rounded shadow-md border border-gray-200"
-                        src="/images/features/dark.png" />
+                    <img alt="Screenshot with hot keys" class="rounded shadow-md border border-gray-200"
+                         src="/images/features/sidekick.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    By default, Ray will follow the theme of your OS. And yes, there's a dark mode.
+                    Use system-wide hotkeys to jump to Ray, or have its compact window permanently float above all other
+                    windows.
                 </p>
             </div>
+
         </div>
         <div class="bg-orange-500
         my-24
@@ -374,12 +292,10 @@
                 <div>
                     <h3 class="flex items-center text-white">
                         <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-indigo-500"></i>
-                        Ray loves Laravel
+                        Debug faster in WordPress
                     </h3>
                     <p class="text-sm max-w-sm text-white">
-                        When installed in a Laravel app, Ray can format models and queries, track events, and even
-                        render
-                        mailables.
+                        When installed in a WordPress app, Ray can format show you executed, sent mails and much more.
                     </p>
                 </div>
 
@@ -401,7 +317,7 @@
                     text-white font-bold text-base
                     group-hover:bg-indigo-600
                     cursor-pointer transition-colors duration-300">
-                            Play <i class="ml-1.5 fas fas fa-play text-xs "></i>
+                            Show WordPress features <i class="ml-1.5 fas fas fa-play text-xs "></i>
                         </div>
                     </button>
                     <template x-if="open">
@@ -432,34 +348,119 @@ markup
 grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 ">
 
-
-            <div>
+            <div class="mt-8">
                 <h3 class="flex items-center">
-                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-blue-500"></i>
-                    Setting breakpoints
+                    <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-orange-400"></i>
+                    Remote debugging? No problem!
                 </h3>
                 <p class="py-2">
-                    <img alt="Screenshot with breakpoints" class="rounded shadow-md border border-gray-200"
-                        src="/images/features/pause.png" />
+                    <img alt="Screenshot with laravel specific info" class="rounded shadow-md border border-gray-200"
+                         src="/images/features/laravel.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    You can pause your code. No need to install a special PHP extension.
+                    Ray is able to display debugging information from your server servers. This happens securely via SSH.
                 </p>
             </div>
 
             <div class="mt-8">
                 <h3 class="flex items-center">
                     <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-gray-500"></i>
-                    Your IDE's sidekick
+                    Multi-window goodness
                 </h3>
                 <p class="py-2">
-                    <img alt="Screenshot with hot keys" class="rounded shadow-md border border-gray-200"
-                        src="/images/features/sidekick.png" />
+                    <img alt="Screenshot dark mode" class="rounded shadow-md border border-gray-200"
+                         src="/images/features/dark.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    Use system-wide hotkeys to jump to Ray, or have its compact window permanently float above all other
-                    windows.
+                    Ray can display debugging information for each project in a separate window.
                 </p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+    <section class="mt-12">
+        <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
+        max-w-4xl
+        markup
+          items-start">
+            <div class="col-span-2 mt-4">
+                <h3 class="text-left text-3xl font-bold">
+                    Use Ray in your next project
+                </h3>
+                <p class="text-sm text-left  w-full ">
+                    Ray works perfectly using these frameworks
+                </p>
+            </div>
+
+
+            <div class="grid grid-cols-4 col-span-8 gap-x-16">
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/laravel.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Laravel</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/alpine.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Alpine</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/cms.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Cms</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/go.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Go</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/nodejs.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        NodeJS</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/rails.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Ruby</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/vue.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Vue</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/wordpress.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Wordpress</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/yii.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Yii2</p>
+                </div>
             </div>
 
         </div>
