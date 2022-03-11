@@ -13,7 +13,7 @@
 
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
             <div>
-            <p class="w-full text-center lg:text-left font-black text-4xl leading-relaxed">
+            <p class="w-full text-center lg:text-left font-black text-4xl leading-tight">
                 Understand and fix bugs faster
             </p>
 
@@ -84,7 +84,7 @@
             mx-auto px-6 sm:px-0 flex justify-center items-start">
 
 
-            <div class="mt-12 w-full h-[30rem]  shadow-xl  overflow-hidden
+            <div class="mt-12 w-full h-[30rem]    overflow-hidden
                 ">
                 <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0 top-1/2 transform -translate-y-1/2
                 bg-gradient-to-r from-indigo-700 to-indigo-900">
@@ -125,36 +125,18 @@
         </div>
     </section>
 
-    <section id="screenshots-wrapper"
-        class="relative w-full h-96 mb-24 bg-gray-200 overflow-hidden flex items-center justify-center">
-        <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
-
-        <div class="absolute top-0 left-0 w-full h-full ">
-
-        </div>
-
-        
-        <div class="max-w-4xl markup p-4 px-6 sm:px-12 md:px-16 left-0 top-0 absolute bg-white h-full">
-            
-            <h3 class="flex items-center gap-3">
-                <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
-                Easy on the eyes
-            </h3>
-            <p class="text-sm max-w-sm w-full text-left">
-                Ray presents debugging information in a clean way. This will greatly help you understand and fix bugs faster.
-            </p>
-        </div>
-    </section>
+    
 
 
 
-    <section class="mb-24 overflow-hidden">
+    <section class="overflow-hidden">
 
     
 
 
         <div class="
         mx-auto px-6 sm:px-12 md:px-16
+        pt-24
         max-w-4xl
         markup
         grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
@@ -217,6 +199,9 @@
                     group-hover:bg-indigo-600
                     cursor-pointer transition-colors duration-300">
                             Show Laravel features <i class="ml-1.5 fas fas fa-play text-xs "></i>
+                        </div>
+                        <div class="absolute w-12 h-full top-0 -right-6 transform skew-x-6 bg-orange-500">
+
                         </div>
                     </button>
                     <template x-if="open">
@@ -291,7 +276,7 @@
 
         </div>
         <div class="bg-orange-500
-        my-24
+        mt-24
         markup
         grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
     ">
@@ -326,6 +311,9 @@
                     cursor-pointer transition-colors duration-300">
                             Show WordPress features <i class="ml-1.5 fas fas fa-play text-xs "></i>
                         </div>
+                        <div class="absolute w-12 h-full top-0 -left-6 transform -skew-x-6 bg-indigo-500">
+
+                        </div>
                     </button>
                     <template x-if="open">
                         <div class="fixed inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center"
@@ -348,6 +336,33 @@
             </div>
 
         </div>
+    </section>
+
+    <section id="screenshots-wrapper"
+        class="relative w-full h-96 mb-24 bg-gray-200 overflow-hidden flex items-center justify-center">
+        <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
+
+        <div class="absolute top-0 left-0 w-full h-full ">
+
+        </div>
+
+        
+        <div class="max-w-4xl markup p-4 px-6 sm:px-12 md:px-16 left-0 flex items-center top-0 absolute bg-white h-full">
+            <div>
+                <h3 class="flex items-center gap-3">
+                    <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
+                    Easy on the eyes
+                </h3>
+                <p class="text-sm max-w-sm w-full text-left">
+                    Ray presents debugging information in a clean way. This will greatly help you understand and fix bugs faster.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+    <section>
+        
         <div class="
 mx-auto px-6 sm:px-12 md:px-16
 max-w-4xl
