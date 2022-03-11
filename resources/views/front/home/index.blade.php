@@ -447,15 +447,14 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
             <div class="mt-8">
                 <h3 class="flex items-center">
                     <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-gray-500"></i>
-                    Your IDE's sidekick
+                    Multi-window goodness
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot dark mode" class="rounded shadow-md border border-gray-200"
                          src="/images/features/dark.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    Use system-wide hotkeys to jump to Ray, or have its compact window permanently float above all other
-                    windows.
+                    Ray can display debugging information for each project in a separate window.
                 </p>
             </div>
 
