@@ -6,7 +6,7 @@
     </div>
     <div class="p-4">
 <code>
-<span class="markup-code-function-decalration">function</span> <span class="markup-code-function">TestCommand()</span> {
+<span class="markup-code-function-decalration">function</span> <span class="markup-code-function">myAwesomeFunction()</span> {
 </code>
 <pre id="typewriter_0" class="hideafter ">
 

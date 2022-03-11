@@ -10,17 +10,17 @@
 
     <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16
     max-w-4xl  ">
-    
+
         <div class="flex items-center gap-24 w-full">
             <p class="w-full  font-black text-4xl leading-relaxed">
                 Debug with Ray <br>to fix problems faster
             </p>
-    
+
             <div class="w-full">
                 @include('partials.priceCard')
             </div>
         </div>
-        
+
 
         <div class="background-01 absolute inset-0 pointer-events-none">
             <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-28 transform scale-x-[-1]  opacity-25 lg:opacity-75"
@@ -34,7 +34,7 @@
 
         </div>
 
-        
+
 
         <div class="
             mx-auto px-6 sm:px-12 md:px-16
@@ -48,7 +48,7 @@
                 @include('partials.rayScreenCode')
             </div>
             <div class="col-span-6 lg:col-span-3 lg:-ml-12">
-                <div class="h-[75%] 
+                <div class="h-[75%]
                     border border-gray-200 bg-white shadow-2xl rounded">
                     @include('partials.rayScreen')
 
@@ -74,7 +74,7 @@
             max-w-4xl
             flex justify-center items-start">
 
-        
+
             <div class="mt-12 w-2/3 lg:mt-0 lg:-mr-12 shadow-xl rounded overflow-hidden
                 ">
                 <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0
@@ -224,7 +224,7 @@
             </p>
         </div>
 
-        
+
 
         <div class="
         mx-auto px-6 sm:px-12 md:px-16
@@ -242,9 +242,8 @@
                         src="/images/features/good-lookin.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    Strings, array, objects, … you can send anything to Ray from PHP/Laravel/WordPress or from
-                    JavaScript/Node.js.
-                    Ray formats the output and displays the origin of your calls.
+                    Strings, array, objects, … you can send anything to Ray.
+                    Output gets formatted automatically and displays the origin of your calls.
                 </p>
             </div>
 
@@ -271,7 +270,7 @@
     ">
 
 
-            <div class=" 
+            <div class="
             ">
                 <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0
             bg-gradient-to-r from-indigo-700 to-indigo-900">
@@ -380,7 +379,7 @@
                 </div>
 
             </div>
-            <div class=" 
+            <div class="
             ">
                 <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0
             bg-gradient-to-r from-indigo-700 to-indigo-900">
