@@ -125,7 +125,7 @@
           items-start">
             <div class="col-span-2 mt-4">
                 <h3 class="text-left text-3xl font-bold">
-                    Use ray in your next project
+                    Use Ray in your next project
                 </h3>
                 <p class="text-sm text-left  w-full ">
                     Ray works perfectly using these frameworks
