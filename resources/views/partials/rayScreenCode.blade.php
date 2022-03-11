@@ -19,19 +19,19 @@
   <span class="markup-comment">// Send as much as you want</span>
   <span class="markup-variable">$array</span> = [
     <span class="markup-code-string">'a'</span> => 1,
-    <span class="markup-code-string">'b'</span> => [],
+    <span class="markup-code-string">'b'</span> => ['c' => '🕺'],
   ];
   <span class="markup-code-function ">ray(</span><span class="markup-variable">$array</span><span class="markup-code-function ">)</span>;
 </pre>
 <pre id="typewriter_2" class="hideafter">
-    
+
   <span class="markup-comment">// Apply a color</span>
   <span class="markup-comment">// and use Ray's color filters</span>
   <span class="markup-variable">$string2</span> = <span class="markup-code-string">'A green statement'</span>;
   <span class="markup-code-function ">ray(</span><span class="markup-variable">$string2</span><span class="markup-code-function ">)</span>-><span class="markup-code-function ">green()</span>;
 </pre>
 <code>
-} 
+}
 </code>
 {{--
                 <span class="markup-code-function-decalration">function</span> <span class="markup-code-function">TestCommand()</span>  {
@@ -48,9 +48,9 @@
                                 </span>
                                 ;
                             </span>
-                            
+
                         </span>
-                        
+
                     </span>
                     <br>
                     <span class="line-2-code block">
@@ -73,16 +73,16 @@
                                 </span>
                                 ;
                             </span>
-                            
+
                         </span>
-                        
+
                     </span>
                 </span>
-                
-                
+
+
             </span>
             <span class="markup-code-bracket">}</span>
                 --}}
     </div>
-    
+
 </div>
