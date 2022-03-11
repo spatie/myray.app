@@ -353,7 +353,7 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot with laravel specific info" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/laravel.png" />
+                         src="/images/features/server.png" />
                 </p>
                 <p class="text-sm max-w-sm">
                     Ray is able to display debugging information from your server servers. This happens securely via SSH.
