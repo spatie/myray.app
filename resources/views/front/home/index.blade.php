@@ -118,9 +118,9 @@
         </div>
     </section>
 
-    <section class="mt-12">
-        <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
-        max-w-4xl
+    <section class="">
+        <div class="mx-auto p-6 bg-gray-100 rounded sm:px-12 md:px-16
+        
         markup
           items-start">
             <div class="col-span-2 mt-4">
@@ -203,29 +203,32 @@
     </section>
 
     <section id="screenshots-wrapper"
-        class="relative w-full h-96 my-24 bg-gray-200 overflow-hidden flex items-center justify-center">
+        class="relative w-full h-96 mb-24 bg-gray-200 overflow-hidden flex items-center justify-center">
         <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
 
         <div class="absolute top-0 left-0 w-full h-full ">
 
         </div>
-    </section>
 
+        
+        <div class="max-w-4xl markup p-4 px-6 sm:px-12 md:px-16 left-0 top-0 absolute bg-white h-full">
+            
+            <h3 class="flex items-center gap-3">
+                <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
+                Easy on the eyes
+            </h3>
+
+            <p class="text-sm max-w-sm w-full text-left">
+                By default, Ray will follow the theme of your OS. And yes, there's a dark mode.
+            </p>
+        </div>
+    </section>
 
 
 
     <section class="mb-24 overflow-hidden">
 
-        <div class="w-full mb-24">
-            <h3 class="text-center mb-8 text-3xl font-bold">
-                Easy on the eyes
-            </h3>
-
-            <p class="text-sm max-w-sm mx-auto w-full text-center">
-                By default, Ray will follow the theme of your OS. And yes, there's a dark mode.
-            </p>
-        </div>
-
+    
 
 
         <div class="
