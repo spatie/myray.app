@@ -118,90 +118,6 @@
         </div>
     </section>
 
-    <section class="mt-12">
-        <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
-        max-w-4xl
-        markup
-          items-start">
-            <div class="col-span-2 mt-4">
-                <h3 class="text-left text-3xl font-bold">
-                    Use Ray in your next project
-                </h3>
-                <p class="text-sm text-left  w-full ">
-                    Ray works perfectly using these frameworks
-                </p>
-            </div>
-
-
-            <div class="grid grid-cols-4 col-span-8 gap-x-16">
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/laravel.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Laravel</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/alpine.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Alpine</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/cms.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Cms</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/go.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Go</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/nodejs.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        NodeJS</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/rails.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Ruby</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/vue.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Vue</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/wordpress.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Wordpress</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/yii.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Yii2</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <section id="screenshots-wrapper"
         class="relative w-full h-96 my-24 bg-gray-200 overflow-hidden flex items-center justify-center">
         <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
@@ -460,6 +376,90 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
 
+
+        </div>
+    </section>
+
+    <section class="mt-12">
+        <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
+        max-w-4xl
+        markup
+          items-start">
+            <div class="col-span-2 mt-4">
+                <h3 class="text-left text-3xl font-bold">
+                    Use Ray in your next project
+                </h3>
+                <p class="text-sm text-left  w-full ">
+                    Ray works perfectly using these frameworks
+                </p>
+            </div>
+
+
+            <div class="grid grid-cols-4 col-span-8 gap-x-16">
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/laravel.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Laravel</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/alpine.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Alpine</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/cms.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Cms</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/go.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Go</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/nodejs.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        NodeJS</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/rails.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Ruby</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/vue.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Vue</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/wordpress.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Wordpress</p>
+                </div>
+                <div class="flex flex-wrap justify-between group">
+                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/yii.svg" alt="">
+                    <p
+                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                        Yii2</p>
+                </div>
+            </div>
 
         </div>
     </section>
