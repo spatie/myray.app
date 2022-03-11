@@ -69,15 +69,17 @@
 
 
 
+        
+    </section>
+
+    <section>
         <div class="
-            mx-auto px-6 sm:px-12 md:px-16 mt-24
-            max-w-4xl
-            flex justify-center items-start">
+            mx-auto px-6 sm:px-0 flex justify-center items-start">
 
         
-            <div class="mt-12 w-2/3 lg:mt-0 lg:-mr-12 shadow-xl rounded overflow-hidden
+            <div class="mt-12 w-full h-[30rem]  shadow-xl  overflow-hidden
                 ">
-                <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0
+                <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0 top-1/2 transform -translate-y-1/2
                 bg-gradient-to-r from-indigo-700 to-indigo-900">
                     <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
                         @click="open = true">
@@ -91,7 +93,7 @@
                         text-white font-bold text-base
                         group-hover:bg-indigo-600
                         cursor-pointer transition-colors duration-300">
-                            Play <i class="ml-1.5 fas fas fa-play text-xs"></i>
+                            Play intro <i class="ml-1.5 fas fas fa-play text-xs"></i>
                         </div>
                     </button>
                     <template x-if="open">
@@ -116,7 +118,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="mt-12">
         <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
         max-w-4xl
         markup

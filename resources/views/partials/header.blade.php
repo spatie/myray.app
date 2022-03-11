@@ -14,9 +14,7 @@
                     By <a class="hover:underline" href="{{spatieUrl()}}">Spatie</a>
                 </span>
             </div>
-            <p class="hidden sm:block ml-4 text-sm mt-2 opacity-75 font-semibold leading-tight">
-                <a href="/">Dump Debugging Evolved</a>
-            </p>
+           
         </div>
 
         <ul class="
