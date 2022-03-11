@@ -12,11 +12,18 @@
     max-w-4xl  ">
 
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
+            <div>
             <p class="w-full text-center lg:text-left font-black text-4xl leading-relaxed">
-                Debug with Ray <br>to fix problems faster
+                Understand and fix bugs faster
             </p>
 
-            <div class="w-full text-center lg:text-left ">
+                <p class="mt-6 text-indigo-900 text-opacity-50">
+                    Ray is a desktop application that serves as the dedicated home for debugging output. Send, format and filter debug information from both local projects and remote servers.
+                </p>
+
+                </div>
+
+            <div class="w-full text-center lg:text-left mt-6">
                 @include('partials.priceCard')
             </div>
         </div>
@@ -390,7 +397,7 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
                     Use Ray in your next project
                 </h3>
                 <p class="text-sm text-left  w-full ">
-                    Ray works perfectly using these frameworks
+                    Ray is up and running in seconds in these languages and frameworks!
                 </p>
             </div>
 
@@ -430,13 +437,6 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
                     <p
                         class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
                         NodeJS</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/rails.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Ruby</p>
                 </div>
                 <div class="flex flex-wrap justify-between group">
                     <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
