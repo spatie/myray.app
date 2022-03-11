@@ -300,7 +300,7 @@
                         Debug faster in WordPress
                     </h3>
                     <p class="text-sm max-w-sm text-white">
-                        When installed in a WordPress app, Ray can format show you executed, sent mails and much more.
+                        When installed in a WordPress app, Ray can format show the queries you executed, all sent mails, and much more.
                     </p>
                 </div>
 
