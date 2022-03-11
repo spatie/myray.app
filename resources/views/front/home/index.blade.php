@@ -11,12 +11,12 @@
     <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16
     max-w-4xl  ">
     
-        <div class="flex items-center gap-24 w-full">
-            <p class="w-full  font-black text-4xl leading-relaxed">
+        <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
+            <p class="w-full text-center lg:text-left font-black text-4xl leading-relaxed">
                 Debug with Ray <br>to fix problems faster
             </p>
     
-            <div class="w-full">
+            <div class="w-full text-center lg:text-left ">
                 @include('partials.priceCard')
             </div>
         </div>
