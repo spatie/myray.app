@@ -53,29 +53,16 @@ pre.sf-dump .sf-dump-num {
 }
 
 .ray-line-01 {
+    
     opacity: 0;
-    animation: ray-appear .1s 1.5s ease-out forwards;
 }
 
 .ray-line-02 {
     opacity: 0;
-    animation: ray-appear .1s 2.5s ease-out forwards;
+    transform-origin: 0 0;
 }
 
 .ray-line-03 {
     opacity: 0;
-    animation: ray-appear .1s 3.5s ease-out forwards;
-}
-
-@keyframes ray-appear {
-    0%{
-        opacity: 0;
-        transform-origin: 0 0;
-        transform: scaleY(.85);
-    }
-    100%{
-        opacity: 1;
-        transform-origin: 0 0;
-        transform: scaleY(1);
-    }
+    transform-origin: 0 0;
 }

@@ -1,6 +1,6 @@
 <div x-data="{tooltip:''}" @click="tooltip = ''" @click.away="tooltip = ''" class="
 group
-absolute w-full h-full
+ w-full h-full
 grid overflow-hidden
 text-base" style="grid-template-rows: auto 1fr">
     <nav class="z-20 flex justify-between items-center px-3.5  bg-gray-200 bg-opacity-75 border-b border-gray-200 select-none  " style="height: 2.375rem;">
