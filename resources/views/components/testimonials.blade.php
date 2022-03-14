@@ -1,4 +1,4 @@
-<div class="testimonial-down w-1/3 h-full">
+<div class="testimonial-down w-1/3 h-full ">
     @include('components.testimonial', [
     'index' => 0,
     'quote' => 'Ray is <strong class=" font-black text-2xl block">Life</strong>',

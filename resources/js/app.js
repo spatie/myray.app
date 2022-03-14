@@ -154,9 +154,12 @@ window.addEventListener('typewriter_2_finished', () => {
 
 // Animation Testimonials
 let timeLineOpenTestimonials = gsap.timeline();
-timeLineOpenTestimonials.to('#testimonial-wrapper', {
+timeLineOpenTestimonials.fromTo('#testimonial-wrapper', {
+    maxHeight: '24rem',
+}, {
     height: '100vh',
     width: '100vw',
+    maxHeight: '100vh',
     top: 0,
     left: 0,
     paddingBottom: 0,
@@ -166,8 +169,8 @@ timeLineOpenTestimonials.to('#testimonial-wrapper', {
     }
 
 }).fromTo('.xtra-testimonials',{
-    display: 'none',
-    opacity: 0,
+    display: 'inline-block',
+    opacity: 0.2,
 }, {
     display: 'inline-block',
     opacity: 1,

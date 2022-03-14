@@ -481,27 +481,29 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
         </div>
     </section>
 
-    <section defer-x-data="testimonials" id="testimonial-wrapper" class="my-12 px-6 sm:px-12  pb-20 w-full ">
-        <div class="absolute lg:w-full w-full h-full lg:h-full left-0 bg-gradient-to-r from-indigo-100 to-indigo-200">
+    <section defer-x-data="testimonials" id="testimonial-wrapper" class="relative my-12 px-6  sm:px-12 overflow-hidden  pb-20 w-full ">
+        <div class="absolute lg:w-full w-full h-full lg:h-full left-0 overflow-hidden  bg-gradient-to-r from-indigo-100 to-indigo-200">
         </div>
         <div
-            class="max-w-md mx-auto pt-6 lg:pt-0 lg:max-w-none lg:w-full  flex  gap-6 lg:gap-3 xl:gap-6  overflow-hidden ">
+            class="relative max-w-md mx-auto pt-6 lg:pt-0 lg:max-w-none lg:w-full  flex  gap-6 lg:gap-3 xl:gap-6  overflow-hidden ">
 
             @include('components.testimonials')
 
 
         </div>
 
-        <div class="w-full absolute -bottom-6 left-0 flex items-center justify-center">
-            <x-button class="mt-4 " id="showMoreTestimonials">
-                Show more...
-            </x-button>
-            <x-button class="-mt-40 hidden " id="closeMoreTestimonials">
-                I'm convinced...
-            </x-button>
-        </div>
+       
 
     </section>
+
+    <div class="w-full relative -mt-24 left-0 flex items-center justify-center">
+        <x-button class="mt-4 " id="showMoreTestimonials">
+            Show more...
+        </x-button>
+        <x-button class="-mt-20 hidden " id="closeMoreTestimonials">
+            I'm convinced...
+        </x-button>
+    </div>
 
     @include('partials.syntax')
 </main>
