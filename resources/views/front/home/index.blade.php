@@ -13,15 +13,16 @@
 
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
             <div>
-            <p class="w-full text-center lg:text-left font-black text-4xl leading-tight">
-                Understand and fix bugs faster
-            </p>
-
-                <p class="mt-6 text-indigo-900 text-opacity-50">
-                    Ray is a desktop application that serves as the dedicated home for debugging output. Send, format and filter debug information from both local projects and remote servers.
+                <p class="w-full text-center lg:text-left font-black text-4xl leading-tight">
+                    Understand and fix bugs faster
                 </p>
 
-                </div>
+                <p class="mt-6 text-center lg:text-left text-indigo-900 text-opacity-50">
+                    Ray is a desktop application that serves as the dedicated home for debugging output. Send, format
+                    and filter debug information from both local projects and remote servers.
+                </p>
+
+            </div>
 
             <div class="w-full text-center lg:text-left mt-6">
                 @include('partials.priceCard')
@@ -30,7 +31,8 @@
 
 
         <div class="background-01 absolute inset-0 pointer-events-none">
-            <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-28 transform scale-x-[-1]  opacity-25 lg:opacity-75"
+            <img alt="" style="bottom: 3rem; height:700px"
+                class="absolute w-full top-28 transform scale-x-[-1]  opacity-25 lg:opacity-75"
                 src="/images/background-01.svg" />
         </div>
     </div>
@@ -80,20 +82,20 @@
     </section>
 
     <section>
-        <div class="
+        <div x-data="{ open: false }"  class="
             mx-auto px-6 sm:px-0 flex justify-center items-start">
 
 
-            <div class="mt-12 w-full h-[30rem]    overflow-hidden
-                ">
-                <div x-data="{ open: false }" style="padding-bottom: 75%;" class="h-0 top-1/2 transform -translate-y-1/2
-                bg-gradient-to-r from-indigo-700 to-indigo-900">
+            <div class="md:mt-12 w-full    overflow-hidden 
+                " :class="open ? ' sm:h-full ' : 'sm:h-[30rem]'">
+                <div style="padding-bottom: 75%;" class="h-0 
+                bg-gradient-to-r from-indigo-700 to-indigo-900" :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
                     <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
                         @click="open = true">
                         <img class="absolute w-full h-full top-0 left-0 object-cover
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
-                        " src="/images/intro-1200.png" alt="Intro screenshot">
+                        " src="/images/intro-video.jpg" alt="Intro screenshot">
                         <div class="
                         px-4 py-2
                         bg-indigo-500 rounded-sm
@@ -120,18 +122,100 @@
                             </iframe>
                         </div>
                     </template>
+                   
                 </div>
             </div>
+             
         </div>
     </section>
 
-    
+    <section class="mt-12 lg:mt-24">
+        <div class="mx-auto p-6 mb-12 grid gap-10  rounded sm:px-12 md:px-16
+        max-w-4xl
+          items-start">
+            <div class="col-span-5 ">
+                <h3 class="text-left text-3xl font-bold">
+                    Use Ray in your next project
+                </h3>
+                <p class="text-sm text-left  w-full ">
+                    Ray is up and running in seconds in these languages and frameworks!
+                </p>
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 col-span-5 gap-x-16">
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/javascript.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        JavaScript</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/php.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        PHP</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/laravel.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Laravel</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/alpine.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Alpine</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/cms.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Cms</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/go.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Go</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/nodejs.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        NodeJS</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/vue.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Vue</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/wordpress.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Wordpress</p>
+                </a>
+                <a href="/" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                        src="/images/frameworks/yii.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Yii2</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
 
 
 
     <section class="overflow-hidden">
 
-    
+
 
 
         <div class="
@@ -163,7 +247,7 @@
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot with colored calls" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/organise-calls.png" />
+                        src="/images/features/organise-calls.png" />
                 </p>
                 <p class="text-sm max-w-sm">
                     Collapse and expand calls, or group items that belong together. Assign Ray colors to your dumps, so
@@ -191,7 +275,7 @@
                         <img class="absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover
                     opacity-75 group-hover:opacity-50
                     transition-opacity duration-300
-                    " src="/images/intro-1200.png" alt="Intro screenshot">
+                    " src="/images/laravel-screenshot.jpg" alt="Intro screenshot">
                         <div class=" absolute top-1/2 transform translate-y-1/2
                     px-4 py-2
                     bg-indigo-500 rounded-sm
@@ -224,7 +308,7 @@
                 </div>
             </div>
             <div class=" flex items-center h-full">
-                <div>
+                <div class="my-8 md:my-0 px-6 md:px-0">
                     <h3 class="flex items-center text-white">
                         <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-orange-400"></i>
                         Ray loves Laravel
@@ -252,7 +336,7 @@
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot with breakpoints" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/pause.png" />
+                        src="/images/features/pause.png" />
                 </p>
                 <p class="text-sm max-w-sm">
                     You can pause your code. No need to install a special PHP extension.
@@ -266,7 +350,7 @@
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot with hot keys" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/sidekick.png" />
+                        src="/images/features/sidekick.png" />
                 </p>
                 <p class="text-sm max-w-sm">
                     Use system-wide hotkeys to jump to Ray, or have its compact window permanently float above all other
@@ -278,16 +362,17 @@
         <div class="bg-orange-500
         mt-24
         markup
-        grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
+        grid md:gap-8 lg:gap-x-16 md:grid-cols-2 items-start
     ">
-            <div class=" flex items-center justify-end pl-16 h-full">
-                <div>
+            <div class=" flex items-center md:justify-end pl-16 h-full">
+                <div class="my-8 md:my-0 px-6 md:px-0">
                     <h3 class="flex items-center text-white">
                         <i class="flex-shrink-0 mr-3 w-2 h-2 rounded-full bg-indigo-500"></i>
                         Debug faster in WordPress
                     </h3>
                     <p class="text-sm max-w-sm text-white">
-                        When installed in a WordPress app, Ray can format show the queries you executed, all sent mails, and much more.
+                        When installed in a WordPress app, Ray can format show the queries you executed, all sent mails,
+                        and much more.
                     </p>
                 </div>
 
@@ -302,7 +387,7 @@
                         <img class="absolute w-full h-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover
                     opacity-75 group-hover:opacity-50
                     transition-opacity duration-300
-                    " src="/images/intro-1200.png" alt="Intro screenshot">
+                    " src="/images/wordpress.jpg" alt="Intro screenshot">
                         <div class=" absolute top-1/2 transform translate-y-1/2
                     px-4 py-2
                     bg-indigo-500 rounded-sm
@@ -338,34 +423,13 @@
         </div>
     </section>
 
-    <section id="screenshots-wrapper"
-        class="relative w-full h-96 mb-24 bg-gray-200 overflow-hidden flex items-center justify-center">
-        <img id="screenshots" class="relative w-full max-w-none  " src="/images/screenshots-100.jpg" alt="">
 
-        <div class="absolute top-0 left-0 w-full h-full ">
-
-        </div>
-
-        
-        <div class="max-w-4xl markup p-4 px-6 sm:px-12 md:px-16 left-0 flex items-center top-0 absolute bg-white h-full">
-            <div>
-                <h3 class="flex items-center gap-3">
-                    <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
-                    Easy on the eyes
-                </h3>
-                <p class="text-sm max-w-sm w-full text-left">
-                    Ray presents debugging information in a clean way. This will greatly help you understand and fix bugs faster.
-                </p>
-            </div>
-            
-        </div>
-    </section>
 
     <section>
-        
+
         <div class="
 mx-auto px-6 sm:px-12 md:px-16
-max-w-4xl
+max-w-4xl my-16
 markup
 grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 ">
@@ -377,10 +441,11 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot with laravel specific info" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/server.png" />
+                        src="/images/features/server.png" />
                 </p>
                 <p class="text-sm max-w-sm">
-                    Ray is able to display debugging information from your server servers. This happens securely via SSH.
+                    Ray is able to display debugging information from your server servers. This happens securely via
+                    SSH.
                 </p>
             </div>
 
@@ -391,7 +456,7 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
                 </h3>
                 <p class="py-2">
                     <img alt="Screenshot dark mode" class="rounded shadow-md border border-gray-200"
-                         src="/images/features/dark.png" />
+                        src="/images/features/dark.png" />
                 </p>
                 <p class="text-sm max-w-sm">
                     Ray can display debugging information for each project in a separate window.
@@ -404,106 +469,90 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
         </div>
     </section>
 
-    <section class="mt-12">
-        <div class="mx-auto p-6 mb-12 bg-gray-100 rounded sm:px-12 md:px-16
-        max-w-4xl
+    <section id="screenshots-wrapper" class="relative w-full overflow-hidden bg-gray-200 mt-24
         markup
-          items-start">
-            <div class="col-span-2 mt-4">
-                <h3 class="text-left text-3xl font-bold">
-                    Use Ray in your next project
+        grid  md:grid-cols-2 items-start">
+        <div class="col-span-1 max-h-56 md:max-h-72 flex items-center justify-center ">
+            <img id="screenshots" class="relative w-[200%] lg:w-[150%] max-w-none   " src="/images/screenshots-100.jpg" alt="">
+            
+        </div>
+
+
+
+        <div
+            class="relative col-span-1 max-w-4xl markup p-4 px-12 sm:px-12 md:px-16 right-0 flex items-center top-0  text-white bg-indigo-500 h-full">
+            <div>
+                <h3 class="flex items-center gap-3">
+                    <i class="flex-shrink-0 w-2 h-2 rounded-full  bg-red-500"></i>
+                    Easy on the eyes
                 </h3>
-                <p class="text-sm text-left  w-full ">
-                    Ray is up and running in seconds in these languages and frameworks!
+                <p class="text-sm max-w-sm w-full text-left">
+                    Ray presents debugging information in a clean way. This will greatly help you understand and fix
+                    bugs faster.
                 </p>
             </div>
 
+            <div class="absolute w-12 h-full top-0 -left-6 transform -skew-x-6 bg-orange-500">
 
-            <div class="grid grid-cols-4 col-span-8 gap-x-16">
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/laravel.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Laravel</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/alpine.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Alpine</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/cms.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Cms</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/go.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Go</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/nodejs.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        NodeJS</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/vue.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Vue</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/wordpress.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Wordpress</p>
-                </div>
-                <div class="flex flex-wrap justify-between group">
-                    <img class=" p-10 w-full grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/yii.svg" alt="">
-                    <p
-                        class="w-full text-center -mt-2 text-xs opacity-0 transform translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        Yii2</p>
-                </div>
             </div>
 
         </div>
     </section>
 
-    <section defer-x-data="testimonials" id="testimonial-wrapper" class="relative my-12 px-6  sm:px-12 overflow-hidden  pb-20 w-full ">
-        <div class="absolute lg:w-full w-full h-full lg:h-full left-0 overflow-hidden  bg-gradient-to-r from-indigo-100 to-indigo-200">
-        </div>
+
+
+    <section defer-x-data="testimonials" id="testimonial-wrapper" x-data="{showTestimonialsIndex : 0}"
+        class="relative mb-12 px-6 mt-24  sm:px-12 overflow-hidden  pb-12 w-full ">
+
+        <h3 class="text-3xl  font-bold">
+            Nice people saying nice things
+        </h3>
+        {{--
         <div
-            class="relative max-w-md mx-auto pt-6 lg:pt-0 lg:max-w-none lg:w-full  flex  gap-6 lg:gap-3 xl:gap-6  overflow-hidden ">
+            class="absolute lg:w-full  py-24 w-full h-full lg:h-full left-0 overflow-hidden  bg-gradient-to-r from-indigo-100 to-indigo-200">
+        </div>
+
+        --}}
+
+        <div class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden xl:max-h-[55rem]  "
+            :style="` height : ${(30 + 17 * showTestimonialsIndex)}rem ` ">
+
+            @include('components.testimonials')
+            <div class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white "
+                :class="showTestimonialsIndex >= 2 ? 'opacity-0 ' : 'opacity-100 '">
+            </div>
+
+        </div>
+
+        <div class="relative lg:hidden mx-auto pt-12  flex flex-wrap gap-6 lg:gap-3 xl:gap-6 h-full ">
 
             @include('components.testimonials')
 
 
         </div>
 
-       
+
+        <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center lg:flex hidden">
+            <div @click="showTestimonialsIndex +=1" x-show="showTestimonialsIndex <= 1">
+                <x-button class="mt-4 ">
+                    Show more...
+                </x-button>
+            </div>
+
+            <div @click="showTestimonialsIndex =0" x-show="showTestimonialsIndex >= 2">
+                <x-button class="mt-4">
+                    I'm convinced...
+                </x-button>
+            </div>
+
+
+        </div>
+
+
 
     </section>
 
-    <div class="w-full relative -mt-24 left-0 flex items-center justify-center">
-        <x-button class="mt-4 " id="showMoreTestimonials">
-            Show more...
-        </x-button>
-        <x-button class="-mt-20 hidden " id="closeMoreTestimonials">
-            I'm convinced...
-        </x-button>
-    </div>
+
 
     @include('partials.syntax')
 </main>

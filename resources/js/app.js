@@ -153,107 +153,12 @@ window.addEventListener('typewriter_2_finished', () => {
 
 
 // Animation Testimonials
-let timeLineOpenTestimonials = gsap.timeline();
-timeLineOpenTestimonials.fromTo('#testimonial-wrapper', {
-    maxHeight: '24rem',
-}, {
-    height: '100vh',
-    width: '100vw',
-    maxHeight: '100vh',
-    top: 0,
-    left: 0,
-    paddingBottom: 0,
-    margin: 0,
-    onStart : function() {
-        this.targets()[0].scrollIntoView({behavior: 'smooth'});
-    }
-
-}).fromTo('.xtra-testimonials',{
-    display: 'inline-block',
-    opacity: 0.2,
-}, {
-    display: 'inline-block',
-    opacity: 1,
-}, '-=.2').pause()
-
-let scrollTestimonialsDown = gsap.timeline();
-scrollTestimonialsDown.to('.testimonial-down', {
-    y: '-100%',
-    duration: 100,
-    ease: Power0.easeNone,
-}).pause()
-
-let scrollTestimonialsUp = gsap.timeline();
-scrollTestimonialsUp.fromTo('.testimonial-up', {
-    y: '0'
-}, {
-    y: '100%',
-    duration: 100,
-    ease: Power0.easeNone,
-}).pause()
 
 
 
-function handleMouseWheel (e){
-    if(e.deltaY > 0){
-        scrollTestimonialsUp.pause()
-        scrollTestimonialsUp.progress(scrollTestimonialsUp.progress() + e.deltaY/10000)
-        scrollTestimonialsUp.play()
-    
-        scrollTestimonialsDown.pause()
-        scrollTestimonialsDown.progress(scrollTestimonialsUp.progress() + e.deltaY/10000)
-        scrollTestimonialsDown.play()
-    }
-    
-    
-}
-
-const showMoreTestimonialsButton = document.getElementById('showMoreTestimonials');
-const closeMoreTestimonialsButton = document.getElementById('closeMoreTestimonials');
 
 
-showMoreTestimonialsButton.addEventListener('click', () => {
 
-    window.addEventListener('wheel', handleMouseWheel)
-
-    
-
-    // Stop scrolling 
-    document.documentElement.style.overflowY = 'hidden'
-    
-    timeLineOpenTestimonials.restart()
-
-    scrollTestimonialsDown.repeat('-1');
-    scrollTestimonialsDown.restart().timeScale(1);
-
-    scrollTestimonialsUp.repeat('-1');
-    scrollTestimonialsUp.restart().timeScale(1);
-
-    closeMoreTestimonialsButton.classList.remove('hidden')
-    showMoreTestimonialsButton.classList.add('hidden')
-
-    window.addEventListener('wheel', handleMouseWheel)
-
-})
-
-closeMoreTestimonialsButton.addEventListener('click', () => {
-    scrollTestimonialsUp.pause().repeat(0).timeScale(500);
-    scrollTestimonialsUp.reverse()
-
-    scrollTestimonialsDown.pause().repeat(0).timeScale(500);
-    scrollTestimonialsDown.reverse()
-   
-    timeLineOpenTestimonials.reverse();
-    // Stop scrolling 
-    document.documentElement.style.overflowY = 'auto'
-
-
-    showMoreTestimonialsButton.classList.remove('hidden')
-    closeMoreTestimonialsButton.classList.add('hidden')
-
-    window.removeEventListener('wheel', handleMouseWheel);
-    
-})
 
 
 // SCREENSHOTS SCROLL EFFECT
