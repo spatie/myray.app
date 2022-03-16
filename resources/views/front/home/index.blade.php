@@ -31,8 +31,7 @@
 
 
         <div class=" z-0 absolute inset-0 pointer-events-none">
-            <img alt="" style="bottom: 3rem; height:700px"
-                class="absolute w-full top-48 transform   "
+            <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-48 transform   "
                 src="/images/background-01.svg" />
         </div>
     </div>
@@ -148,57 +147,66 @@
 
 
             <div class="grid grid-cols-1 md:grid-cols-2 col-span-5 gap-x-16">
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/framework-agnostic-php" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/framework-agnostic-php"
+                    class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/php.svg" alt="">
+                        src="/images/frameworks/php.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         PHP</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/javascript" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/javascript"
+                    class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/javascript.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         JavaScript</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/laravel" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/laravel"
+                    class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/laravel.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Laravel</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/wordpress" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/wordpress"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/wordpress.svg" alt="">
+                        src="/images/frameworks/wordpress.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         WordPress</p>
                 </a>
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/vue" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/vue"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/vue.svg" alt="">
+                        src="/images/frameworks/vue.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Vue</p>
                 </a>
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/alpinejs" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/alpinejs"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/alpine.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Alpine</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/craft-cms" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/craft-cms"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/cms.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Craft CMS</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/go" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/go"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/go.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Go</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/nodejs" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/nodejs"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/nodejs.svg" alt="">
                     <p class="w-full text-left text-xs ">
@@ -206,21 +214,24 @@
                 </a>
 
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/yii2" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/yii2"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/yii.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Yii2</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/expressjs" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/expressjs"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/ex.png" alt="">
+                        src="/images/frameworks/ex.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Express</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/bash" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/bash"
+                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/bash.svg" alt="">
+                        src="/images/frameworks/bash.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Bash</p>
                 </a>
@@ -411,7 +422,7 @@
                     opacity-75 group-hover:opacity-50
                     transition-opacity duration-300
                     " src="/images/wordpress.jpg" alt="Intro screenshot">
-                    <div class="h-14 px-6 top-1/2
+                        <div class="h-14 px-6 top-1/2
                     bg-gradient-to-r from-indigo-500 to-indigo-600
                     border-b border-r border-indigo-700
                     shadow-lg rounded-sm
@@ -536,19 +547,34 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
         </h3>
 
 
-        <div id="testimonial-grow-container" class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden  "
-            >
+        <div id="testimonial-grow-container"
+            class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden  ">
 
             @include('components.testimonials')
-            <div id="testimonials-gradient" class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white "
-               >
+            <div id="testimonials-gradient"
+                class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white ">
             </div>
 
         </div>
 
-        <div class="relative lg:hidden mx-auto pt-12  flex flex-wrap gap-6 lg:gap-3 xl:gap-6 h-full ">
+        <div class="relative lg:hidden mx-auto pt-12  flex gap-y-6 flex-wrap lg:gap-3 xl:gap-6 h-full ">
 
-            @include('components.testimonials')
+            <div class="testimonial-down lg:w-1/3 w-full flex flex-wrap gap-4  ">
+                @foreach($testimonials as $testimonial)
+                @if ($loop->index >= 3)
+                @break
+                @endif
+                @include('components.testimonial', [
+                'index' => rand(0,3),
+                'quote' => $testimonial->text,
+                'avatar' => '/images/testimonials/' . $testimonial->image . '.jpg',
+                'author' => $testimonial->name,
+                'title' => $testimonial->title,
+                'url' => $testimonial->url,
+                ])
+                @endforeach
+            </div>
+
 
 
         </div>
