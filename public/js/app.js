@@ -3588,7 +3588,6 @@ heroTimeline1.fromTo('.ray-loading', {
   opacity: 1
 }, {
   opacity: 0,
-  delay: .2,
   duration: .1,
   ease: gsap__WEBPACK_IMPORTED_MODULE_3__.Power3.easeOut,
   onComplete: function onComplete() {
