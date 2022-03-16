@@ -148,17 +148,17 @@
 
 
             <div class="grid grid-cols-1 md:grid-cols-2 col-span-5 gap-x-16">
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/framework-agnostic-php" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/php.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        PHP</p>
+                </a>
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/javascript" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/javascript.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         JavaScript</p>
-                </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/framework-agnostic-php" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
-                    <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/php.svg" alt="">
-                    <p class="w-full text-left text-xs ">
-                        PHP</p>
                 </a>
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/laravel" class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
@@ -166,6 +166,20 @@
                     <p class="w-full text-left text-xs ">
                         Laravel</p>
                 </a>
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/wordpress" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/wordpress.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        WordPress</p>
+                </a>
+
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/vue" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/vue.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        Vue</p>
+                </a>
+
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/alpinejs" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/alpine.svg" alt="">
@@ -190,18 +204,8 @@
                     <p class="w-full text-left text-xs ">
                         NodeJS</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/vue" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
-                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/vue.svg" alt="">
-                    <p class="w-full text-left text-xs ">
-                        Vue</p>
-                </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/wordpress" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
-                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/wordpress.svg" alt="">
-                    <p class="w-full text-left text-xs ">
-                        WordPress</p>
-                </a>
+
+
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/yii2" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/yii.svg" alt="">
