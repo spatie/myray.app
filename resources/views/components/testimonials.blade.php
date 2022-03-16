@@ -1,3 +1,14 @@
+<ul>
+
+@php
+/** @var array<\App\Support\Testimonial> $testimonials */
+@endphp
+
+@foreach($testimonials as $testimonial)
+    <li>{{ $testimonial->name }}</li>
+@endforeach
+</ul>
+
 <div class="testimonial-down lg:w-1/3 w-full h-full ">
     @include('components.testimonial', [
     'index' => 0,
@@ -105,7 +116,7 @@
     <div class="transition-all  origin-top lg:inline-block hidden"
         :class="showTestimonialsIndex >= 2 ? 'opacity-100 ' : 'opacity-50 '">
         @include('components.testimonial', [
-        'index' => 2,
+        'index' => 1,
         'quote' => 'Ray is a part of my <strong class="font-semibold">Essentials</strong> toolbox. It has the
         snapiness of a real debugger, but the simplicity of <code>dd()</code>',
         'avatar' => '/images/testimonials/nuno.jpg',

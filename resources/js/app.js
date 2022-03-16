@@ -109,6 +109,17 @@ heroTimeline1.fromTo('.ray-line-01', {
     }
 }).pause()
 
+heroTimeline1.fromTo('.ray-loading', {
+    opacity: 1,
+}, {
+    opacity: 0,
+    duration: .1,
+    ease: Power3.easeOut,
+    onComplete: () => {
+        typewriter1.type();
+    }
+}).pause()
+
 let heroTimeline2 = gsap.timeline();
 heroTimeline2.fromTo('.ray-line-02', {
     opacity: 0,

@@ -21,7 +21,7 @@ module.exports = {
 
             black: "#1e0063",
             white: colors.white,
-            gray: colors.coolGray,
+            gray: colors.gray,
             slate: colors.slate,
             red: colors.red,
             yellow: colors.amber,
@@ -58,6 +58,7 @@ module.exports = {
                 12 : '3rem',
             },
             fontSize: {
+                xxs: '0.6rem',
                 'px-xs': '10px',
                 'px-sm': '12px',
                 'px-base': '14px',
