@@ -211,6 +211,13 @@ class HomeController
                 url: 'https://twitter.com/JLadHDeveloper',
                 title: 'Full Stack Wildcard Developer',
             ),
+            new Testimonial(
+                name: 'Mat',
+                text: " I didn’t renew my license because I thought I don’t need Ray. Turns out I do need Ray.",
+                image: 'mat',
+                url: 'https://twitter.com/dakira',
+                title: 'Full Stack Developer',
+            ),
         ]);
     }
 }
