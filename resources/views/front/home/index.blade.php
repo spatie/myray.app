@@ -30,9 +30,9 @@
         </div>
 
 
-        <div class="background-01 absolute inset-0 pointer-events-none">
+        <div class=" z-0 absolute inset-0 pointer-events-none">
             <img alt="" style="bottom: 3rem; height:700px"
-                class="absolute w-full top-28 transform scale-x-[-1]  opacity-25 lg:opacity-75"
+                class="absolute w-full top-48 transform   "
                 src="/images/background-01.svg" />
         </div>
     </div>
@@ -82,27 +82,31 @@
     </section>
 
     <section>
-        <div x-data="{ open: false }"  class="
+        <div x-data="{ open: false }" class="
             mx-auto px-6 sm:px-0 flex justify-center items-start">
 
 
             <div class="md:mt-12 w-full    overflow-hidden 
                 " :class="open ? ' sm:h-full ' : 'sm:h-[30rem]'">
                 <div style="padding-bottom: 75%;" class="h-0 
-                bg-gradient-to-r from-indigo-700 to-indigo-900" :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
+                bg-gradient-to-r from-indigo-700 to-indigo-900"
+                    :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
                     <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
                         @click="open = true">
                         <img class="absolute w-full h-full top-0 left-0 object-cover
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
                         " src="/images/intro-video.jpg" alt="Intro screenshot">
-                        <div class="
-                        px-4 py-2
-                        bg-indigo-500 rounded-sm
-                        text-white font-bold text-base
-                        group-hover:bg-indigo-600
-                        cursor-pointer transition-colors duration-300">
-                            Introducing Ray <i class="ml-1.5 fas fas fa-play text-xs"></i>
+                        <div class="h-14 px-6
+                        bg-gradient-to-r from-indigo-500 to-indigo-600
+                        border-b border-r border-indigo-700
+                        shadow-lg rounded-sm
+                        font-bold text-white text-xl
+                        transform active:translate-y-px
+                        focus:outline-none focus:ring-0
+                        whitespace-nowrap
+                        overflow-hidden flex items-center">
+                            Introducing Ray <i class="ml-1.5 mt-1 fas fas fa-play text-xs"></i>
                         </div>
                     </button>
                     <template x-if="open">
@@ -122,10 +126,10 @@
                             </iframe>
                         </div>
                     </template>
-                   
+
                 </div>
             </div>
-             
+
         </div>
     </section>
 
@@ -276,13 +280,16 @@
                     opacity-75 group-hover:opacity-50
                     transition-opacity duration-300
                     " src="/images/laravel-screenshot.jpg" alt="Intro screenshot">
-                        <div class=" absolute top-1/2 transform translate-y-1/2
-                    px-4 py-2
-                    bg-indigo-500 rounded-sm
-                    text-white font-bold text-base
-                    group-hover:bg-indigo-600
-                    cursor-pointer transition-colors duration-300">
-                            Show Laravel features <i class="ml-1.5 fas fas fa-play text-xs "></i>
+                        <div class="h-14 px-6 top-1/2
+                    bg-gradient-to-r from-indigo-500 to-indigo-600
+                    border-b border-r border-indigo-700
+                    shadow-lg rounded-sm
+                    font-bold text-white text-xl
+                    transform active:translate-y-px
+                    focus:outline-none focus:ring-0
+                    whitespace-nowrap
+                    overflow-hidden flex items-center">
+                            Show Laravel Features <i class="ml-1.5 mt-1 fas fas fa-play text-xs"></i>
                         </div>
                         <div class="absolute w-12 h-full top-0 -right-6 transform skew-x-6 bg-orange-500">
 
@@ -388,13 +395,16 @@
                     opacity-75 group-hover:opacity-50
                     transition-opacity duration-300
                     " src="/images/wordpress.jpg" alt="Intro screenshot">
-                        <div class=" absolute top-1/2 transform translate-y-1/2
-                    px-4 py-2
-                    bg-indigo-500 rounded-sm
-                    text-white font-bold text-base
-                    group-hover:bg-indigo-600
-                    cursor-pointer transition-colors duration-300">
-                            Show WordPress features <i class="ml-1.5 fas fas fa-play text-xs "></i>
+                    <div class="h-14 px-6 top-1/2
+                    bg-gradient-to-r from-indigo-500 to-indigo-600
+                    border-b border-r border-indigo-700
+                    shadow-lg rounded-sm
+                    font-bold text-white text-xl
+                    transform active:translate-y-px
+                    focus:outline-none focus:ring-0
+                    whitespace-nowrap
+                    overflow-hidden flex items-center">
+                            Show Wordpress Features <i class="ml-1.5 mt-1 fas fas fa-play text-xs"></i>
                         </div>
                         <div class="absolute w-12 h-full top-0 -left-6 transform -skew-x-6 bg-indigo-500">
 
@@ -473,8 +483,9 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
         markup
         grid  md:grid-cols-2 items-start">
         <div class="col-span-1 max-h-56 md:max-h-72 flex items-center justify-center ">
-            <img id="screenshots" class="relative w-[200%] lg:w-[150%] max-w-none   " src="/images/screenshots-100.jpg" alt="">
-            
+            <img id="screenshots" class="relative w-[200%] lg:w-[150%] max-w-none   " src="/images/screenshots-100.jpg"
+                alt="">
+
         </div>
 
 
@@ -501,7 +512,7 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
 
-    <section defer-x-data="testimonials" id="testimonial-wrapper" x-data="{showTestimonialsIndex : 0}"
+    <section id="testimonial-wrapper" x-data="testimonials"
         class="relative mb-12 px-6 mt-24  sm:px-12 overflow-hidden  pb-12 w-full ">
 
         <h3 class="text-3xl  font-bold">
@@ -533,13 +544,13 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
         <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center lg:flex hidden">
-            <div @click="showTestimonialsIndex +=1" x-show="showTestimonialsIndex <= 1">
+            <div @click="showMoreTestimonials" x-show="showTestimonialsIndex <= 1">
                 <x-button class="mt-4 ">
                     Show more...
                 </x-button>
             </div>
 
-            <div @click="showTestimonialsIndex =0" x-show="showTestimonialsIndex >= 2">
+            <div @click="showTestimonialsIndex =0" >
                 <x-button class="mt-4">
                     I'm convinced...
                 </x-button>

@@ -154,10 +154,18 @@ window.addEventListener('typewriter_2_finished', () => {
 
 // Animation Testimonials
 
+Alpine.data('testimonials', () => ({
+    showTestimonialsIndex : 0,
 
 
+    showMoreTestimonials(){
+        console.log('click')
+    }
+}))
 
 
+Alpine.start()
+console.log(Alpine)
 
 
 
