@@ -1,4 +1,7 @@
 import Alpine from 'alpinejs'
+
+Alpine.start();
+
 import { gsap, Power3, Power0 } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
