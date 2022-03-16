@@ -120,8 +120,8 @@
                                 leading-none text-white text-3xl
                                 ">×</button>
                             <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
-                                frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
-                                >
+                                frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" 
+                                @mousedown.away="open = false; ">
                             </iframe>
                         </div>
                     </template>
@@ -335,7 +335,7 @@
                             ">×</button>
                             <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
-                                @click.away="open = false">
+                                @mousedown.away="open = false">
                             </iframe>
                         </div>
                     </template>
@@ -450,7 +450,7 @@
                             ">×</button>
                             <iframe src="https://player.vimeo.com/video/688914922?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
-                                @click.away="open = false">
+                                @mousedown.away="open = false">
                             </iframe>
                         </div>
                     </template>
