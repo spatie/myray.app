@@ -165,18 +165,33 @@ window.addEventListener('typewriter_2_finished', () => {
 
 // Animation Testimonials
 
-Alpine.data('testimonials', () => ({
-    showTestimonialsIndex : 0,
+const testimonialWrapper = document.getElementById('testimonial-wrapper');
 
+const showMoreBtn = document.getElementById('testimonial-showMor-btn');
 
-    showMoreTestimonials(){
-        console.log('click')
+//SET Start height 
+const testimonialGrowCont = document.getElementById('testimonial-grow-container');
+let ContainerHeightinRem = 30;
+testimonialGrowCont.style.height = `${ContainerHeightinRem}rem`;
+
+let clickCount = 0;
+
+showMoreBtn.addEventListener('click', () => {
+    clickCount++
+    if (clickCount < 3){
+        ContainerHeightinRem += 30;
+        testimonialGrowCont.style.height = `${ContainerHeightinRem}rem`;
+    } else if(clickCount === 3) {
+        showMoreBtn.childNodes[1].innerHTML = 'Show All'
+        ContainerHeightinRem += 30;
+        testimonialGrowCont.style.height = `${ContainerHeightinRem}rem`;
+    } else {
+        testimonialGrowCont.style.height = 'auto';
+        showMoreBtn.hidden = true;
+        document.getElementById('testimonials-gradient').style.setProperty('display', 'none', 'important');
     }
-}))
+});
 
-
-Alpine.start()
-console.log(Alpine)
 
 
 

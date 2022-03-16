@@ -512,25 +512,20 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
 
-    <section id="testimonial-wrapper" x-data="testimonials"
+    <section id="testimonial-wrapper" data-testimonialcount="{{count($testimonials)}}"
         class="relative mb-12 px-6 mt-24  sm:px-12 overflow-hidden  pb-12 w-full ">
 
         <h3 class="text-3xl  font-bold">
             Nice people saying nice things
         </h3>
-        {{--
-        <div
-            class="absolute lg:w-full  py-24 w-full h-full lg:h-full left-0 overflow-hidden  bg-gradient-to-r from-indigo-100 to-indigo-200">
-        </div>
 
-        --}}
 
-        <div class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden xl:max-h-[55rem]  "
-            :style="` height : ${(30 + 17 * showTestimonialsIndex)}rem ` ">
+        <div id="testimonial-grow-container" class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden  "
+            >
 
             @include('components.testimonials')
-            <div class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white "
-                :class="showTestimonialsIndex >= 2 ? 'opacity-0 ' : 'opacity-100 '">
+            <div id="testimonials-gradient" class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white "
+               >
             </div>
 
         </div>
@@ -544,15 +539,9 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
         <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center lg:flex hidden">
-            <div @click="showMoreTestimonials" x-show="showTestimonialsIndex <= 1">
+            <div id="testimonial-showMor-btn">
                 <x-button class="mt-4 ">
                     Show more...
-                </x-button>
-            </div>
-
-            <div @click="showTestimonialsIndex =0" >
-                <x-button class="mt-4">
-                    I'm convinced...
                 </x-button>
             </div>
 

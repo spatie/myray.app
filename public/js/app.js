@@ -3631,16 +3631,29 @@ window.addEventListener('typewriter_2_finished', function () {
   heroTimeline3.play();
 }); // Animation Testimonials
 
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].data('testimonials', function () {
-  return {
-    showTestimonialsIndex: 0,
-    showMoreTestimonials: function showMoreTestimonials() {
-      console.log('click');
-    }
-  };
-});
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
-console.log(alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"]); // SCREENSHOTS SCROLL EFFECT
+var testimonialWrapper = document.getElementById('testimonial-wrapper');
+var showMoreBtn = document.getElementById('testimonial-showMor-btn'); //SET Start height 
+
+var testimonialGrowCont = document.getElementById('testimonial-grow-container');
+var ContainerHeightinRem = 30;
+testimonialGrowCont.style.height = "".concat(ContainerHeightinRem, "rem");
+var clickCount = 0;
+showMoreBtn.addEventListener('click', function () {
+  clickCount++;
+
+  if (clickCount < 3) {
+    ContainerHeightinRem += 30;
+    testimonialGrowCont.style.height = "".concat(ContainerHeightinRem, "rem");
+  } else if (clickCount === 3) {
+    showMoreBtn.childNodes[1].innerHTML = 'Show All';
+    ContainerHeightinRem += 30;
+    testimonialGrowCont.style.height = "".concat(ContainerHeightinRem, "rem");
+  } else {
+    testimonialGrowCont.style.height = 'auto';
+    showMoreBtn.hidden = true;
+    document.getElementById('testimonials-gradient').style.setProperty('display', 'none', 'important');
+  }
+}); // SCREENSHOTS SCROLL EFFECT
 
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.fromTo('#screenshots', {
   y: '-20%'
