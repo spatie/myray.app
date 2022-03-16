@@ -281,4 +281,48 @@
     font-variant-numeric: tabular-nums;
 }
 
+#typewriter_0::after, #typewriter_1::after, #typewriter_2::after{
+        content: "|";
+        animation: blink 500ms linear infinite alternate;
+}
+
+#typewriter_0.hideafter::after, #typewriter_1.hideafter::after, #typewriter_2.hideafter::after{
+    display: none;
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+.markup-variable{
+    @apply text-[rgb(6,182,212)];
+}
+
+.markup-code-function-decalration{
+    @apply text-[rgb(14,116,144)];
+}
+
+.markup-code-function{
+    @apply text-yellow-500;
+}
+
+.markup-code-string{
+    @apply text-orange-500;
+}
+
+.markup-comment{
+    @apply text-[rgb(100,116,139)];
+}
 

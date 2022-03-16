@@ -36,5 +36,9 @@
                 "git add"
             ]
         }
+    },
+    "dependencies": {
+        "alpinejs": "^3.9.1",
+        "gsap": "^3.9.1"
     }
 }

@@ -37,10 +37,11 @@
             content="@yield('description')"/>
         <meta property="og:image" content="https://myray.app/images/social-card.png"/>
 
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
         @bukStyles()
         @bukScripts()
+
+        <script  src=" {{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="max-w-6xl mx-auto
     bg-white
@@ -64,5 +65,7 @@
             </script>
             <!-- End Twitter universal website tag code -->
         @endproduction
+
+        
     </body>
 </html>
