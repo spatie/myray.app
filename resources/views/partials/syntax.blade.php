@@ -3,7 +3,7 @@
         <img
             alt=""
             style="bottom: 3%; height:650px"
-            class="absolute w-full opacity-25 lg:opacity-75"
+            class="absolute w-full "
             src="/images/background-02.svg"/>
     </div>
 
