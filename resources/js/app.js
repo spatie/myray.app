@@ -1,6 +1,7 @@
 import Alpine from 'alpinejs'
 
 window.Alpine = Alpine;
+
 Alpine.start();
 
 import { gsap, Power3, Power0 } from "gsap"
@@ -193,8 +194,6 @@ showMoreBtn.addEventListener('click', () => {
         document.getElementById('testimonials-gradient').style.setProperty('display', 'none', 'important');
     }
 });
-
-
 
 
 // SCREENSHOTS SCROLL EFFECT
