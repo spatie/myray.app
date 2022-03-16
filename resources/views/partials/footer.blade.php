@@ -10,7 +10,7 @@
             <a class="block w-32" href="/">
                 @include('partials.logoRay')
             </a>
-            <p class="mt-2 font-semibold opacity-75">Dump Debugging Evolved</p>
+            <p class="mt-2 font-semibold opacity-75">Understand and fix bugs faster</p>
         </div>
 
         <nav>

@@ -1,8 +1,8 @@
 @extends('front.layouts.master')
 
-@section('title', 'Dump Debugging Evolved')
+@section('title', 'Understand and fix bugs faster using Ray')
 
-@section('description', 'Debug with Ray to fix problems faster')
+@section('description', 'Understand and fix bugs faster using Ray')
 
 @section('content')
 
@@ -120,7 +120,7 @@
                                 absolute top-0 right-0 m-6
                                 leading-none text-white text-3xl
                                 ">×</button>
-                            <iframe src="https://player.vimeo.com/video/497806481?autoplay=1" class="w-full h-full"
+                            <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
                                 @click.away="open = false">
                             </iframe>
@@ -322,7 +322,7 @@
                             absolute top-0 right-0 m-6
                             leading-none text-white text-3xl
                             ">×</button>
-                            <iframe src="https://player.vimeo.com/video/497806481?autoplay=1" class="w-full h-full"
+                            <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
                                 @click.away="open = false">
                             </iframe>
@@ -437,7 +437,7 @@
                             absolute top-0 right-0 m-6
                             leading-none text-white text-3xl
                             ">×</button>
-                            <iframe src="https://player.vimeo.com/video/497806481?autoplay=1" class="w-full h-full"
+                            <iframe src="https://player.vimeo.com/video/688914922?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
                                 @click.away="open = false">
                             </iframe>
