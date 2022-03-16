@@ -174,7 +174,7 @@
                 </a>
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/craft-cms" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                        src="/images/frameworks/cms.svg" alt="">
+                        src="/images/frameworks/cms.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Craft CMS</p>
                 </a>
@@ -210,13 +210,13 @@
                 </a>
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/expressjs" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/yii.svg" alt="">
+                         src="/images/frameworks/ex.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Express</p>
                 </a>
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/bash" class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
-                         src="/images/frameworks/yii.svg" alt="">
+                         src="/images/frameworks/bash.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Bash</p>
                 </a>
