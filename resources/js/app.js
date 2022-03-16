@@ -8,9 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-// ANiMATION HERO
+// ANIMATION HERO
 
 function setupTypewriter(t) {
 
