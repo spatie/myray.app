@@ -41,7 +41,7 @@
         @bukStyles()
         @bukScripts()
 
-        
+        <script  src=" {{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="max-w-6xl mx-auto
     bg-white
@@ -66,6 +66,6 @@
             <!-- End Twitter universal website tag code -->
         @endproduction
 
-        <script  src=" {{ mix('js/app.js') }}" defer></script>
+        
     </body>
 </html>
