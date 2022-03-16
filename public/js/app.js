@@ -3584,6 +3584,16 @@ heroTimeline1.fromTo('.ray-line-01', {
     typewriter1.type();
   }
 }).pause();
+heroTimeline1.fromTo('.ray-loading', {
+  opacity: 1
+}, {
+  opacity: 0,
+  duration: .1,
+  ease: gsap__WEBPACK_IMPORTED_MODULE_3__.Power3.easeOut,
+  onComplete: function onComplete() {
+    typewriter1.type();
+  }
+}).pause();
 var heroTimeline2 = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline();
 heroTimeline2.fromTo('.ray-line-02', {
   opacity: 0,

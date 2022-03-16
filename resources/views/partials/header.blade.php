@@ -7,12 +7,15 @@
     ">
         <div class="sm:flex items-center">
             <div>
+                <span class="absolute -bottom-6 left-3 text-indigo-800 text-opacity-50 font-normal text-px-xs">
+                    {{-- By <a class="hover:underline" href="{{spatieUrl()}}">Spatie</a>--}}
+                    <a href="https://spatie.be/products/ray/release-notes" class="flex items-center bg-purple-100 rounded-sm text-black px-3 pt-4 pb-2 whitespace-nowrap">
+                        <span><strong>Version 2.0</strong> just released!</span>
+                    </a>
+                </span>
                 <a class="block w-20" href="/">
                     @include('partials.logoRay')
                 </a>
-                <span class="absolute top-full mt-1 left-0 text-indigo-800 text-opacity-50 font-normal text-px-xs">
-                    By <a class="hover:underline" href="{{spatieUrl()}}">Spatie</a>
-                </span>
             </div>
            
         </div>
