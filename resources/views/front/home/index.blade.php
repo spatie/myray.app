@@ -97,7 +97,7 @@
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
                         " src="/images/intro-video.jpg" alt="Intro screenshot">
-                        <div class="h-14 px-6 mt-56
+                        <div class="h-14 px-6 mt-64
                         bg-gradient-to-r from-indigo-500 to-indigo-600
                         border-b border-r border-indigo-700
                         shadow-lg rounded-sm
