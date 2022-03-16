@@ -11,13 +11,11 @@ class HomeController
 {
     public function __invoke(Request $request)
     {
-        $view = $request->segment(1, 'home.index');
-
         $purchasableId = config('services.spatie_prices_api.purchasable_id');
 
         $prices = SpatiePriceApi::getPriceForPurchasable($purchasableId);
 
-        return view('front.'.$view, [
+        return view('front.home.index', [
             'downloadLinkMacIntel' => spatieUrl('https://spatie.be/products/ray/download/macosIntel/latest'),
             'downloadLinkMacAppleSilicon' => spatieUrl('https://spatie.be/products/ray/download/macosAppleSilicon/latest'),
             'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/download/windows/latest'),
@@ -95,7 +93,7 @@ class HomeController
             new Testimonial(
                 name: 'Christoph Rumpel',
                 text: "I'm an Xdebug user, but I still, find myself using Ray a lot because it is just so easy to use and beautiful ✨",
-                image: 'Christoph',
+                image: 'christoph',
                 url: 'https://twitter.com/christophrumpel',
                 title: 'PHP Developer and teacher',
             ),
