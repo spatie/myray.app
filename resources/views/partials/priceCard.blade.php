@@ -24,7 +24,7 @@
                 absolute top-0 right-0 m-6
                 leading-none text-white text-3xl
                 ">×</button>
-            <div class="bg-white p-12 markup" @click.away="download = false">
+            <div class="bg-white p-12 markup" @mousedown.away="download = false">
                 <h2>
                     <span class="text-gradient">Thanks for downloading Ray!</span>
                 </h2>
