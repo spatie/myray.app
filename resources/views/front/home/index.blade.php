@@ -91,7 +91,7 @@
                 bg-gradient-to-r from-indigo-700 to-indigo-900"
                     :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
                     <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
-                        @click="open = true">
+                        @click="open = true; console.log(open)">
                         <img class="absolute w-full h-full top-0 left-0 object-cover
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
@@ -121,7 +121,7 @@
                                 ">×</button>
                             <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
                                 frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
-                                @click.away="open = false">
+                                >
                             </iframe>
                         </div>
                     </template>
