@@ -204,6 +204,13 @@ class HomeController
                 url: 'https://twitter.com/ninthspace',
                 title: 'Rescuer of projects',
             ),
+            new Testimonial(
+                name: 'JL',
+                text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in chrome. Wordpress, Laravel, Yii: I've used ray everywhere and it's done nothing but make me more productive.",
+                image: 'jl',
+                url: 'https://twitter.com/JLadHDeveloper',
+                title: 'Full Stack Wildcard Developer',
+            ),
         ]);
     }
 }
