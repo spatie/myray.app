@@ -95,7 +95,7 @@ class HomeController
             new Testimonial(
                 name: 'Christoph Rumpel',
                 text: "I'm an Xdebug user, but I still, find myself using Ray a lot because it is just so easy to use and beautiful ✨",
-                image: 'Christoph',
+                image: 'christoph',
                 url: 'https://twitter.com/christophrumpel',
                 title: 'PHP Developer and teacher',
             ),
