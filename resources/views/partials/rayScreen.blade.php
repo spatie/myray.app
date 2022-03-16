@@ -303,12 +303,18 @@ app-region-no-drag
         </nav>
 
         <div class="flex-grow overflow-y-auto">
+            <div class="ray-loading absolute top-1/2 left-0 w-full inline-flex justify-center items-center gap-2 text-gray-400 text-xs opacity">
+                <span><i class="far fa-fw fa-sync fa-spin"></i></span>Waiting for items…
+            </div>
+
             <div class="
                 z-10
                 relative group
                 grid items-start pl-3.5
                 border-b border-gray-400 border-opacity-50
                 ray-line-01" style="grid-template-columns: auto auto 1fr;">
+                <div class="absolute  w-[7.5rem] h-full left-0 top-0 bg-gray-50 border-r border-gray-100">
+                </div>  
                 <div class="
                     relative
                     flex-none flex items-center justify-center
@@ -333,7 +339,9 @@ app-region-no-drag
                     p-3.5
                     text-sm text-gray-500
                 ">
-                    <div class="w-16 tabular-nums">10:38:53</div>
+                    <div class="w-16 tabular-nums">
+                        <span class="tag-outline tag-outline-gray bg-gray-50">{{ Date('H:i:s') }}</span>
+                    </div>
                 </div>
 
 
@@ -359,6 +367,8 @@ app-region-no-drag
                 grid items-start pl-3.5
                 border-b border-gray-400 border-opacity-50
                 ray-line-02" style="grid-template-columns: auto auto 1fr;">
+                <div class="absolute  w-[7.5rem] h-full left-0 top-0 bg-gray-50 border-r border-gray-100">
+                </div> 
                 <div class="">
                     <div class="pointer-events-none
                         relative
@@ -377,7 +387,9 @@ app-region-no-drag
                     p-3.5
                     text-sm text-gray-500
                 ">
-                    <div class="w-16 tabular-nums">10:38:53</div>
+                    <div class="w-16 tabular-nums">
+                        <span class="tag-outline tag-outline-gray  bg-gray-50">{{ Date('H:i:s') }}</span>
+                    </div>
                 </div>
 
 
@@ -654,6 +666,8 @@ Object {
                 grid items-start pl-3.5
                 border-b border-gray-400 border-opacity-50
             ray-line-03" style="grid-template-columns: auto auto 1fr;">
+            <div class="absolute w-[7.5rem] h-full left-0 top-0 bg-gray-50 border-r border-gray-100">
+            </div> 
                 <div class="pointer-events-none
                     relative
                     flex-none flex items-center justify-center
@@ -670,7 +684,9 @@ Object {
                     p-3.5
                     text-sm text-gray-500
                 ">
-                    <div class="w-16 tabular-nums">10:38:53</div>
+                    <div class="w-16 tabular-nums">
+                        <span class="tag-outline tag-outline-green bg-green-100">{{ Date('H:i:s') }}</span>
+                    </div>
                 </div>
 
                 <div class="p-3.5" style="transition: max-height 0.2s ease-out 0s; ">
