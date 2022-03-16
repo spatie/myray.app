@@ -105,6 +105,13 @@ class HomeController
                 title: 'Author of Laravel Secrets',
             ),
             new Testimonial(
+                name: 'Patrick Organ',
+                text: "Ray is my go-to debugging solution for every project. It's easy to use while still being powerful enough to display the debugging information I need.",
+                image: 'patrick',
+                url: 'https://twitter.com/patdeveloper',
+                title: 'Software engineer',
+            ),
+            new Testimonial(
                 name: 'Tony Lea',
                 text: "Debugging my application is so much easier thanks to Ray. No more dd() or \Log::info() all over the place. Ray, all the way.",
                 image: 'tony',
