@@ -70,6 +70,13 @@ class HomeController
                 title: 'Laravel Developer',
             ),
             new Testimonial(
+                name: 'Jesse Leite',
+                text: "Everybody loves Raymond! This tool has become a staple in my daily workflow.",
+                image: 'jesse',
+                url: 'https://twitter.com/mvpopuk',
+                title: 'Developer at Statamic',
+            ),
+            new Testimonial(
                 name: 'Luke Downing',
                 text: 'Ray sheds light on your code and brightens your day. Simple and convenient, there’s no other debugging tool I’d rather reach for.',
                 image: 'luke',
@@ -223,6 +230,21 @@ class HomeController
                 url: 'https://twitter.com/dakira',
                 title: 'Full Stack Developer',
             ),
+            new Testimonial(
+                name: 'Jeremy',
+                text: "Since purchasing Ray my beard has been growing. I used to rip it out when debugging.",
+                image: 'jeremy',
+                url: 'https://twitter.com/SeijinAxeman',
+                title: 'Managing Director of Tecuisine',
+            ),
+            new Testimonial(
+                name: 'Marian Pop',
+                text: "I love that I have a separate window for my dump statements and not mix them with html. Since I’m using Ray, I find myself reaching out to other debugging tools less because most of the times Ray is just what I need.",
+                image: 'marian',
+                url: 'https://twitter.com/mvpopuk',
+                title: 'Php & Laravel Developer',
+            ),
+            
         ]);
     }
 }
