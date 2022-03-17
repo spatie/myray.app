@@ -85,18 +85,19 @@
             mx-auto px-6 sm:px-0 flex justify-center items-start">
 
 
-            <div class="md:mt-12 w-full    overflow-hidden
-                " :class="open ? ' sm:h-full ' : 'sm:h-[30rem]'">
-                <div style="padding-bottom: 75%;" class="h-0
-                bg-gradient-to-r from-indigo-700 to-indigo-900"
-                    :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
-                    <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
-                        @click="open = true; console.log(open)">
-                        <img class="absolute w-full h-full top-0 left-0 object-cover
-                        opacity-75 group-hover:opacity-50
+            <div class="md:mt-12 w-full pb-[75%] md:pb-0 " 
+            :class="open == true ? ' sm:h-full ' : ' sm:h-[30rem] '"
+           >
+
+                <button class="absolute w-full h-full inset-0 group flex items-center justify-center"
+                    @click="open = true;">
+
+                    
+                    <img class="absolute w-full h-full top-0 left-0 object-cover
+                        opacity-100 group-hover:opacity-90
                         transition-opacity duration-300
                         " src="/images/intro-video.jpg" alt="Intro screenshot">
-                        <div class="h-14 px-6 mt-24 lg:mt-64
+                    <div class="h-14 px-6 mt-24 lg:mt-64
                         bg-gradient-to-r from-indigo-500 to-indigo-600
                         border-b border-r border-indigo-700
                         shadow-lg rounded-sm
@@ -105,28 +106,32 @@
                         focus:outline-none focus:ring-0
                         whitespace-nowrap
                         overflow-hidden flex items-center">
-                            Introducing Ray <i class="ml-1.5 mt-1 fas fas fa-play text-xs"></i>
-                        </div>
-                    </button>
-                    <template x-if="open">
-                        <div class="fixed inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center"
-                            @keydown.window.escape="open = false">
-                            <div class="
+                        Introducing Ray <i class="ml-1.5 mt-1 fas fas fa-play text-xs"></i>
+                    </div>
+                    <div  class="h-0
+                bg-gradient-to-r from-indigo-700 to-indigo-900"
+                        :class="open ? ' ' : 'sm:top-1/2 sm:transform sm:-translate-y-1/2'">
+                    </div> 
+                </button>
+                <template x-if="open">
+                    <div class="fixed inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center"
+                        @keydown.window.escape="open = false">
+                        <div class="
                                 absolute inset-0 opacity-75
                                 bg-gradient-to-r from-indigo-500 to-indigo-900">
-                            </div>
-                            <button class="
+                        </div>
+                        <button class="
                                 absolute top-0 right-0 m-6
                                 leading-none text-white text-3xl
                                 ">×</button>
-                            <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
-                                frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" 
-                                @mousedown.away="open = false; ">
-                            </iframe>
-                        </div>
-                    </template>
+                        <iframe src="https://player.vimeo.com/video/688914670?autoplay=1" class="w-full h-full"
+                            frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""
+                            @mousedown.away="open = false; ">
+                        </iframe>
+                    </div>
+                </template>
 
-                </div>
+
             </div>
 
         </div>
@@ -558,7 +563,7 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
         </div>
 
         {{--
-            <div class="relative lg:hidden mx-auto pt-12  flex gap-y-6 flex-wrap lg:gap-3 xl:gap-6 h-full ">
+        <div class="relative lg:hidden mx-auto pt-12  flex gap-y-6 flex-wrap lg:gap-3 xl:gap-6 h-full ">
 
             <div class="testimonial-down lg:w-1/3 w-full flex flex-wrap gap-4  ">
                 @foreach($testimonials as $testimonial)
@@ -579,9 +584,9 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
         </div>
-            
-            --}}
-        
+
+        --}}
+
 
 
         <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center flex">
