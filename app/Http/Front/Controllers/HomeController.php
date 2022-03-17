@@ -193,7 +193,7 @@ class HomeController
                 text: "Ray is a tool you don’t think you need until you use it. Now I can’t work without it.",
                 image: 'alex',
                 url: 'https://twitter.com/alexjgarrett',
-                title: 'Found Team Code Course',
+                title: 'Founder Team Code Course',
             ),
             new Testimonial(
                 name: 'Andre Biel',
