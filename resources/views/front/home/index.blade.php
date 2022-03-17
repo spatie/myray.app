@@ -548,16 +548,17 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
         <div id="testimonial-grow-container"
-            class="relative  mx-auto pt-12 lg:pt-12 lg:w-full hidden  lg:flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden  ">
+            class="relative  mx-auto pt-12 lg:pt-12 lg:w-full   flex flex-wrap lg:flex-nowrap  gap-6 lg:gap-3 xl:gap-6 transition-all  overflow-hidden  ">
 
             @include('components.testimonials')
             <div id="testimonials-gradient"
-                class="absolute lg:inline-block hidden  w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white ">
+                class="absolute inline-block   w-full h-24 bottom-0 left-0 overflow-hidden  bg-gradient-to-t from-white ">
             </div>
 
         </div>
 
-        <div class="relative lg:hidden mx-auto pt-12  flex gap-y-6 flex-wrap lg:gap-3 xl:gap-6 h-full ">
+        {{--
+            <div class="relative lg:hidden mx-auto pt-12  flex gap-y-6 flex-wrap lg:gap-3 xl:gap-6 h-full ">
 
             <div class="testimonial-down lg:w-1/3 w-full flex flex-wrap gap-4  ">
                 @foreach($testimonials as $testimonial)
@@ -578,9 +579,12 @@ grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
 
 
         </div>
+            
+            --}}
+        
 
 
-        <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center lg:flex hidden">
+        <div class="w-full relative mt-12 lg:mt-0 left-0  items-center justify-center flex">
             <div id="testimonial-showMor-btn">
                 <x-button class="mt-4 ">
                     Show more...
