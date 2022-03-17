@@ -218,7 +218,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Dom Thomas',
-                text: "Ray is undoubtedly the best debugging tool currently 💪. 'm trying to convince the whole team to use it ♥️",
+                text: "Ray is undoubtedly the best debugging tool currently 💪. I'm trying to convince the whole team to use it ♥️",
                 image: 'dom',
                 url: 'https://twitter.com/DomThomasEs',
                 title: 'Spanish Programming Hero',
