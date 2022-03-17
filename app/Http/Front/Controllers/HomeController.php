@@ -217,6 +217,13 @@ class HomeController
                 title: 'Rescuer of projects',
             ),
             new Testimonial(
+                name: 'Dom Thomas',
+                text: "Ray is undoubtedly the best debugging tool currently 💪. 'm trying to convince the whole team to use it ♥️",
+                image: 'dom',
+                url: 'https://twitter.com/DomThomasEs',
+                title: 'Spanish Programming Hero',
+            ),
+            new Testimonial(
                 name: 'JL',
                 text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in chrome. Wordpress, Laravel, Yii: I've used ray everywhere and it's done nothing but make me more productive.",
                 image: 'jl',
@@ -244,7 +251,7 @@ class HomeController
                 url: 'https://twitter.com/mvpopuk',
                 title: 'Php & Laravel Developer',
             ),
-            
+
         ]);
     }
 }
