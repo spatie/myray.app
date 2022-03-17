@@ -45,7 +45,7 @@ class HomeController
     debugging tools!',
                 image: 'michael',
                 url: 'https://twitter.com/michaeldyrynda',
-                title: 'Senior Developer at MaxoTel',
+                title: 'Technical Lead at Nodifi',
             ),
             new Testimonial(
                 name: 'Jeffrey van Rossum',
