@@ -31,12 +31,12 @@
 
 
         <div class=" z-0 absolute inset-0 pointer-events-none">
-            <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-48 transform   "
+            <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-[30rem] lg:top-48 transform   "
                 src="/images/background-01.svg" />
         </div>
     </div>
 
-    <section class=" p-12">
+    <section class=" p-0 md:p-12">
 
         <div class="">
 
@@ -96,7 +96,7 @@
                         opacity-75 group-hover:opacity-50
                         transition-opacity duration-300
                         " src="/images/intro-video.jpg" alt="Intro screenshot">
-                        <div class="h-14 px-6 mt-64
+                        <div class="h-14 px-6 mt-24 lg:mt-64
                         bg-gradient-to-r from-indigo-500 to-indigo-600
                         border-b border-r border-indigo-700
                         shadow-lg rounded-sm
@@ -140,7 +140,7 @@
                 <h3 class="text-left text-3xl font-bold">
                     Use Ray in your next project
                 </h3>
-                <p class="text-sm text-left  w-full ">
+                <p class="text-sm mt-4 text-left  w-full ">
                     Ray is up and running in seconds in these languages and frameworks!
                 </p>
             </div>
@@ -251,7 +251,7 @@
 
         <div class="
         mx-auto px-6 sm:px-12 md:px-16
-        pt-24
+        pt-0 lg:pt-24
         max-w-4xl
         markup
         grid gap-8 lg:gap-x-16 md:grid-cols-2 items-start
