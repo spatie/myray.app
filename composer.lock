@@ -4451,16 +4451,16 @@
         },
         {
             "name": "spatie/spatie-price-api",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/spatie-price-api.git",
-                "reference": "93762a89af16cb3c0c85f6ee392b7d0e1bf3c69b"
+                "reference": "bc84069e005447a9605acc9db4d8fb534a706038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/spatie-price-api/zipball/93762a89af16cb3c0c85f6ee392b7d0e1bf3c69b",
-                "reference": "93762a89af16cb3c0c85f6ee392b7d0e1bf3c69b",
+                "url": "https://api.github.com/repos/spatie/spatie-price-api/zipball/bc84069e005447a9605acc9db4d8fb534a706038",
+                "reference": "bc84069e005447a9605acc9db4d8fb534a706038",
                 "shasum": ""
             },
             "require": {
@@ -4500,7 +4500,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/spatie-price-api/issues",
-                "source": "https://github.com/spatie/spatie-price-api/tree/1.1.1"
+                "source": "https://github.com/spatie/spatie-price-api/tree/1.1.2"
             },
             "funding": [
                 {
@@ -4512,7 +4512,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-02-14T14:49:33+00:00"
+            "time": "2022-04-25T12:35:30+00:00"
         },
         {
             "name": "spatie/ssh",
@@ -10829,5 +10829,5 @@
         "ext-zip": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
