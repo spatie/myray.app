@@ -86,7 +86,7 @@
     </template>
 </div>
 
-<div class="mt-4 mb-4 text-sm text-indigo-900 text-opacity-50">
+<div class="mt-4 mb-4 mx-auto text-sm text-indigo-900 text-opacity-50">
     <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <button class="group
     py-6 px-6 w-full
