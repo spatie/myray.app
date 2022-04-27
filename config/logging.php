@@ -117,7 +117,6 @@ return [
 
         'flare' => [
             'driver' => 'flare',
-            'level' => 'error',
         ],
     ],
 

@@ -11,6 +11,10 @@
     <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16
     max-w-4xl  ">
 
+        <div class=" z-0 absolute inset-0 pointer-events-none">
+            <img alt="" style="height:700px" class="absolute w-full top-[30rem] lg:top-[18rem] transform   "
+                src="/images/background-01.svg" />
+        </div>
         <div class="flex flex-wrap lg:flex-nowrap items-center gap-x-24  w-full">
             <div>
                 <p class="w-full text-center lg:text-left font-black text-4xl leading-tight">
@@ -24,16 +28,12 @@
 
             </div>
 
-            <div class="w-full text-center lg:text-left mt-6">
+            <div class="w-full text-center lg:text-left mt-6 flex flex-col">
                 @include('partials.priceCard')
             </div>
         </div>
 
 
-        <div class=" z-0 absolute inset-0 pointer-events-none">
-            <img alt="" style="bottom: 3rem; height:700px" class="absolute w-full top-[30rem] lg:top-48 transform   "
-                src="/images/background-01.svg" />
-        </div>
     </div>
 
     <section class=" p-0 md:p-12">
