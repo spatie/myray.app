@@ -118,7 +118,7 @@
     </div>
     --}}
 
-    <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
+    <a class="group inline-flex items-center mt-4" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
 
 
 
