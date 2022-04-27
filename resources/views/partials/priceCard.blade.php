@@ -86,8 +86,8 @@
     </template>
 </div>
 
-{{--
 <div class="mt-4 mb-4 mx-auto text-sm text-indigo-900 text-opacity-50">
+{{--
     <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <button class="group
     py-6 px-6 w-full
@@ -119,9 +119,6 @@
     --}}
 
     <a class="group inline-flex items-center mt-4" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
-
-
-
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
             Get an annual license
             @if($couldFetchPrice)
