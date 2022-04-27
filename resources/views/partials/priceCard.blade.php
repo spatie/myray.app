@@ -118,7 +118,7 @@
     </div>
     --}}
 
-    <a class="group inline-flex items-center mt-4" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
+    <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
             Get an annual license
             @if($couldFetchPrice)
