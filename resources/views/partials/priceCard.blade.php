@@ -86,6 +86,7 @@
     </template>
 </div>
 
+{{--
 <div class="mt-4 mb-4 text-sm text-indigo-900 text-opacity-50">
     <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <button class="group
@@ -115,6 +116,8 @@
             <span x-text="timer.seconds">{{ $component->seconds() }}</span>s</span>
         </x-countdown>
     </div>
+
+    --}}
 
     <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
 
