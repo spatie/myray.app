@@ -87,7 +87,6 @@
 </div>
 
 <div class="mt-4 mb-4 mx-auto text-sm text-indigo-900 text-opacity-50">
-{{--
     <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <button class="group
     py-6 px-6 w-full
@@ -107,7 +106,7 @@
     <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
         Available until
         @php
-            $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2022-04-26 23:59' );
+            $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2022-11-28 23:59' );
         @endphp
         <x-countdown class="inline-block tabular-nums font-bold" :expires="$expirationDate">
             <span x-text="timer.days">{{ $component->days() }}</span>d</span>
@@ -116,7 +115,6 @@
             <span x-text="timer.seconds">{{ $component->seconds() }}</span>s</span>
         </x-countdown>
     </div>
-    --}}
 
     <a class="group inline-flex items-center" target="_blank" href="{{spatieUrl('https://spatie.be/products/ray')}}">
         <span class="leading-tight border-b border-indigo-900 border-opacity-50">
