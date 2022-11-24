@@ -104,7 +104,7 @@
     </a>
 
     <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
-        Available until
+        Available for
         @php
             $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2022-11-28 23:59' );
         @endphp
