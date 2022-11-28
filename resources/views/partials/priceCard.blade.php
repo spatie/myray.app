@@ -106,7 +106,7 @@
     <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
         Available for
         @php
-            $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2022-11-28 23:59' );
+            $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2022-11-29 09:00' );
         @endphp
         <x-countdown class="inline-block tabular-nums font-bold" :expires="$expirationDate">
             <span x-text="timer.days">{{ $component->days() }}</span>d</span>
