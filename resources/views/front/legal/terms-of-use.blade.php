@@ -9,7 +9,7 @@
 @markdown
 These Ray terms of use (the “Terms of Use”) apply to all services provided through <https://myray.app/terms-of-use> by Spatie BVBA, with registered offices at Kruikstraat 22/12, 2018 Antwerp, Belgium and registered at the CBE under number BE 0809.387.596 hereafter referred to as “Ray” “we”, “us” or “our”.
 
-By buying and downloading our App, You explicitly agree to these Terms of Use.
+By buying and/or downloading our App, You explicitly agree to these Terms of Use.
 
 We reserve however the right, in our sole discretion, to change, modify, add or remove these Terms of Use or parts of it at any time. When we make material changes to the Terms of Use, we shall send You a clear notice, as appropriate given the particular circumstances. Therefore, You should check these Terms of Use periodically for modifications. By buying and using our app after having modified these Terms of Use, we presume You have read and agreed to accept these modifications. If You do not agree to these Terms of Use, You should not use our app any longer and remove it from your devices (computer, laptop, tablet, smartphone, etc.) instantly.
 
@@ -45,7 +45,7 @@ The following definitions apply to these Terms of Use:
 
 ## 4. Use of the App
 
-4.1. Spatie is the owner or licensee of all rights in relation to the App. The ebook and all videos within the App are also copyrighted under applicable law.
+4.1. Spatie is the owner or licensee of all rights in relation to the App.
 
 4.2. You shall not modify, copy, sublicence, lease, sell, publish, transmit, (re)distribute, perform, assign, disassemble, decompile, participate in the transfer or sale, create derivative works of, or in any way exploit, any of content of the app, in whole or in part. Nor do You have the right to transfer the app to third parties.
 
