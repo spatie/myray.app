@@ -21,7 +21,7 @@ class Post extends Model implements Feedable, HasMedia
     use InteractsWithMedia;
 
     protected $casts = [
-        'publish_date' => 'datetime',
+        'published_at' => 'datetime',
         'published' => 'boolean',
     ];
 
