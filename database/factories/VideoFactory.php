@@ -17,10 +17,8 @@ class VideoFactory extends Factory
 
     /**
      * Define the model's default state.
-     *
-     * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'chapter_id' => Chapter::factory(),

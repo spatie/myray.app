@@ -10,9 +10,7 @@ class Testimonial
         public string $image,
         public string $url,
         public string $title = '',
-    )
-    {
-
+    ) {
     }
 
     public function image(): string
