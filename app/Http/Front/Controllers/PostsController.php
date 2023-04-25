@@ -12,7 +12,7 @@ class PostsController
             ->published()
             ->orderByDesc('published_at')
             ->orderByDesc('id')
-            ->simplePaginate(50);
+            ->simplePaginate(20);
 
         return view('front.blog.index', [
             'posts' => $posts,
