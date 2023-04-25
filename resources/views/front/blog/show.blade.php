@@ -6,9 +6,13 @@
     <main>
         <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16 max-w-4xl">
             <div class="mt-8">
+                @if($image = $post->getFirstMedia('blog'))
+                    <img alt="header image" src="{{ $image->getUrl() }}" />
+                @endif
+
                 <h2>{{ $post->title }}</h2>
                 <div class="text-indigo-900 text-opacity-50 text-xs">
-                    {{ $post->published_at->format('d F Y') }}
+                    {{ $post->published_at?->format('d F Y') }}
                 </div>
                 <div>
                     <ul class="list-none flex mt-4">
