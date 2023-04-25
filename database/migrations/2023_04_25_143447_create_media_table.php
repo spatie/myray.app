@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('mime_type')->nullable();
             $table->string('disk');
             $table->unsignedInteger('size');
+            $table->json('generated_conversions')->nullable();
             $table->longText('manipulations');
             $table->longText('custom_properties');
             $table->longText('responsive_images');

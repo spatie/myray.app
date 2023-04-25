@@ -36,7 +36,7 @@ class PostResource extends Resource
                     ->fileAttachmentsVisibility('public')
                     ->required(),
                 Forms\Components\TextInput::make('preview_secret')->disabled(),
-                Forms\Components\DateTimePicker::make('publish_date')
+                Forms\Components\DateTimePicker::make('published_at')
                     ->timezone('Europe/Brussels')
                     ->withoutSeconds()
                     ->nullable(),
@@ -51,7 +51,7 @@ class PostResource extends Resource
             ->columns([
                 Tables\Columns\SpatieMediaLibraryImageColumn::make('image')->collection('blog'),
                 Tables\Columns\TextColumn::make('title')->sortable(),
-                Tables\Columns\TextColumn::make('publish_date')->sortable()->dateTime(),
+                Tables\Columns\TextColumn::make('published_at')->sortable()->dateTime(),
                 Tables\Columns\TextColumn::make('created_at')->sortable()->dateTime(),
             ])
             ->filters([

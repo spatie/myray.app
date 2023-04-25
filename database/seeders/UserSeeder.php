@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
             User::create([
                 'name' => $name,
                 'email' => strtolower($name) . '@spatie.be',
-                'password' => 'password',
+                'password' => bcrypt('password'),
             ]);
         }
     }
