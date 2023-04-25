@@ -21,6 +21,7 @@
         "aws/aws-sdk-php": "^3.211",
         "blade-ui-kit/blade-ui-kit": "^0.4",
         "fakerphp/faker": "^1.9.1",
+        "filament/filament": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.8",
         "laravel/socialite": "^5.6",
@@ -95,7 +96,8 @@
             "@php artisan key:generate --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan filament:upgrade"
         ]
     }
 }
