@@ -15,8 +15,6 @@ class AuthServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->registerPolicies();
-
         Auth::viaRequest('license-api-key', function ($request) {
             $license = License::where('key', $request->getPassword())->first();
 
