@@ -2,10 +2,12 @@
 <html lang="en" class="bg-gray-100 overflow-x-hidden">
     <head>
         <meta charset="utf-8">
+        <x-feed-links />
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="dns-prefetch" href="//use.fontawesome.com">
         <link rel="dns-prefetch" href="//www.googletagmanager.com">
+
         @include('partials.gtm-head')
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,6 +68,6 @@
             <!-- End Twitter universal website tag code -->
         @endproduction
 
-        
+
     </body>
 </html>
