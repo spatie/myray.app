@@ -3,7 +3,6 @@
 namespace App\Http\Front\Controllers;
 
 use App\Http\Front\Requests\SubscribeRequest;
-use App\Services\Ray;
 use Exception;
 use Illuminate\Support\Facades\Http;
 
