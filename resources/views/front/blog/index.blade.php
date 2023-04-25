@@ -29,6 +29,9 @@
             <div class="mt-8">
             {{ $posts->links() }}
             </div>
+
+            @include('partials.cta')
+
         </div>
     </main>
 @endsection
