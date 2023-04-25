@@ -2,6 +2,10 @@
 
 return [
 
+    'spatie_prices_api' => [
+        'purchasable_id' => env('PURCHASABLE_ID'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -14,14 +18,11 @@ return [
     |
     */
 
-    'spatie_prices_api' => [
-        'purchasable_id' => env('PURCHASABLE_ID'),
-    ],
-
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+        'scheme' => 'https',
     ],
 
     'postmark' => [
@@ -33,9 +34,9 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_AWS_ACCESS_KEY_ID'),
-        'secret' => env('SES_AWS_SECRET_ACCESS_KEY'),
-        'region' => env('SES_AWS_DEFAULT_REGION', 'us-east-1'),
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
     'vimeo' => [
@@ -51,6 +52,7 @@ return [
         'client_secret' => env('GITHUB_SECRET'),
         'redirect' => env('GITHUB_REDIRECT_URI'),
     ],
+
     'mailcoach' => [
         'subscription_uuid' => env('MAILCOACH_SUBSCRIPTION_UUID'),
     ],
