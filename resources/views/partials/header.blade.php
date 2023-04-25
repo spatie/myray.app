@@ -21,6 +21,7 @@
         grid grid-flow-col gap-8
         font-semibold">
             <li><a class="markup-link" href="{{spatieUrl('https://spatie.be/docs/ray')}}">Docs</a></li>
+            <li><a class="markup-link" href="{{ route('blog') }}">Blog</a></li>
             <li><a class="markup-link" href="{{spatieUrl('https://spatie.be/products/ray')}}">Buy</a></li>
             <li><a class="hover:text-indigo-500
                 transition-colors duration-300" title="GitHub" href="https://github.com/spatie/ray/"><i class="fab fab fa-github"></i></a></li>
