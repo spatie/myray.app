@@ -19,3 +19,5 @@ Route::view('privacy', 'front.legal.privacy')->name('privacy');
 Route::feeds();
 Route::get('blog', [PostsController::class, 'index'])->name('blog');
 Route::get('blog/{postSlug}', [PostsController::class, 'detail'])->name('post.show');
+
+Route::get('login', fn() => redirect()->to('/admin/login'))->name('login');
