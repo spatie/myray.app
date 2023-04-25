@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('custom_properties');
             $table->longText('responsive_images');
             $table->unsignedInteger('order_column')->nullable();
-            $table->uuid('uuid')->nullable();
+            $table->uuid()->nullable();
             $table->string('conversions_disk')->nullable();
             $table->nullableTimestamps();
         });
