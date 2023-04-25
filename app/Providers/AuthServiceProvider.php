@@ -13,7 +13,7 @@ class AuthServiceProvider extends ServiceProvider
         License::class => LicensePolicy::class,
     ];
 
-    public function boot()
+    public function boot(): void
     {
         Auth::viaRequest('license-api-key', function ($request) {
             $license = License::where('key', $request->getPassword())->first();
