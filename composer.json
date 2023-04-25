@@ -19,33 +19,33 @@
         "ext-openssl": "*",
         "ext-zip": "*",
         "aws/aws-sdk-php": "^3.211",
-        "blade-ui-kit/blade-ui-kit": "^0.3",
+        "blade-ui-kit/blade-ui-kit": "^0.4",
         "fakerphp/faker": "^1.9.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^9.3",
-        "laravel/socialite": "^5.5",
-        "laravel/tinker": "^2.7",
-        "laravel/ui": "^3.4",
+        "laravel/framework": "^10.8",
+        "laravel/socialite": "^5.6",
+        "laravel/tinker": "^2.8",
+        "laravel/ui": "^4.2",
         "league/flysystem-aws-s3-v3": "^3.0",
         "spatie/commonmark-highlighter": "^3.0",
-        "spatie/laravel-backup": "^8.0",
+        "spatie/laravel-backup": "^8.1",
         "spatie/laravel-flash": "^1.9",
-        "spatie/laravel-honeypot": "^4.0",
-        "spatie/laravel-ignition": "^1.2",
+        "spatie/laravel-honeypot": "^4.3",
+        "spatie/laravel-ignition": "^2.0",
         "spatie/laravel-log-dumper": "^1.4",
         "spatie/laravel-menu": "^4.1",
         "spatie/laravel-tail": "^4.4",
         "spatie/spatie-price-api": "^1.0",
         "spatie/yaml-front-matter": "^2.0",
-        "symfony/http-client": "^6.0",
-        "symfony/postmark-mailer": "^6.0",
-        "symfony/yaml": "^6.0"
+        "symfony/http-client": "^6.2",
+        "symfony/postmark-mailer": "^6.2",
+        "symfony/yaml": "^6.2"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.12",
+        "barryvdh/laravel-ide-helper": "^2.13",
         "friendsofphp/php-cs-fixer": "^3.6",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
+        "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^9.5.10"
     },
     "config": {
@@ -76,7 +76,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
