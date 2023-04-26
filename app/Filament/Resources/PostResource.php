@@ -32,7 +32,7 @@ class PostResource extends Resource
 
                 Forms\Components\Textarea::make('summary')->required(),
                 MarkdownEditor::make('text')
-                    ->fileAttachmentsDisk('blog')
+                    ->fileAttachmentsDisk('public')
                     ->fileAttachmentsVisibility('public')
                     ->required(),
                 Forms\Components\TextInput::make('preview_secret')->disabled(),
