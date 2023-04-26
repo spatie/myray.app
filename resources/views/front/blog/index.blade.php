@@ -33,21 +33,22 @@
 
                 @include('partials.cta')
 
+            @else
+                <div class="mt-12 justify-center text-xl">
+                    <div>
+                        The first post will be published soon...
+                    </div>
+
+                    <div>
+                        <a
+                            class="underline text-xs mt-4"
+                            href="/">
+                            Go back
+                        </a>
+                    </div>
+                </div>
+
             @endif
-
-            <div class="mt-12 justify-center text-xl">
-                <div>
-                    The first post will be published soon...
-                </div>
-
-                <div>
-                <a
-                    class="underline text-xs mt-4"
-                    href="/">
-                    Go back
-                </a>
-                </div>
-            </div>
         </div>
     </main>
 @endsection
