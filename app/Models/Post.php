@@ -82,7 +82,7 @@ class Post extends Model implements Feedable, HasMedia
     {
         $query
             ->where('published', false)
-            ->whereNotNull('publish_date');
+            ->whereNotNull('published_at');
     }
 
     public function updateAttributes(array $attributes)
