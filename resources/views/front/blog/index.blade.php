@@ -18,7 +18,7 @@
                             {{ $post->published_at->format('d F Y') }}
                         </div>
                         <p class="text-indigo-900 text-opacity-50 mt-2 text-sm">
-                            {{ $post->excerpt }}
+                            {{ $post->summary }}
                         </p>
                         <a
                             class="underline text-xs mt-4"

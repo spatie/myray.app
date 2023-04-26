@@ -10,6 +10,11 @@ class TestCommand extends Command
 
     public function handle()
     {
-        ray('Hi there')->red();
+        $collection = collect(['a', 'b', 'c'])
+            ->map(fn(string $letter) => strtoupper($letter));
+
+        ray($collection);
+
+        $collection->reverse();
     }
 }
