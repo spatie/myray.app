@@ -5,7 +5,7 @@
 @section('content')
     <main class="px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-            <p class="text-base font-semibold leading-7 text-indigo-600">{{ $post->published_at->format('d F Y') }}</p>
+            <p class="text-base font-semibold leading-7 text-indigo-600">{{ $post->published_at?->format('d F Y') ?? 'Preview' }}</p>
             <div class="relative mt-2 flex items-center gap-x-6">
                 @foreach ($post->authors as $author)
                     <div class="flex items-center gap-x-2">
