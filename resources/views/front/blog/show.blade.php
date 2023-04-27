@@ -27,7 +27,7 @@
             @endif
 
             <h1 class="my-4 text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">{{ $post->title }}</h1>
-            <div class="prose text-base text-indigo-900 leading-relaxed">
+            <div class="markup-blog markup markup-links markup-table markup-code markup-lists text-base">
                 {!! $post->formatted_text !!}
             </div>
 
