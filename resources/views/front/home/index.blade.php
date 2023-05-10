@@ -190,6 +190,14 @@
                         Vue</p>
                 </a>
 
+                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/react"
+                   class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
+                    <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                         src="/images/frameworks/react.svg" alt="">
+                    <p class="w-full text-left text-xs ">
+                        React</p>
+                </a>
+
                 <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/alpinejs"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
