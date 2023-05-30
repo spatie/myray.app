@@ -192,7 +192,7 @@
 }
 
 .markup-code pre code {
-    background:transparent 
+    background:transparent
 }
 
 .markup-code pre {
@@ -326,3 +326,6 @@
     @apply text-[rgb(100,116,139)];
 }
 
+.markup-blog h2 {
+    margin-top: 0;
+}

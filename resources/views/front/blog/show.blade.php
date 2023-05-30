@@ -3,36 +3,32 @@
 @section('title', $post->title)
 
 @section('content')
-    <main>
-        <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16 max-w-4xl">
-            <div class="mt-8">
-                @if($image = $post->getFirstMedia('blog'))
-                    <img alt="header image" src="{{ $image->getUrl() }}" />
-                @endif
+    <main class="px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+            <div class="relative mt-2 flex items-center gap-x-6">
+                <p class="text-base font-semibold leading-7 text-indigo-600">{{ $post->published_at?->format('d F Y') ?? 'Preview' }}</p>
+                @foreach ($post->authors as $author)
+                    <div class="flex items-center gap-x-2">
+                        <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
+                        <div class="text-[0.6rem] leading-6">
+                            <p class="font-semibold text-indigo-900">
+                                <span>
+                                    <span class="absolute inset-0"></span>
+                                    {{ $author->name }}
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
 
-                <h2>{{ $post->title }}</h2>
-                <div class="text-indigo-900 text-opacity-50 text-xs">
-                    {{ $post->published_at?->format('d F Y') }}
-                </div>
-                <div>
-                    <ul class="list-none flex mt-4">
-                        @foreach($post->authors as $author)
-                            <li>
-                                <a href="{{ $author->link }}">
-                                    <div class="flex items-center">
-                                        <img src="{{ $author->gravatar_url }}" class="h-6 rounded-full" alt="avatar"/>
-                                        <span class="ml-2 text-indigo-900 text-opacity-50 text-xs">
-                                        {{ $author->name }}
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-                <div class="text-indigo-900 text-opacity-50 mt-4 text-sm">
-                    {!! $post->formatted_text !!}
-                </div>
+            @if($image = $post->getFirstMedia('blog'))
+                <img class="w-full rounded-md my-4" alt="" src="{{ $image->getUrl() }}" />
+            @endif
+
+            <h1 class="my-4 text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">{{ $post->title }}</h1>
+            <div class="markup-blog markup markup-links markup-table markup-code markup-lists text-base">
+                {!! $post->formatted_text !!}
             </div>
 
             @include('partials.cta')

@@ -89,7 +89,7 @@ class Post extends Model implements Feedable, HasMedia
     {
         $this->title = $attributes['title'];
         $this->text = $attributes['text'];
-        $this->publish_date = $attributes['publish_date'];
+        $this->published_at = $attributes['published_at'];
         $this->published = $attributes['published'] ?? false;
 
         $this->save();
@@ -100,7 +100,7 @@ class Post extends Model implements Feedable, HasMedia
     public static function getFeedItems()
     {
         return static::published()
-            ->orderByDesc('publish_date')
+            ->orderByDesc('published_at')
             ->limit(100)
             ->get();
     }

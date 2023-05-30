@@ -2,53 +2,60 @@
 
 @section('title', 'Blog')
 
-
 @section('content')
-    <main>
-        <div class="mx-auto px-6 sm:px-12 md:px-16 pb-16 max-w-4xl">
-            @if(count($posts))
-                @foreach($posts as $post)
-                    <div class="mt-8">
-                        <h2 class="hover:underline">
-                            <a href="{{ route('post.show', $post->idSlug()) }}">
-                                {{ $post->title }}
-                            </a>
-                        </h2>
-                        <div class="text-indigo-900 text-opacity-50 text-xs">
-                            {{ $post->published_at->format('d F Y') }}
+    <main class="max-w-4xl mx-auto">
+        <div class="mx-auto px-6 sm:px-12 md:px-16">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">The Ray blog</h2>
+                <p class="mt-2 text-lg leading-8 text-gray-600">Shining a light on internals and updates.</p>
+            </div>
+            <div class="border-t border-gray-200 mt-10 sm:mt-16 divide-y divide-indigo-100 w-full">
+                @forelse($posts as $post)
+                    <article class="flex py-12 flex-col items-start justify-between">
+                        <div class="flex items-center gap-x-4 text-xs">
+                            <time datetime="{{ $post->published_at->format('Y-m-d') }}" class="text-gray-500">{{ $post->published_at->format('d F Y') }}</time>
                         </div>
-                        <p class="text-indigo-900 text-opacity-50 mt-2 text-sm">
-                            {{ $post->summary }}
-                        </p>
-                        <a
-                            class="underline text-xs mt-4"
-                            href="{{ route('post.show', $post->idSlug()) }}">
-                            Read more
-                        </a>
-                    </div>
-                @endforeach
-                <div class="mt-8">
-                    {{ $posts->links() }}
-                </div>
-
-                @include('partials.cta')
-
-            @else
-                <div class="mt-12 justify-center text-xl">
-                    <div>
-                        The first post will be published soon...
-                    </div>
-
-                    <div>
-                        <a
-                            class="underline text-xs mt-4"
-                            href="/">
-                            Go back
-                        </a>
-                    </div>
-                </div>
-
-            @endif
+                        <div class="group relative">
+                            <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
+                                <a href="{{ route('post.show', $post->idSlug()) }}">
+                                    <span class="absolute inset-0"></span>
+                                    {{ $post->title }}
+                                </a>
+                            </h3>
+                            <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ strip_tags($post->summary) }}</p>
+                        </div>
+                        <div class="relative mt-2 flex items-center gap-x-6">
+                            @foreach ($post->authors as $author)
+                                <div class="flex items-center gap-x-2">
+                                    <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
+                                    <div class="text-[0.6rem] leading-6">
+                                        <p class="font-semibold text-indigo-900">
+                                            <span>
+                                                <span class="absolute inset-0"></span>
+                                                {{ $author->name }}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </article>
+                @empty
+                    <article class="flex py-12 flex-col items-start justify-between">
+                        <div class="group relative">
+                            <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
+                                The first post will be published soon...
+                            </h3>
+                        </div>
+                    </article>
+                @endforelse
+            </div>
         </div>
+
+        <div class="mt-8">
+            {{ $posts->links() }}
+        </div>
+
+        @include('partials.cta')
     </main>
 @endsection
