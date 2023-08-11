@@ -34,7 +34,7 @@
         </div>
         <div x-show="selected == 'JavaScript'">
             <dl class="grid bg-white bg-opacity-25 md:grid-cols-auto-1fr" >
-                @include('components.syntax-javaScript')
+                @include('components.syntax-javascript')
             </dl>
         </div>
         
