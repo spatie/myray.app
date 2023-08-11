@@ -19,8 +19,8 @@
                 <li class="bg-left-bottom cursor-pointer" :class="{'markup-link': (selected === 'PHP') }" @click="selected= 'PHP'">
                     PHP
                 </li>
-                <li class="bg-left-bottom  cursor-pointer" :class="{'markup-link': (selected === 'Javascript') }"  @click="selected= 'Javascript'">
-                    Javascript
+                <li class="bg-left-bottom  cursor-pointer" :class="{'markup-link': (selected === 'JavaScript') }"  @click="selected= 'JavaScript'">
+                    JavaScript
                 </li>
             </ul>
         </div>
@@ -32,9 +32,9 @@
                 @include('components.syntax-php')
             </dl>
         </div>
-        <div x-show="selected == 'Javascript'">
+        <div x-show="selected == 'JavaScript'">
             <dl class="grid bg-white bg-opacity-25 md:grid-cols-auto-1fr" >
-                @include('components.syntax-javascript')
+                @include('components.syntax-javaScript')
             </dl>
         </div>
         
