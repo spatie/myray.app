@@ -12,9 +12,11 @@
             <div class="border-t border-gray-200 mt-10 sm:mt-16 divide-y divide-indigo-100 w-full">
                 @forelse($posts as $post)
                     <article class="flex py-12 flex-col items-start justify-between">
+                        @isset($post->published_at)
                         <div class="flex items-center gap-x-4 text-xs">
                             <time datetime="{{ $post->published_at->format('Y-m-d') }}" class="text-gray-500">{{ $post->published_at->format('d F Y') }}</time>
                         </div>
+                        @endisset
                         <div class="group relative">
                             <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
                                 <a href="{{ route('post.show', $post->idSlug()) }}">
