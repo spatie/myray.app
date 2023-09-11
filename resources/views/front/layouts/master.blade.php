@@ -43,6 +43,7 @@
         @bukStyles()
         @bukScripts()
 
+        <script src="https://cdn.usefathom.com/script.js" data-site="AUCCHTBP" defer></script>
         <script  src=" {{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="max-w-6xl mx-auto
