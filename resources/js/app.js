@@ -12,6 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 // ANIMATION HERO
 
 function setupTypewriter(t) {
+    if (! t) {
+        return;
+    }
 
     let event = new CustomEvent(`${t.id}_finished`);
 
