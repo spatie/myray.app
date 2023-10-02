@@ -29,10 +29,10 @@
                 <div>
                     Pick a version:
                     <ul class="mt-2 mb-3 list-inside list-disc">
-                        <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}">macOS (Intel)</a></li>
-                        <li><a class="markup-link" download href="{{ $downloadLinkMacAppleSilicon }}">macOS (Apple Silicon)</a></li>
-                        <li><a class="markup-link" download href="{{ $downloadLinkWindows }}">Windows</a></li>
-                        <li><a class="markup-link" download href="{{ $downloadLinkLinux }}">Linux</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}" onclick="fathom.trackGoal('YMAVPAEJ', 0);">macOS (Intel)</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkMacAppleSilicon }}" onclick="fathom.trackGoal('YMAVPAEJ', 0);">macOS (Apple Silicon)</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkWindows }}" onclick="fathom.trackGoal('YMAVPAEJ', 0);">Windows</a></li>
+                        <li><a class="markup-link" download href="{{ $downloadLinkLinux }}" onclick="fathom.trackGoal('YMAVPAEJ', 0);">Linux</a></li>
                     </ul>
                 </div>
 
