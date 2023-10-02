@@ -3,9 +3,7 @@
 @endphp
 
 
-<div
-    x-data="{ download: false }"
-    class="">
+<div x-data="{ download: false }">
     <a data-role='download-link' target="_blank" href="{{ $downloadLinkMacIntel }}" @click.prevent="download = true">
         <x-button class="mt-4 lg:w-full">
             <span data-role="download-label">
