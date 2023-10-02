@@ -11,13 +11,12 @@
 
     </div>
 
-    <div class="w-full text-center lg:text-left mt-6 flex flex-col">
-        <a href="/">
-            <x-button class="mt-4 lg:w-full">
-            <span data-role="download-label">
-                Learn more
-            </span>
-            </x-button>
-        </a>
+    <div class="w-full text-center lg:text-left mt-6">
+        <x-download />
+        <div class="mt-4 mb-4 mx-auto text-sm text-center text-indigo-900 text-opacity-50">
+            <a class="leading-tight border-b border-indigo-900 border-opacity-50" href="/">
+                Or learn more…
+            </a>
+        </div>
     </div>
 </div>
