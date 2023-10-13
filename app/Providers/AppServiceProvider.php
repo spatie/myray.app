@@ -22,18 +22,6 @@ class AppServiceProvider extends ServiceProvider
             'error' => 'alert-error',
         ]);
 
-        Gate::define('viewMailcoach', function (User $user) {
-            return $user->admin;
-        });
-
-        app()->singleton(Vimeo::class, function () {
-            return new Vimeo(new Client([
-                'headers' => [
-                    'Authorization' => 'Bearer '.config('services.vimeo.access'),
-                ],
-            ]));
-        });
-
         Blade::component('app.components.buyButton', 'buy-button');
 
         Blade::directive('markdown', function () {

@@ -2,25 +2,25 @@
 
 namespace App\Http\Front\Controllers;
 
-use App\Models\Post;
+use Spatie\ContentApi\ContentApi;
 
 class PostsController
 {
     public function index()
     {
-        $posts = Post::query()
-            ->published()
-            ->orderByDesc('published_at')
-            ->orderByDesc('id')
-            ->simplePaginate(20);
+        $posts = ContentApi::getPosts('ray', request('page', 1));
 
         return view('front.blog.index', [
             'posts' => $posts,
         ]);
     }
 
-    public function detail(Post $post)
+    public function detail(string $slug)
     {
+        $post = ContentApi::getPost('ray', $slug);
+
+        abort_if(is_null($post), 404);
+
         return view('front.blog.show', [
             'post' => $post,
         ]);

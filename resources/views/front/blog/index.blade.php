@@ -14,12 +14,12 @@
                     <article class="flex py-12 flex-col items-start justify-between">
                         @isset($post->published_at)
                         <div class="flex items-center gap-x-4 text-xs">
-                            <time datetime="{{ $post->published_at->format('Y-m-d') }}" class="text-gray-500">{{ $post->published_at->format('d F Y') }}</time>
+                            <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
                         </div>
                         @endisset
                         <div class="group relative">
                             <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
-                                <a href="{{ route('post.show', $post->idSlug()) }}">
+                                <a href="{{ route('post.show', $post->slug) }}">
                                     <span class="absolute inset-0"></span>
                                     {{ $post->title }}
                                 </a>
@@ -27,6 +27,7 @@
                             <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ strip_tags($post->summary) }}</p>
                         </div>
                         <div class="relative mt-2 flex items-center gap-x-6">
+                            <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
                             @foreach ($post->authors as $author)
                                 <div class="flex items-center gap-x-2">
                                     <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
