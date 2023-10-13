@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d39cb2804bf09b0bc6cc1122333a72c",
+    "content-hash": "f18adcfae155b351a5b13823b1cff00a",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -5176,7 +5176,7 @@
         },
         {
             "name": "spatie/spatie-content-api",
-            "version": "dev-main",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/spatie-content-api.git",
@@ -5206,7 +5206,6 @@
                 "phpstan/phpstan-phpunit": "^1.0",
                 "spatie/laravel-ray": "^1.26"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -5234,7 +5233,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/spatie-content-api/issues",
-                "source": "https://github.com/spatie/spatie-content-api/tree/main"
+                "source": "https://github.com/spatie/spatie-content-api/tree/1.1.1"
             },
             "time": "2023-10-13T12:30:32+00:00"
         },
@@ -12219,9 +12218,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "spatie/spatie-content-api": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

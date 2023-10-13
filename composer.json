@@ -38,7 +38,7 @@
         "spatie/laravel-menu": "^4.1",
         "spatie/laravel-sluggable": "^3.4",
         "spatie/laravel-tail": "^4.4",
-        "spatie/spatie-content-api": "dev-main",
+        "spatie/spatie-content-api": "^1.1.1",
         "spatie/spatie-price-api": "^1.0",
         "spatie/yaml-front-matter": "^2.0",
         "symfony/http-client": "^6.2",
