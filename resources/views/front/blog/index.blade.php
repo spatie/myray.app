@@ -12,7 +12,7 @@
             <div class="border-t border-gray-200 mt-10 sm:mt-16 divide-y divide-indigo-100 w-full">
                 @forelse($posts as $post)
                     <article class="flex py-12 flex-col items-start justify-between">
-                        @isset($post->published_at)
+                        @isset($post->date)
                         <div class="flex items-center gap-x-4 text-xs">
                             <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
                         </div>
@@ -24,7 +24,7 @@
                                     {{ $post->title }}
                                 </a>
                             </h3>
-                            <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ strip_tags($post->summary) }}</p>
+                            <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
                         </div>
                         <div class="relative mt-2 flex items-center gap-x-6">
                             <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
