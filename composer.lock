@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f18adcfae155b351a5b13823b1cff00a",
+    "content-hash": "34309103849822c2a09f5af1b2e5c9db",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -5176,19 +5176,20 @@
         },
         {
             "name": "spatie/spatie-content-api",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/spatie-content-api.git",
-                "reference": "6b822f9cff8a1eb419ed711737a3d4573384202e"
+                "reference": "134faa4c6b2e1006ef1c2ea08144487e99ee2d7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/spatie-content-api/zipball/6b822f9cff8a1eb419ed711737a3d4573384202e",
-                "reference": "6b822f9cff8a1eb419ed711737a3d4573384202e",
+                "url": "https://api.github.com/repos/spatie/spatie-content-api/zipball/134faa4c6b2e1006ef1c2ea08144487e99ee2d7d",
+                "reference": "134faa4c6b2e1006ef1c2ea08144487e99ee2d7d",
                 "shasum": ""
             },
             "require": {
+                "guzzlehttp/guzzle": "^7.8",
                 "illuminate/contracts": "^10.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
@@ -5233,9 +5234,9 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/spatie-content-api/issues",
-                "source": "https://github.com/spatie/spatie-content-api/tree/1.1.1"
+                "source": "https://github.com/spatie/spatie-content-api/tree/1.1.2"
             },
-            "time": "2023-10-13T12:30:32+00:00"
+            "time": "2023-10-16T10:32:04+00:00"
         },
         {
             "name": "spatie/spatie-price-api",
