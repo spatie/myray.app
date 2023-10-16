@@ -8,7 +8,7 @@ class PostsController
 {
     public function index()
     {
-        $posts = ContentApi::getPosts('ray', request('page', 1));
+        $posts = ContentApi::getPosts('ray', request('page', 1), theme: 'nord');
 
         return view('front.blog.index', [
             'posts' => $posts,
@@ -17,7 +17,7 @@ class PostsController
 
     public function detail(string $slug)
     {
-        $post = ContentApi::getPost('ray', $slug);
+        $post = ContentApi::getPost('ray', $slug, theme: 'nord');
 
         abort_unless($post, 404);
 
