@@ -6,7 +6,7 @@
     <main class="px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <div class="relative mt-2 flex items-center gap-x-6">
-                <p class="text-base font-semibold leading-7 text-indigo-600">{{ $post->published_at?->format('d F Y') ?? 'Preview' }}</p>
+                <p class="text-base font-semibold leading-7 text-indigo-600">{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
                 @foreach ($post->authors as $author)
                     <div class="flex items-center gap-x-2">
                         <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
@@ -22,13 +22,23 @@
                 @endforeach
             </div>
 
-            @if($image = $post->getFirstMedia('blog'))
-                <img class="w-full rounded-md my-4" alt="" src="{{ $image->getUrl() }}" />
+            @if($post->header_image)
+                <img class="w-full rounded-md my-4" alt="" src="{{ $post->header_image }}" />
             @endif
 
             <h1 class="my-4 text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">{{ $post->title }}</h1>
             <div class="markup-blog markup markup-links markup-table markup-code markup-lists text-base">
-                {!! $post->formatted_text !!}
+                <?php /** @var Spatie\ContentApi\Data\Set $content */ ?>
+                @foreach ($post->content as $content)
+                    @switch($content->type)
+                        @case(\Spatie\ContentApi\Data\SetType::Text)
+                            {!! $content->text !!}
+                        @break
+                        @case(\Spatie\ContentApi\Data\SetType::Code)
+                            {!! $content->code !!}
+                        @break
+                    @endswitch
+                @endforeach
             </div>
 
             @include('partials.cta')
