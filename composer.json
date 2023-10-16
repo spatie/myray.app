@@ -48,7 +48,7 @@
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
         "friendsofphp/php-cs-fixer": "^3.6",
-        "laravel/envoy": "*",
+        "laravel/envoy": "^2.8",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^9.5.10",
