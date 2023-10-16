@@ -19,7 +19,7 @@ class PostsController
     {
         $post = ContentApi::getPost('ray', $slug);
 
-        abort_if(is_null($post), 404);
+        abort_unless($post, 404);
 
         return view('front.blog.show', [
             'post' => $post,
