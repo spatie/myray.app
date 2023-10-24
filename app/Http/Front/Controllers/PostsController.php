@@ -21,7 +21,15 @@ class PostsController
     {
         $post = ContentApi::getPost('ray', $slug, theme: 'nord');
 
-        abort_unless($post, 404);
+        if (! $post && is_numeric(explode('-', $slug)[0])) {
+            $parts = explode('-', $slug);
+
+            $parts = array_slice($parts, 1);
+
+            return redirect(action([self::class, 'detail'], implode('-', $parts)), 301);
+        }
+
+        abort_if(is_null($post), 404);
 
         return view('front.blog.show', [
             'post' => $post,
