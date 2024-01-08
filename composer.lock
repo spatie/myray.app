@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ad3db0833c18be9258875cd6ffe0887",
+    "content-hash": "7764fc027af843015531f24754051841",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -5178,16 +5178,16 @@
         },
         {
             "name": "spatie/spatie-content-api",
-            "version": "2.1.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/spatie-content-api.git",
-                "reference": "63ff0e5491f3edc8bf7097685409b751f8b43163"
+                "reference": "c454d97580a0681c7b520ed4858826d2cd4c13af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/spatie-content-api/zipball/63ff0e5491f3edc8bf7097685409b751f8b43163",
-                "reference": "63ff0e5491f3edc8bf7097685409b751f8b43163",
+                "url": "https://api.github.com/repos/spatie/spatie-content-api/zipball/c454d97580a0681c7b520ed4858826d2cd4c13af",
+                "reference": "c454d97580a0681c7b520ed4858826d2cd4c13af",
                 "shasum": ""
             },
             "require": {
@@ -5236,9 +5236,9 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/spatie-content-api/issues",
-                "source": "https://github.com/spatie/spatie-content-api/tree/2.1.0"
+                "source": "https://github.com/spatie/spatie-content-api/tree/3.0.0"
             },
-            "time": "2023-12-14T12:48:01+00:00"
+            "time": "2024-01-08T13:30:38+00:00"
         },
         {
             "name": "spatie/spatie-price-api",

@@ -28,20 +28,7 @@
 
             <h1 class="my-4 text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">{{ $post->title }}</h1>
             <div class="markup-blog markup markup-links markup-table markup-code markup-lists text-base">
-                <?php /** @var Spatie\ContentApi\Data\Sets\Set $content */ ?>
-                @foreach ($post->content as $content)
-                    @if ($content instanceof \Spatie\ContentApi\Data\Sets\Text)
-                        {!! $content->text !!}
-                    @endif
-
-                    @if ($content instanceof \Spatie\ContentApi\Data\Sets\Code)
-                        {!! $content->code !!}
-                    @endif
-
-                    @if ($content instanceof \Spatie\ContentApi\Data\Sets\Video)
-                        <iframe class="w-full" style="aspect-ratio: 16/9" src="{{ $content->embedUrl }}{{ $content->loop ? '' : '?' }}{{ $content->autoplay || $content->loop ? '&controls=0&showinfo=0' : '' }}{{ $content->autoplay ? '&autoplay=1&mute=1' : '' }}{{ $content->loop ? '&loop=1' : '' }}"></iframe>
-                    @endif
-                @endforeach
+                {!! $post->content !!}
             </div>
 
             @include('partials.cta')
