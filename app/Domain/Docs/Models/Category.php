@@ -28,6 +28,10 @@ class Category
             return $a->weight <=> $b->weight;
         });
 
+        usort($this->pages, function ($a, $b) {
+            return $a->weight <=> $b->weight;
+        });
+
         foreach ($this->subCategories as $subCategory) {
             $subCategory->sortCategories();
         }
