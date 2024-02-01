@@ -1,3 +1,14 @@
-Hello World
+@extends('front.layouts.master')
 
-<x-docs-navigation></x-docs-navigation>
+@section('title', 'Understand and fix bugs faster using Ray')
+
+@section('description', 'Understand and fix bugs faster using Ray')
+
+@section('content')
+
+
+    Hello World
+
+    <x-docs-navigation></x-docs-navigation>
+
+@endsection
