@@ -10,12 +10,11 @@ class CustomPathParser implements PathParser
     public function parse(string $path): array
     {
         $parts = explode('/', $path);
-        $slug = explode('.', $path)[0];
 
         return [
             'parts' => $parts,
             'category' => implode('/', array_slice($parts, 0, -1)),
-            'slug' => implode('/', $parts),
+            'slug' => str_replace('.md', '', implode('/', $parts)),
             'type' => (end($parts) === '_index.md') ? SheetType::Category : SheetType::Page,
         ];
     }

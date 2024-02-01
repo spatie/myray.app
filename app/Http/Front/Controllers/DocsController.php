@@ -2,14 +2,23 @@
 
 namespace App\Http\Front\Controllers;
 
+use App\Domain\Docs\Models\Navigation;
 use Spatie\Sheets\Sheets;
 
 class DocsController
 {
-    public function index(Sheets $sheets, string $slug = null)
+    public function index()
     {
-        $docs = $sheets->collection('docs')->all()->sortBy('weight');
+        $navigation = Navigation::build();
+        $page = $navigation->topCategory->firstPage();
 
-        return view('front.docs.index', compact('docs'));
+        return view('front.docs.index', compact('page'));
+    }
+
+    public function show(string $slug)
+    {
+        $page = sheets()->collection('docs')->get($slug);
+
+        return view('front.docs.index', compact('page'));
     }
 }

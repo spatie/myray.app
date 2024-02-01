@@ -5,10 +5,7 @@
 @section('description', 'Understand and fix bugs faster using Ray')
 
 @section('content')
+    <h1>{{$page->title}}</h1>
 
-
-    Hello Docs
-
-
-
+    {!! $page->content !!}
 @endsection

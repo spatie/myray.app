@@ -10,6 +10,6 @@ class DocsPage extends Sheet
     {
         $slug = str_replace('.md', '', $this->slug);
 
-        return route('docs.index', compact('slug'));
+        return route('docs.show', compact('slug'));
     }
 }

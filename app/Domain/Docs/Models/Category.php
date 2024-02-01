@@ -2,6 +2,7 @@
 
 namespace App\Domain\Docs\Models;
 
+use App\Domain\Docs\Sheets\DocsPage;
 use Illuminate\Support\Collection;
 
 class Category
@@ -37,5 +38,17 @@ class Category
         foreach ($this->subCategories as $subCategory) {
             $subCategory->sortCategories();
         }
+    }
+
+    public function firstPage(): ?DocsPage
+    {
+        if ($this->pages->count() > 0) {
+            return $this->pages->first();
+        }
+
+        /** @var Category $subCategory */
+        $subCategory = $this->subCategories->first();
+
+        return $subCategory->firstPage();
     }
 }
