@@ -1,15 +1,7 @@
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @import "./bootstrap.css";
 
 @import "./utilities/markup.css";
 @import "./utilities/ray.css";
-
 
 .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
@@ -85,6 +77,6 @@
 }
 
 body.docs .docs-navigation {
-    max-width: 240px;
+    max-width: 300px;
     padding: 0px 30px;
 }

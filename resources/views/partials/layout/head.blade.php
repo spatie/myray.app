@@ -15,7 +15,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c170d0c6e5.js" crossorigin="anonymous"></script>
-<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+@vite(['resources/css/app.css'])
+
 
 @include('partials.favicon')
 
@@ -41,4 +43,4 @@
 @bukScripts()
 
 <script src="https://cdn.usefathom.com/script.js" data-site="AUCCHTBP" defer></script>
-<script  src=" {{ mix('js/app.js') }}" defer></script>
+@vite(['resources/js/app.js'])
