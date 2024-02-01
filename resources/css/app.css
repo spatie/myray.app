@@ -10,7 +10,7 @@
 @import "./utilities/markup.css";
 @import "./utilities/ray.css";
 
- 
+
 .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
   -webkit-background-clip: text;
@@ -82,4 +82,9 @@
 
 .tooltip-hover:hover {
   @apply opacity-25 !important;
+}
+
+body.docs .docs-navigation {
+    max-width: 240px;
+    padding: 0px 30px;
 }

@@ -1,9 +1,12 @@
 <header>
     <nav class="
-        mx-auto px-6 sm:px-12 md:px-16 pt-8 pb-16
-        max-w-4xl
-        flex items-center justify-between
+        @if(isset($narrow) && $narrow)
 
+        max-w-4xl
+        @endif
+        px-6 sm:px-12 md:px-16 pt-8 pb-16
+        mx-auto
+        flex items-center justify-between
     ">
         <div class="sm:flex items-center">
             <div>
@@ -14,7 +17,6 @@
                     By <a class="hover:underline" href="{{spatieUrl()}}">Spatie</a>
                 </span>
             </div>
-
         </div>
 
         <ul class="

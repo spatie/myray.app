@@ -4,7 +4,7 @@
     @include('partials.layout.head')
 </head>
 <body class="max-w-6xl mx-auto bg-white font-sans font-medium text-black">
-    @include('partials.header')
+    @include('partials.header', ['narrow' => true])
 
     @yield('content')
 

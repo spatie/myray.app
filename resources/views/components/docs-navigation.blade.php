@@ -1,4 +1,4 @@
-<div>
+<nav class="docs-navigation">
     <h2>Navigation</h2>
 
     <ul>
@@ -8,4 +8,4 @@
             </li>
         @endforeach
     </ul>
-</div>
+</nav>

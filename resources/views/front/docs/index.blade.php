@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('front.layouts.docs')
 
 @section('title', 'Understand and fix bugs faster using Ray')
 
@@ -7,8 +7,8 @@
 @section('content')
 
 
-    Hello World
+    Hello Docs
 
-    <x-docs-navigation></x-docs-navigation>
+
 
 @endsection
