@@ -6,6 +6,10 @@
         </li>
     @endforeach
     @foreach($category->pages as $page)
-        <li>{{$page->title}}</li>
+        <li>
+            <a href="{{$page->url}}">
+                {{$page->title}}
+            </a>
+        </li>
     @endforeach
 </ul>

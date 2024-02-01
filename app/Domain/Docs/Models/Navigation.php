@@ -2,6 +2,7 @@
 
 namespace App\Domain\Docs\Models;
 
+use App\Domain\Docs\Enum\SheetType;
 use Spatie\Sheets\Sheet;
 
 class Navigation
@@ -11,6 +12,21 @@ class Navigation
     public function __construct()
     {
         $this->topCategory = new Category();
+    }
+
+    public static function build(): self
+    {
+        $navigation = new self();
+
+        $docs = app('sheets')->collection('docs')->all()->sortBy('weight');
+
+        $docs->each(function ($doc) use (&$navigation) {
+            $navigation->add($doc);
+        });
+
+        $navigation->sortCategories();
+
+        return $navigation;
     }
 
     public function add(Sheet $doc): void
@@ -26,6 +42,18 @@ class Navigation
             $category = $category->childCategory($doc->parts[$i]);
         }
 
+        if ($doc->type === SheetType::Category) {
+            $category->weight = $doc->weight;
+            $category->title = $doc->title;
+            return;
+        }
+
         $category->pages[] = $doc;
+    }
+
+    public function sortCategories(): self
+    {
+        $this->topCategory->sortCategories();
+        return $this;
     }
 }

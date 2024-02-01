@@ -23,4 +23,4 @@ Route::get('blog/{slug}', [PostsController::class, 'detail'])->name('post.show')
 
 Route::get('login', fn() => redirect()->to('/admin/login'))->name('login');
 
-Route::get('docs', [DocsController::class, 'index'])->name('docs.index');
+Route::get('docs/{slug?}', [DocsController::class, 'index'])->name('docs.index');

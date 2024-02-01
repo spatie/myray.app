@@ -6,7 +6,7 @@ use Spatie\Sheets\Sheets;
 
 class DocsController
 {
-    public function index(Sheets $sheets)
+    public function index(Sheets $sheets, string $slug = null)
     {
         $docs = $sheets->collection('docs')->all()->sortBy('weight');
 

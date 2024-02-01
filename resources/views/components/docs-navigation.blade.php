@@ -1,6 +1,4 @@
-<nav class="docs-navigation">
-    <h2>Navigation</h2>
-
+<nav class="docs-navigation p-8">
     <ul>
         @foreach($navigation->topCategory->subCategories as $key => $category)
             <li>
