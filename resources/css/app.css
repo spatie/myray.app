@@ -146,4 +146,11 @@ body.docs .docs-navigation {
             margin-bottom: .5rem;
         }
     }
+
+    & .shiki {
+        margin-bottom: 1rem;
+        padding: 1.25rem;
+        font-size: .7rem;
+        border-radius: 4px;
+    }
 }
