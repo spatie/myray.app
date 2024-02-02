@@ -3,7 +3,6 @@
 namespace App\Http\Front\Controllers;
 
 use App\Domain\Docs\Models\Navigation;
-use Spatie\Sheets\Sheets;
 
 class DocsController
 {

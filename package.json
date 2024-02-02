@@ -34,7 +34,7 @@
         "laravel-vite-plugin": "^1.0.1",
         "postcss": "^8.4.33",
         "postcss-preset-env": "^9.3.0",
-        "shiki": "^0.14.1",
+        "shiki": "^0.9.5",
         "vite": "^5.0.12"
     },
     "type": "module"

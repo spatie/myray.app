@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2212b5d2a2209ca41c0a98c0fe09c1a",
+    "content-hash": "41c8d3e5e791b6023935483a3e805136",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4586,23 +4586,23 @@
         },
         {
             "name": "spatie/laravel-markdown",
-            "version": "2.4.0",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-markdown.git",
-                "reference": "38d11c666ccdbf111535677c1d927b349b64aca4"
+                "reference": "7f23584b545d7ec66e6114d9b25c3ec3ddffbb76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-markdown/zipball/38d11c666ccdbf111535677c1d927b349b64aca4",
-                "reference": "38d11c666ccdbf111535677c1d927b349b64aca4",
+                "url": "https://api.github.com/repos/spatie/laravel-markdown/zipball/7f23584b545d7ec66e6114d9b25c3ec3ddffbb76",
+                "reference": "7f23584b545d7ec66e6114d9b25c3ec3ddffbb76",
                 "shasum": ""
             },
             "require": {
-                "illuminate/cache": "^8.49|^9.0|^10.0",
-                "illuminate/contracts": "^8.37|^9.0|^10.0",
-                "illuminate/support": "^8.49|^9.0|^10.0",
-                "illuminate/view": "^8.49|^9.0|^10.0",
+                "illuminate/cache": "^8.49|^9.0|^10.0|^11.0",
+                "illuminate/contracts": "^8.37|^9.0|^10.0|^11.0",
+                "illuminate/support": "^8.49|^9.0|^10.0|^11.0",
+                "illuminate/view": "^8.49|^9.0|^10.0|^11.0",
                 "league/commonmark": "^2.2",
                 "php": "^8.0",
                 "spatie/commonmark-shiki-highlighter": "^2.0",
@@ -4650,7 +4650,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-markdown/tree/2.4.0"
+                "source": "https://github.com/spatie/laravel-markdown/tree/2.4.2"
             },
             "funding": [
                 {
@@ -4658,7 +4658,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-08-17T06:59:15+00:00"
+            "time": "2024-01-11T08:43:31+00:00"
         },
         {
             "name": "spatie/laravel-menu",

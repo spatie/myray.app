@@ -13,11 +13,10 @@
 <meta name="description" content="@yield('description')">
 <link rel="canonical" href="{{ url()->current() }}"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;400;600;700;800&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c170d0c6e5.js" crossorigin="anonymous"></script>
 
 @vite(['resources/css/app.css'])
-
 
 @include('partials.favicon')
 

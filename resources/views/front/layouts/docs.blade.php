@@ -13,7 +13,7 @@
             <x-docs-navigation></x-docs-navigation>
         </div>
 
-        <section class="page-content p-14">
+        <section class="page-content w-full p-14">
             @yield('content')
         </section>
     </div>
