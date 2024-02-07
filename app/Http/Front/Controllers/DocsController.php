@@ -18,6 +18,6 @@ class DocsController
     {
         $page = sheets()->collection('docs')->get($slug);
 
-        return view('front.docs.index', compact('page'));
+        return view('front.docs.index', compact('page', 'slug'));
     }
 }

@@ -15,6 +15,10 @@ class DocsNavigation extends Component
     {
         $navigation = Navigation::build();
 
-        return view('components.docs-navigation', compact('navigation'));
+        ray(request()->route()->parameter('slug'));
+
+        $slug = request()->route()->parameter('slug');
+
+        return view('components.docs-navigation', compact('navigation', 'slug'));
     }
 }

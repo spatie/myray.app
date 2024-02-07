@@ -29,7 +29,7 @@
         }
     },
     "dependencies": {
-        "alpinejs": "^3.9.1",
+        "alpinejs": "^3.13.5",
         "gsap": "^3.9.1",
         "laravel-vite-plugin": "^1.0.1",
         "postcss": "^8.4.33",

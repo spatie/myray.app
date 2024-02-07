@@ -16,6 +16,8 @@ class Category
 
     public string $title = '<no title>';
 
+    public string $slug = '';
+
     public function __construct() {
         $this->subCategories = new Collection();
         $this->pages = new Collection();

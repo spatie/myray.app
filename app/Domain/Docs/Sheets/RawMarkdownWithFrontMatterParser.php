@@ -11,8 +11,6 @@ class RawMarkdownWithFrontMatterParser implements ContentParser
     {
         $document = YamlFrontMatter::parse($contents);
 
-        ray($contents);
-
         return array_merge(
             $document->matter(),
             ['contents' => $document->body()]
