@@ -9,7 +9,9 @@
     </div>
 
     <div class="relative">
-        @include('partials.docs.ornament')
+        <div class="absolute right-0 -top-4">
+            @include('partials.docs.ornament')
+        </div>
 
         <div class="flex">
             <div class="border-r border-gray-200">
@@ -19,6 +21,10 @@
             <section class="page-content w-full p-14">
                 @yield('content')
             </section>
+        </div>
+
+        <div class="absolute right-0 -bottom-4">
+            @include('partials.docs.ornament')
         </div>
     </div>
 
