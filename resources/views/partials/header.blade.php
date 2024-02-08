@@ -1,10 +1,9 @@
 <header>
     <nav class="
         @if(isset($narrow) && $narrow)
-
         max-w-4xl
         @endif
-        px-6 sm:px-12 md:px-16 pt-8 pb-16
+        px-6 sm:px-12 md:px-16 py-8
         mx-auto
         flex items-center justify-between
     ">

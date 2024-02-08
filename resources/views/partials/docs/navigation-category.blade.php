@@ -1,7 +1,5 @@
 <div class="navigation-category" x-data="{ open: {{\Illuminate\Support\Str::contains($slug, $category->slug) ? 'true' : 'false'}} }">
-    @ray($category)
-
-    <strong class="cursor-pointer" @click="open = !open">{{$category->title}}</strong>
+    <strong class="cursor-pointer text-base font-semibold" @click="open = !open">{{$category->title}}</strong>
     <ul x-show="open">
         @foreach($category->subCategories as $subCategory)
             <li>
@@ -9,7 +7,11 @@
             </li>
         @endforeach
         @foreach($category->pages as $page)
-            <li>
+            <li
+                @class([
+                    'active border-indigo-500' => $page->slug === $slug,
+                ])
+            >
                 <a href="{{$page->url}}">
                     {{$page->title}}
                 </a>

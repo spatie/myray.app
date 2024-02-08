@@ -1,16 +1,32 @@
 body.docs .docs-navigation {
     width: 300px;
     font-size: .8rem;
+    box-sizing: border-box;
 
     & > ul > li {
         margin-bottom: 1.5rem;
+        font-weight: 400;
 
-        & > ul > li {
-            padding-left: 1rem;
-            margin-bottom: 1rem;
+        & > div > ul {
+            border-left: 1px solid #E9E5EF;
+            margin-top: .8rem;
 
-            & > ul > li {
+            &  > li {
                 padding-left: 1rem;
+                margin-bottom: .5rem;
+
+                border-left: #E9E5EF 1px solid;
+                left: -1px;
+
+                &.active {
+                    border-color: #4D00C9;
+                    color: #4D00C9;
+                    font-weight: 600;
+                }
+
+                & > ul > li {
+                    padding-left: 1rem;
+                }
             }
         }
     }
