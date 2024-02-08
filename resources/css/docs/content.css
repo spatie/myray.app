@@ -9,6 +9,29 @@
     & h1, & h2, & h3, & h4, & h5, & h6 {
         font-weight: 700;
         margin-bottom: 1rem;
+
+        background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:hover:not(a) {
+            background: transparent;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+
+            & .heading-permalink {
+                cursor: pointer;
+                display: inline-block;
+                margin-left: .5rem;
+                color: #8E80B1;
+                font-weight: 400;
+                position: relative;
+            }
+        }
+
+        & .heading-permalink {
+            display: none;
+        }
     }
 
     & h2, & h3, & h4, & h5, & h6 {

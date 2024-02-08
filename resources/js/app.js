@@ -1,8 +1,32 @@
 import Alpine from 'alpinejs'
+import Clipboard from "@ryangjchandler/alpine-clipboard"
+
+
 
 window.Alpine = Alpine;
 
+Alpine.plugin(Clipboard)
+
 Alpine.start();
+
+// PERMALINKS
+document.querySelectorAll('.heading-permalink').forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = el.getAttribute('href');
+
+        console.debug('CLICKED', document.documentURI + target);
+
+        navigator.clipboard.writeText(document.documentURI + target);
+
+        // Add a span with a text to the clicked element
+        const div = document.createElement('div');
+        div.classList.add('copy-tooltip');
+        div.textContent = 'Copied URL!';
+        el.prepend(div);
+    });
+});
+
 
 import { gsap, Power3, Power0 } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
