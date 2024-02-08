@@ -1,5 +1,7 @@
 <?php
 
+use League\CommonMark\Normalizer\SlugNormalizer;
+
 return [
     'code_highlighting' => [
         /*
@@ -44,6 +46,7 @@ return [
             'title' => 'Permalink',
             'symbol' => '#',
             'aria_hidden' => false,
+            'apply_id_to_heading' => false,
         ],
         'table_of_contents' => [
             'html_class' => '',
