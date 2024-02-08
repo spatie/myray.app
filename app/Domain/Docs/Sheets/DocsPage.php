@@ -9,6 +9,7 @@ class DocsPage extends Sheet
     public function getUrlAttribute(): string
     {
         $slug = str_replace('.md', '', $this->slug);
+        $slug = str_replace('_index', '', $slug);
 
         return route('docs.show', compact('slug'));
     }

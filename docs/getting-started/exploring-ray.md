@@ -1,5 +1,7 @@
 ---
 title: Exploring Ray
-weight: 1
+weight: 2
 ---
 Foobar
+
+<x-integrations-overview></x-integrations-overview>
