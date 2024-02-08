@@ -1,6 +1,8 @@
 <?php
 
+use App\Domain\Docs\BladeParsingExtension;
 use League\CommonMark\Normalizer\SlugNormalizer;
+use League\CommonMark\Util\HtmlFilter;
 
 return [
     'code_highlighting' => [
@@ -36,6 +38,7 @@ return [
      * More info: https://spatie.be/docs/laravel-markdown/v1/using-the-blade-component/passing-options-to-commonmark
      */
     'commonmark_options' => [
+        'html_input' => HtmlFilter::ALLOW,
         'heading_permalink' => [
             'html_class' => 'heading-permalink',
             'id_prefix' => '',
@@ -88,6 +91,7 @@ return [
     'extensions' => [
         League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
         League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class,
+        BladeParsingExtension::class,
     ],
 
     /*
