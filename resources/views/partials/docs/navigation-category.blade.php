@@ -9,10 +9,14 @@
         @foreach($category->pages as $page)
             <li
                 @class([
-                    'active border-indigo-500' => $page->slug === $slug,
+                    'active border-indigo-500' => \Illuminate\Support\Str::contains($slug, $page->slug),
                 ])
             >
-                <a href="{{$page->url}}">
+                <a href="{{$page->url}}"
+                    @class([
+                        'active border-indigo-500 border-s' => \Illuminate\Support\Str::contains($slug, $page->slug),
+                    ])
+                >
                     {{$page->title}}
                 </a>
             </li>

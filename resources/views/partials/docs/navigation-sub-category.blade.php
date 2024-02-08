@@ -1,4 +1,8 @@
-<strong>{{$category->title}}</strong>
+<strong @class([
+    '-left-px active border-l border-indigo-500' => \Illuminate\Support\Str::contains($slug, $category->slug),
+])>
+    {{$category->title}}
+</strong>
 <ul>
     @foreach($category->subCategories as $subCategory)
         <li>

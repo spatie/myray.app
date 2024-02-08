@@ -3,6 +3,12 @@ body.docs .docs-navigation {
     font-size: .8rem;
     box-sizing: border-box;
 
+    & > ul {
+        & strong, & a {
+            padding-left: 1rem;
+        }
+    }
+
     & > ul > li {
         margin-bottom: 1.5rem;
         font-weight: 400;
@@ -12,20 +18,25 @@ body.docs .docs-navigation {
             margin-top: .8rem;
 
             &  > li {
-                padding-left: 1rem;
                 margin-bottom: .5rem;
 
                 border-left: #E9E5EF 1px solid;
                 left: -1px;
 
+                & > a {
+                    padding-left: 1rem
+                }
+
                 &.active {
-                    border-color: #4D00C9;
                     color: #4D00C9;
                     font-weight: 600;
                 }
 
                 & > ul > li {
-                    padding-left: 1rem;
+                    left: -1px;
+                    & > a {
+                        padding-left: 2rem;
+                    }
                 }
             }
         }
