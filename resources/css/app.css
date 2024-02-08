@@ -2,6 +2,7 @@
 
 @import "./utilities/markup.css";
 @import "./utilities/ray.css";
+@import "./docs/docs.css";
 
 .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
@@ -74,83 +75,4 @@
 
 .tooltip-hover:hover {
   @apply opacity-25 !important;
-}
-
-body.docs .docs-navigation {
-    width: 300px;
-    font-size: .8rem;
-
-    & > ul > li {
-        margin-bottom: 1.5rem;
-
-        & > ul > li {
-            padding-left: 1rem;
-            margin-bottom: 1rem;
-
-            & > ul > li {
-                padding-left: 1rem;
-            }
-        }
-    }
-}
-
-.docs-content {
-    font-size: .9rem;
-    font-weight: 400;
-
-    & h1, & h2, & h3, & h4, & h5, & h6, & p, & ul, & ol {
-        max-width: 680px;
-    }
-
-    & h1, & h2, & h3, & h4, & h5, & h6 {
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    & h2, & h3, & h4, & h5, & h6 {
-        margin-top: 2rem;
-    }
-
-    & h1 {
-        font-size: 2.3rem;
-    }
-
-    & h2 {
-        font-size: 1.8rem;
-    }
-
-    & p {
-        margin-bottom: 1rem;
-    }
-
-    & > div {
-        display: flex;
-        justify-content: space-between;
-
-        & > article {
-            max-width: 740px;
-        }
-    }
-
-    & .table-of-contents {
-        min-width: 220px;
-        margin-left: 100px;
-        font-size: .7rem;
-
-        & h2 {
-            font-size: .7rem;
-            margin-bottom: .5rem;
-        }
-
-        & li {
-            margin-bottom: .5rem;
-        }
-    }
-
-    & .shiki {
-        margin-bottom: 1rem;
-        padding: 1.25rem;
-        font-size: .7rem;
-        border-radius: 4px;
-    }
 }
