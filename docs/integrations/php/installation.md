@@ -2,6 +2,7 @@
 title: Installation
 weight: 1
 ---
+# Using Ray with PHP
 To communicate with the Ray desktop app, we're going to use a function named `ray()`.
 
 ## Global installation

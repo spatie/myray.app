@@ -2,7 +2,7 @@
 title: Using Ray with Go
 weight: 1
 ---
-
+# Using Ray with Go
 When using Go Modules, you do not need to install anything to start using Ray with your Go program. Import the module
 and the go will automatically download the latest version of the module when you next build your program.
 

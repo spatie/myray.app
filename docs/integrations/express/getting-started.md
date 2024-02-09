@@ -1,8 +1,8 @@
 ---
-title: Using Ray in Express.js
+title: Using Ray with Express.js
 weight: 1
 ---
-
+# Using Ray in Express.js
 You can send information from Express.js applications to Ray via this third party package:
 
 [permafrost-dev/express-ray](https://github.com/permafrost-dev/express-ray)

@@ -1,7 +1,9 @@
 ---
-title: Using Ray in NodeJS
+title: Using Ray with NodeJS
 weight: 1
 ---
+
+# Using Ray with NodeJS
 
 You can send information from NodeJS code (JavaScript or TypeScript) to Ray via this third party package:
 

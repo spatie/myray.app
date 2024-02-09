@@ -2,7 +2,7 @@
 title: Using Ray with Ruby
 weight: 1
 ---
-
+# Using Ray with Ruby
 The Ruby gem is still in active development. We haven't released a stable version just yet, but you can already install and play around with the `0.x` version.
 
 To start using Ray in any Ruby project, install the `ruby-ray` gem.

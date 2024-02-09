@@ -3,6 +3,8 @@ title: Installation
 weight: 1
 ---
 
+# Using Ray with Laravel
+
 If you use Laravel, this is the way.
 
 ## Installing the package in single Laravel project

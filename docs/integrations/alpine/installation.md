@@ -2,7 +2,7 @@
 title: Installation
 weight: 1
 ---
-
+# Installation
 You can send information from Alpine.js to Ray via this third party package:
 
 [permafrost-dev/alpinejs-ray](https://github.com/permafrost-dev/alpinejs-ray)

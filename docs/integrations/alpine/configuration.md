@@ -2,6 +2,7 @@
 title: Configuration
 weight: 2
 ---
+# Configuration
 ## Configuration Options
 
 To configure `alpinejs-ray`, you must create an `alpineRayConfig` property on the `window` object before loading `alpinejs-ray`:

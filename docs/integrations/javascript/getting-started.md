@@ -2,6 +2,8 @@
 title: Installation
 weight: 1
 ---
+# Using Ray with Javascript
+
 You can send information from JavaScript to Ray via this third party package:
 
 [permafrost-dev/node-ray](https://github.com/permafrost-dev/node-ray)

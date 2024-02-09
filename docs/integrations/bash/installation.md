@@ -2,7 +2,7 @@
 title: Using Ray with Bash
 weight: 1
 ---
-
+# Bash
 You can send information from Bash to Ray via one of these third party packages:
 
 ## node-ray-cli
