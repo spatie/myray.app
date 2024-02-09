@@ -92,6 +92,7 @@ return [
         League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
         League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class,
         BladeParsingExtension::class,
+        League\CommonMark\Extension\Table\TableExtension::class,
     ],
 
     /*

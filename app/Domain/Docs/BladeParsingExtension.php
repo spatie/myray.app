@@ -54,7 +54,6 @@ class BladeParsingExtension implements ExtensionInterface
             // Replace the code node with our placeholder
             $node->replaceWith($replacement);
 
-
             // Create an identical renderer to the main one
             $renderer = new HtmlRenderer($this->environment);
 
@@ -93,7 +92,6 @@ class BladeParsingExtension implements ExtensionInterface
     protected function isCodeNode($node)
     {
         return $node instanceof FencedCode
-            || $node instanceof IndentedCode
-            || $node instanceof Code;
+            || $node instanceof IndentedCode;
     }
 }

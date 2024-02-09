@@ -24,7 +24,7 @@ body.docs .docs-navigation {
                 left: -1px;
 
                 & > a {
-                    padding-left: 1rem
+                    padding-left: 1rem;
                 }
 
                 &.active {
@@ -34,6 +34,8 @@ body.docs .docs-navigation {
 
                 & > ul > li {
                     left: -1px;
+                    margin: .25rem 0;
+
                     & > a {
                         padding-left: 2rem;
                     }

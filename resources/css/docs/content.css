@@ -2,6 +2,11 @@
     font-size: .9rem;
     font-weight: 400;
 
+    & a {
+        color: theme('colors.indigo.500');
+        text-decoration: underline;
+    }
+
     & h1, & h2, & h3, & h4, & h5, & h6, & p, & ul, & ol {
         max-width: 680px;
     }
@@ -42,11 +47,16 @@
     }
 
     & h1 {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
 
     & h2 {
         font-size: 1.8rem;
+    }
+
+    & h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
     }
 
     & p {
@@ -82,5 +92,37 @@
         padding: 1.25rem;
         font-size: .7rem;
         border-radius: 4px;
+    }
+
+    & table {
+        margin-bottom: 2rem;
+        & thead {
+            & tr {
+                border-bottom: 2px solid #E9E5EF;
+
+                & th {
+                    text-align: left;
+                    font-size: .65rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+
+        & tbody {
+            & tr {
+                border-bottom: 1px solid #E9E5EF;
+
+                & td:first-child {
+                    color: theme('colors.indigo.500');
+                    width: 50%;
+                }
+
+                & td {
+                    font-size: .7rem;
+                    line-height: 1.5rem;
+                    padding: .5rem 0;
+                }
+            }
+        }
     }
 }
