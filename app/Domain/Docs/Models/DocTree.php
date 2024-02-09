@@ -31,8 +31,6 @@ class DocTree
 
         $docs = resolve(Sheets::class)->collection('docs')->all()->sortBy('weight');
 
-        ray($docs);
-
         $docs->each(fn ($doc) => $docTree->add($doc));
 
         $docTree->sort();
@@ -43,7 +41,6 @@ class DocTree
     public function add(Sheet $doc): void
     {
         if (count($doc->parts) === 1) {
-            ray('RETURN', $doc);
             return;
         }
 
