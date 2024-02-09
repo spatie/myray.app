@@ -2,6 +2,8 @@
     font-size: .9rem;
     font-weight: 400;
 
+    color: theme('colors.midnight');
+
     & a {
         color: theme('colors.indigo.500');
         text-decoration: underline;
@@ -51,11 +53,11 @@
     }
 
     & h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     & h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 500;
     }
 
@@ -80,10 +82,19 @@
         & h2 {
             font-size: .7rem;
             margin-bottom: .5rem;
+
+            &:only-child {
+                display: none;
+            }
         }
 
         & li {
             margin-bottom: .5rem;
+        }
+
+        & a {
+            text-decoration: none;
+            color: theme('colors.midnight');
         }
     }
 
@@ -92,6 +103,7 @@
         padding: 1.25rem;
         font-size: .7rem;
         border-radius: 4px;
+        overflow-x: scroll;
     }
 
     & table {

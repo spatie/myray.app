@@ -18,6 +18,7 @@ module.exports = {
             current: 'currentColor',
             spatie: '#197593',
             wordpress: '#007fa2',
+            midnight: '#423755',
 
             black: "#1e0063",
             white: colors.white,

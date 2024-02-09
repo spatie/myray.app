@@ -2,7 +2,7 @@
 title: Installation
 weight: 1
 ---
-
+# Installation
 Ray helps you debug your web application faster and easier. It's a companion app available for Windows, Mac and Linux, and supports common languages and frameworks as PHP, Laravel, WordPress, JavaScript and Node.js.
 
 ## Install the Ray application
