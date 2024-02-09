@@ -4,6 +4,7 @@ namespace App\Domain\Docs\Models;
 
 use App\Domain\Docs\Enum\SheetType;
 use App\Domain\Docs\HasCategoriesAndPages;
+use App\Domain\Docs\Sheets\DocsPage;
 use Illuminate\Support\Collection;
 use Spatie\Sheets\Sheet;
 use Spatie\Sheets\Sheets;
@@ -18,11 +19,14 @@ class DocTree
 
     public Collection $flatPages;
 
+    public Collection $flatCategories;
+
     public function __construct()
     {
         $this->categories = new Collection();
         $this->pages = new Collection();
         $this->flatPages = new Collection();
+        $this->flatCategories = new Collection();
     }
 
     public static function build(): self
@@ -58,11 +62,17 @@ class DocTree
         }
 
         $category->pages->add($doc);
+        $this->flatCategories->put($category->slug, $category);
         $this->flatPages->put($doc->slug, $doc);
     }
 
-    public function find(string $slug)
+    public function find(string $slug): ?DocsPage
     {
+        return $this->flatPages->get($slug);
+    }
 
+    public function findCategory(string $slug): ?Category
+    {
+        return $this->flatCategories->get($slug);
     }
 }

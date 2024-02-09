@@ -7,23 +7,32 @@ use App\Domain\Docs\Models\DocTree;
 
 class DocsController
 {
+    private DocTree $docTree;
+
+    public function __construct()
+    {
+        $this->docTree = DocTree::build();
+    }
+
     public function index()
     {
-        $navigation = DocTree::build();
-        $page = $navigation->firstPage();
+        $page = $this->docTree->firstPage();
 
         return view('front.docs.index', compact('page'));
     }
 
     public function show(string $slug)
     {
-        $docs = sheets()->collection('docs');
-
-        $page = $docs->get($slug);
+        $page = $this->docTree->find($slug);
 
         if (!$page) {
-            // See if we can find a category for this slug.
-            $page = $docs->all()->where('category', $slug)->where('type', SheetType::Page)->firstOrFail();
+            $category = $this->docTree->findCategory($slug);
+
+            if (!$category) {
+                abort(404);
+            }
+
+            $page = $category->firstPage();
 
             if (!$page) {
                 abort(404);

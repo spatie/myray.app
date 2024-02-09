@@ -15,3 +15,13 @@ it('can build a new DocTree', function () {
 it('can retrieve a default/first page', function () {
     expect($this->docTree->firstPage())->toBeInstanceOf(DocsPage::class);
 });
+
+it('can find a page by slug', function () {
+    $page = $this->docTree->find('getting-started/local-environments');
+    expect($page->title)->toEqual('Local Environments');
+});
+
+it('can find a category by slug', function () {
+   $category = $this->docTree->findCategory('getting-started');
+   ray($category);
+});
