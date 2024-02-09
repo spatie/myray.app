@@ -2,7 +2,6 @@
 
 namespace App\Http\Front\Controllers;
 
-use App\Domain\Docs\Enum\SheetType;
 use App\Domain\Docs\Models\DocTree;
 
 class DocsController
@@ -18,7 +17,7 @@ class DocsController
     {
         $page = $this->docTree->firstPage();
 
-        return view('front.docs.index', compact('page'));
+        return redirect()->away($page->url);
     }
 
     public function show(string $slug)
