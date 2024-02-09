@@ -13,10 +13,9 @@
 
 uses(
     Tests\TestCase::class,
-    // Illuminate\Foundation\Testing\RefreshDatabase::class,
 )->beforeEach(function () {
     ray()->newScreen($this->name());
-})->in('Docs');
+})->in('.');
 
 /*
 |--------------------------------------------------------------------------
