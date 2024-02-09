@@ -4,7 +4,7 @@
     </a>
     @if(\Illuminate\Support\Str::contains($slug, $category->slug))
         <ul>
-            @foreach($category->subCategories as $subCategory)
+            @foreach($category->categories as $subCategory)
                 <li>
                     @include('partials.docs.navigation-sub-category', ['category' => $subCategory])
                 </li>

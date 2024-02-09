@@ -27,3 +27,7 @@ Route::get('docs', [DocsController::class, 'index'])->name('docs.index');
 Route::get('docs/{slug}', [DocsController::class, 'show'])->where([
     'slug' => '.*'
 ])->name('docs.show');
+
+Route::get('debug', function () {
+    \App\Domain\Docs\Models\DocTree::build();
+});

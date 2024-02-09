@@ -3,14 +3,14 @@
 namespace App\Http\Front\Controllers;
 
 use App\Domain\Docs\Enum\SheetType;
-use App\Domain\Docs\Models\Navigation;
+use App\Domain\Docs\Models\DocTree;
 
 class DocsController
 {
     public function index()
     {
-        $navigation = Navigation::build();
-        $page = $navigation->topCategory->firstPage();
+        $navigation = DocTree::build();
+        $page = $navigation->firstPage();
 
         return view('front.docs.index', compact('page'));
     }

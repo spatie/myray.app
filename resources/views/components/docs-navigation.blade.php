@@ -1,6 +1,6 @@
 <nav class="docs-navigation p-8">
     <ul>
-        @foreach($navigation->topCategory->subCategories as $key => $category)
+        @foreach($navigation->categories as $key => $category)
             <li>
                 @include('partials.docs.navigation-category', ['category' => $category])
             </li>
