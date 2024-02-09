@@ -4,8 +4,8 @@ weight: 4
 ---
 # Support
 
-If you have any questions or need help, please feel free to reach out to us. We're happy to help you with any questions you might have.
+Find yourself stuck using the Ray app? Found a bug? Do you have general questions or suggestions for improving ray or laravel-ray? Feel free to create an issue on GitHub, we'll try to address it as soon as possible.
 
-You can email us at [support@spatie](mailto:support@spatie).
+If you've found a bug regarding security please mail [security@spatie](mailto:security@spatie) instead of using the issue tracker.
 
-For technical issues you can also use the issue tracker on Github: [https://github.com/spatie/ray/issues](https://github.com/spatie/ray/issues).
+If you have problems with your license you can mail us at [support@spatie](mailto:support@spatie).
