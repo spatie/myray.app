@@ -7,8 +7,6 @@ weight: 2
 
 [Ray](https://myray.app) is a very simple app to use. You can use any of the `ray` calls that are documented in [the usage section](/docs/ray/v1/usage/introduction).
 
-![screenshot](/docs/ray/v1/images/empty.jpg)
-
 ## Clearing the screen
 
 When debugging, you probably will need a couple of attempts to find the source of the bug. For each attempt, you could opt to use a new screen, so you will only see the output of your current attempt. There are three ways for creating a new screen.
@@ -29,11 +27,11 @@ If you want Ray always to be on top, just toggle on the `Keep on top` toggle on 
 
 At the bottom of every item that displayed in Ray, you'll see a link that, when clicked, will take you to where this item was sent to ray. You can use this to, after debugging, quickly find locations where `ray()` calls are made, so you can remove them.
 
-![screenshot](/docs/ray/v1/images/clean.jpg)
+![screenshot](/docs/getting-started/tips-1.png)
 
 When a Ray screen is displaying many items, it might be bothersome to click each item. In this case, you can click "List files" to get a unique list of locations where a Ray call is in your source code.
 
-![screenshot](/docs/ray/v1/images/list-files.jpg)
+![screenshot](/docs/getting-started/tips-2.png)
 
 Should you forget to remove a `ray()` call in a Laravel app, and push your code to production, no worries. Ray will not try to transmit any info in a production environment.
 
@@ -43,4 +41,4 @@ You can press `cmd+shift+L` to hide or show the app, no matter which application
 
 You can customize this key in the preferences.
 
-![screenshot](/docs/ray/v1/images/hotkeys.jpg)
+![screenshot](/docs/getting-started/shortcuts.png)
