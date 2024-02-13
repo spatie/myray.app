@@ -15,7 +15,7 @@ ray(['an array']);
 ray($anObject);
 ```
 
-![screenshot](/docs/ray/v1/images/ray.jpg)
+![screenshot](/docs/integrations/php/usage.png)
 
 `ray` accepts multiple arguments. Each argument will be displayed in the Ray app.
 
@@ -61,7 +61,7 @@ ray('this is purple')->purple();
 ray('this is gray')->gray();
 ```
 
-![screenshot](/docs/ray/v1/images/colors.jpg)
+![screenshot](/docs/integrations/php/colors.png)
 
 ### Using sizes
 
@@ -73,7 +73,7 @@ ray('regular');
 ray('large')->large();
 ```
 
-![screenshot](/docs/ray/v1/images/sizes.jpg)
+![screenshot](/docs/integrations/php/sizes.png)
 
 ### Adding a label
 
@@ -83,24 +83,7 @@ You can customize the label displayed next to item with the `label` function.
 ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 ```
 
-![screenshot](/docs/ray/v1/images/label.png)
-
-### Showing a separator
-
-Another way to visually separate items in Ray, is to call  `seperator`.
-
-```php
-ray('first item');
-
-ray()->separator();
-
-ray('second item');
-
-ray('third item');
-```
-
-![screenshot](/docs/ray/v1/images/separator.png)
-
+![screenshot](/docs/integrations/php/labels.png)
 
 ### Creating a new screen
 
@@ -118,7 +101,7 @@ Optionally, you can give a screen a name:
 ray()->newScreen('My debug screen');
 ```
 
-![screenshot](/docs/ray/v1/images/screen.jpg)
+![screenshot](/docs/integrations/php/newScreen.png)
 
 You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
 current request. In a Laravel app, a good place for this might be the service provider.
@@ -143,7 +126,7 @@ function.
 ray()->caller();
 ```
 
-![screenshot](/docs/ray/v1/images/caller.jpg)
+![screenshot](/docs/integrations/php/caller.png)
 
 If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 
@@ -151,7 +134,7 @@ If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 ray()->trace();
 ```
 
-![screenshot](/docs/ray/v1/images/trace.jpg)
+![screenshot](/docs/integrations/php/trace.png)
 
 ### Pausing execution
 
@@ -161,7 +144,7 @@ You can pause execution of a script by using the `pause` method.
 ray()->pause();
 ```
 
-![screenshot](/docs/ray/v1/images/pause.jpg)
+![screenshot](/docs/integrations/php/pause.png)
 
 If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
 exception in your app to halt execution.
@@ -186,7 +169,7 @@ foreach (range(1, 2) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/ray/v1/images/count.png)
+![screenshot](/docs/integrations/php/count.png)
 
 Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
 executed.
@@ -219,7 +202,7 @@ foreach (range(1, 4) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/ray/v1/images/named-count.png)
+![screenshot](/docs/integrations/php/named-count.png)
 
 ### Limiting the number of sent payloads
 
@@ -300,7 +283,7 @@ sleep(2);
 ray()->measure();
 ```
 
-![screenshot](/docs/ray/v1/images/measure.jpg)
+![screenshot](/docs/integrations/php/measure.png)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
@@ -311,7 +294,7 @@ ray()->measure(function() {
 });
 ```
 
-![screenshot](/docs/ray/v1/images/measure-closure.jpg)
+![screenshot](/docs/integrations/php/measure-closure.png)
 
 ## Displaying the private properties / methods
 
@@ -366,7 +349,7 @@ be converted to JSON with [json_encode](https://www.php.net/json_encode).
 ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
 ```
 
-![screenshot](/docs/ray/v1/images/to-json.png)
+![screenshot](/docs/integrations/php/json.png)
 
 The `toJson` function can also accept multiple arguments.
 
@@ -392,7 +375,7 @@ $jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
 ray()->json($jsonString);
 ```
 
-![screenshot](/docs/ray/v1/images/json.png)
+![screenshot](/docs/integrations/php/from-json.png)
 
 The `json` function can also accept multiple valid JSON strings.
 
@@ -413,7 +396,7 @@ $xmlString = '<one><two><three>3</three></two></one>';
 ray()->xml($xmlString);
 ```
 
-![screenshot](/docs/ray/v1/images/xml.png)
+![screenshot](/docs/integrations/php/xml.png)
 
 ### Working with Carbon instances
 
@@ -423,7 +406,7 @@ ray()->xml($xmlString);
 ray()->carbon(new \Carbon\Carbon());
 ```
 
-![screenshot](/docs/ray/v1/images/carbon.png)
+![screenshot](/docs/integrations/php/carbon.png)
 
 ### Working with files
 
@@ -445,7 +428,7 @@ ray()->table([
 ]);
 ```
 
-![screenshot](/docs/ray/v1/images/table.png)
+![screenshot](/docs/integrations/php/table.png)
 
 As a second argument, you can pass a label that will be displayed next to the table.
 
@@ -453,7 +436,7 @@ As a second argument, you can pass a label that will be displayed next to the ta
 ray()->table(['John', 'Paul', 'George', 'Ringo'], 'Beatles');
 ```
 
-![screenshot](/docs/ray/v1/images/table-label.png)
+![screenshot](/docs/integrations/php/table-label.png)
 
 ### Displaying images
 
@@ -627,16 +610,6 @@ ray('this one will be remove if the number is 2')->removeWhen($number === 2);
 ray('this one will be remove if the number is 2')->removeWhen(fn() => ... // return true to remove the item);
 ```
 
-### Hiding items
-
-You can display something in ray and make it hidden immediately.
-
-```php
-ray($largeObject)->hide()
-```
-
-![screenshot](/docs/ray/v1/images/hide.jpg)
-
 ### Returning items
 
 To make all methods chainable, the `ray()` function returns an instance of `Spatie\Ray\Ray`. To quickly send something
@@ -672,7 +645,7 @@ You can use Ray to display a notification.
 ray()->notify('This is my notification');
 ```
 
-![screenshot](/docs/ray/v1/images/notification.jpg)
+![screenshot](/docs/integrations/php/notification.jpg)
 
 ### Shooting confetti
 
@@ -682,7 +655,7 @@ For those times that success is to be celebrated.
 ray()->confetti();
 ```
 
-![screenshot](/docs/ray/v1/images/confetti.png)
+![screenshot](/docs/integrations/php/confetti.png)
 
 ### Halting the PHP process
 
@@ -708,7 +681,7 @@ ray()->phpinfo();
 ray()->phpinfo('xdebug.enabled', 'default_mimetype');
 ```
 
-![screenshot](/docs/ray/v1/images/php-info.png)
+![screenshot](/docs/integrations/php/phpinfo.png)
 
 
 ### Displaying exceptions
