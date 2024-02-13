@@ -1,5 +1,5 @@
 ---
-title: Methods
+title: Reference
 weight: 3
 ---
 

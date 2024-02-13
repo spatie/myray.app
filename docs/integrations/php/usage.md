@@ -15,7 +15,7 @@ ray(['an array']);
 ray($anObject);
 ```
 
-![screenshot](/docs/integrations/php/usage.png)
+![screenshot](/docs/screenshots/usage.png)
 
 `ray` accepts multiple arguments. Each argument will be displayed in the Ray app.
 
@@ -23,7 +23,7 @@ ray($anObject);
 ray('as', 'many' , 'arguments', 'as', 'you', 'like');
 ```
 
-### Expanding arrays and objects
+## Expanding arrays and objects
 
 When sending an array or object to Ray, it will be displayed in a collapsed state.
 
@@ -48,7 +48,7 @@ ray($arrayOrObject)->expand('myKey.nestedKey');
 
 You can also use the `expandAll()` method to expand all levels.
 
-### Using colors
+## Using colors
 
 You can colorize things you sent to ray by using one of the color functions.
 
@@ -61,9 +61,9 @@ ray('this is purple')->purple();
 ray('this is gray')->gray();
 ```
 
-![screenshot](/docs/integrations/php/colors.png)
+![screenshot](/docs/screenshots/colors.png)
 
-### Using sizes
+## Using sizes
 
 Ray can display things in different sizes.
 
@@ -73,9 +73,9 @@ ray('regular');
 ray('large')->large();
 ```
 
-![screenshot](/docs/integrations/php/sizes.png)
+![screenshot](/docs/screenshots/sizes.png)
 
-### Adding a label
+## Adding a label
 
 You can customize the label displayed next to item with the `label` function.
 
@@ -83,9 +83,9 @@ You can customize the label displayed next to item with the `label` function.
 ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 ```
 
-![screenshot](/docs/integrations/php/labels.png)
+![screenshot](/docs/screenshots/labels.png)
 
-### Creating a new screen
+## Creating a new screen
 
 You can use `newScreen` (or `clearScreen`) to programmatically create a new screen.
 
@@ -101,7 +101,7 @@ Optionally, you can give a screen a name:
 ray()->newScreen('My debug screen');
 ```
 
-![screenshot](/docs/integrations/php/newScreen.png)
+![screenshot](/docs/screenshots/newScreen.png)
 
 You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
 current request. In a Laravel app, a good place for this might be the service provider.
@@ -117,7 +117,7 @@ To clear the current screen and all previous screens, call `clearAll`.
 ray()->clearAll(); 
 ```
 
-### See the caller of a function
+## See the caller of a function
 
 Sometimes you want to know where your code is being called. You can quickly determine that by using the `caller`
 function.
@@ -126,7 +126,7 @@ function.
 ray()->caller();
 ```
 
-![screenshot](/docs/integrations/php/caller.png)
+![screenshot](/docs/screenshots/caller.png)
 
 If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 
@@ -134,9 +134,9 @@ If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 ray()->trace();
 ```
 
-![screenshot](/docs/integrations/php/trace.png)
+![screenshot](/docs/screenshots/trace.png)
 
-### Pausing execution
+## Pausing execution
 
 You can pause execution of a script by using the `pause` method.
 
@@ -144,14 +144,14 @@ You can pause execution of a script by using the `pause` method.
 ray()->pause();
 ```
 
-![screenshot](/docs/integrations/php/pause.png)
+![screenshot](/docs/screenshots/pause.png)
 
 If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
 exception in your app to halt execution.
 
 If you are using Windows, you must set the maximum execution time to a high value, as the paused time will count against the maximum execution time.
 
-### Counting execution times
+## Counting execution times
 
 You can display a count of how many times a piece of code was called using `count`.
 
@@ -169,7 +169,7 @@ foreach (range(1, 2) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/integrations/php/count.png)
+![screenshot](/docs/screenshots/count.png)
 
 Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
 executed.
@@ -202,9 +202,9 @@ foreach (range(1, 4) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/integrations/php/named-count.png)
+![screenshot](/docs/screenshots/named-count.png)
 
-### Limiting the number of sent payloads
+## Limiting the number of sent payloads
 
 To limit the number of payloads sent by a particular `ray()` call, use the `limit` function.  It works well for debugging loops.
 
@@ -218,7 +218,7 @@ foreach (range(1, 10) as $i) {
 
 If the argument passed to `limit()` is a negative number or zero, limiting is disabled.
 
-### Using a rate limiter
+## Using a rate limiter
 
 A rate limiter can help to reduce the amount of sent messages. This would avoid spamming the desktop app, which can be helpful when using Ray in loops.
 
@@ -237,7 +237,7 @@ Ray::rateLimiter()->clear();
 
 A message to the desktop app will be sent once to notify the user the rate limit has been reached.
 
-### Sending a payload once
+## Sending a payload once
 
 To only send a payload once, use the `once` function.  This is useful for debugging loops.
 
@@ -258,7 +258,7 @@ foreach (range(1, 10) as $i) {
 }
 ```
 
-### Display the class name of an object
+## Display the class name of an object
 
 To quickly send the class name of an object to ray, use the `className` function.
 
@@ -266,7 +266,7 @@ To quickly send the class name of an object to ray, use the `className` function
 ray()->className($anObject)
 ```
 
-### Measuring performance and memory usage
+## Measuring performance and memory usage
 
 You can use the `measure` function to display runtime and memory usage. When `measure` is called again, the time between
 this and previous call is also displayed.
@@ -283,7 +283,7 @@ sleep(2);
 ray()->measure();
 ```
 
-![screenshot](/docs/integrations/php/measure.png)
+![screenshot](/docs/screenshots/measure.png)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
@@ -294,7 +294,7 @@ ray()->measure(function() {
 });
 ```
 
-![screenshot](/docs/integrations/php/measure-closure.png)
+![screenshot](/docs/screenshots/measure-closure.png)
 
 ## Displaying the private properties / methods
 
@@ -340,7 +340,7 @@ ray()->invade($privateClass)->privateMethod()->green();
 
 ```
 
-### Working with JSON
+## Working with JSON
 
 Want to display the JSON representation of anything you'd like in Ray? Use `toJson`. You can provide any value that can
 be converted to JSON with [json_encode](https://www.php.net/json_encode).
@@ -349,7 +349,7 @@ be converted to JSON with [json_encode](https://www.php.net/json_encode).
 ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
 ```
 
-![screenshot](/docs/integrations/php/json.png)
+![screenshot](/docs/screenshots/json.png)
 
 The `toJson` function can also accept multiple arguments.
 
@@ -375,7 +375,7 @@ $jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
 ray()->json($jsonString);
 ```
 
-![screenshot](/docs/integrations/php/from-json.png)
+![screenshot](/docs/screenshots/from-json.png)
 
 The `json` function can also accept multiple valid JSON strings.
 
@@ -384,7 +384,7 @@ The `json` function can also accept multiple valid JSON strings.
 ray()->json($jsonString, $anotherJsonString, $yetAnotherJsonString);
 ```
 
-### Working with XML
+## Working with XML
 
 You can send a valid XML string to Ray with the `xml` function.
 
@@ -396,9 +396,9 @@ $xmlString = '<one><two><three>3</three></two></one>';
 ray()->xml($xmlString);
 ```
 
-![screenshot](/docs/integrations/php/xml.png)
+![screenshot](/docs/screenshots/xml.png)
 
-### Working with Carbon instances
+## Working with Carbon instances
 
 [Carbon](https://carbon.nesbot.com/docs/) is a popular datetime package. You can send instances of `Carbon` to Ray with `carbon`.
 
@@ -406,9 +406,9 @@ ray()->xml($xmlString);
 ray()->carbon(new \Carbon\Carbon());
 ```
 
-![screenshot](/docs/integrations/php/carbon.png)
+![screenshot](/docs/screenshots/carbon.png)
 
-### Working with files
+## Working with files
 
 You can display the contents of any file in Ray with the `file` function.
 
@@ -416,7 +416,7 @@ You can display the contents of any file in Ray with the `file` function.
 ray()->file('somefile.txt');
 ```
 
-### Displaying a table
+## Displaying a table
 
 You can send an associative array to Ray with the `table` function.
 
@@ -428,7 +428,7 @@ ray()->table([
 ]);
 ```
 
-![screenshot](/docs/integrations/php/table.png)
+![screenshot](/docs/screenshots/table.png)
 
 As a second argument, you can pass a label that will be displayed next to the table.
 
@@ -436,9 +436,9 @@ As a second argument, you can pass a label that will be displayed next to the ta
 ray()->table(['John', 'Paul', 'George', 'Ringo'], 'Beatles');
 ```
 
-![screenshot](/docs/integrations/php/table-label.png)
+![screenshot](/docs/screenshots/table-label.png)
 
-### Displaying images
+## Displaying images
 
 To display an image, call the `image` function and pass a fully-qualified filename, url, or a valid base64-encoded image as its only argument.
 
@@ -451,7 +451,7 @@ ray()->image('data:image/png;base64,iVBORw0KGgoAAA...truncated');
 ray()->image('iVBORw0KGgoAAA...truncated');
 ```
 
-### Displaying a link
+## Displaying a link
 
 You can render a clickable link in Ray, by using the `link` (or `url`) methods.
 
@@ -461,7 +461,7 @@ ray()->link('spatie.be', 'Spatie homepage'); // optionally, you can pass a label
 ray()->url('myray.app'); // `url` is an alias of `link`
 ```
 
-### Rendering HTML
+## Rendering HTML
 
 To render a piece of HTML directly in Ray, you can use the `html` method.
 
@@ -469,7 +469,7 @@ To render a piece of HTML directly in Ray, you can use the `html` method.
 ray()->html('<b>Bold string<b>');
 ```
 
-### Displaying text content
+## Displaying text content
 
 To display raw text while preserving whitespace formatting, use the `text` method.  If the text contains HTML, it will be displayed as-is and is not rendered.
 
@@ -478,7 +478,7 @@ ray()->text('<em>this string is html encoded</em>');
 ray()->text('  whitespace formatting' . PHP_EOL . '   is preserved as well.');
 ```
 
-### Updating displayed items
+## Updating displayed items
 
 You can update values that are already displayed in Ray. To do this, you must hold on the instance returned by the `ray`
 function and call send on it.
@@ -505,7 +505,7 @@ sleep(1);
 $ray->red()->large()
 ```
 
-### Conditionally showing items
+## Conditionally showing items
 
 You can conditionally show things using the `showIf` method. If you pass a truthy value, the item will be displayed.
 
@@ -517,7 +517,7 @@ ray('will not be shown')->showIf(false);
 You can also pass a callable to `showIf`. If the callable returns a truthy value, it will be shown. Otherwise, it will
 not.
 
-### Conditionally sending items to Ray
+## Conditionally sending items to Ray
 
 If for any reason you do not want to send payloads to Ray _unless_ a condition is met, use the `if()` method.
 
@@ -585,7 +585,7 @@ foreach(range(1, 100) as $number) {
 ```
 
 
-### Removing items
+## Removing items
 
 You can remove an item that is already displayed in Ray. To do this, call the `remove` function on an instance return by
 the `ray` function.
@@ -610,7 +610,7 @@ ray('this one will be remove if the number is 2')->removeWhen($number === 2);
 ray('this one will be remove if the number is 2')->removeWhen(fn() => ... // return true to remove the item);
 ```
 
-### Returning items
+## Returning items
 
 To make all methods chainable, the `ray()` function returns an instance of `Spatie\Ray\Ray`. To quickly send something
 to Ray and have that something return as a value, use the `pass` function.
@@ -637,7 +637,7 @@ function foo() {
 }
 ```
 
-### Displaying a notification
+## Displaying a notification
 
 You can use Ray to display a notification.
 
@@ -645,9 +645,9 @@ You can use Ray to display a notification.
 ray()->notify('This is my notification');
 ```
 
-![screenshot](/docs/integrations/php/notification.jpg)
+![screenshot](/docs/screenshots/notification.jpg)
 
-### Shooting confetti
+## Shooting confetti
 
 For those times that success is to be celebrated.
 
@@ -655,9 +655,9 @@ For those times that success is to be celebrated.
 ray()->confetti();
 ```
 
-![screenshot](/docs/integrations/php/confetti.png)
+![screenshot](/docs/screenshots/confetti.png)
 
-### Halting the PHP process
+## Halting the PHP process
 
 You can stop the PHP process by calling `die`.
 
@@ -671,7 +671,7 @@ Alternatively, you can use the `rd` function.
 rd($anything);
 ```
 
-### Showing PHP info
+## Showing PHP info
 
 Using `phpinfo()` you can quickly see some information about your PHP environment.
 You can also pass ini options to see the value of those options.
@@ -681,10 +681,10 @@ ray()->phpinfo();
 ray()->phpinfo('xdebug.enabled', 'default_mimetype');
 ```
 
-![screenshot](/docs/integrations/php/phpinfo.png)
+![screenshot](/docs/screenshots/phpinfo.png)
 
 
-### Displaying exceptions
+## Displaying exceptions
 
 You can display information about an Exception in Ray, including a snippet of source code showing where it was thrown.
 
@@ -696,7 +696,7 @@ try {
 }
 ```
 
-### Callables and handling exceptions
+## Callables and handling exceptions
 
 You can use Ray to handle exceptions using when passing a callable to `ray` using the `catch` function.  If no exceptions are thrown, the result of the callable is sent to the Ray app.
 
@@ -756,7 +756,7 @@ ray($callable)
 
 After calling `catch`, you may continue to chain methods that will be called regardless of whether there was an exception handled or not.
 
-### Showing raw values
+## Showing raw values
 
 When you sent certain values to Ray, such as Carbon instances or Eloquent models, these values will be displayed in nice way. To see all private, protected, and public properties of such values, you can use the `raw()` method.
 
@@ -768,7 +768,7 @@ ray(new Carbon, $eloquentModel)); // will be formatted nicely
 ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
 ```
 
-### Showing and hiding the app
+## Showing and hiding the app
 
 You can show and hide the Ray app via code.
 
@@ -777,7 +777,7 @@ ray()->showApp(); // Ray will be brought to the foreground
 ray()->hideApp(); // Ray will be hidden
 ```
 
-### Enabling / disabling Ray
+## Enabling / disabling Ray
 
 You can enable and disable sending stuff to Ray with the `enable` and `disable` functions.
 
