@@ -7,8 +7,6 @@ Inside a Laravel application, you can use all methods from [the framework agnost
 
 Additionally, you can use these Laravel specific methods. Sometimes you may want to log something to ray and get the resulting return value of your closure instead of an instance of `Ray`. You can achieve this by adding a return value type to your closure. See the examples for `showQueries()` and `countQueries()` below. Any other methods that accept a closure will function the same way.
 
-
-
 ## Showing events
 
 You can display all events that are executed by calling `showEvents` (or `events`).
@@ -21,7 +19,7 @@ event(new TestEvent());
 event(new TestEventWithParameter('my argument'));
 ```
 
-![screenshot](/docs/ray/v1/images/event.jpg)
+![screenshot](/docs/screenshots/events.png)
 
 To stop showing events, call `stopShowingEvents`.
 
@@ -58,7 +56,7 @@ dispatch(new TestJob('my-test-job'));
 
 ```
 
-![screenshot](/docs/ray/v1/images/job.png)
+![screenshot](/docs/screenshots/jobs.png)
 
 To stop showing jobs, call `stopShowingJobs`.
 
@@ -98,7 +96,7 @@ Cache::get('my-key');
 Cache::get('another-key');
 ```
 
-![screenshot](/docs/ray/v1/images/cache.png)
+![screenshot](/docs/screenshots/cache.png)
 
 To stop showing cache events, call `stopShowingCache`.
 
