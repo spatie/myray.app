@@ -1,11 +1,9 @@
 import Alpine from 'alpinejs'
 import Clipboard from "@ryangjchandler/alpine-clipboard"
 
-
-
 window.Alpine = Alpine;
 
-Alpine.plugin(Clipboard)
+Alpine.plugin(Clipboard);
 
 Alpine.start();
 
@@ -26,7 +24,6 @@ document.querySelectorAll('.heading-permalink').forEach((el) => {
         el.prepend(div);
     });
 });
-
 
 import { gsap, Power3, Power0 } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -180,7 +177,11 @@ heroTimeline3.fromTo('.ray-line-03', {
 
 
 // START TYPING FIRST TYPER And LISTEN WHEN DONE
-typewriter0.type();
+
+if (typewriter0) {
+    typewriter0.type();
+}
+
 window.addEventListener('typewriter_0_finished', () => {
     heroTimeline1.play()
 });
@@ -201,12 +202,14 @@ const showMoreBtn = document.getElementById('testimonial-showMor-btn');
 
 //SET Start height
 const testimonialGrowCont = document.getElementById('testimonial-grow-container');
-let ContainerHeightinRem = 30;
-testimonialGrowCont.style.height = `${ContainerHeightinRem}rem`;
+if (testimonialGrowCont) {
+    let ContainerHeightinRem = 30;
+    testimonialGrowCont.style.height = `${ContainerHeightinRem}rem`;
+}
 
 let clickCount = 0;
 
-showMoreBtn.addEventListener('click', () => {
+showMoreBtn?.addEventListener('click', () => {
     clickCount++
     if (clickCount < 3){
         ContainerHeightinRem += 30;
