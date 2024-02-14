@@ -2,7 +2,7 @@ body.docs .docs-navigation {
     font-size: .8rem;
     box-sizing: border-box;
 
-    @media screen(md) {
+    @media screen(lg) {
         width: 300px;
     }
 

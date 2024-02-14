@@ -13,12 +13,12 @@
             @include('partials.docs.ornament')
         </div>
 
-        <div class="md:flex">
+        <div class="lg:flex">
             <div class="border-r border-gray-200">
                 <x-docs-navigation></x-docs-navigation>
             </div>
 
-            <section class="page-content md:w-full p-5 md:p-14">
+            <section class="page-content lg:w-full p-5 lg:p-14">
                 @yield('content')
             </section>
         </div>

@@ -10,7 +10,12 @@
 
         & > article {
             max-width: 100%;
+
             @media screen(md) {
+                max-width: 680px;
+            }
+
+            @media screen(xl) {
                 max-width: 740px;
             }
         }
@@ -89,6 +94,13 @@
         min-width: 220px;
         margin-left: 100px;
         font-size: .7rem;
+
+        display: none;
+
+        @media screen(lg) {
+            display: block;
+        }
+
 
         & h2 {
             font-size: .7rem;
