@@ -5,7 +5,5 @@
 @section('description', 'Understand and fix bugs faster using Ray')
 
 @section('content')
-    <section class="docs-content w-full">
-        @include('partials.docs.doc-body')
-    </section>
+    @include('partials.docs.doc-body')
 @endsection

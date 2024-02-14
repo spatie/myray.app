@@ -1,4 +1,4 @@
-<section class="docs-content w-full">
+<section class="docs-content md:w-full">
     <x-markdown>
 <article>
 {!! $page->contents !!}

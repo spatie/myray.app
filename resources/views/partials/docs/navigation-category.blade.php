@@ -1,5 +1,5 @@
 <div class="navigation-category">
-    <a href="{{$category->firstPage()->url}}" class="pl-0 cursor-pointer text-base font-semibold">
+    <a href="{{$category->firstPage()->url}}" class="pl-0 cursor-pointer text-sm font-semibold">
         {{$category->title}}
     </a>
     @if(\Illuminate\Support\Str::contains($slug, $category->slug))

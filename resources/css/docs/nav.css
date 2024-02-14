@@ -1,7 +1,10 @@
 body.docs .docs-navigation {
-    width: 300px;
     font-size: .8rem;
     box-sizing: border-box;
+
+    @media screen(md) {
+        width: 300px;
+    }
 
     & > ul {
         & strong, & a {

@@ -4,6 +4,18 @@
 
     color: theme('colors.midnight');
 
+    & > div {
+        display: flex;
+        justify-content: space-between;
+
+        & > article {
+            max-width: 100%;
+            @media screen(md) {
+                max-width: 740px;
+            }
+        }
+    }
+
     & a {
         color: theme('colors.indigo.500');
         text-decoration: underline;
@@ -16,7 +28,10 @@
     }
 
     & h1, & h2, & h3, & h4, & h5, & h6, & p, & ul, & ol {
-        max-width: 680px;
+        max-width: 100%;
+        @media screen(md) {
+            max-width: 680px;
+        }
     }
 
     & h1, & h2, & h3, & h4, & h5, & h6 {
@@ -68,15 +83,6 @@
 
     & p {
         margin-bottom: 1rem;
-    }
-
-    & > div {
-        display: flex;
-        justify-content: space-between;
-
-        & > article {
-            max-width: 740px;
-        }
     }
 
     & .table-of-contents {
