@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\migrations\database\seeders;
 
 use App\Models\Author;
 use App\Models\Post;

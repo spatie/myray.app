@@ -29,6 +29,7 @@
         }
     },
     "dependencies": {
+        "@alpinejs/focus": "^3.13.5",
         "alpinejs": "^3.13.5",
         "gsap": "^3.9.1",
         "laravel-vite-plugin": "^1.0.1",

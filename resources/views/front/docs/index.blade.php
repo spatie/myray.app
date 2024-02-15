@@ -1,6 +1,6 @@
 @extends('front.layouts.docs')
 
-@section('title', 'Understand and fix bugs faster using Ray')
+@section('title', $page->title)
 
 @section('description', 'Understand and fix bugs faster using Ray')
 
