@@ -14,7 +14,7 @@ ray()->showQueries();
 User::firstWhere('email', 'john@example.com'); // this query will be displayed in Ray.
 ```
 
-![screenshot](/docs/ray/v1/images/query.jpg)
+![screenshot](/docs/screenshots/queries.png)
 
 To stop showing queries, call `stopShowingQueries`.
 
@@ -62,7 +62,7 @@ $user = ray()->countQueries(function (): User {
 });
 ```
 
-![screenshot](/docs/ray/v1/images/query-count.png)
+![screenshot](/docs/screenshots/counting-queries.png)
 
 ## Manually showing a query
 
@@ -75,20 +75,20 @@ User::query()
     ->first();
 ```
 
-![screenshot](/docs/ray/v1/images/single-query.png)
+![screenshot](/docs/screenshots/showing-query.png)
 
 You can call `ray()` multiple times to see how a query is being built up.
 
 ```php
 User::query()
-    ->where('first_name', 'John')
-    ->ray()
-    ->where('last_name', 'Doe')
-    ->ray()
-    ->first();
+        ->where('name', 'John')
+        ->ray()
+        ->whereDate('email_verified_at', '2024-02-15')
+        ->ray()
+        ->first();
 ```
 
-![screenshot](/docs/ray/v1/images/single-query-multiple-calls.png)
+![screenshot](/docs/screenshots/showing-query-2.png)
 
 ## Showing duplicate queries
 

@@ -100,32 +100,6 @@ Cache::get('another-key');
 
 To stop showing cache events, call `stopShowingCache`.
 
-## Showing http client requests
-
-You can display all http client requests and responses using `showHttpClientRequests`
-
-```php
-ray()->showHttpClientRequests();
-
-Http::get('https://example.com/api/users');
-```
-
-![screenshot](/docs/ray/v1/images/http.png)
-
-To stop showing http client events, call `stopShowingHttpClientRequests`.
-
-Alternatively, you can pass a callable to `showHttpClientRequests`. Only the http requests made inside that callable will be displayed in Ray.
-
-```php
-Http::get('https://example.com'); // this request won't be displayed.
-
-ray()->showHttpClientRequests(function() {
-    Http::get('https://example.com'); // this request will be displayed.
-});
-
-Http::get('https://example.com'); // this request won't be displayed.
-```
-
 ## Handling models
 
 Using the `model` function, you can display the attributes and relations of a model.
@@ -134,7 +108,7 @@ Using the `model` function, you can display the attributes and relations of a mo
 ray()->model($user);
 ```
 
-![screenshot](/docs/ray/v1/images/model.jpg)
+![screenshot](/docs/screenshots/model.png)
 
 The `model` function can also accept multiple models and even collections.
 
@@ -159,7 +133,7 @@ Mails that are sent to the log mailer are automatically shown in Ray, you can al
 ray()->mailable(new TestMailable());
 ```
 
-![screenshot](/docs/ray/v1/images/mailable.jpg)
+![screenshot](/docs/screenshots/mailable.png)
 
 ## Showing which views are rendered
 
@@ -172,7 +146,7 @@ ray()->showViews();
 view('welcome', ['name' => 'John Doe'])->render();
 ```
 
-![screenshot](/docs/ray/v1/images/views.png)
+![screenshot](/docs/screenshots/views.png)
 
 To stop showing views, call `stopShowingViews`.
 
@@ -183,6 +157,8 @@ View the rendered version of a markdown string in Ray by calling the `markdown` 
 ```php
 ray()->markdown('# Hello World');
 ```
+
+![screenshot](/docs/screenshots/markdown.png)
 
 ## Displaying collections
 
@@ -195,7 +171,7 @@ collect(['a', 'b', 'c'])
     ->ray('uppercased collection'); // displays the modified collection
 ```
 
-![screenshot](/docs/ray/v1/images/collection.jpg)
+![screenshot](/docs/screenshots/collections.png)
 
 ## Usage with a `Stringable`
 
@@ -208,7 +184,7 @@ Str::of('Lorem')
    ->append(' Dolor Sit Amen');
 ```
 
-![screenshot](/docs/ray/v1/images/stringable.jpg)
+![screenshot](/docs/screenshots/stringable.png)
 
 
 ## Displaying environment variables
@@ -254,12 +230,32 @@ public function my_endpoint_works_correctly()
 }
 ```
 
-![screenshot](/docs/ray/v1/images/response.png)
-
-## Displaying requests
-
-To display all requests made in your Laravel app in Ray, you can call `ray()->showRequests()`. A typical place to put this would be in a service provider.
-
-![screenshot](/docs/ray/v1/images/request.png)
+![screenshot](/docs/screenshots/response.png)
 
 To enable this behaviour by default, you can set the `send_requests_to_ray` option in [the config file](https://spatie.be/docs/ray/v1/configuration/laravel) to `true`.
+
+## Showing http client requests
+
+You can display all http client requests and responses using `showHttpClientRequests`
+
+```php
+ray()->showHttpClientRequests();
+
+Http::get('https://example.com/api/users');
+```
+
+![screenshot](/docs/screenshots/requests.png)
+
+To stop showing http client events, call `stopShowingHttpClientRequests`.
+
+Alternatively, you can pass a callable to `showHttpClientRequests`. Only the http requests made inside that callable will be displayed in Ray.
+
+```php
+Http::get('https://example.com'); // this request won't be displayed.
+
+ray()->showHttpClientRequests(function() {
+    Http::get('https://example.com'); // this request will be displayed.
+});
+
+Http::get('https://example.com'); // this request won't be displayed.
+```
