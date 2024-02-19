@@ -131,7 +131,7 @@ php artisan config:cache
 php artisan view:cache
 php artisan storage:link
 
-sudo service php8.2-fpm restart
+sudo service php8.3-fpm restart
 sudo supervisorctl restart all
 @endtask
 
@@ -155,6 +155,6 @@ php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
 php artisan view:cache
-sudo service php8.2-fpm restart
+sudo service php8.3-fpm restart
 sudo supervisorctl restart all
 @endtask
