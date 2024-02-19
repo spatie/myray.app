@@ -1,8 +1,8 @@
 ---
-title: Installation
+title: Using Ray with Javascript
+menuTitle: Installation
 weight: 1
 ---
-# Using Ray with Javascript
 
 You can send information from JavaScript to Ray via this third party package:
 

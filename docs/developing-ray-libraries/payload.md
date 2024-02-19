@@ -2,7 +2,7 @@
 title: Structure of a payload
 weight: 3
 ---
-# Structure of a payload
+
 Every time any data is sent to Ray, a payload is generated with the same basic structure before being sent to the Ray app.
 
 If you run the following test PHP script, you'll get the payload example below sent via `HTTP POST` to the Ray app.

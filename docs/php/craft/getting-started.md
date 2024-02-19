@@ -2,7 +2,7 @@
 title: Using Ray with Craft CMS
 weight: 1
 ---
-# Using Ray with Craft CMS
+
 If you use Craft CMS, this is the way.
 
 ## Installing the package

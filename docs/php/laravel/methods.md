@@ -1,5 +1,6 @@
 ---
-title: Methods
+title: Ray methods in Laravel
+menuTitle: Methods
 weight: 3
 ---
 # Ray methods in Laravel

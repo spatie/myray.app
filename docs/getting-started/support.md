@@ -2,7 +2,6 @@
 title: Support
 weight: 4
 ---
-# Support
 
 Find yourself stuck using the Ray app? Found a bug? Do you have general questions or suggestions for improving ray or laravel-ray? Feel free to create an issue on GitHub, we'll try to address it as soon as possible.
 

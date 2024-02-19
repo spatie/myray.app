@@ -2,7 +2,6 @@
 title: Using Ray with Drupal
 weight: 1
 ---
-# Using Ray with Drupal
 
 Ray for Drupal is available as a Drupal module. With Ray for Drupal, Ray becomes available in Drupal theme files, Twig, and your theme or module JavaScript files.
 

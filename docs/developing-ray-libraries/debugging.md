@@ -2,7 +2,7 @@
 title: Debugging
 weight: 2
 ---
-# Debugging
+
 When developing a Ray Library, you may find it necessary to debug the data being sent to the Ray app.
 
 You may use the following third-party package to intercept and display the data being sent from your code to the Ray app:

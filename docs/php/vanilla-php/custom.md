@@ -1,9 +1,8 @@
 ---
-title: Custom functions
+title: Adding your own Ray functions in PHP
+menuTitle: Custom functions
 weight: 5
 ---
-
-# Adding your own Ray functions in PHP
 
 In all PHP projects, `ray` will proxy all calls to the `Spatie\Ray\Ray` class. This class is macroable: you can dynamically add your own functions to it.
 

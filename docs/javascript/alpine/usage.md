@@ -2,7 +2,7 @@
 title: Usage
 weight: 3
 ---
-# Usage
+
 The third-party Alpine.js [package](https://github.com/permafrost-dev/alpinejs-ray) for Ray uses the [package for NodeJS](/docs/ray/v1/installation-in-your-project/nodejs) for
 most core functionality. See the [NodeJS reference](/docs/ray/v1/usage/nodejs) for a full list of available methods.
 

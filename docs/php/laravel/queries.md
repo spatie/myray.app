@@ -1,8 +1,8 @@
 ---
-title: Queries
+title: Debugging Database Queries
+menuTitle: Queries
 weight: 3
 ---
-# Debugging Database Queries
 
 ## Showing queries
 

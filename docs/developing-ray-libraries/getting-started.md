@@ -1,8 +1,9 @@
 ---
-title: Getting Started
+title: Developing a Ray Library
+menuTitle: Getting Started
 weight: 1
 ---
-# Developing a Ray Library
+
 The [Ray app](https://myray.app) is not a language-specific debugging app - as long as there's an integration library, it can be used with any language.
 
 If you're interested in developing a Ray library for your language of choice, this document will help guide you through the process.  As an example, we'll be creating an example Ray integration library for Javascript/NodeJS; however, the concepts apply to any language.

@@ -1,9 +1,8 @@
 ---
-title: Configure PHPStan
+title: Configure PHPStan to detect ray calls
+menuTitle: Configure PHPStan
 weight: 9
 ---
-
-# Configure PHPStan to detect ray calls
 
 Ray allows you to specify a custom PHPStan rule that lets you detect remaining ray calls in your application.
 

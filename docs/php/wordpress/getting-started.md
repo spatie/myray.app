@@ -2,7 +2,7 @@
 title: Using Ray in Wordpress
 weight: 1
 ---
-# Using Ray in WordPress
+
 There are several ways to install Ray in WordPress.
 
 ## Global installation

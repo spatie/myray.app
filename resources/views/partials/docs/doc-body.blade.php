@@ -3,6 +3,7 @@
 <section class="docs-content md:w-full">
     <x-markdown>
 <article>
+<h1>{{ $page->title }}</h1>
 {!! $page->contents !!}
 </article>
 

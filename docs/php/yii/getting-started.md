@@ -2,7 +2,7 @@
 title: Using Ray with Yii
 weight: 1
 ---
-# Using Ray with Yii
+
 If you use Yii2, this is the way.
 
 ## Installing the package

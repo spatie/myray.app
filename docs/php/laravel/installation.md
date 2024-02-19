@@ -1,9 +1,8 @@
 ---
-title: Installation
+title: Using Ray with Laravel
+menuTitle: Installation
 weight: 1
 ---
-
-# Using Ray with Laravel
 
 If you use Laravel, this is the way.
 

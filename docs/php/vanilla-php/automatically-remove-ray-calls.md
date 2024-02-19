@@ -1,9 +1,8 @@
 ---
-title: Removing Ray calls
+title: Automatically remove Ray calls
+menuTitle: Remove Ray calls
 weight: 8
 ---
-
-# Automatically remove Ray calls
 
 To avoid shipping your code with some `ray()` calls in it you can automate the removal of all `ray()` calls in your codebase.
 

@@ -20,7 +20,7 @@
                             'active border-indigo-500 border-s' => \Illuminate\Support\Str::contains($slug, $page->slug),
                         ])
                     >
-                        {{$page->title}}
+                        {{$page->menuTitle()}}
                     </a>
                 </li>
             @endforeach

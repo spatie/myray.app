@@ -503,6 +503,11 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.9.6.tgz#2c1fb69e02a3f1506f52698cfdc3a8b6386df9a6"
   integrity sha512-jqzNLhNDvIZOrt69Ce4UjGRpXJBzhUBzawMwnaDAwyHriki3XollsewxWzOzz+4yOFDkuJHtTsZFwMxhYJWmLQ==
 
+"@ryangjchandler/alpine-clipboard@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@ryangjchandler/alpine-clipboard/-/alpine-clipboard-2.3.0.tgz#44d7a9e8c4446fd24ece2d6be0d23fac7dd59b20"
+  integrity sha512-r1YL/LL851vSemjgcca+M6Yz9SNtA9ATul8nJ0n0sAS1W3V1GUWvH0Od2XdQF1r36YJF+/4sUc0eHF/Zexw7dA==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.1.tgz#a21117b19ee9be70c379ec1877537ef2e1c63301"

@@ -1,9 +1,9 @@
 ---
-title: Detect with X-ray
+title: Configure X-Ray to detect ray calls
+menuTitle: Detect with X-ray
 weight: 10
 ---
 
-# Configure X-Ray to detect ray calls
 Ray provides a first-party package named [x-ray](https://github.com/spatie/x-ray), allowing you detect remaining ray calls in your application.
 
 The primary use case is when calls to ray() cannot be left in source code before deploying, even if ray is disabled. This package does NOT remove the calls, it simply displays their locations so they can be removed manually.

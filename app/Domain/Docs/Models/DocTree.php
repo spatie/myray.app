@@ -56,7 +56,7 @@ class DocTree
 
         if ($doc->type === SheetType::Category) {
             $category->weight = $doc->weight;
-            $category->title = $doc->title;
+            $category->title = $doc->menuTitle ?? $doc->title;
             $category->slug = str_replace('/_index', '', $doc->slug);
             return;
         }
