@@ -40,6 +40,15 @@ class DocsController
             return redirect()->away($page->url);
         }
 
-        return view('front.docs.index', compact('page', 'slug'));
+        $category = $this->docTree->findCategory($page->category);
+
+        $categories = [];
+        while($category !== null) {
+            $categories[] = $category;
+            $category = $category->parent ?? null;
+        }
+        $categories = array_reverse($categories);
+
+        return view('front.docs.index', compact('page', 'slug', 'categories'));
     }
 }

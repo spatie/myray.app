@@ -51,18 +51,26 @@ class DocTree
         $category = $this;
 
         for ($i = 0; $i < count($doc->parts) - 1; $i++) {
+            if ($i > 0) {
+                $parent = $category;
+            }
+
             $category = $category->childCategory($doc->parts[$i]);
         }
 
         if ($doc->type === SheetType::Category) {
+            if (isset($parent)) {
+                $category->parent = $parent;
+            }
+
             $category->weight = $doc->weight;
             $category->title = $doc->menuTitle ?? $doc->title;
             $category->slug = str_replace('/_index', '', $doc->slug);
+            $this->flatCategories->put($category->slug, $category);
             return;
         }
 
         $category->pages->add($doc);
-        $this->flatCategories->put($category->slug, $category);
         $this->flatPages->put($doc->slug, $doc);
     }
 
@@ -73,6 +81,7 @@ class DocTree
 
     public function findCategory(string $slug): ?Category
     {
+        ray($this->flatCategories->pluck('slug'));
         return $this->flatCategories->get($slug);
     }
 }

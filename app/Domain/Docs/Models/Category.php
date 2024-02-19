@@ -20,6 +20,8 @@ class Category
 
     public string $slug = '';
 
+    public Category $parent;
+
     public function __construct() {
         $this->categories = new Collection();
         $this->pages = new Collection();
