@@ -81,7 +81,6 @@ class DocTree
 
     public function findCategory(string $slug): ?Category
     {
-        ray($this->flatCategories->pluck('slug'));
         return $this->flatCategories->get($slug);
     }
 }
