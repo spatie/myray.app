@@ -20,7 +20,7 @@ class IntegrationsOverview extends Component
         $docs = app('sheets')->collection('docs')->all()->sortBy('weight')->filter(function ($doc) {
             return
                 count($doc->parts) === 3 &&
-                $doc->parts[0] === 'integrations' &&
+                ($doc->parts[0] === 'php' || $doc->parts[0] === 'javascript' || $doc->parts[0] === 'other-languages') &&
                 $doc->parts[count($doc->parts) -1] === '_index.md';
         });
 
