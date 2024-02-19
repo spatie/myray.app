@@ -14,7 +14,7 @@
 
     <div class="fixed left-0 right-0 top-0 bottom-0 z-50 pointer-events-none" x-show="showSearchBox" x-trap="showSearchBox">
         <div class="flex justify-center items-center h-full">
-            <div class="bg-white shadow-lg w-full max-w-2xl rounded pointer-events-auto">
+            <div class="bg-white shadow-lg w-full max-w-2xl rounded pointer-events-auto m-3">
                 <div class="relative flex items-center border-b">
                     <div class="absolute left-0 z-50 left-3">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
