@@ -4,6 +4,8 @@
 @import "./utilities/ray.css";
 @import "./docs/docs.css";
 
+[x-cloak] { display: none !important; }
+
 .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
   -webkit-background-clip: text;

@@ -9,10 +9,10 @@
         <span class="text-xs text-gray-400">⌘K</span>
     </button>
 
-    <div class="fixed left-0 right-0 top-0 bottom-0 bg-indigo-100/75 z-40" x-show="showSearchBox" @click="showSearchBox=false">
+    <div class="fixed left-0 right-0 top-0 bottom-0 bg-indigo-100/75 z-40" x-cloak x-show="showSearchBox" @click="showSearchBox=false">
     </div>
 
-    <div class="fixed left-0 right-0 top-0 bottom-0 z-50 pointer-events-none" x-show="showSearchBox" x-trap="showSearchBox">
+    <div class="fixed left-0 right-0 top-0 bottom-0 z-50 pointer-events-none" x-cloak x-show="showSearchBox" x-trap="showSearchBox">
         <div class="flex justify-center items-center h-full">
             <div class="bg-white shadow-lg w-full max-w-2xl rounded pointer-events-auto m-3">
                 <div class="relative flex items-center border-b">
