@@ -21,7 +21,8 @@
         <ul class="
         grid grid-flow-col gap-8
         font-semibold">
-            <li><a class="markup-link" href="{{route('docs.index')}}">Docs</a></li>
+{{--            <li><a class="markup-link" href="{{route('docs.index')}}">Docs</a></li>--}}
+            <li><a class="markup-link" href="https://spatie.be/docs/ray/v1/introduction">Docs</a></li>
             <li><a class="markup-link" href="{{ route('blog') }}">Blog</a></li>
             <li><a class="markup-link" href="{{spatieUrl('https://spatie.be/products/ray')}}">Buy</a></li>
             <li><a class="hover:text-indigo-500
