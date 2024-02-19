@@ -132,7 +132,7 @@ php artisan view:cache
 php artisan storage:link
 
 sudo service php8.2-fpm restart
-sudo supervisorctl restart all
+#sudo supervisorctl restart all
 @endtask
 
 @task('cleanOldReleases', ['on' => 'remote'])
@@ -156,4 +156,5 @@ php artisan cache:clear
 php artisan config:cache
 php artisan view:cache
 sudo service php8.2-fpm restart
+sudo supervisorctl restart all
 @endtask
