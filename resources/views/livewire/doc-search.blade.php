@@ -29,9 +29,9 @@
                     <div class="max-h-80 overflow-y-auto px-3 pb-3">
                         <div class="text-sm font-bold mt-2 mb-2">Results</div>
                         @if($results->hits->count() > 0)
-                            <ul>
+                            <ul class="search-results">
                                 @foreach($results->hits as $hit)
-                                    <li class=" mb-3">
+                                    <li class="mb-3">
                                         <a href="{{$hit->url}}">
                                             <div class="text-xs font-semibold">{{$hit->title()}}</div>
                                             <div class="text-xs font-normal">{!! $hit->highlightedSnippet() !!}</div>

@@ -8,6 +8,12 @@ Ray helps you debug your web application faster and easier. It's a companion app
 ## Install the Ray application
 You can give Ray a try by downloading [our free trial](https://myray.app/). After installing the application, link your app with Ray by installing the right package give it a try by running your first calls. Enjoying Ray? Get full access to the app by [purchasing a license](https://spatie.be/products/ray).
 
+Find download links to the Ray application for our support platforms below:
+* [macOS (Apple Silicon)](https://spatie.be/products/ray/download/macosAppleSilicon/latest)
+* [macOS (Intel)](https://spatie.be/products/ray/download/macosIntel/latest)
+* [Windows](https://spatie.be/products/ray/download/windows/latest)
+* [Linux](https://spatie.be/products/ray/download/linux/latest)
+
 ## Connect your application to Ray
 You need to install a package/library for your specific language or framework that allows your project to communicate with Ray. Most integrations are installed with a package manager, but the steps may be different depending on the integration.
 

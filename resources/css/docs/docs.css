@@ -1,6 +1,13 @@
 @import "./nav.css";
 @import "./content.css";
 
+.search-results {
+    & em {
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
 .copy-tooltip {
     background: #4D00C9;
     color: white;
