@@ -36,6 +36,11 @@ return [
             'throw' => false,
         ],
 
+        'docs' => [
+            'driver' => 'local',
+            'root' => base_path('docs'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
@@ -71,6 +76,7 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('docs') => base_path('docs'),
     ],
 
 ];

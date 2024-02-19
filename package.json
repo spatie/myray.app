@@ -4,24 +4,15 @@
         "postcss": "^8"
     },
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production",
+        "dev": "vite",
+        "build": "vite build",
         "format": "prettier 'resources/**/*.{css,js,json,css,ts,tsx}' '*.{js,css}' --write"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.5.0",
-        "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat",
-        "autoprefixer": "^9",
+        "@tailwindcss/forms": "^0.5.7",
+        "autoprefixer": "^10.4.17",
         "husky": "^3.0.9",
-        "laravel-mix": "^6.0.43",
-        "laravel-mix-purgecss": "^6.0.0",
         "lint-staged": "^8.1.5",
-        "postcss": "^8",
         "prettier": "^1.18.2",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat"
     },
@@ -38,8 +29,15 @@
         }
     },
     "dependencies": {
-        "alpinejs": "^3.9.1",
+        "@alpinejs/focus": "^3.13.5",
+        "@ryangjchandler/alpine-clipboard": "^2.3.0",
+        "alpinejs": "^3.13.5",
         "gsap": "^3.9.1",
-        "shiki": "^0.14.1"
-    }
+        "laravel-vite-plugin": "^1.0.1",
+        "postcss": "^8.4.33",
+        "postcss-preset-env": "^9.3.0",
+        "shiki": "^0.9.5",
+        "vite": "^5.0.12"
+    },
+    "type": "module"
 }

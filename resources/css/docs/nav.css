@@ -1,0 +1,49 @@
+body.docs .docs-navigation {
+    font-size: .8rem;
+    box-sizing: border-box;
+
+    @media screen(lg) {
+        width: 300px;
+    }
+
+    & > ul {
+        & strong, & a {
+            padding-left: 1rem;
+        }
+    }
+
+    & > ul > li {
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+
+        & > div > ul {
+            border-left: 1px solid #E9E5EF;
+            margin-top: .8rem;
+
+            &  > li {
+                margin-bottom: .5rem;
+
+                border-left: #E9E5EF 1px solid;
+                left: -1px;
+
+                & > a {
+                    padding-left: 1rem;
+                }
+
+                &.active {
+                    color: #4D00C9;
+                    font-weight: 600;
+                }
+
+                & > ul > li {
+                    left: -1px;
+                    margin: .25rem 0;
+
+                    & > a {
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

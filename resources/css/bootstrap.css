@@ -1,26 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/fonts/JetBrainsMono-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/JetBrainsMono-Regular.woff') format('woff'); /* Pretty Modern Browsers */
     font-display: swap;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Italic.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/fonts/JetBrainsMono-Italic.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/JetBrainsMono-Italic.woff') format('woff'); /* Pretty Modern Browsers */
     font-display: swap;
-    font-weight: 400; 
+    font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/fonts/JetBrainsMono-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-         url('/fonts/JetBrainsMono-Medium.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/JetBrainsMono-Medium.woff') format('woff'); /* Pretty Modern Browsers */
     font-display: swap;
-    font-weight: 600; 
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -32,7 +36,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     font-size: min(max(1rem, 2vw), 1.25rem);
-    
+
     @supports (font-size: clamp(1rem, 2vw, 1.25rem)) {
         font-size: clamp(1rem, 2vw, 1.25rem);
     }

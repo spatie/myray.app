@@ -1,9 +1,11 @@
 <header>
     <nav class="
-        mx-auto px-6 sm:px-12 md:px-16 pt-8 pb-16
+        @if(isset($narrow) && $narrow)
         max-w-4xl
+        @endif
+        px-6 sm:px-12 md:px-16 py-8
+        mx-auto
         flex items-center justify-between
-
     ">
         <div class="sm:flex items-center">
             <div>
@@ -14,13 +16,13 @@
                     By <a class="hover:underline" href="{{spatieUrl()}}">Spatie</a>
                 </span>
             </div>
-
         </div>
 
         <ul class="
         grid grid-flow-col gap-8
         font-semibold">
-            <li><a class="markup-link" href="{{spatieUrl('https://spatie.be/docs/ray')}}">Docs</a></li>
+{{--            <li><a class="markup-link" href="{{route('docs.index')}}">Docs</a></li>--}}
+            <li><a class="markup-link" href="https://spatie.be/docs/ray/v1/introduction">Docs</a></li>
             <li><a class="markup-link" href="{{ route('blog') }}">Blog</a></li>
             <li><a class="markup-link" href="{{spatieUrl('https://spatie.be/products/ray')}}">Buy</a></li>
             <li><a class="hover:text-indigo-500
