@@ -87,7 +87,7 @@ yarn --frozen-lockfile
 @task('generateAssets', ['on' => 'remote'])
 {{ logMessage("🌅  Generating assets...") }}
 cd {{ $newReleaseDir }};
-yarn run production
+yarn run build
 @endtask
 
 @task('updateSymlinks', ['on' => 'remote'])
