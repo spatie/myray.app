@@ -90,6 +90,10 @@
         margin-bottom: 1rem;
     }
 
+    & ul {
+        list-style: disc inside;
+    }
+
     & .table-of-contents {
         min-width: 220px;
         margin-left: 100px;
