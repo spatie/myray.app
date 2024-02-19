@@ -30,4 +30,4 @@ Ray::macro('myCustomFunction', function() {
 ray()->myCustomFunction();
 ```
 
-![screenshot](/docs/screenshots/custom.png)
+![screenshot](/screenshots/custom.png)

@@ -20,7 +20,7 @@ event(new TestEvent());
 event(new TestEventWithParameter('my argument'));
 ```
 
-![screenshot](/docs/screenshots/events.png)
+![screenshot](/screenshots/events.png)
 
 To stop showing events, call `stopShowingEvents`.
 
@@ -57,7 +57,7 @@ dispatch(new TestJob('my-test-job'));
 
 ```
 
-![screenshot](/docs/screenshots/jobs.png)
+![screenshot](/screenshots/jobs.png)
 
 To stop showing jobs, call `stopShowingJobs`.
 
@@ -97,7 +97,7 @@ Cache::get('my-key');
 Cache::get('another-key');
 ```
 
-![screenshot](/docs/screenshots/cache.png)
+![screenshot](/screenshots/cache.png)
 
 To stop showing cache events, call `stopShowingCache`.
 
@@ -109,7 +109,7 @@ Using the `model` function, you can display the attributes and relations of a mo
 ray()->model($user);
 ```
 
-![screenshot](/docs/screenshots/model.png)
+![screenshot](/screenshots/model.png)
 
 The `model` function can also accept multiple models and even collections.
 
@@ -134,7 +134,7 @@ Mails that are sent to the log mailer are automatically shown in Ray, you can al
 ray()->mailable(new TestMailable());
 ```
 
-![screenshot](/docs/screenshots/mailable.png)
+![screenshot](/screenshots/mailable.png)
 
 ## Showing which views are rendered
 
@@ -147,7 +147,7 @@ ray()->showViews();
 view('welcome', ['name' => 'John Doe'])->render();
 ```
 
-![screenshot](/docs/screenshots/views.png)
+![screenshot](/screenshots/views.png)
 
 To stop showing views, call `stopShowingViews`.
 
@@ -159,7 +159,7 @@ View the rendered version of a markdown string in Ray by calling the `markdown` 
 ray()->markdown('# Hello World');
 ```
 
-![screenshot](/docs/screenshots/markdown.png)
+![screenshot](/screenshots/markdown.png)
 
 ## Displaying collections
 
@@ -172,7 +172,7 @@ collect(['a', 'b', 'c'])
     ->ray('uppercased collection'); // displays the modified collection
 ```
 
-![screenshot](/docs/screenshots/collections.png)
+![screenshot](/screenshots/collections.png)
 
 ## Usage with a `Stringable`
 
@@ -185,7 +185,7 @@ Str::of('Lorem')
    ->append(' Dolor Sit Amen');
 ```
 
-![screenshot](/docs/screenshots/stringable.png)
+![screenshot](/screenshots/stringable.png)
 
 
 ## Displaying environment variables
@@ -231,7 +231,7 @@ public function my_endpoint_works_correctly()
 }
 ```
 
-![screenshot](/docs/screenshots/response.png)
+![screenshot](/screenshots/response.png)
 
 To enable this behaviour by default, you can set the `send_requests_to_ray` option in [the config file](https://spatie.be/docs/ray/v1/configuration/laravel) to `true`.
 
@@ -245,7 +245,7 @@ ray()->showHttpClientRequests();
 Http::get('https://example.com/api/users');
 ```
 
-![screenshot](/docs/screenshots/requests.png)
+![screenshot](/screenshots/requests.png)
 
 To stop showing http client events, call `stopShowingHttpClientRequests`.
 

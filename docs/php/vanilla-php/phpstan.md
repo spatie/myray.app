@@ -13,4 +13,4 @@ rules:
 
 All remaining ray calls would then be reported by [phpstan](https://phpstan.org)
 
-![screenshot](/docs/screenshots/phpstan-failing-result.jpg)
+![screenshot](/screenshots/phpstan-failing-result.jpg)

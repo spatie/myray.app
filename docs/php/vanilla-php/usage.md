@@ -14,7 +14,7 @@ ray(['an array']);
 ray($anObject);
 ```
 
-![screenshot](/docs/screenshots/usage.png)
+![screenshot](/screenshots/usage.png)
 
 `ray` accepts multiple arguments. Each argument will be displayed in the Ray app.
 
@@ -60,7 +60,7 @@ ray('this is purple')->purple();
 ray('this is gray')->gray();
 ```
 
-![screenshot](/docs/screenshots/colors.png)
+![screenshot](/screenshots/colors.png)
 
 ## Using sizes
 
@@ -72,7 +72,7 @@ ray('regular');
 ray('large')->large();
 ```
 
-![screenshot](/docs/screenshots/sizes.png)
+![screenshot](/screenshots/sizes.png)
 
 ## Adding a label
 
@@ -82,7 +82,7 @@ You can customize the label displayed next to item with the `label` function.
 ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 ```
 
-![screenshot](/docs/screenshots/labels.png)
+![screenshot](/screenshots/labels.png)
 
 ## Creating a new screen
 
@@ -100,7 +100,7 @@ Optionally, you can give a screen a name:
 ray()->newScreen('My debug screen');
 ```
 
-![screenshot](/docs/screenshots/newScreen.png)
+![screenshot](/screenshots/newScreen.png)
 
 You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
 current request. In a Laravel app, a good place for this might be the service provider.
@@ -125,7 +125,7 @@ function.
 ray()->caller();
 ```
 
-![screenshot](/docs/screenshots/caller.png)
+![screenshot](/screenshots/caller.png)
 
 If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 
@@ -133,7 +133,7 @@ If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 ray()->trace();
 ```
 
-![screenshot](/docs/screenshots/trace.png)
+![screenshot](/screenshots/trace.png)
 
 ## Pausing execution
 
@@ -143,7 +143,7 @@ You can pause execution of a script by using the `pause` method.
 ray()->pause();
 ```
 
-![screenshot](/docs/screenshots/pause.png)
+![screenshot](/screenshots/pause.png)
 
 If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
 exception in your app to halt execution.
@@ -168,7 +168,7 @@ foreach (range(1, 2) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/screenshots/count.png)
+![screenshot](/screenshots/count.png)
 
 Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
 executed.
@@ -201,7 +201,7 @@ foreach (range(1, 4) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/docs/screenshots/named-count.png)
+![screenshot](/screenshots/named-count.png)
 
 ## Limiting the number of sent payloads
 
@@ -282,7 +282,7 @@ sleep(2);
 ray()->measure();
 ```
 
-![screenshot](/docs/screenshots/measure.png)
+![screenshot](/screenshots/measure.png)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
@@ -293,7 +293,7 @@ ray()->measure(function() {
 });
 ```
 
-![screenshot](/docs/screenshots/measure-closure.png)
+![screenshot](/screenshots/measure-closure.png)
 
 ## Displaying the private properties / methods
 
@@ -348,7 +348,7 @@ be converted to JSON with [json_encode](https://www.php.net/json_encode).
 ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
 ```
 
-![screenshot](/docs/screenshots/json.png)
+![screenshot](/screenshots/json.png)
 
 The `toJson` function can also accept multiple arguments.
 
@@ -374,7 +374,7 @@ $jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
 ray()->json($jsonString);
 ```
 
-![screenshot](/docs/screenshots/from-json.png)
+![screenshot](/screenshots/from-json.png)
 
 The `json` function can also accept multiple valid JSON strings.
 
@@ -395,7 +395,7 @@ $xmlString = '<one><two><three>3</three></two></one>';
 ray()->xml($xmlString);
 ```
 
-![screenshot](/docs/screenshots/xml.png)
+![screenshot](/screenshots/xml.png)
 
 ## Working with Carbon instances
 
@@ -405,7 +405,7 @@ ray()->xml($xmlString);
 ray()->carbon(new \Carbon\Carbon());
 ```
 
-![screenshot](/docs/screenshots/carbon.png)
+![screenshot](/screenshots/carbon.png)
 
 ## Working with files
 
@@ -427,7 +427,7 @@ ray()->table([
 ]);
 ```
 
-![screenshot](/docs/screenshots/table.png)
+![screenshot](/screenshots/table.png)
 
 As a second argument, you can pass a label that will be displayed next to the table.
 
@@ -435,7 +435,7 @@ As a second argument, you can pass a label that will be displayed next to the ta
 ray()->table(['John', 'Paul', 'George', 'Ringo'], 'Beatles');
 ```
 
-![screenshot](/docs/screenshots/table-label.png)
+![screenshot](/screenshots/table-label.png)
 
 ## Displaying images
 
@@ -644,7 +644,7 @@ You can use Ray to display a notification.
 ray()->notify('This is my notification');
 ```
 
-![screenshot](/docs/screenshots/notification.jpg)
+![screenshot](/screenshots/notification.jpg)
 
 ## Shooting confetti
 
@@ -654,7 +654,7 @@ For those times that success is to be celebrated.
 ray()->confetti();
 ```
 
-![screenshot](/docs/screenshots/confetti.png)
+![screenshot](/screenshots/confetti.png)
 
 ## Halting the PHP process
 
@@ -680,7 +680,7 @@ ray()->phpinfo();
 ray()->phpinfo('xdebug.enabled', 'default_mimetype');
 ```
 
-![screenshot](/docs/screenshots/phpinfo.png)
+![screenshot](/screenshots/phpinfo.png)
 
 
 ## Displaying exceptions

@@ -22,12 +22,12 @@ User::firstWhere('email', 'john@example.com');
 
 Here's how that looks like in Ray.
 
-![screenshot](/docs/screenshots/intro.png)
+![screenshot](/screenshots/intro.png)
 
 There are many other helper functions available on Ray that allow you to display things that can help you debug such as [runtime and memory usage](/docs/ray/v1/usage/framework-agnostic-php-project#measuring-performance-and-memory-usage), [queries that were executed](/docs/ray/v1/usage/laravel#showing-queries), and much more.
 
 In addition to debugging locally, you can also connect to a server. All `ray` calls performed on that server will be securely forwarded via SSH to your local machine.
 
-![screenshot](/docs/screenshots/servers.png)
+![screenshot](/screenshots/servers.png)
 
 Next: [Installing Ray](/docs/getting-started/installation)
