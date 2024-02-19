@@ -23,4 +23,4 @@ composer require spatie/craft-ray --dev
 
 ## Usage
 
-Head over to the [global installation instructions](https://spatie.be/docs/ray/v1/configuration/framework-agnostic-php#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
+Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.

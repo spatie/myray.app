@@ -3,7 +3,7 @@ title: Configuration
 weight: 2
 ---
 
-In framework agnostic projects you can use this template as [the ray config file](/docs/ray/v1/configuration/general).
+In framework agnostic projects you can use this template as the ray config file.
 
 ```php
 <?php

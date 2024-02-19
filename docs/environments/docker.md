@@ -3,7 +3,7 @@ title: Docker
 weight: 1
 ---
 # Docker
-When developing using Docker, the Ray host should point to the internal IP of your Docker host by using 'host.docker.internal' in [the config file](/docs/ray/v1/configuration/general).
+When developing using Docker, the Ray host should point to the internal IP of your Docker host by using 'host.docker.internal' in [the config file](/docs/php/vanilla-php/configuration).
 
 ```php
 <?php

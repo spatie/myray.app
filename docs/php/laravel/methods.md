@@ -4,7 +4,7 @@ menuTitle: Methods
 weight: 3
 ---
 # Ray methods in Laravel
-Inside a Laravel application, you can use all methods from [the framework agnostic version](/docs/ray/v1/usage/framework-agnostic-php-project).
+Inside a Laravel application, you can use all methods from [the framework agnostic version](/docs/php/vanilla-php/usage).
 
 Additionally, you can use these Laravel specific methods. Sometimes you may want to log something to ray and get the resulting return value of your closure instead of an instance of `Ray`. You can achieve this by adding a return value type to your closure. See the examples for `showQueries()` and `countQueries()` below. Any other methods that accept a closure will function the same way.
 
@@ -233,7 +233,7 @@ public function my_endpoint_works_correctly()
 
 ![screenshot](/screenshots/response.png)
 
-To enable this behaviour by default, you can set the `send_requests_to_ray` option in [the config file](https://spatie.be/docs/ray/v1/configuration/laravel) to `true`.
+To enable this behaviour by default, you can set the `send_requests_to_ray` option in [the config file](/docs/php/laravel/configuration) to `true`.
 
 ## Showing http client requests
 
