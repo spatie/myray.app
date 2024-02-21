@@ -1,6 +1,7 @@
 <?php
 
 use App\Domain\Docs\BladeParsingExtension;
+use App\Domain\Docs\WireNavigateExtension;
 use League\CommonMark\Normalizer\SlugNormalizer;
 use League\CommonMark\Util\HtmlFilter;
 
@@ -92,6 +93,7 @@ return [
         League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
         League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class,
         BladeParsingExtension::class,
+        WireNavigateExtension::class,
         League\CommonMark\Extension\Table\TableExtension::class,
     ],
 
