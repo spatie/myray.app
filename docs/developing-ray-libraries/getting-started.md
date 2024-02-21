@@ -6,19 +6,19 @@ weight: 1
 
 The [Ray app](https://myray.app) is not a language-specific debugging app - as long as there's an integration library, it can be used with any language.
 
-If you're interested in developing a Ray library for your language of choice, this document will help guide you through the process.  As an example, we'll be creating an example Ray integration library for Javascript/NodeJS; however, the concepts apply to any language.
+If you're interested in developing a Ray library for your language of choice, this document will help guide you through the process.  As an example, we'll be creating an example Ray integration library for JavaScript/Node.js; however, the concepts apply to any language.
 
 - Estimated time investment: `1 hour`
 - Required Tools: [Typescript](https://github.com/Microsoft/TypeScript), [ESBuild](https://github.com/evanw/esbuild), [ray-proxy](https://github.com/permafrost-dev/ray-proxy)
 - Companion Repository: [permafrost-dev/creating-a-ray-integration](https://github.com/permafrost-dev/creating-a-ray-integration)
 
-## Creating a javascript integration for Ray
+## Creating a JavaScript integration for Ray
 
-In this guide, we'll create a new javascript library that communicates with Ray.  There are already comprehensive third-party libraries in this space, such as [node-ray](https://github.com/permafrost-dev/node-ray), but this will serve well as an example.
+In this guide, we'll create a new JavaScript library that communicates with Ray.  There are already comprehensive third-party libraries in this space, such as [node-ray](https://github.com/permafrost-dev/node-ray), but this will serve well as an example.
 
 ## Goals
 
-Create a javascript library that communicates with Ray that implements the following methods:
+Create a JavaScript library that communicates with Ray that implements the following methods:
 - `color()`
 - `html()`
 - `ray()`
@@ -26,7 +26,7 @@ Create a javascript library that communicates with Ray that implements the follo
 - `send()`
 - `sendRequest()`
 
-## Getting Started
+## Getting started
 
 The [`spatie/ray`](https://github.com/spatie/ray) PHP package should be used as a reference - it is the primary library for Ray, and all new functionality is always added here first.  We'll reference its source code as we write our library.
 
@@ -62,7 +62,7 @@ When you're ready to start intercepting data, start Ray app and set the port to 
 npx ray-proxy
 ```
 
-## Technology/Package choices
+## Technology/package choices
 
 For the development, we'll use [TypeScript](https://www.typescriptlang.org/docs/) as the primary language and the `esbuild` package to compile and bundle our library.
 
@@ -87,7 +87,7 @@ touch ./src/Ray.ts
 touch ./src/payloadUtils.ts
 ```
 
-## Structure of a Payload
+## Structure of a payload
 
 Let's start with the raw contents of a payload that is sent from your code to the Ray app.  You may view it in `ray-proxy` by running the following:
 
@@ -152,7 +152,7 @@ import { OriginData } from './Origin';
 // create the actual payload to send using the structure from above
 export function createSendablePayload(payloads: any[] = [], uuid: string | null = null): any {
 	uuid = uuid ?? uuidv4({}).toString();
-	
+
 	return { uuid, payloads, meta: { my_package_version: "1.0.0" } };
 }
 
@@ -167,11 +167,11 @@ export function createPayload(type: string, label: string | undefined, content: 
         },
         origin: OriginData,
 	};
-	
+
 	if (result.content.label === undefined) {
 		delete result.content['label'];
 	}
-	
+
 	return result;
 }
 
@@ -205,43 +205,43 @@ const  superagent = require('superagent');
 
 export class Ray {
 	public uuid: string | null = null;
-	
+
 	// change the color of the payload
 	public color(name: string): Ray {
 		const payload = createColorPayload(name, this.uuid);
-		
+
 		return this.sendRequest(payload);
 	}
-	
+
 	// send custom html to Ray
 	public html(name: string): Ray {
 		const payload = createHtmlPayload(name, this.uuid);
-		
-		return this.sendRequest(payload);	
+
+		return this.sendRequest(payload);
 	}
 
     // send an arbitrary number of arguments of any type to Ray
 	public send(...args: any[]): Ray {
 		args.forEach(arg => {
-			const payload = createLogPayload('log', null, arg);			
+			const payload = createLogPayload('log', null, arg);
 			this.sendRequest(payload);
 		});
-		
+
 		return this;
 	}
-    
+
 	public charles(): Ray {
 	    return this.send('🎶 🎹 🎷 🕺');
     }
-	
+
 	// send a payload object to Ray
 	public sendRequest(payload: any): Ray {
 		this.uuid = request.uuid;
-		
+
         superagent.post(`http://localhost:23517/`).send(payload)
 	        .then(resp => { })
 	        .catch(err => {});
-	
+
 		return this;
 	}
 }
@@ -269,7 +269,7 @@ if you'd like to add a shortcut, modify the `scripts` section in your `package.j
   },
 ```
 
-Once saved, you may run the `npm run build` command instead of the `./node_modules/.bin/esbuild ...` command.
+Once saved, you may run the `npm run build` command instead of the `./node_modules/.bin/esbuild …` command.
 
 After running the build command you choose, you'll see that the file `./dist/index.js` has been created.
 
@@ -294,7 +294,7 @@ node ./dist/test.js
 
 With any luck, you'll see the message "_hello world_" with a red marker next to it in the Ray app - but not the _"hello world 2"_ blue message.
 
-## Debugging Issues
+## Debugging issues
 
 If you were to test the `send()` method, you'd notice that nothing appears in the Ray app.  No problem, though - since we've got access to the PHP package as well as the `ray-proxy` app running, we can debug this in no time.
 
@@ -334,7 +334,7 @@ And here's what SHOULD be sent _(relevant parts only)_:
 
 ```json
 {
-  ...
+  …
   "payloads": [
     {
       "type": "log",
@@ -343,11 +343,11 @@ And here's what SHOULD be sent _(relevant parts only)_:
           "Hello World!"
         ]
       },
-	...
+	…
     }
   ],
   "meta": {
-	...
+	…
   }
 }
 ```
@@ -372,9 +372,9 @@ And lastly, we need to update the `send()` method on the `Ray` class:
 public send(...args: any[]): Ray {
     // we only need to send a single payload with `args` as the data, instead of
     // sending a new payload for each arg in args.
-	const payload = createLogPayload(args, this.uuid);			
+	const payload = createLogPayload(args, this.uuid);
 	this.sendRequest(payload);
-	
+
 	return this;
 }
 ```
@@ -397,7 +397,7 @@ Let's add one more feature to make using our library more pleasant - a `ray()` h
 > Integration libraries **must** provide a global `ray()` helper method to maintain consistency with the other libraries.
 
 ```typescript
-// ... Ray class code here
+// … Ray class code here
 
 export function ray(...args: any[]) {
     return (new Ray()).send(...args);

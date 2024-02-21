@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Javascript
+title: Using Ray With JavaScript
 menuTitle: Installation
 weight: 1
 ---

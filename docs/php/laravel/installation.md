@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Laravel
+title: Using Ray With Laravel
 menuTitle: Installation
 weight: 1
 ---
@@ -20,7 +20,7 @@ You could opt to install `laravel-ray` as a dev dependency. If you go this route
 composer require spatie/laravel-ray --dev
 ```
 
-## Use `ray()`, `dd()` and `dump()` in any file.
+## Use ray(), dd() and dump() in any file.
 
 Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
 
@@ -32,7 +32,7 @@ Optionally, you can run an artisan command to publish [the config file](/docs/ph
 php artisan ray:publish-config
 ```
 
-You can also add an option for 'docker' or 'homestead' to give a base configuration for those dev environments.
+You can also add `--docker` or `--homestead` option to set up a base configuration for those dev environments.
 
 ```bash
 php artisan ray:publish-config --docker

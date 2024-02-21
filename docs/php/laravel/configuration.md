@@ -3,7 +3,7 @@ title: Configuration
 weight: 2
 ---
 
-For Laravel projects you can create a `ray.php` file in your project directory (not in the `config` directory) using the following template as [the ray config file](/docs/php/vanilla-php/configuration). Since the configuration file is developer specific, you might want to add it to the `.gitignore` of the project.
+For Laravel projects you can create a `ray.php` file in your project directory (not in the `config` directory) using the following template as [the Ray config file](/docs/php/vanilla-php/configuration). Since the configuration file is developer specific, you might want to add it to the `.gitignore` of the project.
 
 Note: if everyone working on the project needs the same configuration, you can put the file in the `config` directory as well.
 
@@ -119,4 +119,5 @@ return [
 ```
 
 ## Docker
+
 See [our Docker-specific configuration page](/docs/environments/docker) for information about setting up Ray in combination with Docker. All changes also apply to a setup with Laravel.

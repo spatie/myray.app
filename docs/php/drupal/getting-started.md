@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Drupal
+title: Using Ray With Drupal
 weight: 1
 ---
 

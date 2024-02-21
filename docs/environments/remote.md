@@ -1,9 +1,7 @@
 ---
-title: Remote servers
+title: Remote Servers
 weight: 5
 ---
-
-# Connecting to remote servers
 
 When connected to a remote server, Ray will display the output of `ray` calls that happen on your remote server. The output is transferred securely from to server to your local machine via SSH.
 

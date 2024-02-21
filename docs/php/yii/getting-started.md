@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Yii
+title: Using Ray With Yii
 weight: 1
 ---
 

@@ -1,12 +1,13 @@
 ---
-title: Automatically remove Ray calls
-menuTitle: Remove Ray calls
+title: Automatically Remove Ray calls
+menuTitle: Remove Ray Calls
 weight: 8
 ---
 
 To avoid shipping your code with some `ray()` calls in it you can automate the removal of all `ray()` calls in your codebase.
 
 ## Rector
+
 If you are already using [Rector](https://getrector.com/) this can be simply done by adding a rule to your `rector.php` config file:
 
 ```php
@@ -16,6 +17,7 @@ $rectorConfig->rule(RemoveRayCallRector::class);
 ```
 
 ## If you are not using Rector
+
 If you are not using Rector you can use the script provided by the package:
 
 ```bash

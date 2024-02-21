@@ -1,4 +1,4 @@
 ---
-title: Wordpress
+title: WordPress
 weight: 25
 ---

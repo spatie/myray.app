@@ -1,4 +1,4 @@
 ---
-title: Developing for Ray
+title: Developing For Ray
 weight: 6
 ---

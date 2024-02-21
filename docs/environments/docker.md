@@ -2,7 +2,7 @@
 title: Docker
 weight: 1
 ---
-# Docker
+
 When developing using Docker, the Ray host should point to the internal IP of your Docker host by using 'host.docker.internal' in [the config file](/docs/php/vanilla-php/configuration).
 
 ```php
@@ -16,17 +16,17 @@ return [
     'host' => 'host.docker.internal',
 
     /*
-     *  The port number used to communicate with the Ray app. 
+     *  The port number used to communicate with the Ray app.
      */
     'port' => 23517,
-    
+
     /*
      *  Absolute base path for your sites or projects in Homestead, Vagrant, Docker, or another remote development server.
      */
     'remote_path' => null,
-    
+
     /*
-     *  Absolute base path for your sites or projects on your local computer where your IDE or code editor is running on. 
+     *  Absolute base path for your sites or projects on your local computer where your IDE or code editor is running on.
      */
     'local_path' => null,
 ];
@@ -63,10 +63,10 @@ services:
       - packt-api
     extra_hosts: # <-- does no harm
       - "host.docker.internal:host-gateway" # <-- does no harm
-  
+
   php:
     image: php:fpm-alpine
-    ...
+    …
     networks:
       - packt-api
     extra_hosts: # <--- this is required

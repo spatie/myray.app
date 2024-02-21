@@ -1,5 +1,5 @@
 ---
-title: Using Ray in Wordpress
+title: Using Ray in WordPress
 weight: 1
 ---
 
@@ -31,7 +31,7 @@ Inside the `wp-contents/plugins` directory run this command
 git clone git@github.com:spatie/wordpress-ray
 ```
 
-## Installing Ray via the WordPress admin UI
+## Installing Ray via the WordPress admin interface
 
 Ray is also registered as [a plugin on WordPress.org](https://wordpress.org/plugins/spatie-ray/). In the admin section of WordPress, go to "Plugins" > "Add New", and search for "Spatie Ray".
 
@@ -39,7 +39,7 @@ Ray is also registered as [a plugin on WordPress.org](https://wordpress.org/plug
 
 Install and activate the plugin.
 
-## Must use Plugins
+## Must use plugins
 
 By default WordPress loads your plugins in the following order:
 - Checks for any must-use plugins directory (default = /wp-content/mu-plugins).
@@ -66,7 +66,7 @@ You'll then need to create `ray-loader.php` within `/wp-content/mu-plugins` and 
 require WPMU_PLUGIN_DIR.'/wordpress-ray/wp-ray.php';
 ```
 
-## Setting Environment variable
+## Setting the environment variable
 
 When developing locally you should have `WP_ENVIRONMENT_TYPE` set as `local` in your `wp-config.php` otherwise Ray won't work.
 

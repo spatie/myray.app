@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Go
+title: Using Ray With Go
 weight: 1
 ---
 

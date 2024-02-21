@@ -1,10 +1,10 @@
 ---
 menuTitle: Usage
-title: Using Ray with PHP
+title: Using Ray With PHP
 weight: 2
 ---
 
-To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects, ... you name it.
+To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects… you name it.
 
 ```php
 ray('a string');
@@ -30,16 +30,16 @@ To open up a node, you can use the `expand` method.
 
 ```php
 // will open up the first level of nodes
-ray($arrayOrObject)->expand(); 
+ray($arrayOrObject)->expand();
 
 // will open up the first three levels of nodes
-ray($arrayOrObject)->expand(3); 
+ray($arrayOrObject)->expand(3);
 
 // will open the node with key named `myKey`
-ray($arrayOrObject)->expand('myKey'); 
+ray($arrayOrObject)->expand('myKey');
 
 // open up all nodes with the given names
-ray($arrayOrObject)->expand('myKey', 'anotherKey'); 
+ray($arrayOrObject)->expand('myKey', 'anotherKey');
 
 // you can use dot notation to expand deeper nodes
 ray($arrayOrObject)->expand('myKey.nestedKey');
@@ -49,7 +49,7 @@ You can also use the `expandAll()` method to expand all levels.
 
 ## Using colors
 
-You can colorize things you sent to ray by using one of the color functions.
+You can colorize things you sent to Ray by using one of the color functions.
 
 ```php
 ray('this is green')->green();
@@ -89,7 +89,7 @@ ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 You can use `newScreen` (or `clearScreen`) to programmatically create a new screen.
 
 ```php
-ray()->newScreen(); 
+ray()->newScreen();
 ```
 
 You can see values that were previously displayed, by clicking the little back button in the header of Ray.
@@ -113,7 +113,7 @@ code.
 To clear the current screen and all previous screens, call `clearAll`.
 
 ```php
-ray()->clearAll(); 
+ray()->clearAll();
 ```
 
 ## See the caller of a function
@@ -295,7 +295,7 @@ ray()->measure(function() {
 
 ![screenshot](/screenshots/measure-closure.png)
 
-## Displaying the private properties / methods
+## Displaying the private properties & methods
 
 Using Ray, you can easily see the value of a private property or the result of a private method.
 
@@ -446,8 +446,8 @@ ray()->image('https://placekitten.com/200/300');
 ray()->image('/home/user/kitten.jpg');
 
 // display base64-encoded images
-ray()->image('data:image/png;base64,iVBORw0KGgoAAA...truncated');
-ray()->image('iVBORw0KGgoAAA...truncated');
+ray()->image('data:image/png;base64,iVBORw0KGgoAAA…truncated');
+ray()->image('iVBORw0KGgoAAA…truncated');
 ```
 
 ## Displaying a link
@@ -530,12 +530,12 @@ is true.  When using a callback with `if()`, all additional chained methods will
 ```php
 foreach(range(1, 100) as $number) {
     ray()->if($number < 10)->text("value is less than ten: $number")->blue();
-    
+
     ray()->if(function() use ($number) {
         return $number == 25;
     })->text("value is twenty-five!")->green();
-    
-    // display "value: #" for every item, and display 
+
+    // display "value: #" for every item, and display
     // even numbered values as red
     ray()->text("value: $number")
         ->if($number % 2 === 0)
@@ -548,7 +548,7 @@ You can even chain multiple `if()` calls without callbacks:
 ```php
 foreach(range(1, 10) as $number) {
     // display "value: #" for every item, and display even values as red
-    // and odd values as blue, except for 10 -- which is shown with large 
+    // and odd values as blue, except for 10 -- which is shown with large
     // text and in green.
     ray()
         ->text("value: $number")
@@ -606,7 +606,7 @@ ray('this one will be remove if the number is 2')->removeWhen($number === 2);
 `removeWhen` also accepts a callable.
 
 ```php
-ray('this one will be remove if the number is 2')->removeWhen(fn() => ... // return true to remove the item);
+ray('this one will be remove if the number is 2')->removeWhen(fn() => … // return true to remove the item);
 ```
 
 ## Returning items
@@ -703,14 +703,14 @@ You can use Ray to handle exceptions using when passing a callable to `ray` usin
 
 ```php
 ray($callable)->catch();
-// execution will continue. 
+// execution will continue.
 ```
 
 You can also pass a callable to `catch` to customize the handling of an Exception.  If you typehint the `$exception` variable, only Exceptions of that type will be handled.  PHP 8 union types are supported.
 
 ```php
 ray($callable)->catch(function(MyException $exception) {
-   // do something with $exception if it is of the MyException type 
+   // do something with $exception if it is of the MyException type
 });
 
 ray($callable)->catch(function($exception) {
@@ -739,7 +739,7 @@ ray($callable)->catch([
     },
     function(CustomExceptionTwo $exception) {
        // handle CustomExceptionTwo exceptions
-    },    
+    },
     \Exception::class,
 ]);
 ```
@@ -776,7 +776,7 @@ ray()->showApp(); // Ray will be brought to the foreground
 ray()->hideApp(); // Ray will be hidden
 ```
 
-## Enabling / disabling Ray
+## Enabling & disabling Ray
 
 You can enable and disable sending stuff to Ray with the `enable` and `disable` functions.
 

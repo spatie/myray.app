@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Bash
+title: Using Ray With Bash
 weight: 1
 ---
 
@@ -13,13 +13,13 @@ Install the package normally with `npm`:
 npm install node-ray-cli
 ```
 
-...install it globally to be able to access it from any script/directory:
+…install it globally to be able to access it from any script/directory:
 
 ```bash
 npm install -g node-ray-cli
 ```
 
-...or run it without installing using `npx`:
+…or run it without installing using `npx`:
 
 ```bash
 npx node-ray-cli --help

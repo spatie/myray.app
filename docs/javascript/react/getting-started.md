@@ -1,9 +1,9 @@
 ---
-title: Using Ray with React
+title: Using Ray With React
 weight: 1
 ---
 
-The third-party React package for Ray, `react-ray`, uses the [package for NodeJS](/docs/javascript/nodejs) for most core functionality.
+The third-party React package for Ray, `react-ray`, uses the [package for Node.js](/docs/javascript/nodejs) for most core functionality.
 
 `react-ray` supports React 16+ and provides two hooks:
 
