@@ -5,10 +5,11 @@ weight: 0
 
 [Ray](https://myray.app) is a beautiful, lightweight desktop app that helps you debug your app. There's a [free demo](https://myray.app) available that can be unlocked with a [license](https://spatie.be/products/ray).
 
-Ray supports PHP, Ruby, JavaScript, TypeScript, NodeJS, Go and Bash applications. After installing one of the libraries to send information to Ray, you can use the `ray` function to quickly dump stuff. Any variable(s) that you pass to `ray` will be displayed.
+Ray supports PHP, Ruby, JavaScript, TypeScript, Node.js, Go and Bash applications. After installing one of the libraries to send information to Ray, you can use the `ray` function to quickly dump stuff. Any variable(s) that you pass to `ray` will be displayed.
 
 Here's an example for a Laravel app (for other languages the syntax is similar):
-```
+
+```php
 ray('Hello world');
 
 ray(['a' => 1, 'b' => 2])->color('red');

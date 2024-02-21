@@ -1,4 +1,4 @@
 ---
-title: Javascript
+title: JavaScript
 weight: 3
 ---

@@ -1,12 +1,12 @@
 ---
-title: Ray methods in Laravel
+title: Ray Methods in Laravel
 menuTitle: Methods
 weight: 3
 ---
-# Ray methods in Laravel
+
 Inside a Laravel application, you can use all methods from [the framework agnostic version](/docs/php/vanilla-php/usage).
 
-Additionally, you can use these Laravel specific methods. Sometimes you may want to log something to ray and get the resulting return value of your closure instead of an instance of `Ray`. You can achieve this by adding a return value type to your closure. See the examples for `showQueries()` and `countQueries()` below. Any other methods that accept a closure will function the same way.
+Additionally, you can use these Laravel specific methods. Sometimes you may want to log something to Ray and get the resulting return value of your closure instead of an instance of `Ray`. You can achieve this by adding a return value type to your closure. See the examples for `showQueries()` and `countQueries()` below. Any other methods that accept a closure will function the same way.
 
 ## Showing events
 
@@ -174,7 +174,7 @@ collect(['a', 'b', 'c'])
 
 ![screenshot](/screenshots/collections.png)
 
-## Usage with a `Stringable`
+## Usage with a Stringable
 
 Ray will automatically register a `ray` macro to `Stringable` to easily send `Stringable`s to Ray.
 
@@ -235,9 +235,9 @@ public function my_endpoint_works_correctly()
 
 To enable this behaviour by default, you can set the `send_requests_to_ray` option in [the config file](/docs/php/laravel/configuration) to `true`.
 
-## Showing http client requests
+## Showing HTTP client requests
 
-You can display all http client requests and responses using `showHttpClientRequests`
+You can display all HTTP client requests and responses using `showHttpClientRequests`
 
 ```php
 ray()->showHttpClientRequests();
@@ -247,9 +247,9 @@ Http::get('https://example.com/api/users');
 
 ![screenshot](/screenshots/requests.png)
 
-To stop showing http client events, call `stopShowingHttpClientRequests`.
+To stop showing HTTP client events, call `stopShowingHttpClientRequests`.
 
-Alternatively, you can pass a callable to `showHttpClientRequests`. Only the http requests made inside that callable will be displayed in Ray.
+Alternatively, you can pass a callable to `showHttpClientRequests`. Only the HTTP requests made inside that callable will be displayed in Ray.
 
 ```php
 Http::get('https://example.com'); // this request won't be displayed.

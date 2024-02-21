@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Ruby
+title: Using Ray With Ruby
 weight: 1
 ---
 

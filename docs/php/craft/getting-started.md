@@ -1,5 +1,5 @@
 ---
-title: Using Ray with Craft CMS
+title: Using Ray With Craft CMS
 weight: 1
 ---
 

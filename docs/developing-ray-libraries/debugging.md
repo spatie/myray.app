@@ -29,4 +29,4 @@ npm install ray-proxy --save-dev
 ./node_modules/.bin/ray-proxy
 ```
 
-Once you start sending ray messages, you'll see the raw payloads being sent in the proxy, along with statistics!
+Once you start sending Ray messages, you'll see the raw payloads being sent in the proxy, along with statistics!

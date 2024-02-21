@@ -3,7 +3,7 @@ title: Reference
 weight: 3
 ---
 
-To display something in Ray use the ray() function. It accepts everything: strings, arrays, objects, ... you name it.
+To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects… you name it.
 
 ## Reference
 

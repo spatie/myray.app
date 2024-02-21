@@ -1,5 +1,5 @@
 ---
-title: Using Ray with PHP
+title: Using Ray With PHP
 menuTitle: Installation
 weight: 1
 ---

@@ -11,7 +11,7 @@ When debugging, you probably will need a couple of attempts to find the source o
 
 1. Clicking the `+` button in the menubar
 2. By executing `ray()->newScreen()` somewhere in your code. Optionally, you can pass a screen name as an argument to `newScreen`.
-3. By pressing `cmd+K` on Mac or `ctrl+K` on Windows when the Ray app is active.  When the Ray app is not the active one, press `cmd+shift+K on Mac or `ctrl+shift+K` on Windows to clear the screen.
+3. By pressing `Cmd+K` on Mac or `Ctrl+K` on Windows when the Ray app is active.  When the Ray app is not the active one, press `Cmd+Shift+K on Mac or `Ctrl+Shift+K` on Windows to clear the screen.
 
 ## Using color filters
 
@@ -35,7 +35,7 @@ Should you forget to remove a `ray()` call in a Laravel app, and push your code 
 
 ## Hiding the app using the hotkey
 
-You can press `cmd+shift+L` to hide or show the app, no matter which application is the active on.
+You can press `Cmd+Shift+L` to hide or show the app, no matter which application is the active on.
 
 You can customize this key in the preferences.
 

@@ -3,7 +3,8 @@ title: Configuration
 weight: 2
 ---
 
-## Configuration Options
+## Configuration options
+
 To configure `alpinejs-ray`, you must create an `alpineRayConfig` property on the `window` object before loading `alpinejs-ray`:
 
 ```html
@@ -18,10 +19,10 @@ To configure `alpinejs-ray`, you must create an `alpineRayConfig` property on th
 <!-- load axios and alpinejs-ray -->
 ```
 
-## Configuration Reference
+## Configuration reference
 
 | Name | Type(s) | Default | Description |
 | --- | --- | --- | --- |
 | `logComponentsInit` | `boolean` | `false` | Send info on component initializations to Ray |
-| `logErrors` | `boolean` | `false` | Send javascript errors to Ray instead of the console |
+| `logErrors` | `boolean` | `false` | Send JavaScript errors to Ray instead of the console |
 | `logEvents` | `boolean, array` | `false` | Send specified custom events to Ray, or `false` to disable |

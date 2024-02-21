@@ -3,11 +3,11 @@ title: Usage
 weight: 3
 ---
 
-The third-party Alpine.js [package](https://github.com/permafrost-dev/alpinejs-ray) for Ray uses the [package for NodeJS](/docs/javascript/nodejs/getting-started) for most core functionality.
+The third-party Alpine.js [package](https://github.com/permafrost-dev/alpinejs-ray) for Ray uses the [package for Node.js](/docs/javascript/nodejs/getting-started) for most core functionality.
 
 Once the plugin is installed, you may access the helper function as `$ray()` from within your Alpine components.
 
-## Example Component
+## Example component
 
 ```html
 <div x-data="onClickData()">
@@ -16,7 +16,7 @@ Once the plugin is installed, you may access the helper function as `$ray()` fro
     <button @click="$ray('hello from alpine')">Send to Ray</button>
 </div>
 
-<script>        
+<script>
 function onClickData() {
     return {
         init() {
@@ -32,7 +32,7 @@ function onClickData() {
 </script>
 ```
 
-## Tracking Data Stores
+## Tracking data stores
 
 You may automatically send Alpine stores to Ray whenever the store data is updated.  Consider the following:
 
@@ -40,7 +40,7 @@ You may automatically send Alpine stores to Ray whenever the store data is updat
 window.Alpine.store('mydata', {
     showing: false,
 });
- 
+
 setInterval( () => {
     window.Alpine.store('mydata').showing = !window.Alpine.store('mydata').showing;
 }, 3000);
@@ -54,11 +54,11 @@ To watch the store and display changes in Ray, use the `$ray().watchStore('name'
     <button x-on:click="toggle()">Show/Hide (Ray)</button>
 </div>
 
-<script>      
+<script>
 window.Alpine.store('mydata', {
     showing: false,
 });
-  
+
 function componentData() {
     return {
         init() {

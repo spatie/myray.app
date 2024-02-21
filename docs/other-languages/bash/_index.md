@@ -1,4 +1,4 @@
 ---
-title: bash
+title: Bash
 weight: 10
 ---

@@ -1,9 +1,9 @@
 ---
-title: Using Ray with NodeJS
+title: Using Ray with Node.js
 weight: 1
 ---
 
-You can send information from NodeJS code (JavaScript or TypeScript) to Ray via this third party package:
+You can send information from Node.js code (JavaScript or TypeScript) to Ray via this third party package:
 
 [permafrost-dev/node-ray](https://github.com/permafrost-dev/node-ray)
 

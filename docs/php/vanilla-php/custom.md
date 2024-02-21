@@ -1,6 +1,6 @@
 ---
-title: Adding your own Ray functions in PHP
-menuTitle: Custom functions
+title: Adding Your Own Ray Functions in PHP
+menuTitle: Custom Functions
 weight: 5
 ---
 
@@ -11,9 +11,9 @@ Here's a silly example where the passed value will be displayed in uppercase in 
 ```php
 Spatie\Ray\Ray::macro('uppercase', function(string $value) {
     $uppercasedValue = strtoupper($value);
-    
+
     $this->send($uppercasedValue);
-    
+
     return $this;
 });
 

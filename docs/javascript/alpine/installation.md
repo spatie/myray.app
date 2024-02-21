@@ -58,7 +58,7 @@ First, install `alpinejs-ray` with npm _(or your preferred package manager)_:
 npm install alpinejs-ray
 ```
 
-```js 
+```js
 import Alpine from 'alpinejs';
 import AlpineRayPlugin from 'alpinejs-ray';
 

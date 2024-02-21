@@ -1,14 +1,14 @@
 ---
-title: Configure X-Ray to detect ray calls
-menuTitle: Detect with X-ray
+title: Configure X-Ray To Detect Ray Calls
+menuTitle: Detect With X-ray
 weight: 10
 ---
 
-Ray provides a first-party package named [x-ray](https://github.com/spatie/x-ray), allowing you detect remaining ray calls in your application.
+Ray provides a first-party package named [x-ray](https://github.com/spatie/x-ray), allowing you detect remaining Ray calls in your application.
 
-The primary use case is when calls to ray() cannot be left in source code before deploying, even if ray is disabled. This package does NOT remove the calls, it simply displays their locations so they can be removed manually.
+The primary use case is when calls to Ray cannot be left in source code before deploying, even if Ray is disabled. This package does NOT remove the calls, it simply displays their locations so they can be removed manually.
 
-The exit code of the x-ray command is zero if no ray calls are found, and non-zero if calls are found. This allows the package to be used in an automated environment such as Github Workflows.
+The exit code of the x-ray command is zero if no Ray calls are found, and non-zero if calls are found. This allows the package to be used in an automated environment such as Github Workflows.
 
 ## Installation
 
@@ -40,7 +40,7 @@ Display each filename & pass/fail status, along with compact results:
 ./vendor/bin/x-ray ./app --compact --verbose
 ```
 
-## Available Options
+## Available options
 
 | Flag | Description
 |---|---|
