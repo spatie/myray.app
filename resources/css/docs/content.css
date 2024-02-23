@@ -101,6 +101,11 @@
         min-width: 220px;
         margin-left: 100px;
         font-size: .7rem;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: auto;
+        padding-bottom: 1rem;
 
         display: none;
 
