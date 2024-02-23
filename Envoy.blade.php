@@ -133,6 +133,8 @@ php artisan storage:link
 
 sudo service php8.3-fpm restart
 sudo supervisorctl restart all
+
+php artisan app:cache-warm
 @endtask
 
 @task('cleanOldReleases', ['on' => 'remote'])
@@ -157,6 +159,4 @@ php artisan config:cache
 php artisan view:cache
 sudo service php8.3-fpm restart
 sudo supervisorctl restart all
-
-php artisan app:cache-warm
 @endtask
