@@ -7,7 +7,10 @@
     </button>
 
     <div class="p-5 pb-0 lg:p-8 lg:pb-0">
-        <button @click="showSearchBox = true" class="border rounded p-3 w-full flex justify-between">
+        <button @click="showSearchBox = true"
+                class="transition-border border hover:border-indigo-500 rounded p-3 w-full flex justify-between"
+                :class="showSearchBox ? 'border-indigo-500' : 'nope'"
+        >
             <div class="flex items-center">
                 @include('partials.svg.icon-search')
                 <span class="text-xs ml-2">Quick Search</span>
