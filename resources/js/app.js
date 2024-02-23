@@ -15,8 +15,6 @@ document.querySelectorAll('.heading-permalink').forEach((el) => {
         e.preventDefault();
         const target = el.getAttribute('href');
 
-        console.debug('CLICKED', document.documentURI + target);
-
         navigator.clipboard.writeText(document.documentURI + target);
 
         // Add a span with a text to the clicked element
@@ -24,6 +22,10 @@ document.querySelectorAll('.heading-permalink').forEach((el) => {
         div.classList.add('copy-tooltip');
         div.textContent = 'Copied URL!';
         el.prepend(div);
+
+        setTimeout(() => {
+            div.remove();
+        }, 1500);
     });
 });
 
