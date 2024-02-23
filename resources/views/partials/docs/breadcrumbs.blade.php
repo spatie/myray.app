@@ -1,4 +1,4 @@
-<div class="flex text-xs md:text-xxs items-center mb-4">
+<div class="flex text-xs md:text-xxs items-center mb-4 text-midnightDark">
     <a href="/docs" class="mr-2">
         @include('partials.svg.icon-home')
     </a>
