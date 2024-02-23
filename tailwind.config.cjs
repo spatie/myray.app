@@ -18,7 +18,8 @@ module.exports = {
             current: 'currentColor',
             spatie: '#197593',
             wordpress: '#007fa2',
-            midnight: '#13052B',
+            midnight: '#1E0063',
+            midnightDark: '#13052B',
 
             black: "#1e0063",
             white: colors.white,
@@ -53,6 +54,9 @@ module.exports = {
             },
         },
         extend: {
+            transitionProperty: {
+                'border': 'border, border-color',
+            },
             minWidth: {
                 8 : '2rem',
                 10 : '2.5rem',

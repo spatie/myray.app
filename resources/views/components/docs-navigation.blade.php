@@ -1,4 +1,4 @@
-<nav class="docs-navigation" x-data="{ navOpen: false }" x-on:livewire:navigated.window="navOpen = false">
+<nav class="docs-navigation text-midnightDark" x-data="{ navOpen: false }" x-on:livewire:navigated.window="navOpen = false">
     <button @click="navOpen = !navOpen"
             class="block lg:hidden w-full bg-white border-b px-5 py-4 text-left font-semibold text-base flex justify-between items-center">
         <span>Contents</span>
