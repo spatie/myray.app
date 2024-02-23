@@ -62,7 +62,6 @@
         }
 
         & .heading-permalink {
-            opacity: 0;
             cursor: pointer;
             display: inline-block;
             margin-left: .5rem;
@@ -70,10 +69,10 @@
             font-weight: 400;
             transition: opacity .2s;
             position: absolute;
-            left: 0;
+            left: -1.7rem;
             top: 0;
-            transform: translateX(-200%);
             text-decoration: none;
+            transform: scale(.8);
         }
     }
 
@@ -111,6 +110,23 @@
     & ul {
         list-style: disc inside;
         margin-bottom: 1rem;
+    }
+
+    blockquote {
+        background-color: #F4F4F5;
+        margin: 2rem 0;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        max-width: 680px;
+        @apply rounded;
+
+        & h2 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+
+        & :last-child {
+            margin-bottom: 0;
+        }
     }
 
     & .table-of-contents {
@@ -157,7 +173,7 @@
         margin-bottom: 1rem;
         padding: 1.25rem;
         font-size: .7rem;
-        border-radius: 4px;
+        @apply rounded;
         overflow-x: auto;
         max-width: 680px;
 

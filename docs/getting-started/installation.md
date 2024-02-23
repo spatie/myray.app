@@ -39,3 +39,9 @@ This will display the following in Ray:
 @todo
 
 Every time you use Ray, the details of each call will show up in this window. There are various types of calls, each presenting information in useful ways. Some of them are unique for each integration, so make sure to check out the documentation for your integration to see what's possible.
+
+> ## What's next?
+> After you've set up Ray and connected it to your project, the next things to do are to understand what Ray can do in the language or framework you chose. You can also check out additional features within the Ray application itself.
+> * [Check out the integrations](/docs/getting-started/integrations)
+> * [Read about some useful tips and tricks](/docs/getting-started/tips-tricks)
+> * [Check how to set up your environment](/docs/environments)
