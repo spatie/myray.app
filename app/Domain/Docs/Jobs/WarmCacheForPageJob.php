@@ -19,6 +19,6 @@ class WarmCacheForPageJob implements ShouldQueue
 
     public function handle(): void
     {
-        Http::get($this->page->url);
+        Http::timeout(60 * 5)->get($this->page->url);
     }
 }
