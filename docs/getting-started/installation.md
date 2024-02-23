@@ -16,6 +16,8 @@ Find download links to the Ray application for our support platforms below:
 * [Windows](https://spatie.be/products/ray/download/windows/latest)
 * [Linux](https://spatie.be/products/ray/download/linux/latest)
 
+You can also install Ray with Homebrew on macOS: `brew install --cask ray`.
+
 ## Connect your application to Ray
 
 You need to install a package/library for your specific language or framework that allows your project to communicate with Ray. Most integrations are installed with a package manager, but the steps may be different depending on the integration.

@@ -98,6 +98,7 @@
 
     & ul {
         list-style: disc inside;
+        margin-bottom: 1rem;
     }
 
     & .table-of-contents {
@@ -149,6 +150,11 @@
         max-width: 680px;
 
         @apply custom-shadow;
+    }
+
+    code {
+        font-family: 'JetBrains Mono', serif;
+        font-weight: 500;
     }
 
     & table {

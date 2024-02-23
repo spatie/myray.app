@@ -21,6 +21,14 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
+    src: url('../fonts/JetBrainsMono-SemiBold.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
     src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2'), /* Super Modern Browsers */
          url('../fonts/JetBrainsMono-Medium.woff') format('woff'); /* Pretty Modern Browsers */
     font-display: swap;
