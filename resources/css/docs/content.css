@@ -98,18 +98,29 @@
 
     & p {
         margin-bottom: 1rem;
+    }
 
+    & ul {
+        list-style: disc inside;
+        margin-bottom: 1rem;
+    }
+
+    & ol {
+        list-style: decimal inside;
+        margin-bottom: 1rem;
+
+        & li {
+            margin-bottom: .5rem;
+        }
+    }
+
+    & li, & p {
         & code {
             font-family: 'JetBrains Mono', serif;
             font-weight: 500;
             padding: 0 4px;
             background-color: #F2F1F4;
         }
-    }
-
-    & ul {
-        list-style: disc inside;
-        margin-bottom: 1rem;
     }
 
     blockquote {
