@@ -1,8 +1,10 @@
 .docs-content {
-    font-size: .75rem;
     font-weight: 400;
-
     color: theme('colors.midnight');
+
+    @media screen(md) {
+        font-size: .75rem;
+    }
 
     & > div {
         display: flex;
