@@ -11,7 +11,8 @@ You can display all queries that are executed by calling `showQueries` (or `quer
 ```php
 ray()->showQueries();
 
-User::firstWhere('email', 'john@example.com'); // this query will be displayed in Ray.
+// This query will be displayed in Ray.
+User::firstWhere('email', 'john@example.com'); 
 ```
 
 ![screenshot](/screenshots/queries.png)
@@ -21,24 +22,29 @@ To stop showing queries, call `stopShowingQueries`.
 ```php
 ray()->showQueries();
 
-User::firstWhere('email', 'john@example.com'); // this query will be displayed.
+// This query will be displayed.
+User::firstWhere('email', 'john@example.com'); 
 
 ray()->stopShowingQueries();
 
-User::firstWhere('email', 'jane@example.com'); // this query won't be displayed.
+// This query won't be displayed.
+User::firstWhere('email', 'jane@example.com'); 
 ```
 
 Alternatively, you can pass a callable to `showQueries`. Only the queries performed inside that callable will be displayed in Ray. If you include a return type in the callable, the return value will also be returned.
 
 ```php
-User::all(); // this query won't be displayed.
+// This query won't be displayed.
+User::all(); 
 
 ray()->showQueries(function() {
-    User::all(); // this query will be displayed.
+    // This query will be displayed.
+    User::all(); 
 });
 
 $users = ray()->showQueries(function (): Illuminate\Support\Collection {
-    return User::all(); // this query will be displayed and the collection will be returned.
+    // This query will be displayed and the collection will be returned.
+    return User::all(); 
 });
 
 User::all(); // this query won't be displayed.
@@ -97,8 +103,11 @@ You can display all duplicate queries by calling `showDuplicateQueries`.
 ```php
 ray()->showDuplicateQueries();
 
-User::firstWhere('email', 'john@example.com'); // this query won't be displayed in Ray
-User::firstWhere('email', 'john@example.com'); // this query will be displayed in Ray.
+// This query won't be displayed in Ray.
+User::firstWhere('email', 'john@example.com'); 
+
+// This query will be displayed in Ray.
+User::firstWhere('email', 'john@example.com'); 
 ```
 
 To stop showing duplicate queries, call `stopShowingDuplicateQueries`.
@@ -107,15 +116,21 @@ Alternatively, you can pass a callable to `showDuplicateQueries`. Only the dupli
 
 ```php
 User::all();
-User::all(); // this query won't be displayed.
+
+// This query won't be displayed.
+User::all(); 
 
 ray()->showDuplicateQueries(function() {
     User::where('id', 1)->get('id');
-    User::where('id', 1)->get('id'); // this query will be displayed.
+    
+    // This query will be displayed.
+    User::where('id', 1)->get('id'); 
 });
 
 User::all();
-User::all(); // this query won't be displayed.
+
+// This query won't be displayed.
+User::all(); 
 ```
 
 ## Showing slow queries
@@ -125,7 +140,7 @@ You can display all queries that took longer than a specified number of millisec
 ```php
 ray()->showSlowQueries(100);
 
-// this query will only be displayed in Ray if it takes longer than 100ms to execute.
+// This query will only be displayed in Ray if it takes longer than 100ms to execute.
 User::firstWhere('email', 'john@example.com');
 ```
 
@@ -133,17 +148,20 @@ Alternatively, you can also pass a callable to `showSlowQueries`. Only the slow 
 
 ```php
 User::all();
-User::all(); // this query won't be displayed.
+
+// This query won't be displayed.
+User::all(); 
 
 ray()->showSlowQueries(100, function() {
-    User::where('id', 1)->get('id'); // this query will be displayed if it takes longer than 100ms.
+    // This query will be displayed if it takes longer than 100ms.
+    User::where('id', 1)->get('id'); 
 });
 ```
 
-You can also use the shorthand method, `slowQueries()`:
+You can also use the shorthand method, `slowQueries()` which is the equivalent of calling `showSlowQueries`:
 
 ```php
-ray()->slowQueries(); // equivalent to calling 'showSlowQueries'.
+ray()->slowQueries(); 
 ```
 
 To stop showing slow queries, call `stopShowingSlowQueries`.
