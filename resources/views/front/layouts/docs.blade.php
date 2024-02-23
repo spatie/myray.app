@@ -3,7 +3,7 @@
 <head>
     @include('partials.layout.head')
 </head>
-<body class="bg-white font-sans font-medium text-black docs">
+<body class="bg-white font-sans font-medium text-black docs" x-data="{showSearchBox: false}" @keydown.cmd.k.window.prevent="showSearchBox = true">
     <div class="border-b border-gray-200 bg-white relative z-50" id="header">
         @include('partials.header')
     </div>
@@ -29,6 +29,8 @@
             </section>
         </div>
     </div>
+
+    @livewire('doc-search')
 
     <script>
         document.addEventListener('alpine:init', () => {
