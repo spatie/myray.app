@@ -87,7 +87,7 @@ touch ./src/Ray.ts
 touch ./src/payloadUtils.ts
 ```
 
-## Structure of a payload
+## Structure of a Payload
 
 Let's start with the raw contents of a payload that is sent from your code to the Ray app.  You may view it in `ray-proxy` by running the following:
 

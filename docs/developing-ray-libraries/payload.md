@@ -1,5 +1,5 @@
 ---
-title: Structure of a payload
+title: Structure of a Payload
 weight: 3
 ---
 
