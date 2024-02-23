@@ -13,11 +13,7 @@
             </li>
         @endforeach
         @foreach($category->pages as $page)
-            <li x-bind:class="$current('{{ $page->url }}') ? 'active border-indigo-500' : ''"
-                @class([
-                    'active border-indigo-500' => \Illuminate\Support\Str::contains($slug, $page->slug),
-                ])
-            >
+            <li x-bind:class="$current('{{ $page->url }}') ? 'active border-indigo-500' : ''">
                 <a
                     href="{{ $page->url }}"
                     x-bind:class="$current('{{ $page->url }}') ? 'active border-indigo-500 border-s' : ''"
