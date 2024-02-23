@@ -1,3 +1,4 @@
+@persist('search')
 <div>
 
 
@@ -38,3 +39,4 @@
         </div>
     </div>
 </div>
+@endpersist
