@@ -33,7 +33,7 @@
                                     <li class="mb-3">
                                         <a href="{{$hit->url}}">
                                             <div class="text-xs font-semibold">{{$hit->title()}}</div>
-                                            <div class="text-xs font-normal">{!! $hit->highlightedSnippet() !!}</div>
+                                            <div class="text-xxs font-normal">{!! $hit->highlightedSnippet() !!}</div>
                                         </a>
                                     </li>
                                 @endforeach
