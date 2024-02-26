@@ -36,7 +36,7 @@ ray('Hello world!');
 
 This will display the following in Ray:
 
-@todo
+![screenshot](/screenshots/helloworld.png)
 
 Every time you use Ray, the details of each call will show up in this window. There are various types of calls, each presenting information in useful ways. Some of them are unique for each integration, so make sure to check out the documentation for your integration to see what's possible.
 
