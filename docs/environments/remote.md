@@ -7,16 +7,18 @@ When connected to a remote server, Ray will display the output of `ray` calls th
 
 To get started, click the "Servers" icon on the top right of the Ray app
 
+![screenshot](/screenshots/remote-1.png)
+
 On this screen you can define a server.
 
-![screenshot](/docs/ray/v1/images/define-server.png)
+![screenshot](/screenshots/remote-2.png)
 
 When the server is defined, click the connect button.
 
-![screenshot](/docs/ray/v1/images/connect.png)
+![screenshot](/screenshots/remote-3.png)
 
 The output of any `ray` calls on the remote server will now be shown.
 
-![screenshot](/docs/ray/v1/images/remote-log.png)
+![screenshot](/screenshots/remote-4.png)
 
 **Note:** if you are connecting to a docker container in a remote server (see [docker configuration](/docs/environments/docker)), you may need to enable `GatewayPorts yes` in server's `/etc/ssh/sshd_config` configuration (remember to restart the sshd daemon in order to apply your changes).
