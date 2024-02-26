@@ -78,6 +78,5 @@
     });
 </script>
 
-@include('partials.layout.scripts')
 </body>
 </html>
