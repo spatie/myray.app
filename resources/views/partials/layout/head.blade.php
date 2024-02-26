@@ -1,11 +1,8 @@
 <meta charset="utf-8">
 <x-feed-links />
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="dns-prefetch" href="//use.fontawesome.com">
-<link rel="dns-prefetch" href="//www.googletagmanager.com">
-
-@include('partials.gtm-head')
+<link rel="dns-prefetch" href="https://kit.fontawesome.com">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
