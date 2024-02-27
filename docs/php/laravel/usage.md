@@ -1,6 +1,6 @@
 ---
 title: Ray Methods in Laravel
-menuTitle: Methods
+menuTitle: Usage
 weight: 3
 ---
 
