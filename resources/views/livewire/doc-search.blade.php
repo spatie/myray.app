@@ -26,7 +26,7 @@
                 </div>
                 @if($results)
                     <div class="max-h-80 overflow-y-auto px-3 pb-3">
-                        <div class="text-sm font-bold mt-2 mb-2">Results</div>
+                        <div class="text-xxs font-bold mt-2 mb-2">Results</div>
                         @if($results->hits->count() > 0)
                             <ul class="search-results">
                                 @foreach($results->hits as $hit)
