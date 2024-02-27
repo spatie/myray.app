@@ -1,7 +1,7 @@
 ---
 menuTitle: Customizing Output
 title: Customizing the output in Ray
-weight: 3
+weight: 5
 ---
 
 ## Expanding arrays and objects

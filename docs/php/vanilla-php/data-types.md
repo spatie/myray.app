@@ -1,6 +1,6 @@
 ---
-menuTitle: Outputting Data Types
-title: Using Ray With PHP
+menuTitle: Output Formats
+title: Outputting specific formats in Ray
 weight: 4
 ---
 
