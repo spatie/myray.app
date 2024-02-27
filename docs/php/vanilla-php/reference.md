@@ -1,6 +1,6 @@
 ---
 title: Reference
-weight: 3
+weight: 2
 ---
 
 To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects… you name it.

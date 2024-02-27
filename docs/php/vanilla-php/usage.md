@@ -22,100 +22,6 @@ ray($anObject);
 ray('as', 'many' , 'arguments', 'as', 'you', 'like');
 ```
 
-## Expanding arrays and objects
-
-When sending an array or object to Ray, it will be displayed in a collapsed state.
-
-To open up a node, you can use the `expand` method.
-
-```php
-// will open up the first level of nodes
-ray($arrayOrObject)->expand();
-
-// will open up the first three levels of nodes
-ray($arrayOrObject)->expand(3);
-
-// will open the node with key named `myKey`
-ray($arrayOrObject)->expand('myKey');
-
-// open up all nodes with the given names
-ray($arrayOrObject)->expand('myKey', 'anotherKey');
-
-// you can use dot notation to expand deeper nodes
-ray($arrayOrObject)->expand('myKey.nestedKey');
-```
-
-You can also use the `expandAll()` method to expand all levels.
-
-## Using colors
-
-You can colorize things you sent to Ray by using one of the color functions.
-
-```php
-ray('this is green')->green();
-ray('this is orange')->orange();
-ray('this is red')->red();
-ray('this is blue')->blue();
-ray('this is purple')->purple();
-ray('this is gray')->gray();
-```
-
-![screenshot](/screenshots/colors.png)
-
-## Using sizes
-
-Ray can display things in different sizes.
-
-```php
-ray('small')->small();
-ray('regular');
-ray('large')->large();
-```
-
-![screenshot](/screenshots/sizes.png)
-
-## Adding a label
-
-You can customize the label displayed next to item with the `label` function.
-
-```php
-ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
-```
-
-![screenshot](/screenshots/labels.png)
-
-## Creating a new screen
-
-You can use `newScreen` (or `clearScreen`) to programmatically create a new screen.
-
-```php
-ray()->newScreen();
-```
-
-You can see values that were previously displayed, by clicking the little back button in the header of Ray.
-
-Optionally, you can give a screen a name:
-
-```php
-ray()->newScreen('My debug screen');
-```
-
-![screenshot](/screenshots/newScreen.png)
-
-You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
-current request. In a Laravel app, a good place for this might be the service provider.
-
-When using PHPUnit to run tests, you might use `newScreen` to get a new screen each time your run a test to debug some
-code.
-
-### Clearing everything including history
-
-To clear the current screen and all previous screens, call `clearAll`.
-
-```php
-ray()->clearAll();
-```
-
 ## See the caller of a function
 
 Sometimes you want to know where your code is being called. You can quickly determine that by using the `caller`
@@ -149,6 +55,20 @@ If you press the "Continue" button in Ray, execution will continue. When you pre
 exception in your app to halt execution.
 
 If you are using Windows, you must set the maximum execution time to a high value, as the paused time will count against the maximum execution time.
+
+## Halting the PHP process
+
+You can stop the PHP process by calling `die`.
+
+```php
+ray($anything)->die();
+```
+
+Alternatively, you can use the `rd` function.
+
+```php
+rd($anything);
+```
 
 ## Counting execution times
 
@@ -203,68 +123,6 @@ This is how that looks like in Ray.
 
 ![screenshot](/screenshots/named-count.png)
 
-## Limiting the number of sent payloads
-
-To limit the number of payloads sent by a particular `ray()` call, use the `limit` function.  It works well for debugging loops.
-
-```php
-foreach (range(1, 10) as $i) {
-    ray()->limit(3)->text("A #{$i}"); // counts to 3
-    ray()->limit(6)->text("B #{$i}"); // counts to 6
-    ray()->text("C #{$i}"); // counts to 10
-}
-```
-
-If the argument passed to `limit()` is a negative number or zero, limiting is disabled.
-
-## Using a rate limiter
-
-A rate limiter can help to reduce the amount of sent messages. This would avoid spamming the desktop app, which can be helpful when using Ray in loops.
-
-```php
-Ray::rateLimiter()->max(10); // only 10 messages will be sent
-```
-
-```php
-Ray::rateLimiter()->perSecond(10); // only 10 messages per second will be sent
-```
-
-To remove the rate limits again
-```php
-Ray::rateLimiter()->clear();
-```
-
-A message to the desktop app will be sent once to notify the user the rate limit has been reached.
-
-## Sending a payload once
-
-To only send a payload once, use the `once` function.  This is useful for debugging loops.
-
-`once()` may be called with arguments:
-
-
-```php
-foreach (range(1, 10) as $i) {
-    ray()->once($i); // only sends "1"
-}
-```
-
-You can also use `once` without arguments. Any function you chain on `once` will also only be called once.
-
-```php
-foreach (range(1, 10) as $i) {
-    ray()->once()->html("<strong>{$i}</strong>"); // only sends "<strong>1</strong>"
-}
-```
-
-## Display the class name of an object
-
-To quickly send the class name of an object to ray, use the `className` function.
-
-```php
-ray()->className($anObject)
-```
-
 ## Measuring performance and memory usage
 
 You can use the `measure` function to display runtime and memory usage. When `measure` is called again, the time between
@@ -294,6 +152,14 @@ ray()->measure(function() {
 ```
 
 ![screenshot](/screenshots/measure-closure.png)
+
+## Display the class name of an object
+
+To quickly send the class name of an object to ray, use the `className` function.
+
+```php
+ray()->className($anObject)
+```
 
 ## Displaying the private properties & methods
 
@@ -337,144 +203,6 @@ $privateClass = new PrivateClass();
 ray()->invade($privateClass)->privateProperty->red();
 ray()->invade($privateClass)->privateMethod()->green();
 
-```
-
-## Working with JSON
-
-Want to display the JSON representation of anything you'd like in Ray? Use `toJson`. You can provide any value that can
-be converted to JSON with [json_encode](https://www.php.net/json_encode).
-
-```php
-ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
-```
-
-![screenshot](/screenshots/json.png)
-
-The `toJson` function can also accept multiple arguments.
-
-```php
-// all of these will be displayed in Ray
-$object = new \stdClass();
-$object->company = 'Spatie';
-
-ray()->toJson(
-    ['a' => 1, 'b' => ['c' => 3]],
-    ['d' => ['e' => 5]],
-    $object
-);
-```
-
-You can send a valid JSON string to Ray with the `json` function.
-
-It will be displayed nicely and collapsable in Ray.
-
-```php
-$jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
-
-ray()->json($jsonString);
-```
-
-![screenshot](/screenshots/from-json.png)
-
-The `json` function can also accept multiple valid JSON strings.
-
-```php
-// all of these will be displayed in Ray
-ray()->json($jsonString, $anotherJsonString, $yetAnotherJsonString);
-```
-
-## Working with XML
-
-You can send a valid XML string to Ray with the `xml` function.
-
-It will be displayed as formatted XML and collapsable in Ray.
-
-```php
-$xmlString = '<one><two><three>3</three></two></one>';
-
-ray()->xml($xmlString);
-```
-
-![screenshot](/screenshots/xml.png)
-
-## Working with Carbon instances
-
-[Carbon](https://carbon.nesbot.com/docs/) is a popular datetime package. You can send instances of `Carbon` to Ray with `carbon`.
-
-```php
-ray()->carbon(new \Carbon\Carbon());
-```
-
-![screenshot](/screenshots/carbon.png)
-
-## Working with files
-
-You can display the contents of any file in Ray with the `file` function.
-
-```php
-ray()->file('somefile.txt');
-```
-
-## Displaying a table
-
-You can send an associative array to Ray with the `table` function.
-
-```php
-ray()->table([
-    'First' => 'First value',
-    'Second' => 'Second value',
-    'Third' => 'Third value',
-]);
-```
-
-![screenshot](/screenshots/table.png)
-
-As a second argument, you can pass a label that will be displayed next to the table.
-
-```php
-ray()->table(['John', 'Paul', 'George', 'Ringo'], 'Beatles');
-```
-
-![screenshot](/screenshots/table-label.png)
-
-## Displaying images
-
-To display an image, call the `image` function and pass a fully-qualified filename, url, or a valid base64-encoded image as its only argument.
-
-```php
-ray()->image('https://placekitten.com/200/300');
-ray()->image('/home/user/kitten.jpg');
-
-// display base64-encoded images
-ray()->image('data:image/png;base64,iVBORw0KGgoAAA…truncated');
-ray()->image('iVBORw0KGgoAAA…truncated');
-```
-
-## Displaying a link
-
-You can render a clickable link in Ray, by using the `link` (or `url`) methods.
-
-```php
-ray()->link('spatie.be'); // we'll assume that you meant `https://spatie.be`
-ray()->link('spatie.be', 'Spatie homepage'); // optionally, you can pass a label
-ray()->url('myray.app'); // `url` is an alias of `link`
-```
-
-## Rendering HTML
-
-To render a piece of HTML directly in Ray, you can use the `html` method.
-
-```php
-ray()->html('<b>Bold string<b>');
-```
-
-## Displaying text content
-
-To display raw text while preserving whitespace formatting, use the `text` method.  If the text contains HTML, it will be displayed as-is and is not rendered.
-
-```php
-ray()->text('<em>this string is html encoded</em>');
-ray()->text('  whitespace formatting' . PHP_EOL . '   is preserved as well.');
 ```
 
 ## Updating displayed items
@@ -636,40 +364,6 @@ function foo() {
 }
 ```
 
-## Displaying a notification
-
-You can use Ray to display a notification.
-
-```php
-ray()->notify('This is my notification');
-```
-
-![screenshot](/screenshots/notification.jpg)
-
-## Shooting confetti
-
-For those times that success is to be celebrated.
-
-```php
-ray()->confetti();
-```
-
-![screenshot](/screenshots/confetti.png)
-
-## Halting the PHP process
-
-You can stop the PHP process by calling `die`.
-
-```php
-ray($anything)->die();
-```
-
-Alternatively, you can use the `rd` function.
-
-```php
-rd($anything);
-```
-
 ## Showing PHP info
 
 Using `phpinfo()` you can quickly see some information about your PHP environment.
@@ -767,6 +461,38 @@ ray(new Carbon, $eloquentModel)); // will be formatted nicely
 ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
 ```
 
+## Creating a new screen
+
+You can use `newScreen` (or `clearScreen`) to programmatically create a new screen.
+
+```php
+ray()->newScreen();
+```
+
+You can see values that were previously displayed, by clicking the little back button in the header of Ray.
+
+Optionally, you can give a screen a name:
+
+```php
+ray()->newScreen('My debug screen');
+```
+
+![screenshot](/screenshots/newScreen.png)
+
+You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
+current request. In a Laravel app, a good place for this might be the service provider.
+
+When using PHPUnit to run tests, you might use `newScreen` to get a new screen each time your run a test to debug some
+code.
+
+### Clearing everything including history
+
+To clear the current screen and all previous screens, call `clearAll`.
+
+```php
+ray()->clearAll();
+```
+
 ## Showing and hiding the app
 
 You can show and hide the Ray app via code.
@@ -805,3 +531,23 @@ ray()->enable();
 ray()->enabled(); // true
 ray()->disabled(); // false
 ```
+
+## Displaying a notification
+
+You can use Ray to display a notification.
+
+```php
+ray()->notify('This is my notification');
+```
+
+![screenshot](/screenshots/notification.jpg)
+
+## Shooting confetti
+
+For those times that success is to be celebrated.
+
+```php
+ray()->confetti();
+```
+
+![screenshot](/screenshots/confetti.png)
