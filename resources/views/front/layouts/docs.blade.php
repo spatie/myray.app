@@ -24,7 +24,7 @@
         <section class="page-content lg:w-full p-5 lg:p-14 lg:pb-24">
             @yield('content')
 
-            <div class="absolute right-0 bottom-24">
+            <div class="absolute hidden md:block right-0 bottom-24">
                 @include('partials.svg.ornament')
             </div>
         </section>
