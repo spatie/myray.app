@@ -1,10 +1,5 @@
 <?php
 
-use App\Domain\Docs\BladeParsingExtension;
-use App\Domain\Docs\WireNavigateExtension;
-use League\CommonMark\Normalizer\SlugNormalizer;
-use League\CommonMark\Util\HtmlFilter;
-
 return [
     'code_highlighting' => [
         /*
@@ -39,7 +34,7 @@ return [
      * More info: https://spatie.be/docs/laravel-markdown/v1/using-the-blade-component/passing-options-to-commonmark
      */
     'commonmark_options' => [
-        'html_input' => HtmlFilter::ALLOW,
+        'html_input' => League\CommonMark\Util\HtmlFilter::ALLOW,
         'heading_permalink' => [
             'html_class' => 'heading-permalink',
             'id_prefix' => '',
@@ -60,6 +55,11 @@ return [
             'max_heading_level' => 2,
             'normalize' => 'relative',
             'placeholder' => '[TOC]',
+        ],
+        'wire_navigate' => [
+            'domain' => 'myray.app',
+            'paths' => ['docs'],
+            'hover' => true,
         ],
     ],
 
@@ -92,8 +92,8 @@ return [
     'extensions' => [
         League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
         League\CommonMark\Extension\TableOfContents\TableOfContentsExtension::class,
-        BladeParsingExtension::class,
-        WireNavigateExtension::class,
+        App\Domain\Docs\BladeParsingExtension::class,
+        Spatie\CommonMarkWireNavigate\WireNavigateExtension::class,
         League\CommonMark\Extension\Table\TableExtension::class,
     ],
 

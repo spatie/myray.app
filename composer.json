@@ -29,6 +29,7 @@
         "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/livewire": "^3.4",
         "meilisearch/meilisearch-php": "^1.6",
+        "spatie/commonmark-wire-navigate": "dev-main",
         "spatie/laravel-backup": "^8.1",
         "spatie/laravel-feed": "^4.2",
         "spatie/laravel-flash": "^1.9",
