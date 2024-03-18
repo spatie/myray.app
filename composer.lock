@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63b21c8dee41f594dfbff2ceefaf1c73",
+    "content-hash": "3e4b7ef26a960986646edcfda2a95f08",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -4736,16 +4736,16 @@
         },
         {
             "name": "spatie/commonmark-wire-navigate",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/commonmark-wire-navigate.git",
-                "reference": "5ddb2de5c6a3c866eb1b6a6d2716edb5811e9e2f"
+                "reference": "9d61c721cf0ab5a24cb2dd8e40bea643c4f824e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/commonmark-wire-navigate/zipball/5ddb2de5c6a3c866eb1b6a6d2716edb5811e9e2f",
-                "reference": "5ddb2de5c6a3c866eb1b6a6d2716edb5811e9e2f",
+                "url": "https://api.github.com/repos/spatie/commonmark-wire-navigate/zipball/9d61c721cf0ab5a24cb2dd8e40bea643c4f824e9",
+                "reference": "9d61c721cf0ab5a24cb2dd8e40bea643c4f824e9",
                 "shasum": ""
             },
             "require": {
@@ -4756,9 +4756,10 @@
             "require-dev": {
                 "laravel/pint": "^1.0",
                 "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-type-coverage": "^2.8",
+                "phpstan/phpstan": "^1.10",
                 "spatie/ray": "^1.41"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4779,12 +4780,15 @@
             "description": "Add a wire:navigate attribute to links rendered in Markdown",
             "homepage": "https://github.com/spatie/commonmark-wire-navigate",
             "keywords": [
+                "commmonmark",
                 "commonmark-wire-navigate",
+                "livewire",
+                "markdown",
                 "spatie"
             ],
             "support": {
                 "issues": "https://github.com/spatie/commonmark-wire-navigate/issues",
-                "source": "https://github.com/spatie/commonmark-wire-navigate/tree/main"
+                "source": "https://github.com/spatie/commonmark-wire-navigate/tree/1.0.0"
             },
             "funding": [
                 {
@@ -4792,7 +4796,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-14T16:26:23+00:00"
+            "time": "2024-03-15T15:44:39+00:00"
         },
         {
             "name": "spatie/crawler",
@@ -14244,9 +14248,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "spatie/commonmark-wire-navigate": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
