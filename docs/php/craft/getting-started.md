@@ -21,6 +21,12 @@ You could opt to install `craft-ray` as a dev dependency. If you go this route, 
 composer require spatie/craft-ray --dev
 ```
 
+## Install the plugin
+
+```bash
+craft plugin/install craft-ray
+```
+
 ## Usage
 
 Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
