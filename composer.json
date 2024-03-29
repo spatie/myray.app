@@ -47,7 +47,8 @@
         "spatie/yaml-front-matter": "^2.0",
         "symfony/http-client": "^6.2",
         "symfony/postmark-mailer": "^6.2",
-        "symfony/yaml": "^6.2"
+        "symfony/yaml": "^6.2",
+        "tempest/highlight": "^1.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.13",
