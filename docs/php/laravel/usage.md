@@ -101,6 +101,26 @@ Cache::get('another-key');
 
 To stop showing cache events, call `stopShowingCache`.
 
+## Showing context
+
+Laravel 11 introduced [the ability to set context](https://laravel.com/docs/11.x/context).
+
+You can display all context using Ray's `context` method.
+
+```php
+ray()->context(); // displays all context
+
+ray()->context('key', 'key2') // displays only the given keys
+```
+
+Context can also be invisible. You can display those values using the `hiddenContext` method.
+
+```php
+ray()->hiddenContext(); // displays all hidden context
+
+ray()->hiddenContext('key', 'key2') // displays only the given hidden keys
+```
+
 ## Handling models
 
 Using the `model` function, you can display the attributes and relations of a model.
