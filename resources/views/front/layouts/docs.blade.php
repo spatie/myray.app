@@ -60,7 +60,9 @@
         document.addEventListener('livewire:navigated', () => {
             try {
                 if (window.location.hash) {
-                    document.getElementById(window.location.hash).scrollIntoView();
+                    setTimeout(() => {
+                        document.getElementById(window.location.hash.replace('#', '')).scrollIntoView();
+                    });
                 }
             } catch (e) {
                 console.error(e);

@@ -25,12 +25,12 @@ return [
     /*
      * When enabled, anchor links will be added to all titles
      */
-    'add_anchors_to_headings' => true,
+    'add_anchors_to_headings' => false,
 
     /**
      * When enabled, anchors will be rendered as links.
      */
-    'render_anchors_as_links' => false,
+    'render_anchors_as_links' => true,
 
     /*
      * These options will be passed to the league/commonmark package which is
@@ -44,7 +44,7 @@ return [
             'html_class' => 'heading-permalink',
             'id_prefix' => '',
             'fragment_prefix' => '',
-            'insert' => 'after',
+            'insert' => 'before',
             'min_heading_level' => 2,
             'max_heading_level' => 6,
             'title' => 'Permalink',
