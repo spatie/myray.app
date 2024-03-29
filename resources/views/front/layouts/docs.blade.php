@@ -58,6 +58,14 @@
         });
 
         document.addEventListener('livewire:navigated', () => {
+            try {
+                if (window.location.hash) {
+                    document.getElementById(window.location.hash).scrollIntoView();
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
             queueMicrotask(() => {
                 document.documentElement.scrollTop = document.body.scrollTop = Math.min(
                     scrollPosition,
