@@ -64,15 +64,15 @@
         & .heading-permalink {
             cursor: pointer;
             display: inline-block;
-            margin-left: .5rem;
             color: #8E80B1;
             font-weight: 400;
             transition: opacity .2s;
-            position: absolute;
-            left: -1.7rem;
-            top: 0;
             text-decoration: none;
             transform: scale(.8);
+            margin-left: -1.5rem;
+            z-index: 99999;
+            margin-right: .5rem;
+            opacity: 0.5;
         }
     }
 
@@ -181,7 +181,7 @@
         }
     }
 
-    & .shiki {
+    & .shiki, & pre {
         margin-bottom: 1rem;
         padding: 1.25rem;
         font-size: .7rem;
@@ -223,4 +223,69 @@
             }
         }
     }
+}
+
+
+
+/** Highlighting **/
+pre {
+    color: #637777;
+    background-color: #13052B;
+
+}
+
+.hl-keyword {
+    color: #7FDBCA;
+}
+
+.hl-property {
+    color: #B392F0;
+}
+
+.hl-attribute {
+    font-style: italic;
+}
+
+.hl-type {
+    color: #79B8FF;
+}
+
+.hl-generic {
+    color: #9d3af6;
+}
+
+.hl-value {
+    color: #9ECBFF;
+}
+
+.hl-variable {
+    color: #000;
+}
+
+.hl-comment {
+    color: #888888;
+}
+
+.hl-blur {
+    filter: blur(2px);
+}
+
+.hl-strong {
+    font-weight: bold;
+}
+
+.hl-em {
+    font-style: italic;
+}
+
+.hl-addition {
+    display: inline-block;
+    min-width: 100%;
+    background-color: #00FF0033;
+}
+
+.hl-deletion {
+    display: inline-block;
+    min-width: 100%;
+    background-color: #FF000022;
 }

@@ -1,5 +1,10 @@
 <?php
 
+use League\CommonMark\Extension\CommonMark\Node\Block\FencedCode;
+use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
+use Tempest\Highlight\CommonMark\CodeBlockRenderer;
+use Tempest\Highlight\CommonMark\InlineCodeBlockRenderer;
+
 return [
     'code_highlighting' => [
         /*
@@ -7,7 +12,7 @@ return [
          *
          * More info: https://spatie.be/docs/laravel-markdown/v1/installation-setup
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * The name of or path to a Shiki theme
@@ -20,12 +25,12 @@ return [
     /*
      * When enabled, anchor links will be added to all titles
      */
-    'add_anchors_to_headings' => true,
+    'add_anchors_to_headings' => false,
 
     /**
      * When enabled, anchors will be rendered as links.
      */
-    'render_anchors_as_links' => false,
+    'render_anchors_as_links' => true,
 
     /*
      * These options will be passed to the league/commonmark package which is
@@ -39,7 +44,7 @@ return [
             'html_class' => 'heading-permalink',
             'id_prefix' => '',
             'fragment_prefix' => '',
-            'insert' => 'after',
+            'insert' => 'before',
             'min_heading_level' => 2,
             'max_heading_level' => 6,
             'title' => 'Permalink',
@@ -104,7 +109,8 @@ return [
      * More info: https://commonmark.thephpleague.com/2.4/customization/rendering/
      */
     'block_renderers' => [
-        // ['class' => FencedCode::class, 'renderer' => MyCustomCodeRenderer::class, 'priority' => 0]
+        ['class' => FencedCode::class, 'renderer' => CodeBlockRenderer::class, 'priority' => 10],
+        ['class' => Code::class, 'renderer' => InlineCodeBlockRenderer::class, 'priority' => 10],
     ],
 
     /*

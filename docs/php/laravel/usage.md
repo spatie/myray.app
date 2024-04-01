@@ -110,16 +110,20 @@ You can display all context using Ray's `context` method.
 ```php
 ray()->context(); // displays all context
 
-ray()->context('key', 'key2') // displays only the given keys
+ray()->context('key', 'key2'); // displays only the given keys
 ```
+
+![screenshot](/screenshots/context.png)
 
 Context can also be invisible. You can display those values using the `hiddenContext` method.
 
 ```php
 ray()->hiddenContext(); // displays all hidden context
 
-ray()->hiddenContext('key', 'key2') // displays only the given hidden keys
+ray()->hiddenContext('key', 'key2'); // displays only the given hidden keys
 ```
+
+![screenshot](/screenshots/context-hidden.png)
 
 ## Handling models
 
