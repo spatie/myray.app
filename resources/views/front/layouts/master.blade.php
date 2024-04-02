@@ -9,5 +9,6 @@
     @yield('content')
 
     @include('partials.footer')
+    @livewire('dummy-component')
 </body>
 </html>
