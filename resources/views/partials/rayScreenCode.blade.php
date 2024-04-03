@@ -1,4 +1,4 @@
-<div class="bg-[rgb(30,41,59)] text-white overflow-hidden shadow-sm text-sm  -mt-8 rounded">
+<div class="bg-[#13052b] text-white overflow-hidden shadow-sm text-sm  -mt-8 rounded">
     <div class="h-8 relative pl-4 w-full bg-[rgb(15,23,42)] gap-2 flex items-center">
         <div class="w-3 h-3 bg-[rgb(51,65,85)] rounded-full"></div>
         <div class="w-3 h-3 bg-[rgb(51,65,85)] rounded-full"></div>
