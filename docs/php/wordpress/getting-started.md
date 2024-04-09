@@ -35,7 +35,7 @@ git clone git@github.com:spatie/wordpress-ray
 
 Ray is also registered as [a plugin on WordPress.org](https://wordpress.org/plugins/spatie-ray/). In the admin section of WordPress, go to "Plugins" > "Add New", and search for "Spatie Ray".
 
-![screenshot](/docs/ray/v1/images/wp-install.png)
+![screenshot](/screenshots/wp-install.png)
 
 Install and activate the plugin.
 
