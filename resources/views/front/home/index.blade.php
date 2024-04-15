@@ -153,28 +153,28 @@
 
 
             <div class="grid grid-cols-1 md:grid-cols-2 col-span-5 gap-x-16">
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/framework-agnostic-php"
+                <a href="https://myray.app/docs/php/vanilla-php/installation"
                     class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/php.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         PHP</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/javascript"
+                <a href="https://myray.app/docs/javascript/vanilla-javascript/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/javascript.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         JavaScript</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/laravel"
+                <a href="https://myray.app/docs/php/laravel/installation"
                     class="flex items-center gap-4 border-b border-black/20 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80  contrast-200 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/laravel.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Laravel</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/wordpress"
+                <a href="https://myray.app/docs/php/wordpress/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/wordpress.svg" alt="">
@@ -182,7 +182,7 @@
                         WordPress</p>
                 </a>
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/vue"
+                <a href="https://myray.app/docs/javascript/vuejs/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/vue.svg" alt="">
@@ -190,7 +190,7 @@
                         Vue</p>
                 </a>
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/react"
+                <a href="https://myray.app/docs/javascript/react/getting-started"
                    class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                          src="/images/frameworks/react.svg" alt="">
@@ -198,28 +198,28 @@
                         React</p>
                 </a>
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/alpinejs"
+                <a href="https://myray.app/docs/javascript/alpine/installation"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/alpine.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Alpine</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/craft-cms"
+                <a href="https://myray.app/docs/php/craft/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/cms.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Craft CMS</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/go"
+                <a href="https://myray.app/docs/other-languages/go/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/go.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Go</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/nodejs"
+                <a href="https://myray.app/docs/javascript/nodejs/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/nodejs.svg" alt="">
@@ -228,21 +228,21 @@
                 </a>
 
 
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/yii2"
+                <a href="https://myray.app/docs/php/yii/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/yii.svg" alt="">
                     <p class="w-full text-left text-xs ">
                         Yii2</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/expressjs"
+                <a href="https://myray.app/docs/javascript/express/getting-started"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/ex.png" alt="">
                     <p class="w-full text-left text-xs ">
                         Express</p>
                 </a>
-                <a href="https://spatie.be/docs/ray/v1/installation-in-your-project/bash"
+                <a href="https://myray.app/docs/other-languages/bash/installation"
                     class="flex items-center gap-4 border-b border-black/20 h-16 py-4 justify-between group">
                     <img class="  w-8 grayscale opacity-80 contrast-200 group-hover:contrast-100 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                         src="/images/frameworks/bash.svg" alt="">
