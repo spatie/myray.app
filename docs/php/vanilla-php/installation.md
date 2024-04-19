@@ -8,7 +8,7 @@ To communicate with the Ray desktop app, we're going to use a function named `ra
 
 ## Global installation
 
-To make the `ray()`, `dump()` and `ray()` functions available in any PHP file and project on your system, you can install the `spatie/global-ray` package.
+To make the `ray()`, `dump()` and `dd()` functions available in any PHP file and project on your system, you can install the `spatie/global-ray` package.
 
 ```bash
 composer global require spatie/global-ray
