@@ -91,7 +91,7 @@ Go to your SSH config:
 nano /etc/hosts/sshd_config
 ```
 
-Search for *GatewayPorts* and set him from **no** to **yes**
+Search for *GatewayPorts* and set it from **no** to **yes**
 ```text
 GatewayPorts yes
 ```
