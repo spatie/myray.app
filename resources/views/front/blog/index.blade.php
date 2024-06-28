@@ -11,38 +11,38 @@
             </div>
             <div class="border-t border-gray-200 mt-10 sm:mt-16 divide-y divide-indigo-100 w-full">
                 @forelse($posts as $post)
-                    <article class="flex py-12 flex-col items-start justify-between">
-                        @isset($post->date)
-                        <div class="flex items-center gap-x-4 text-xxs">
-                            <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
-                        </div>
-                        @endisset
-                        <div class="group relative">
-                            <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
-                                <a href="{{ route('post.show', $post->slug) }}">
-                                    <span class="absolute inset-0"></span>
-                                    {{ $post->title }}
-                                </a>
-                            </h3>
-                            <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
-                        </div>
-                        <div class="relative mt-2 flex items-center gap-x-6">
-                            <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
-                            @foreach ($post->authors as $author)
-                                <div class="flex items-center gap-x-2">
-                                    <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
-                                    <div class="text-[0.6rem] leading-6">
-                                        <p class="font-semibold text-indigo-900">
-                                            <span>
-                                                <span class="absolute inset-0"></span>
-                                                {{ $author->name }}
-                                            </span>
-                                        </p>
+                    <a href="{{ route('post.show', $post->slug) }}" class="flex py-8 flex-col items-start justify-between">
+                        <article>
+                            @isset($post->date)
+                            <div class="flex items-center gap-x-4 text-xxs">
+                                <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
+                            </div>
+                            @endisset
+                            <div class="group relative">
+                                <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
+                                        <span class="absolute inset-0"></span>
+                                        {{ $post->title }}
+                                </h3>
+                                <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
+                            </div>
+                            <div class="relative mt-2 flex items-center gap-x-6">
+                                <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
+                                @foreach ($post->authors as $author)
+                                    <div class="flex items-center gap-x-2">
+                                        <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
+                                        <div class="text-[0.6rem] leading-6">
+                                            <p class="font-semibold text-indigo-900">
+                                                <span>
+                                                    <span class="absolute inset-0"></span>
+                                                    {{ $author->name }}
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </article>
+                                @endforeach
+                            </div>
+                        </article>
+                    </a>
                 @empty
                     <article class="flex py-12 flex-col items-start justify-between">
                         <div class="group relative">
