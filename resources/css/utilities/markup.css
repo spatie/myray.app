@@ -29,11 +29,11 @@
 .markup p,
 .markup ol,
 .markup ul {
-    @apply mb-6;
+    @apply mb-4;
 }
 
 .markup p + ul {
-    @apply -mt-6;
+    @apply -mt-4;
 }
 
 .markup li ul {
@@ -197,7 +197,7 @@
 
 .markup-code pre {
     @apply font-mono;
-    @apply my-8;
+    @apply my-6;
     @apply p-4;
     @apply overflow-x-auto;
     @apply bg-white;

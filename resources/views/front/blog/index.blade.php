@@ -3,7 +3,7 @@
 @section('title', 'Blog')
 
 @section('content')
-    <main class="max-w-4xl mx-auto">
+    <main class="max-w-4xl mx-auto text-midnight font-light">
         <div class="mx-auto px-6 sm:px-12 md:px-16">
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 class="text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">The Ray blog</h2>
@@ -13,7 +13,7 @@
                 @forelse($posts as $post)
                     <article class="flex py-12 flex-col items-start justify-between">
                         @isset($post->date)
-                        <div class="flex items-center gap-x-4 text-xs">
+                        <div class="flex items-center gap-x-4 text-xxs">
                             <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
                         </div>
                         @endisset
