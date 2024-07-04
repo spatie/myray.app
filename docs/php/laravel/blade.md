@@ -22,7 +22,7 @@ You can use the `@measure` directive as a shortcut for the `ray()->measure()` me
 {{-- inside a view --}}
 
 @measure
-@php(sleep(10))
+@php(sleep(4))
 @measure
 ```
 
