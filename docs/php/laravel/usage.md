@@ -222,16 +222,6 @@ ray()->env();
 ray()->env(['APP_NAME', 'DB_DATABASE', 'DB_HOSTNAME', 'DB_PORT']);
 ```
 
-## Using Ray in Blade views
-
-You can use the `@ray` directive to easily send variables to Ray from inside a Blade view. You can pass as many things as you'd like.
-
-```blade
-{{-- inside a view --}}
-
-@ray($variable, $anotherVariables)
-```
-
 ## Using Ray with test responses
 
 When testing responses, you can send a `TestResponse` to Ray using the `ray()` method.
