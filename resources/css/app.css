@@ -28,9 +28,6 @@
   animation: background-appear-right .2s 0.6s ease-out forwards;
 }
 
-
-
-
 @keyframes background-appear-left {
   0%{
       opacity: 0;
@@ -59,12 +56,10 @@
   @apply duration-500;
   @apply delay-500;
   @apply bg-indigo-500;
-
 }
 
 .group:hover .tooltip-reveal {
   @apply opacity-10;
-
 }
 
 .tooltip-hover {

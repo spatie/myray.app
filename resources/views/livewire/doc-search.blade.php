@@ -16,7 +16,7 @@
             <div class="bg-white shadow-lg w-full max-w-2xl rounded pointer-events-auto m-3">
                 <div class="relative flex items-center border-b">
                     <div class="absolute left-0 z-50 left-3">
-                        @include('partials.svg.icon-search')
+                        <x-icons.search />
                     </div>
                     <input
                         type="text"

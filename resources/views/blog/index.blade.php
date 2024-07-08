@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('layouts.default')
 
 @section('title', 'Blog')
 
@@ -59,6 +59,6 @@
             {{ $posts->links() }}
         </div>
 
-        @include('partials.cta')
+        <x-cta />
     </main>
 @endsection

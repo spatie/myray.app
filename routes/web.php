@@ -15,8 +15,8 @@ Route::post('subscribe', SubscribeController::class)->middleware(ProtectAgainstS
 Route::redirect('wordpress', '/')->name('wordpress');
 Route::redirect('javascript', '/')->name('javascript');
 
-Route::view('terms-of-use', 'front.legal.terms-of-use')->name('termsOfUse');
-Route::view('privacy', 'front.legal.privacy')->name('privacy');
+Route::view('terms-of-use', 'legal.terms-of-use')->name('termsOfUse');
+Route::view('privacy', 'legal.privacy')->name('privacy');
 
 Route::feeds();
 Route::get('blog', [PostsController::class, 'index'])->name('blog');

@@ -24,6 +24,6 @@ class IntegrationsOverview extends Component
                 $doc->parts[count($doc->parts) -1] === '_index.md';
         });
 
-        return view('components.integrations-overview', compact('docs'));
+        return view('components.docs.integrations-overview', compact('docs'));
     }
 }

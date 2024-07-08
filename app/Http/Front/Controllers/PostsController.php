@@ -12,7 +12,7 @@ class PostsController
     {
         $posts = ContentApi::getPosts('ray', request('page', 1), theme: 'nord');
 
-        return view('front.blog.index', [
+        return view('blog.index', [
             'posts' => $posts,
         ]);
     }
@@ -31,7 +31,7 @@ class PostsController
 
         abort_if(is_null($post), 404);
 
-        return view('front.blog.show', [
+        return view('blog.show', [
             'post' => $post,
         ]);
     }

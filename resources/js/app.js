@@ -1,12 +1,12 @@
-import Clipboard from "@ryangjchandler/alpine-clipboard"
 import focus from '@alpinejs/focus'
+import clipboard from "@ryangjchandler/alpine-clipboard"
 
-Alpine.plugin(Clipboard);
+Alpine.plugin(clipboard);
 Alpine.plugin(focus);
 
 Alpine.start();
 
-// PERMALINKS
+// Permalinks
 document.querySelectorAll('.heading-permalink').forEach((el) => {
     el.addEventListener('click', (e) => {
         e.preventDefault();
@@ -25,7 +25,3 @@ document.querySelectorAll('.heading-permalink').forEach((el) => {
         }, 1500);
     });
 });
-
-if (document.getElementById('typewriter_0')) {
-    import('./animation');
-}

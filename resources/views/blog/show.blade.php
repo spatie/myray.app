@@ -1,4 +1,4 @@
-@extends('front.layouts.master')
+@extends('layouts.default')
 
 @section('title', $post->title)
 
@@ -31,7 +31,7 @@
                 {!! $post->content !!}
             </div>
 
-            @include('partials.cta')
+            <x-cta />
         </div>
     </main>
 @endsection

@@ -12,7 +12,7 @@
                 :class="showSearchBox ? 'border-indigo-500' : 'nope'"
         >
             <div class="flex items-center">
-                @include('partials.svg.icon-search')
+                <x-icons.search />
                 <span class="text-xs ml-2">Quick Search</span>
             </div>
             <span class="text-xs text-gray-400">⌘K</span>

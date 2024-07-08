@@ -1,4 +1,4 @@
-@extends('front.layouts.docs')
+@extends('layouts.docs')
 
 @section('title', $page->title)
 

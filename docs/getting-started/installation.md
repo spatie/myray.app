@@ -24,7 +24,7 @@ You need to install a package/library for your specific language or framework th
 
 Ray support the following languages and frameworks:
 
-<x-integrations-overview></x-integrations-overview>
+<x-docs.integrations-overview></x-docs.integrations-overview>
 
 ## Sending your first call
 

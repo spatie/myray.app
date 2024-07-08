@@ -12,7 +12,7 @@
     </div>
 
     <div class="w-full text-center lg:text-left mt-6">
-        <x-download />
+        <x-cta.download />
         <div class="mt-4 mb-4 mx-auto text-sm text-center text-indigo-900 text-opacity-50">
             <a class="leading-tight border-b border-indigo-900 border-opacity-50" href="/">
                 Or learn more…

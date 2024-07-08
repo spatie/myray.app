@@ -5,13 +5,9 @@
 </head>
 <body class="antialiased bg-white font-sans font-medium text-black docs" x-data="{showSearchBox: false}"
       @keydown.cmd.k.window.prevent="showSearchBox = true">
-<div class="border-b border-gray-200 bg-white relative z-50" id="header">
-    @include('partials.header')
-</div>
-
 <div class="relative">
     <div class="absolute right-0 -top-4">
-        @include('partials.svg.ornament')
+        <x-docs.ornament />
     </div>
 
     <div class="lg:flex">
@@ -25,7 +21,7 @@
             @yield('content')
 
             <div class="absolute hidden md:block right-0 bottom-24">
-                @include('partials.svg.ornament')
+                <x-docs.ornament />
             </div>
         </section>
     </div>

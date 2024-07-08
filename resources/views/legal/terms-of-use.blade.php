@@ -1,11 +1,10 @@
-@extends('front.layouts.article')
+@extends('layouts.default')
 
 @section('title', 'Terms of use')
 
 @section('description', 'Terms of use for Ray')
 
-@section('article')
-
+@section('content')
 @markdown
 These Ray terms of use (the “Terms of Use”) apply to all services provided through <https://myray.app/terms-of-use> by Spatie BVBA, with registered offices at Kruikstraat 22/12, 2018 Antwerp, Belgium and registered at the CBE under number BE 0809.387.596 hereafter referred to as “Ray” “we”, “us” or “our”.
 
