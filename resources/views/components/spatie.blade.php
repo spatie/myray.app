@@ -1,4 +1,4 @@
-<svg class="w-auto h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 255.12">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 255.12" {{ $attributes->twMerge('w-auto h-full') }}>
     <title>SPATIE</title>
     <g>
         <path class="fill-current" d="M0,9.77A10,10,0,0,1,10.26,0H585a10,10,0,0,1,10.28,9.77V245.36A10,10,0,0,1,585,255.12H10.26A10,10,0,0,1,0,245.36V9.77Z"></path>

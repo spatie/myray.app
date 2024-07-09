@@ -8,7 +8,7 @@
 <ul x-show="$currentSection('{{ $category->firstPage()->url }}')">
     @foreach($category->categories as $subCategory)
         <li>
-            @include('partials.docs.navigation-sub-category', ['category' => $subCategory])
+            <x-docs.navigation.sub-category :category="$subCategory" />
         </li>
     @endforeach
     @if(count($category->pages) >= 2)

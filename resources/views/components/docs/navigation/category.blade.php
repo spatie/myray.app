@@ -9,7 +9,7 @@
     <ul>
         @foreach($category->categories as $subCategory)
             <li>
-                @include('partials.docs.navigation-sub-category', ['category' => $subCategory])
+                <x-docs.navigation.sub-category :category="$subCategory" />
             </li>
         @endforeach
         @foreach($category->pages as $page)

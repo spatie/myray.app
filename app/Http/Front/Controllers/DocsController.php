@@ -49,6 +49,6 @@ class DocsController
         }
         $categories = array_reverse($categories);
 
-        return view('docs.index', compact('page', 'slug', 'categories'));
+        return view('docs.show', compact('page', 'slug', 'categories'));
     }
 }

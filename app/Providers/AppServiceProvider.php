@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
             'error' => 'alert-error',
         ]);
 
-        Blade::component('app.components.buyButton', 'buy-button');
+        Blade::anonymousComponentPath('docs.components', 'docs');
 
         Blade::directive('markdown', function () {
             return "<?php echo (new \League\CommonMark\CommonMarkConverter())->convertToHtml(<<<HEREDOC";

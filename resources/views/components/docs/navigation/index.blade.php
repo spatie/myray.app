@@ -22,7 +22,7 @@
     <ul class="bg-white p-5 lg:p-8 border-b lg:border-none" x-bind:class="! navOpen ? 'hidden lg:block' : ''">
         @foreach($navigation->categories as $key => $category)
             <li>
-                @include('partials.docs.navigation-category', ['category' => $category])
+                <x-docs.navigation.category :category="$category" />
             </li>
         @endforeach
     </ul>

@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>@yield('title') - Ray</title>
-<meta name="description" content="@yield('description')">
+<title>{{ $title }} - Ray</title>
+<meta name="description" content="{{ $description }}">
 <link rel="canonical" href="{{ url()->current() }}"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;400;600;700;800&display=swap" rel="text/css">
@@ -34,11 +34,9 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="{{ url()->current() }}"/>
 <meta property="og:type" content="product"/>
-<meta property="og:title" content="@yield('title')"/>
-<meta property="og:description"
-      content="@yield('description')"/>
+<meta property="og:title" content="{{ $title }}"/>
+<meta property="og:description" content="{{ $description }}"/>
 <meta property="og:image" content="https://myray.app/images/social-card.png"/>
-
 
 @bukStyles()
 @bukScripts()

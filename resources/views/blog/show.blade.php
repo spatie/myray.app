@@ -1,8 +1,4 @@
-@extends('layouts.default')
-
-@section('title', $post->title)
-
-@section('content')
+<x-layouts.default :title="$post->title">
     <main class="px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <div class="relative mt-2 flex items-center gap-x-6">
@@ -34,4 +30,4 @@
             <x-cta />
         </div>
     </main>
-@endsection
+</x-layouts.default>

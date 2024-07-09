@@ -1,8 +1,4 @@
-@extends('layouts.default')
-
-@section('title', 'Blog')
-
-@section('content')
+<x-layouts.default title="Blog">
     <main class="max-w-4xl mx-auto text-midnight font-light">
         <div class="mx-auto px-6 sm:px-12 md:px-16">
             <div class="mx-auto max-w-2xl lg:mx-0">
@@ -61,4 +57,4 @@
 
         <x-cta />
     </main>
-@endsection
+</x-layouts.default>
