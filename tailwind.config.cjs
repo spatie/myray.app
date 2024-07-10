@@ -2,7 +2,8 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
     content: [
-        './resources/**/*.{.blade.php,.js}',
+        './resources/**/*.blade.php',
+        './resources/**/*.js'
     ],
     theme: {
         fontFamily: {
