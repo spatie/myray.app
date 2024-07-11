@@ -33,9 +33,11 @@
         </div>
     </header>
 
-    <main>
+    <main x-data="{ download: true }">
         {{ $slot }}
+        <x-download.template />
     </main>
+
 
     {{-- Force Alpine to initialize on every page --}}
     @livewire('dummy-component')

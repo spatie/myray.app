@@ -24,10 +24,7 @@
 
                 <div class="flex flex-wrap gap-4 items-center justify-start md:justify-center">
                     <div class="shadow-small-drop">
-                        <a class="inline-flex gap-2 text-xl px-6 py-4 font-bold rounded-md bg-gradient-to-r from-orange to-bright-orange shadow-top-white align-middle hover:to-orange"
-                            href="#">Download trial <img class="inline w-20" src="/images/os-logos.svg"
-                                alt="For MacOS, Windows and Linux">
-                        </a>
+                        <x-download.button />
                     </div>
                     <div class="shadow-small-drop">
                         <a class="inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
@@ -183,7 +180,8 @@
     <div class="bg-bright-purple p-8 lg:py-24 border-b border-t border-white border-opacity-15">
 
         <div class="absolute pointer-events-none overflow-hidden inset-0 opacity-75">
-            <img class="w-[85rem] max-w-none p-0 mx-auto md:p-8 -translate-y-2/4 top-2/4" src="/images/24-background-1.svg" />
+            <img class="w-[85rem] max-w-none p-0 mx-auto md:p-8 -translate-y-2/4 top-2/4"
+                src="/images/24-background-1.svg" />
         </div>
 
         <div class="bg-midnight lg:w-[45rem] mx-auto border border-bleak-purple-light rounded-md shadow-large-drop">
@@ -267,20 +265,8 @@
 
         </div>
 
-        <div class="flex flex-col gap-4 py-12 text-center max-w-md mx-auto md:py-16 lg:pb-0">
-            <h3 class="font-display font-bold text-2xl leading-[1.2] text-balance">Stay in the loop with Ray updates
-                &amp; promotions</h3>
-            <form class="flex" action="">
-                <div
-                    class="flex p-1 gap-4 bg-bleak-purple rounded-full w-full ring-bleak-purple-light ring-inset focus-within:ring-1">
-                    <input class="px-6 py-3 w-full h-full bg-transparent rounded-full outline-none" type="email"
-                        placeholder="Email address" required>
-                    <button
-                        class="px-5 py-3 bg-gradient-to-r from-orange to-bright-orange hover:to-orange rounded-full border-b border-r border-bright-orange"
-                        type="submit">Submit</button>
-                </div>
-            </form>
-            <p class="text-sm text-white text-opacity-50">We only send a few emails a year</p>
+        <div class="max-w-md mx-auto py-12 md:py-16 lg:pb-0">
+            <x-form.newsletter />
         </div>
 
     </div>
@@ -305,10 +291,7 @@
                         whether you're a seasoned backend pro or new to frontend development.</p>
                     <div class="flex flex-wrap gap-4 items-center">
                         <div class="shadow-small-drop">
-                            <a class="inline-flex gap-2 text-xl px-6 py-4 font-bold rounded-md bg-gradient-to-r from-orange to-bright-orange shadow-top-white align-middle hover:to-orange"
-                                href="#">Download trial <img class="inline w-20" src="/images/os-logos.svg"
-                                    alt="For MacOS, Windows and Linux">
-                            </a>
+                            <x-download.button />
                         </div>
                         <div class="shadow-small-drop">
                             <a class="inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
