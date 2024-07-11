@@ -2,7 +2,7 @@
     <main class="px-6 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <div class="relative mt-2 flex items-center gap-x-6">
-                <p class="text-base font-bold leading-7 text-midnightDark text-xs">{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
+                <p class="text-base font-bold leading-7 text-midnight-dark text-xs">{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
                 @foreach ($post->authors as $author)
                     <div class="flex items-center gap-x-2">
                         <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">

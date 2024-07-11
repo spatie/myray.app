@@ -1,4 +1,4 @@
-<div class="flex text-xs md:text-xxs items-center mb-4 text-midnightDark">
+<div class="flex text-xs md:text-xxs items-center mb-4 text-midnight-dark">
     <a href="/docs" class="mr-2">
         <x-icons.home />
     </a>

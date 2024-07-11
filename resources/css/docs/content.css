@@ -1,6 +1,6 @@
 .docs-content {
     font-weight: 400;
-    color: theme('colors.midnight');
+    color: theme('colors.midnight.DEFAULT');
 
     @media screen(md) {
         font-size: .75rem;
@@ -177,7 +177,7 @@
 
         & a {
             text-decoration: none;
-            color: theme('colors.midnight');
+            color: theme('colors.midnight.DEFAULT');
         }
     }
 

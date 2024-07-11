@@ -2,7 +2,7 @@
     :title="$page->title"
     description="Understand and fix bugs faster using Ray"
 >
-    <div class="flex text-xs md:text-xxs items-center mb-4 text-midnightDark">
+    <div class="flex text-xs md:text-xxs items-center mb-4 text-midnight-dark">
         <a href="/docs" class="mr-2">
             <x-icons.home />
         </a>
@@ -28,7 +28,7 @@
             </div>
         </x-markdown>
     </section>
-    <a class="text-xs text-midnightDark mt-5 block flex items-center" target="_blank" href="https://github.com/spatie/myray.app/blob/main/docs/{{$page->getPath()}}">
+    <a class="text-xs text-midnight-dark mt-5 block flex items-center" target="_blank" href="https://github.com/spatie/myray.app/blob/main/docs/{{$page->getPath()}}">
         <div class="mr-2 inline-block">
             <x-icons.github />
         </div>
