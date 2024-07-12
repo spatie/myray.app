@@ -4,7 +4,7 @@
         &amp; promotions</h3>
     <form class="flex" action="">
         <div
-            class="flex p-1 gap-4 bg-bleak-purple rounded-full w-full ring-bleak-purple-light ring-inset focus-within:ring-1">
+            class="flex p-1 gap-4 bg-neutrals-white-20 rounded-full w-full ring-neutrals-white-20 ring-inset focus-within:ring-2">
             <input class="px-6 py-3 w-full h-full bg-transparent rounded-full outline-none" type="email"
                 placeholder="Email address" required>
             <button

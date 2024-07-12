@@ -9,10 +9,10 @@
         <div class="absolute inset-0 bg-midnight-dark bg-opacity-95"></div>
         <button class="absolute top-0 right-0 m-6 leading-none text-white text-3xl w-[1em]">&times;</button>
 
-        <div class="max-w-[40rem] shadow-large-drop" @mousedown.away="download = false">
+        <div class="max-w-[40rem] shadow-large-drop rounded-2xl" @mousedown.away="download = false">
             <div class="bg-gradient-to-b from-midnight to-bright-purple shadow-top-white rounded-2xl overflow-hidden">
 
-                <div class="py-12 px-6 md:py-12 md:px-24 text-center border-b border-white border-opacity-10">
+                <div class="py-12 px-6 md:py-12 md:px-16 text-center border-b border-white border-opacity-10">
 
                     <h2
                         class="font-display font-black text-3xl md:text-4xl mb-8 bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text leading-[1] text-balance">
@@ -117,10 +117,7 @@
                     </div>
                     <x-form.newsletter />
                 </div>
-
-                <div class="mt-4 text-xs text-indigo-900 text-opacity-50">
-                    No spam, just a few updates a year.
-                </div>
+                
             </div>
         </div>
 
