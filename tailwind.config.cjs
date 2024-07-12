@@ -17,12 +17,6 @@ module.exports = {
                 'large-drop': '0px 308px 86px 0px rgba(0, 0, 0, 0.00), 0px 197px 79px 0px rgba(0, 0, 0, 0.02), 0px 111px 67px 0px rgba(0, 0, 0, 0.06), 0px 49px 49px 0px rgba(0, 0, 0, 0.11), 0px 12px 27px 0px rgba(0, 0, 0, 0.13)',
                 'small-drop': '0px 10px 15px -3px rgba(0, 0, 0, 0.10), 0px 4px 6px -2px rgba(0, 0, 0, 0.05)'
             },
-            backgroundImage: {
-                'pattern-1': "url('/images/24-background-1.svg')",
-                'pattern-2': "url('/images/24-background-2.svg')",
-                'pattern-3': "url('/images/24-background-3.svg')",
-                'pattern-4': "url('/images/24-background-4.svg')",
-            },
             colors: {
 
                 'bleak-purple': {

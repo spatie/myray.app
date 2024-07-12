@@ -4,14 +4,14 @@
 <html lang="en" class="bg-midnight text-white antialiased">
 
 <head>
-    <x-layouts.head :title="$title" :description="$description" />
+    <x-layouts.head :title="$title" :description="$description ?? ''" />
 </head>
 
 <body class="overflow-x-hidden">
 
     <x-nav.header />
 
-    <main x-data="{ download: false }">
+    <main class="static" x-data="{ download: false }">
         {{ $slot }}
         <x-download.template />
     </main>

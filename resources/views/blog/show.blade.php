@@ -1,33 +1,50 @@
-<x-layouts.default :title="$post->title">
-    <main class="px-6 lg:px-8">
-        <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-            <div class="relative mt-2 flex items-center gap-x-6">
-                <p class="text-base font-bold leading-7 text-midnight-dark text-xs">{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
-                @foreach ($post->authors as $author)
-                    <div class="flex items-center gap-x-2">
-                        <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
-                        <div class="text-[0.6rem] leading-6">
-                            <p class="font-semibold text-indigo-900">
-                                <span>
-                                    <span class="absolute inset-0"></span>
-                                    {{ $author->name }}
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
+<x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))">
+
+    <div
+        class="absolute w-full translate-y-[-18rem] pointer-events-none md:p-8 bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
+        <img class="opacity-20 max-w-[90rem] mx-auto" src="/images/24-background-3.svg" alt="">
+    </div>
+
+    <div class="container max-w-4xl mx-auto pb-12 md:pb-0">
+
+        <div class="mx-auto px-6 sm:px-12 md:px-16">
+
+            <div class="mb-8">
+                <a class="inline-block underline text-bleak-purple-extra-light mb-4 hover:text-white" href="#">Back
+                    to overview</a>
+                <h1
+                    class="font-display font-black text-3xl mb-[0.25em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl">
+                    {{ $post->title }}
+                </h1>
             </div>
 
-            @if($post->header_image)
-                <img class="w-full rounded-md my-4" alt="" src="{{ $post->header_image }}" />
+            <div class="flex items-center gap-8 mb-12">
+                <p>{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
+                <div class="flex items-center gap-x-6">
+                    @foreach ($post->authors as $author)
+                        <x-author :image="$author->gravatar_url" :name="$author->name" />
+                    @endforeach
+                </div>
+            </div>
+
+            @if ($post->header_image)
+            <div class="my-12">
+                <img class="w-full rounded-md my-4" alt=""
+                    src="{{ $post->header_image }}" />
+            </div>
             @endif
 
-            <h1 class="my-4 text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">{{ $post->title }}</h1>
-            <div class="markup-blog markup markup-links markup-table markup-code markup-lists text-midnight font-light text-sm">
+            <div class="markup-blog markup markup-table markup-code markup-lists text-lg">
                 {!! $post->content !!}
             </div>
 
-            <x-cta />
         </div>
-    </main>
+
+    </div>
+
+    <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
+        <x-cta.large />
+        <x-nav.footer />
+    </div>
+
 </x-layouts.default>

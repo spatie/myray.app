@@ -3,11 +3,12 @@
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
-        <div class="absolute pointer-events-none h-screen inset-0 opacity-75">
-            <img class="w-[85rem] max-w-none p-0 mx-auto md:top-[-20rem] md:p-8" src="/images/24-background-1.svg" />
+        <div class="absolute w-full translate-y-[-35%] pointer-events-none md:p-8">
+            <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
+            <img class="opacity-75 mx-auto md:hidden" src="/images/24-background-1-m.svg" alt="">
         </div>
 
-        <div class="container mx-auto p-8 md:py-16 lg:px-4">
+        <div class="container mx-auto p-6 pb-12 lg:px-4">
 
             <div class="max-w-[54rem] mx-auto mb-12 md:text-balance md:text-center md:mb-24">
                 <h1 class="font-display font-black text-5xl tracking-tight mb-[0.25em] md:text-7xl">The debugger that
@@ -108,16 +109,10 @@
     </div>
 
     <div class="border-b border-white border-opacity-10">
-        <div class="container mx-auto p-8 md:py-24 lg:px-16">
+        <div class="container mx-auto p-6 md:py-24 lg:px-16">
 
-            <div class="max-w-prose mx-auto mb-8 md:mb-16 md:text-center">
-                <h2
-                    class="font-display font-black text-3xl mb-[0.25em] md:text-5xl bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">
-                    A better way to dump()</h2>
-                <p class="text-lg leading-snug">Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu
-                    consectetur risus urna
-                    a ante.</p>
-            </div>
+            <x-intro.default title="A better way to dump()"
+                text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante." />
 
             <div>
                 <div class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
@@ -152,7 +147,7 @@
         </div>
     </div>
 
-    <div class="container mx-auto p-8 md:py-24 lg:px-16">
+    <div class="container mx-auto p-6 md:py-24 lg:px-16">
 
         <div class="max-w-prose mx-auto mb-8 md:mb-16 md:text-center">
             <h2 class="font-display font-bold text-4xl">Ways Ray helps you debug code</h2>
@@ -177,7 +172,7 @@
 
     </div>
 
-    <div class="bg-bright-purple p-8 lg:py-24 border-b border-t border-white border-opacity-15">
+    <div class="bg-bright-purple p-6 lg:py-24 border-b border-t border-white border-opacity-15">
 
         <div class="absolute pointer-events-none overflow-hidden inset-0 opacity-75">
             <img class="w-[85rem] max-w-none p-0 mx-auto md:p-8 -translate-y-2/4 top-2/4"
@@ -219,16 +214,10 @@
         </div>
     </div>
 
-    <div class="mx-auto p-8 md:py-24 md:pb-0 lg:px-6">
+    <div class="mx-auto p-6 md:py-24 md:pb-0 lg:px-6">
 
-        <div class="max-w-prose mx-auto mb-8 md:mb-16 md:text-center">
-            <h2
-                class="font-display font-black text-3xl mb-[0.25em] md:text-5xl bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">
-                Love from the community</h2>
-            <p class="text-lg leading-snug">Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu
-                consectetur risus
-                urna a ante.</p>
-        </div>
+        <x-intro.default title="Love from the community"
+            text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante." />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-h-[45rem] overflow-hidden">
             @for ($i = 0; $i < 4; $i++)
@@ -271,69 +260,9 @@
 
     </div>
 
-    <div class="container mx-auto p-2 lg:py-24 lg:px-16">
-
-        <div
-            class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
-            <div
-                class="flex flex-col lg:flex-row items-center gap-12 p-12 overflow-hidden bg-gradient-to-b from-midnight to-midnight-extra-light rounded-xl lg:gap-24 lg:p-24 lg:pr-0">
-
-                <div class="absolute pointer-events-none overflow-hidden h-screen inset-0 opacity-75">
-                    <img class="w-[85rem] max-w-none p-0 mx-auto md:top-[-10rem]" src="/images/24-background-4.svg" />
-                </div>
-
-                <div class="lg:shrink-0 lg:max-w-[32rem]">
-                    <h2 class="font-display font-black text-5xl tracking-tight mb-[0.5em] md:text-6xl">
-                        <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">Power
-                            up</span> your debugging skills
-                    </h2>
-                    <p class="text-xl leading-tight mb-8">Ray helps every developer debug better,
-                        whether you're a seasoned backend pro or new to frontend development.</p>
-                    <div class="flex flex-wrap gap-4 items-center">
-                        <div class="shadow-small-drop">
-                            <x-download.button />
-                        </div>
-                        <div class="shadow-small-drop">
-                            <a class="inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
-                                href="#">Buy now for &euro;49</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="shrink-0 lg:w-[45rem] shadow-large-drop rounded-3xl overflow-hidden">
-                    <div
-                        class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
-                        <div class="rounded-xl overflow-hidden">
-                            <img src="https://images.placeholders.dev/?width=720&height=480" alt=""
-                                srcset="">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <footer class="flex flex-col gap-12 items-center">
-            <nav>
-                <ul class="flex gap-6">
-                    <li>
-                        <a class="text-lg font-bold hover:underline" href="#">Terms of use</a>
-                    </li>
-                    <li>
-                        <a class="text-lg font-bold hover:underline" href="#">Privacy Policy</a>
-
-                    </li>
-                    <li>
-                        <a class="text-lg" href="#">🎉</a>
-                    </li>
-                </ul>
-            </nav>
-            <a class="hover:opacity-90" href="https://spatie.be/?ref=myray.app" target="_blank">
-                <img class="h-12" src="/images/spatie.svg" alt="Spatie">
-            </a>
-    </div>
-    </footer>
-
+    <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
+        <x-cta.large />
+        <x-nav.footer />
     </div>
 
 </x-layouts.default>

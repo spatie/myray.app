@@ -1,60 +1,69 @@
-<x-layouts.default title="Blog">
-    <main class="max-w-4xl mx-auto text-midnight font-light">
+<x-layouts.default title="Ray Blog" description="Read about new features, upcoming updates, and useful tips for using Ray.">
+
+    <div class="absolute w-full translate-y-[-18rem] pointer-events-none md:p-8 bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
+        <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
+        <img class="opacity-75 mx-auto md:hidden" src="/images/24-background-1-m.svg" alt="">
+    </div>
+
+    <div class="container max-w-4xl mx-auto pb-12 md:pb-0">
         <div class="mx-auto px-6 sm:px-12 md:px-16">
-            <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-3xl font-bold tracking-tight text-indigo-900 sm:text-4xl">The Ray blog</h2>
-                <p class="mt-2 text-lg leading-8 text-gray-600">Shining a light on internals and updates.</p>
-            </div>
-            <div class="border-t border-gray-200 mt-10 sm:mt-16 divide-y divide-indigo-100 w-full">
+
+            <x-intro.default title="Blog"
+                text="Read about new features, upcoming updates, and useful tips for using Ray."
+                tag="h1" />
+
+            <div class="flex flex-col gap-8 mb-8">
                 @forelse($posts as $post)
-                    <a href="{{ route('post.show', $post->slug) }}" class="flex py-8 flex-col items-start justify-between">
-                        <article>
+
+                    <a href="{{ route('post.show', $post->slug) }}"
+                        class="flex flex-col items-start justify-between rounded-2xl shadow-top-white ring-neutrals-white-20 ring-inset hover:ring-2">
+                        <article class="bg-bleak-purple bg-opacity-75 rounded-2xl w-full p-8 md:p-12">
                             @isset($post->date)
-                            <div class="flex items-center gap-x-4 text-xxs">
-                                <time datetime="{{ $post->date->format('Y-m-d') }}" class="text-gray-500">{{ $post->date->format('d F Y') }}</time>
-                            </div>
+                                <div class="mb-2">
+                                    <time datetime="{{ $post->date->format('Y-m-d') }}"
+                                        class="text-white text-opacity-50">{{ $post->date->format('d F Y') }}</time>
+                                </div>
                             @endisset
-                            <div class="group relative">
-                                <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
-                                        <span class="absolute inset-0"></span>
-                                        {{ $post->title }}
-                                </h3>
-                                <p class="mt-1 line-clamp-3 text-xs leading-6 text-indigo-900">{{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
+                            <div class="mb-6">
+                                <h3 class="font-display font-bold text-xl mb-[0.5em] md:text-3xl">
+                                    {{ $post->title }}</h3>
+                                <p class="text-white text-opacity-50 !leading-6 md:text-lg">
+                                    {{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
                             </div>
                             <div class="relative mt-2 flex items-center gap-x-6">
                                 <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
+                                <div class="flex items-center gap-x-6">
                                 @foreach ($post->authors as $author)
-                                    <div class="flex items-center gap-x-2">
-                                        <img src="{{ $author->gravatar_url }}" alt="" class="h-6 w-6 rounded-full bg-indigo-50">
-                                        <div class="text-[0.6rem] leading-6">
-                                            <p class="font-semibold text-indigo-900">
-                                                <span>
-                                                    <span class="absolute inset-0"></span>
-                                                    {{ $author->name }}
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <x-author :image="$author->gravatar_url" :name="$author->name" />
                                 @endforeach
+                                </div>
                             </div>
                         </article>
                     </a>
+
                 @empty
                     <article class="flex py-12 flex-col items-start justify-between">
                         <div class="group relative">
-                            <h3 class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
+                            <h3
+                                class="mt-1 text-lg font-semibold leading-6 text-indigo-900 group-hover:text-indigo-600">
                                 The first post will be published soon...
                             </h3>
                         </div>
                     </article>
                 @endforelse
             </div>
+
+            <div class="flex">
+                {{ $posts->links('vendor.pagination.simple-tailwind') }}
+            </div>
+
         </div>
 
-        <div class="mt-8">
-            {{ $posts->links() }}
-        </div>
+    </div>
 
-        <x-cta />
-    </main>
+    <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
+        <x-cta.large />
+        <x-nav.footer />
+    </div>
+
 </x-layouts.default>

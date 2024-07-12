@@ -5,7 +5,7 @@
 }
 
 .markup h2 {
-    @apply mt-16;
+    @apply mt-8;
     @apply mb-4;
 }
 
@@ -57,10 +57,6 @@
     @apply text-3xl;
     @apply leading-tight;
     @apply uppercase;
-
-    background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .markup h2,
@@ -68,14 +64,11 @@
     @apply inline-block;
     @apply font-extrabold;
     @apply text-2xl;
-    background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .markup h3,
 .markup-h3 {
-    @apply font-semibold;
+    @apply font-bold;
     @apply text-lg;
 }
 
@@ -225,9 +218,9 @@
 }
 
 .markup-code :not(pre) > code {
-    @apply rounded-sm;
     font-size: 0.85em;
-    @apply p-1;
+    word-break: keep-all;
+    @apply p-0.5;
 }
 
 .markup-code .hljs {
@@ -326,6 +319,35 @@
     @apply text-[rgb(100,116,139)];
 }
 
-.markup-blog h2 {
-    margin-top: 0;
+.markup-blog .shiki {
+    border-radius: 0.75em;
+    @apply !bg-bleak-purple-dark;
+    @apply border border-bleak-purple-light;
+    @apply shadow-large-drop;
+    @apply my-8;
+}
+
+.markup-blog a {
+    text-decoration: underline;
+    text-underline-offset: 0.175em;
+    @apply text-bleak-purple-extra-light;
+    @apply hover:text-white;
+}
+
+.markup-blog p > code::before {
+    content: '`';
+}
+
+.markup-blog p > code::after {
+    content: '`';
+}
+
+
+.markup-blog img, 
+.markup-blog video,
+.markup-blog iframe {
+    padding: 0.25em;
+    border-radius: 0.75em;
+    @apply border border-white border-opacity-20;
+    @apply my-8;
 }
