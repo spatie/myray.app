@@ -18,9 +18,6 @@ You can use the `@ray` directive to easily send variables to Ray from inside a B
 
 You can use the `@xray` directive to show all variables available in your Blade file.
 
-```blade
-{{-- inside a view --}}
-
 ## Using measure
 
 You can use the `@measure` directive as a shortcut for the `ray()->measure()` method to measure the time and memory it takes to render content in your view.
