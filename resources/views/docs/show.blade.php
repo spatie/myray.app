@@ -1,37 +1,36 @@
-<x-layouts.docs
-    :title="$page->title"
-    description="Understand and fix bugs faster using Ray"
->
-    <div class="flex text-xs md:text-xxs items-center mb-4 text-midnight-dark">
-        <a href="/docs" class="mr-2">
-            <x-icons.home />
-        </a>
-        @foreach($categories as $category)
-            <x-icons.caret-right />
+<x-layouts.docs :title="$page->title" description="Understand and fix bugs faster using Ray">
 
-            <a class="mr-2" href="/docs/{{$category->slug}}">{{$category->title}}</a>
-        @endforeach
-        <x-icons.caret-right />
-        <a class="mr-2 font-bold" href="/docs/{{$category->slug}}">{{$page->title}}</a>
-    </div>
-    <section class="docs-content md:w-full">
-        <x-markdown>
-            <article>
+    <section class="gap-20 lg:flex">
+        <x-markdown class="w-full markup highlight lg:w-[45rem]">
+            <article class="w-full">
                 <h1>{{ $page->title }}</h1>
                 {!! $page->contents !!}
             </article>
 
             <div class="table-of-contents">
                 <h2>On this page</h2>
-
                 [TOC]
             </div>
         </x-markdown>
-    </section>
-    <a class="text-xs text-midnight-dark mt-5 block flex items-center" target="_blank" href="https://github.com/spatie/myray.app/blob/main/docs/{{$page->getPath()}}">
-        <div class="mr-2 inline-block">
-            <x-icons.github />
+
+        <div class="table-of-contents w-full max-w-60 sticky top-0">
+            <h2 class="text-base font-semibold">On this page</h2>
+            <ul class="markup">
+                <li>
+                    <a href="#reference">Reference</a>
+                </li>
+                <li>
+                    <a href="#updating-a-ray-instance">Updating a Ray instance</a>
+                </li>
+            </ul>
         </div>
+
+    </section>
+
+    <a class="text-sm mt-5 flex items-center" target="_blank"
+        href="https://github.com/spatie/myray.app/blob/main/docs/{{ $page->getPath() }}">
+        <span class="mr-2"><x-icons.github /></span>
         Help us improve this page
     </a>
+
 </x-layouts.docs>

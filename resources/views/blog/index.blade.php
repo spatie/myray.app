@@ -1,9 +1,13 @@
 <x-layouts.default title="Ray Blog" description="Read about new features, upcoming updates, and useful tips for using Ray.">
 
-    <div class="absolute w-full translate-y-[-18rem] pointer-events-none md:p-8 bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
-        <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
-        <img class="opacity-75 mx-auto md:hidden" src="/images/24-background-1-m.svg" alt="">
-    </div>
+    <x-slot name="background">
+        <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
+            <div class="w-full translate-y-[-18rem]">
+                <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
+                <img class="opacity-75 mx-auto md:hidden" src="/images/24-background-1-m.svg" alt="">
+            </div>
+        </div>
+    </x-slot>
 
     <div class="container max-w-4xl mx-auto pb-12 md:pb-0">
         <div class="mx-auto px-6 sm:px-12 md:px-16">

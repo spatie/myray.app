@@ -9,6 +9,12 @@
 
 <body class="overflow-x-hidden">
 
+    @if (isset($background))
+        <div class="absolute w-full pointer-events-none">
+            {{ $background }}
+        </div>
+    @endif
+
     <x-nav.header />
 
     <main class="static" x-data="{ download: false }">

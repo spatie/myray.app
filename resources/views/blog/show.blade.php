@@ -1,9 +1,12 @@
 <x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))">
 
-    <div
-        class="absolute w-full translate-y-[-18rem] pointer-events-none md:p-8 bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
-        <img class="opacity-20 max-w-[90rem] mx-auto" src="/images/24-background-3.svg" alt="">
-    </div>
+    <x-slot name="background">
+        <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
+            <div class="w-full translate-y-[-18rem]">
+                <img class="opacity-20 max-w-[90rem] mx-auto" src="/images/24-background-3.svg" alt="">
+            </div>
+        </div>
+    </x-slot>
 
     <div class="container max-w-4xl mx-auto pb-12 md:pb-0">
 
@@ -13,7 +16,7 @@
                 <a class="inline-block underline text-bleak-purple-extra-light mb-4 hover:text-white" href="#">Back
                     to overview</a>
                 <h1
-                    class="font-display font-black text-3xl mb-[0.25em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl">
+                    class="font-display font-black text-3xl mb-[0.25em] pb-[0.075em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl">
                     {{ $post->title }}
                 </h1>
             </div>
@@ -34,7 +37,7 @@
             </div>
             @endif
 
-            <div class="markup-blog markup markup-table markup-code markup-lists text-lg">
+            <div class="markup text-lg">
                 {!! $post->content !!}
             </div>
 

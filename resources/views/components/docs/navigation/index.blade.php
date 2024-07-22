@@ -1,29 +1,29 @@
-<nav class="docs-navigation text-midnight-dark" x-data="{ navOpen: false }" x-on:livewire:navigated.window="navOpen = false">
-    <button @click="navOpen = !navOpen"
-            class="block lg:hidden w-full bg-white border-b px-5 py-4 text-left font-semibold text-base flex justify-between items-center">
-        <span>Contents</span>
+<nav class="w-full rounded-2xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-[1px]" x-data="{ navOpen: false }"
+    x-on:livewire:navigated.window="navOpen = false">
+    <div class="bg-midnight p-6 rounded-2xl">
 
-        <i class="fa fa-thin fa-angle-up" x-bind:class="! navOpen ? 'rotate-180' : ''"></i>
-    </button>
+        <div class="mb-6">
+            <button @click="showSearchBox = true"
+                class="transition-border border border-white border-opacity-20 rounded-full py-3 px-4 w-full hover:border-opacity-50">
+                <div class="flex items-center">
+                    <x-icons.search />
+                    <span class="opacity-70 text-sm ml-2">Click to search</span>
+                </div>
+            </button>
+        </div>
 
-    <div class="p-5 pb-0 lg:p-8 lg:pb-0">
-        <button @click="showSearchBox = true"
-                class="transition-border border hover:border-indigo-500 rounded p-3 w-full flex justify-between"
-                :class="showSearchBox ? 'border-indigo-500' : 'nope'"
-        >
-            <div class="flex items-center">
-                <x-icons.search />
-                <span class="text-xs ml-2">Quick Search</span>
-            </div>
-            <span class="text-xs text-gray-400">⌘K</span>
+        <button @click="navOpen = !navOpen"
+            class="lg:hidden w-full text-left font-semibold text-lg flex justify-between items-center">
+            <span>Contents</span>
+            <i class="fa fa-thin fa-angle-up" x-bind:class="!navOpen ? 'rotate-180' : ''"></i>
         </button>
-    </div>
 
-    <ul class="bg-white p-5 lg:p-8 border-b lg:border-none" x-bind:class="! navOpen ? 'hidden lg:block' : ''">
-        @foreach($navigation->categories as $key => $category)
-            <li>
-                <x-docs.navigation.category :category="$category" />
-            </li>
-        @endforeach
-    </ul>
+        <ul class="mt-4 lg:mt-0" x-bind:class="!navOpen ? 'hidden lg:block' : ''">
+            @foreach ($navigation->categories as $key => $category)
+                <li class="mb-6">
+                    <x-docs.navigation.category :category="$category" />
+                </li>
+            @endforeach
+        </ul>
+    </div>
 </nav>

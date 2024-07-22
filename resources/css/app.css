@@ -1,12 +1,15 @@
 @import "./bootstrap.css";
+@import "./markup.css";
+@import "./views/docs.css";
 
-@import "./utilities/markup.css";
-@import "./utilities/ray.css";
-@import "./docs/docs.css";
+@import "./utilities/highlight.css";
+
+/* @import "./utilities/ray.css"; */
+/* @import "./docs/docs.css"; */
 
 [x-cloak] { display: none !important; }
 
-.text-gradient {
+/* .text-gradient {
   background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,4 +75,4 @@
 
 .tooltip-hover:hover {
   @apply opacity-25 !important;
-}
+} */

@@ -1,0 +1,178 @@
+.markup h1 {
+    @apply inline-block;
+    @apply text-3xl;
+    @apply font-display;
+    @apply font-black;
+    @apply leading-tight;
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange;
+    @apply mt-10;
+    @apply mb-6;
+    @apply md:text-5xl;
+    padding-bottom: 0.075em;
+    text-wrap: balance;
+}
+
+.markup h2 {
+    @apply block;
+    @apply font-display;
+    @apply font-bold;
+    @apply text-3xl;
+    @apply mt-10;
+    @apply mb-6;
+}
+
+.markup h3 {
+    @apply font-display;
+    @apply font-bold;
+    @apply text-2xl;
+    @apply mt-10;
+    @apply mb-6;
+}
+
+.markup h1:first-child,
+.markup h2:first-child,
+.markup h3:first-child {
+    margin-top: 0;
+}
+
+.markup p {
+    @apply leading-normal;
+}
+
+.markup p,
+.markup ol,
+.markup ul {
+    @apply mb-4;
+}
+
+.markup strong {
+    @apply font-semibold;
+}
+
+.markup ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+.markup ol>li::marker,
+.markup ul>li::marker {
+    @apply text-bleak-purple-extra-light;
+}
+
+.markup ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.markup ul>li>ul {
+    margin-bottom: 0;
+    padding-left: 1em;
+}
+
+.markup a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:text-white;
+    text-decoration: underline;
+    text-underline-offset: 0.175em;
+}
+
+.markup code {
+    @apply font-mono;
+    background-color: rgba(0, 0, 0, .125);
+    border-radius: 0.5em;
+}
+
+.markup :not(pre)>code {
+    @apply p-0.5;
+    font-size: 0.85em;
+    word-break: keep-all;
+    margin: .175rem;
+}
+
+.markup pre code {
+    background-color: transparent;
+}
+
+.markup td code {
+    @apply bg-transparent;
+    margin: 0;
+}
+
+.markup pre {
+    @apply my-8;
+    @apply p-4;
+    @apply overflow-x-auto;
+    @apply !bg-bleak-purple-dark;
+    @apply border border-bleak-purple-light;
+    @apply shadow-large-drop;
+    @apply rounded-xl;
+    font-size: 0.85em;
+    line-height: 1.8;
+}
+
+.markup li>code::before,
+.markup p>code::before {
+    content: '`';
+}
+
+.markup li>code::after,
+.markup p>code::after {
+    content: '`';
+}
+
+.markup blockquote {
+    @apply my-8;
+    @apply p-8;
+    @apply border border-bleak-purple-light;
+    @apply bg-gradient-to-b;
+    @apply from-midnight;
+    @apply to-midnight-extra-light;
+    @apply shadow-large-drop;
+    border-radius: 0.75em;
+}
+
+.markup blockquote > *:last-child {
+    margin-bottom: 0;
+}
+
+.markup img,
+.markup video,
+.markup iframe {
+    @apply border border-bleak-purple-light;
+    @apply my-8;
+    padding: 0.25em;
+    border-radius: 0.75em;
+}
+
+.markup .heading-permalink {
+    @apply mr-2;
+    text-decoration: none;
+}
+
+.markup table {
+    margin-bottom: 2rem;
+}
+
+.markup table thead tr {
+    @apply border-b;
+    @apply border-neutrals-white-20;
+}
+
+.markup table thead tr th {
+    text-align: left;
+    padding-bottom: 0.25em;
+}
+
+.markup table tbody tr {
+    @apply border-b;
+    @apply border-neutrals-white-20;
+}
+
+.markup table tbody tr td:first-child {
+    width: 50%;
+}
+
+.markup table tbody tr td {
+    line-height: 1.5rem;
+    padding: 0.5rem 0;
+}
