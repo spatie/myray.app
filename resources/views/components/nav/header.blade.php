@@ -1,4 +1,4 @@
-@php($headerItemClass = 'transition inline-flex px-4 py-3 leading-none border border-white border-opacity-10 rounded-full lg:border-opacity-0 lg:py-4 lg:px-6 hover:border-white hover:border-opacity-50')
+@php $headerItemClass = 'transition inline-flex px-4 py-3 leading-none border border-white border-opacity-10 rounded-full lg:border-opacity-0 lg:py-4 lg:px-6 hover:border-white hover:border-opacity-50' @endphp
 
 <header id="header" {{ $attributes->twMerge("p-6 lg:p-12 top-0 z-10") }}>
     <div
@@ -11,9 +11,9 @@
                     <img class="w-32" src="/images/ray-logo.svg" alt="Logo">
                 </a>
                 <ul class="flex gap-2 order-last w-full lg:order-none lg:w-auto">
-                    <li><a class="{{ $headerItemClass }}" href="{{ route('docs.index') }}">Docs</a></li>
-                    <li><a class="{{ $headerItemClass }}" href="#">What's new</a></li>
-                    <li><a class="{{ $headerItemClass }}" href="{{ route('blog') }}">Blog</a></li>
+                    <li><a class="{{ $headerItemClass }} @if (Request::is('docs*')) {{'!border-opacity-50'}} @endif" href="{{ route('docs.index') }}">Docs</a></li>
+                    <li><a class="{{ $headerItemClass }} " href="#">What's new</a></li>
+                    <li><a class="{{ $headerItemClass }} @if (Request::is('blog*')) {{'!border-opacity-50'}} @endif" href="{{ route('blog') }}">Blog</a></li>
                 </ul>
 
                 <ul class="flex-1 text-right">
