@@ -1,4 +1,4 @@
-@php($headerItemClass = 'inline-flex px-4 py-3 leading-none border border-white border-opacity-10 rounded-full lg:border-opacity-0 lg:py-4 lg:px-6 hover:border-white hover:border-opacity-50')
+@php($headerItemClass = 'transition inline-flex px-4 py-3 leading-none border border-white border-opacity-10 rounded-full lg:border-opacity-0 lg:py-4 lg:px-6 hover:border-white hover:border-opacity-50')
 
 <header id="header" {{ $attributes->twMerge("p-6 lg:p-12 top-0 z-10") }}>
     <div

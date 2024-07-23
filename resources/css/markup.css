@@ -140,8 +140,8 @@
 }
 
 .markup img:not([class]),
-.markup video:not([class]),
-.markup iframe:not([class]) {
+.markup video,
+.markup iframe {
     @apply border border-bleak-purple-light;
     @apply my-8;
     padding: 0.25em;

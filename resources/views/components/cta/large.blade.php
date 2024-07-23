@@ -18,7 +18,7 @@
                     <x-download.button />
                 </div>
                 <div class="shadow-small-drop">
-                    <a class="inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
+                    <a class="transition inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
                         href="{{ spatieUrl('https://spatie.be/products/ray') }}">Buy now for &euro;49</a>
                 </div>
             </div>

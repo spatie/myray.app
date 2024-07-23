@@ -33,7 +33,7 @@
                         <x-download.button />
                     </div>
                     <div class="shadow-small-drop">
-                        <a class="inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
+                        <a class="transition inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
                             href="{{ spatieUrl('https://spatie.be/products/ray') }}">Buy now for &euro;49</a>
                     </div>
                 </div>
@@ -208,7 +208,7 @@
                         quickly.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">
-                    <img class="rounded-full w-16" src="https://images.placeholders.dev/?width=120&height=120"
+                    <img class="rounded-full w-16" src="https://2.gravatar.com/avatar/874805999527de531a64edc2a0e416a1349ae32cb6e87edaa8c4acbd8dd85819?size=256"
                         alt="Freek">
                     <div class="leading-none">
                         <p class="text-lg font-bold">Freek Van der Herten</p>

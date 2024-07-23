@@ -20,8 +20,8 @@
                 @forelse($posts as $post)
 
                     <a href="{{ route('post.show', $post->slug) }}"
-                        class="flex flex-col items-start justify-between rounded-2xl shadow-top-white ring-neutrals-white-20 ring-inset hover:ring-2">
-                        <article class="bg-bleak-purple bg-opacity-75 rounded-2xl w-full p-8 md:p-12">
+                        class="flex flex-col items-start justify-between rounded-2xl group">
+                        <article class="transition bg-bleak-purple bg-opacity-85 rounded-2xl w-full p-8 shadow-top-white md:p-12 group-hover:bg-opacity-100">
                             @isset($post->date)
                                 <div class="mb-2">
                                     <time datetime="{{ $post->date->format('Y-m-d') }}"
