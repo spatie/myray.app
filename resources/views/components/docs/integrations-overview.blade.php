@@ -1,11 +1,15 @@
-<div class="grid grid-cols-3 gap-4">
-    @foreach($docs as $doc)
-        <a href="{{$doc->url}}" class="text-center mb-1">
-            <div class="transition-border border hover:border-indigo-500 rounded custom-shadow p-4 flex align-items-center justify-center">
-                <img class="w-3/5" src="https://myray.app/images/logos/{{$doc->parts[1]}}.png" alt="{{$doc->title}}">
+<div class="grid grid-cols-4 gap-8 my-8">
+    @foreach ($docs as $doc)
+        <a href="{{ $doc->url }}" class="text-center group">
+            <div
+                class="flex-1 rounded-2xl overflow-hidden mb-2 bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] group-hover:from-orange group-hover:to-bright-orange">
+                <div
+                    class="flex flex-col align-items-center justify-center items-center rounded-2xl bg-bleak-purple aspect-square">
+                    <img class="w-full p-10" src="/images/logos/icons/logo-{{ $doc->parts[1] }}.svg"
+                        alt="{{ $doc->title }}">
+                </div>
             </div>
-
-            <strong class="font-semibold text-xs text-black mt-2 inline-block">{{$doc->title}}</strong>
+            <span class="font-semibold inline-block">{{ $doc->title }}</span>
         </a>
     @endforeach
 </div>

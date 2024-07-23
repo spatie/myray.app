@@ -1,7 +1,7 @@
 @props(['title', 'description'])
 
 <!DOCTYPE html>
-<html lang="en" class="bg-midnight text-white antialiased">
+<html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
     <x-layouts.head :title="$title" :description="$description" />
@@ -26,7 +26,7 @@
                 <x-docs-navigation></x-docs-navigation>
             </div>
 
-            <div class="w-full min-w-0 page-content">
+            <div class="w-full min-w-0 flex-1">
                 {{ $slot }}
             </div>
         </div>

@@ -39,3 +39,22 @@
     font-weight: bold;
     font-style: normal;
 }
+
+.docs-toc {
+    display: none;
+}
+
+.docs-toc ul li {
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+.docs-toc ul li a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:text-white;
+    @apply hover:underline;
+}
+
+.docs-toc:has(ul) {
+    display: block;
+}

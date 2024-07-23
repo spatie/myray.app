@@ -1,7 +1,7 @@
 @props(['title', 'description'])
 
 <!DOCTYPE html>
-<html lang="en" class="bg-midnight text-white antialiased">
+<html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
     <x-layouts.head :title="$title" :description="$description ?? ''" />
@@ -15,7 +15,7 @@
         </div>
     @endif
 
-    <x-nav.header />
+    <x-nav.header class="lg:sticky" />
 
     <main class="static" x-data="{ download: false }">
         {{ $slot }}

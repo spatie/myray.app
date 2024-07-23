@@ -35,6 +35,10 @@
     margin-top: 0;
 }
 
+.markup h1 + h2 {
+    margin-top: 0;
+}
+
 .markup p {
     @apply leading-normal;
 }
@@ -131,13 +135,13 @@
     border-radius: 0.75em;
 }
 
-.markup blockquote > *:last-child {
+.markup blockquote>*:last-child {
     margin-bottom: 0;
 }
 
-.markup img,
-.markup video,
-.markup iframe {
+.markup img:not([class]),
+.markup video:not([class]),
+.markup iframe:not([class]) {
     @apply border border-bleak-purple-light;
     @apply my-8;
     padding: 0.25em;
