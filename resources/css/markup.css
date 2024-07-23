@@ -139,7 +139,8 @@
     margin-bottom: 0;
 }
 
-.markup img:not([class]),
+.markup p > img,
+.markup p ~ img,
 .markup video,
 .markup iframe {
     @apply border border-bleak-purple-light;
