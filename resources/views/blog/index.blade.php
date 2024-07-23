@@ -65,9 +65,4 @@
 
     </div>
 
-    <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
-        <x-cta.large />
-        <x-nav.footer />
-    </div>
-
 </x-layouts.default>

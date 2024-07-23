@@ -2,6 +2,10 @@
     title="Terms of use"
     description="Terms of use for Ray"
 >
+<div class="container max-w-4xl mx-auto pb-12 md:pb-0">
+    <div class="markup mx-auto px-6 sm:px-12 md:px-16">
+    <h1 class="font-display font-black text-3xl mb-[0.25em] pb-[0.075em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl" >
+        Terms of use</h1>
 @markdown
 These Ray terms of use (the “Terms of Use”) apply to all services provided through <https://myray.app/terms-of-use> by Spatie BVBA, with registered offices at Kruikstraat 22/12, 2018 Antwerp, Belgium and registered at the CBE under number BE 0809.387.596 hereafter referred to as “Ray” “we”, “us” or “our”.
 
@@ -129,4 +133,6 @@ The following definitions apply to these Terms of Use:
 
 13.3. In case and insofar express or implied restrictions are not permitted by applicable law, these express or implied restrictions remain valid and enforceable to the extent permitted by this applicable law.
 @endmarkdown
+    </div>
+</div>
 </x-layouts.default>

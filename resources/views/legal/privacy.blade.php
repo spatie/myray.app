@@ -2,6 +2,10 @@
     title="Privacy and cookie policy"
     description="Privacy and cookie policy for Ray"
 >
+<div class="container max-w-4xl mx-auto pb-12 md:pb-0">
+    <div class="markup mx-auto px-6 sm:px-12 md:px-16">
+    <h1 class="font-display font-black text-3xl mb-[0.25em] pb-[0.075em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl" >
+        Privacy</h1>
 @markdown
 This the Ray privacy and cookie policy. Ray is a product of Spatie BVBA, with a registered office at Kruikstraat 22/12, 2018 Antwerp, Belgium, and registered at the CBE under number BE 0809.387.596.
 
@@ -135,4 +139,6 @@ When you visit our website for the first time, we will ask you to accept our dif
 
 You can block cookies by adjusting your browser settings, which allows you to deny the cookies. Refusing certain cookies can lead to the effect of not being able to use some functionalities of the website. In case you have any more questions or remarks regarding the processing of your data, you may contact us by email at <a href="mailto:info@spatie.be">info@spatie.be</a>.
 @endmarkdown
+    </div>
+</div>
 </x-layouts.default>
