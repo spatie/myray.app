@@ -219,7 +219,10 @@
         <x-intro.default title="Love from the community"
             text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante." />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-h-[45rem] overflow-hidden">
+        <div 
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" 
+            x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" 
+            x-data="{ testimonialsOpen: false }">
             @for ($i = 0; $i < 4; $i++)
                 <div class="flex flex-col gap-6">
                     @for ($j = 0; $j < 6; $j++)
@@ -234,7 +237,7 @@
                                         <p class="text-white text-opacity-50">Role</p>
                                     </div>
                                 </div>
-                                <p class="text-lg leading-tight">Lorem ipsum dolor sit amet consectetur, adipisicing
+                                <p class="text-lg leading-tight ">Lorem ipsum dolor sit amet consectetur, adipisicing
                                     elit. Itaque facere in inventore ipsa
                                     commodi, aut mollitia, eligendi quasi velit, hic obcaecati temporibus. Est expedita,
                                     rerum hic nam minus harum! Perspiciatis?</p>
@@ -244,11 +247,15 @@
                 </div>
             @endfor
 
-            <div class="bg-gradient-to-b from-transparent to-midnight flex w-full h-3/6 absolute bottom-0 items-end">
+            <div 
+                class="bg-gradient-to-b from-transparent to-midnight flex w-full h-3/6 absolute bottom-0 items-end"
+                x-bind:class="testimonialsOpen && 'hidden'">
                 <div class="flex w-full justify-center">
                     <button
-                        class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light">Show
-                        all reviews</button>
+                        class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
+                        @click="testimonialsOpen = !testimonialsOpen"> 
+                        Show all reviews
+                    </button>
                 </div>
             </div>
 
