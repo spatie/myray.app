@@ -33,7 +33,7 @@ class HomeController
         return collect([
             new Testimonial(
                 name: 'Taylor Otwell',
-                text: 'Ray is <strong class=" font-black text-2xl block">Life</strong>',
+                text: '<span class="text-2xl">Ray is life</span>',
                 image: 'taylor',
                 url: 'https://twitter.com/taylorotwell',
                 title: 'Laravel Founder & Creator',
@@ -56,7 +56,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Nuno Maduro',
-                text: 'Ray is a part of my <strong class="font-semibold">Essentials</strong> toolbox. It has the
+                text: 'Ray is a part of my <strong class="font-bold">Essentials</strong> toolbox. It has the
         snapiness of a real debugger, but the simplicity of <code>dd()</code>',
                 image: 'nuno',
                 url: 'https://twitter.com/enunomaduro',

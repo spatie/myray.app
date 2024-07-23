@@ -1,3 +1,8 @@
+@php
+    $testimonialCount = count($testimonials);
+    $itemsPerColumn = ceil($testimonialCount / 4);
+@endphp
+
 <x-layouts.default title="Ray lets you debug and fix bugs faster"
     description="Send, format, and filter debug info from local and remote projects. Ray collects all your debugging output in a neat desktop app.">
 
@@ -167,7 +172,7 @@
 
         <div class="flex justify-center">
             <a class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
-                href="#">Explore more features</a>
+                href="{{ route('docs.index') }}">Explore more features</a>
         </div>
 
     </div>
@@ -225,25 +230,22 @@
             x-data="{ testimonialsOpen: false }">
             @for ($i = 0; $i < 4; $i++)
                 <div class="flex flex-col gap-6">
-                    @for ($j = 0; $j < 6; $j++)
+                    @foreach ($testimonials->slice($i * $itemsPerColumn, $itemsPerColumn) as $testimonial)
                         <div
                             class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] overflow-hidden grow-0">
                             <div class="rounded-xl bg-bleak-purple-dark p-8">
                                 <div class="flex gap-6 items-center mb-6">
                                     <img class="rounded-full w-16"
-                                        src="https://images.placeholders.dev/?width=120&height=120" alt="Freek">
+                                        src="/images/testimonials/{{ $testimonial->image }}.jpg" alt="{{ $testimonial->name }}">
                                     <div class="leading-none">
-                                        <p class="text-lg font-bold">Name</p>
-                                        <p class="text-white text-opacity-50">Role</p>
+                                        <p class="text-lg font-bold">{{ $testimonial->name }}</p>
+                                        <p class="text-white text-opacity-50">{{ $testimonial->title }}</p>
                                     </div>
                                 </div>
-                                <p class="text-lg leading-tight ">Lorem ipsum dolor sit amet consectetur, adipisicing
-                                    elit. Itaque facere in inventore ipsa
-                                    commodi, aut mollitia, eligendi quasi velit, hic obcaecati temporibus. Est expedita,
-                                    rerum hic nam minus harum! Perspiciatis?</p>
+                                <p class="text-lg leading-tight ">{!! $testimonial->text !!}</p>
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
             @endfor
 
