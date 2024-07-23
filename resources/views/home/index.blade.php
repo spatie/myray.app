@@ -94,19 +94,19 @@
             <div class="flex flex-col gap-4 md:items-center ">
                 <p>Works great with</p>
                 <ul class="flex flex-wrap gap-4 items-center md:gap-8">
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_laravel_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/php/laravel/installation"><img src="/images/logos/logo_laravel_white.svg"
                                 alt="Laravel"></a></li>
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_php_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/php/vanilla-php/installation"><img src="/images/logos/logo_php_white.svg"
                                 alt="PHP"></a></li>
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_js_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/javascript/vanilla-javascript/getting-started"><img src="/images/logos/logo_js_white.svg"
                                 alt="JavaScript"></a></li>
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_vue_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/javascript/vuejs/getting-started"><img src="/images/logos/logo_vue_white.svg"
                                 alt="Vue"></a></li>
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_react_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/javascript/react/getting-started"><img src="/images/logos/logo_react_white.svg"
                                 alt="React"></a></li>
-                    <li><a class="hover:opacity-75" href="#"><img src="/images/logos/logo_wordpress_white.svg"
+                    <li><a class="transition hover:opacity-75" href="{{ route('docs.index') }}/php/wordpress/getting-started"><img src="/images/logos/logo_wordpress_white.svg"
                                 alt="WordPress"></a></li>
-                    <li class="text-white text-opacity-50">&mldr; and more</li>
+                    <li class="transition text-white text-opacity-50 hover:text-opacity-100"><a href="{{ route('docs.index') }}/getting-started/integrations">&mldr; and more</a></li>
                 </ul>
             </div>
         </div>
