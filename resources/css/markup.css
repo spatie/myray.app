@@ -1,6 +1,6 @@
 .markup h1 {
     @apply inline-block;
-    @apply text-3xl;
+    @apply text-4xl;
     @apply font-display;
     @apply font-black;
     @apply leading-tight;
@@ -35,7 +35,7 @@
     margin-top: 0;
 }
 
-.markup h1 + h2 {
+.markup h1+h2 {
     margin-top: 0;
 }
 
@@ -99,6 +99,8 @@
 
 .markup td code {
     @apply bg-transparent;
+    @apply break-all;
+    @apply md:break-normal;
     margin: 0;
 }
 
@@ -139,8 +141,8 @@
     margin-bottom: 0;
 }
 
-.markup p > img,
-.markup p ~ img,
+.markup p>img,
+.markup p~img,
 .markup video,
 .markup iframe {
     @apply border border-bleak-purple-light;
@@ -155,7 +157,25 @@
 }
 
 .markup table {
-    margin-bottom: 2rem;
+    @apply mb-4;
+}
+
+.markup tr {
+    @apply flex;
+    @apply flex-wrap;
+    @apply gap-x-4;
+    @apply leading-tight;
+    @apply py-2;
+}
+
+.markup th,
+.markup td {
+    @apply flex-1;
+}
+
+.markup th:last-child, .markup td:last-child {
+    @apply basis-full;
+    @apply md:basis-0;
 }
 
 .markup table thead tr {
@@ -164,20 +184,11 @@
 }
 
 .markup table thead tr th {
+    @apply pb-1;
     text-align: left;
-    padding-bottom: 0.25em;
 }
 
 .markup table tbody tr {
     @apply border-b;
     @apply border-neutrals-white-20;
-}
-
-.markup table tbody tr td:first-child {
-    width: 50%;
-}
-
-.markup table tbody tr td {
-    line-height: 1.5rem;
-    padding: 0.5rem 0;
 }

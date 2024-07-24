@@ -1,6 +1,6 @@
 <nav class="w-full rounded-2xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-[1px]" x-data="{ navOpen: false }"
     x-on:livewire:navigated.window="navOpen = false">
-    <div class="bg-midnight p-6 rounded-2xl">
+    <div class="bg-midnight p-6 rounded-2xl shadow-large-drop">
 
         <div class="mb-6">
             <button @click="showSearchBox = true"
