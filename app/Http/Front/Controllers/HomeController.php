@@ -127,7 +127,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Caneco',
-                text: 'dd() is for now, ray() is forever… or at least until you clear your log screen.',
+                text: 'dd() is for now, Ray() is forever… or at least until you clear your log screen.',
                 image: 'caneco',
                 url: 'https://twitter.com/caneco',
                 title: 'Full Stack Developer at Mediacare',
@@ -148,7 +148,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Daniel Koop',
-                text: 'I have just started using ray and I just love the simplicity of the tool. It is a neat way for debugging without a configuration hassle and I love the pause feature rather than running sleep.',
+                text: 'I have just started using Ray and I just love the simplicity of the tool. It is a neat way for debugging without a configuration hassle and I love the pause feature rather than running sleep.',
                 image: 'mrkoopie',
                 url: 'https://twitter.com/mrkoopie',
                 title: 'WordPress and Laravel developer',
@@ -204,7 +204,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Andre Biel',
-                text: 'Despite being awesome in so many different ways, ray is the missing dd() for pure API applications.',
+                text: 'Despite being awesome in so many different ways, Ray is the missing dd() for pure API applications.',
                 image: 'andre',
                 url: 'https://twitter.com/the_real_biel',
                 title: 'Co-founder Nice Outside',
@@ -225,7 +225,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'JL',
-                text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in chrome. Wordpress, Laravel, Yii: I've used ray everywhere and it's done nothing but make me more productive.",
+                text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in Chrome. Wordpress, Laravel, Yii: I've used Ray everywhere and it's done nothing but make me more productive.",
                 image: 'jl',
                 url: 'https://twitter.com/JLadHDeveloper',
                 title: 'Full Stack Wildcard Developer',

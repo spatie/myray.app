@@ -83,8 +83,7 @@
                     <div
                         class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
                         <div class="rounded-xl overflow-hidden">
-                            <img class="w-full" src="/images/app/app_window_test.svg"
-                                alt="" srcset="">
+                            <x-animation.window />
                         </div>
                     </div>
                 </div>
