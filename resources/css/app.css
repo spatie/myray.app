@@ -9,51 +9,12 @@
 
 [x-cloak] { display: none !important; }
 
-/* .text-gradient {
-  background: -webkit-linear-gradient(bottom left, theme('colors.indigo.900'), theme('colors.indigo.500'));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.tooltip-reveal {
+  @apply border;
+  @apply border-orange;
 }
 
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
-}
-
-.background-01 {
-  opacity: 0;
-  transform-origin: 0 50%;
-  animation: background-appear-left .2s 0.3s ease-out forwards;
-}
-
-.background-02 {
-  opacity: 0;
-  transform-origin: 100% 50%;
-  animation: background-appear-right .2s 0.6s ease-out forwards;
-}
-
-@keyframes background-appear-left {
-  0%{
-      opacity: 0;
-      transform: translate(-100%, -42%);
-  }
-  100%{
-      opacity: 1;
-      transform: translate(0, 0);
-  }
-}
-
-@keyframes background-appear-right {
-  0%{
-      opacity: 0;
-      transform: translate(100%, -50%);
-  }
-  100%{
-      opacity: 1;
-      transform: translate(0, 0);
-  }
-}
-
-.tooltip-reveal{
+/* .tooltip-reveal{
   @apply opacity-0;
   @apply transition-all;
   @apply duration-500;

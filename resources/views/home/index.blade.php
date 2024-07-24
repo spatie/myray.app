@@ -82,9 +82,7 @@
                 <div class="shadow-large-drop rounded-3xl xl:mt-24 order-first lg:order-last">
                     <div
                         class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
-                        <div class="rounded-xl overflow-hidden">
                             <x-animation.window />
-                        </div>
                     </div>
                 </div>
 
