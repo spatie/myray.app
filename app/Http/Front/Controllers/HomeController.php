@@ -40,7 +40,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Michael Dyrynda',
-                text: 'As an amateur developer that swears by <code>dd()</code>, I was thrilled to hear about Ray. Now
+                text: 'As an amateur developer that swears by dd(), I was thrilled to hear about Ray. Now
     I can <strong class="font-semibold">feel like a real developer</strong>, even without using \'real\'
     debugging tools!',
                 image: 'michael',
@@ -57,7 +57,7 @@ class HomeController
             new Testimonial(
                 name: 'Nuno Maduro',
                 text: 'Ray is a part of my <strong class="font-bold">Essentials</strong> toolbox. It has the
-        snapiness of a real debugger, but the simplicity of <code>dd()</code>',
+        snapiness of a real debugger, but the simplicity of dd()',
                 image: 'nuno',
                 url: 'https://twitter.com/enunomaduro',
                 title: 'Software engineer at Laravel',

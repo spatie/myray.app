@@ -83,7 +83,7 @@
                     <div
                         class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
                         <div class="rounded-xl overflow-hidden">
-                            <img class="w-full" src="https://images.placeholders.dev/?width=720&height=480"
+                            <img class="w-full" src="/images/app/app_window_test.svg"
                                 alt="" srcset="">
                         </div>
                     </div>
