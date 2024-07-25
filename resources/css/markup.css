@@ -110,8 +110,9 @@
     @apply overflow-x-auto;
     @apply !bg-bleak-purple-dark;
     @apply border border-bleak-purple-light;
-    @apply shadow-large-drop;
+    @apply shadow-xl;
     @apply rounded-xl;
+    @apply bg-opacity-50;
     font-size: 0.85em;
     line-height: 1.8;
 }
