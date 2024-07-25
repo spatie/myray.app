@@ -8,11 +8,12 @@
 
 .docs-nav-sub-category-item>a {
     @apply text-bleak-purple-extra-light;
-    @apply hover:text-white;
+    @apply hover:underline;
 }
 
 .docs-nav-sub-category-item>a.active {
-    @apply text-white;
+    @apply text-orange;
+    @apply hover:no-underline;
 }
 
 .docs-nav-item {
@@ -24,7 +25,7 @@
 
 .docs-nav-item>a {
     @apply text-bleak-purple-extra-light;
-    @apply hover:text-white;
+    @apply hover:underline;
 }
 
 .docs-nav-item.active {
@@ -33,6 +34,7 @@
 
 .docs-nav-item.active>a {
     @apply text-orange;
+    @apply hover:no-underline;
 }
 
 .docs-search-results-item em {
@@ -51,7 +53,6 @@
 
 .docs-toc ul li a {
     @apply text-bleak-purple-extra-light;
-    @apply hover:text-white;
     @apply hover:underline;
 }
 
