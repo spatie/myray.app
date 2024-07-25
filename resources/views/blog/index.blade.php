@@ -25,7 +25,7 @@
                             @isset($post->date)
                                 <div class="mb-2">
                                     <time datetime="{{ $post->date->format('Y-m-d') }}"
-                                        class="text-white text-opacity-50">{{ $post->date->format('d F Y') }}</time>
+                                        class="text-white text-opacity-50">{{ $post->date->format('j F Y') }}</time>
                                 </div>
                             @endisset
                             <div class="mb-6">

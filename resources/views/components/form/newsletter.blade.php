@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-4 text-center">
-    <h3 class="font-display font-bold text-2xl leading-[1.2] text-balance">Stay in the loop with Ray
-        updates
-        &amp; promotions</h3>
+    <h3 class="font-display font-bold text-2xl leading-[1.2] text-balance">
+        Stay in the loop with updates &amp; promotions for Ray
+    </h3>
     <form class="flex" action="">
         <div
             class="flex p-1 gap-4 bg-neutrals-white-20 rounded-full w-full ring-neutrals-white-20 ring-inset focus-within:ring-2">
@@ -9,8 +9,8 @@
                 placeholder="Email address" required>
             <button
                 class="px-5 py-3 bg-gradient-to-r from-orange to-bright-orange hover:to-orange rounded-full border-b border-r border-bright-orange"
-                type="submit">Submit</button>
+                type="submit">Subscribe</button>
         </div>
     </form>
-    <p class="text-sm text-white text-opacity-50">We only send a few emails a year</p>
+    <p class="text-sm text-white text-opacity-50">We only send a few emails a year.</p>
 </div>
