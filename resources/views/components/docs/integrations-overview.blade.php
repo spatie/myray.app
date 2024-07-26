@@ -1,6 +1,6 @@
 <div class="grid grid-cols-3 gap-8 my-8 lg:grid-cols-4">
     @foreach ($docs as $doc)
-        <a href="{{ $doc->url }}" class="text-center group">
+        <a href="{{ $doc->url }}" class="text-center group leading-tight">
             <div
                 class="flex-1 rounded-2xl overflow-hidden mb-2 bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] group-hover:from-orange group-hover:to-bright-orange">
                 <div
