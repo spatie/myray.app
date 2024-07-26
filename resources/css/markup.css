@@ -35,6 +35,11 @@
     margin-top: 0;
 }
 
+.markup h2 > a, .markup h3 > a {
+    @apply text-bleak-purple-extra-light;
+    @apply transition;
+} 
+
 .markup h1+h2 {
     margin-top: 0;
 }
@@ -74,7 +79,7 @@
 }
 
 .markup a {
-    @apply text-bleak-purple-extra-light;
+    @apply text-orange;
     @apply hover:text-white;
     text-decoration: underline;
     text-underline-offset: 0.175em;
@@ -82,7 +87,8 @@
 
 .markup code {
     @apply font-mono;
-    background-color: rgba(0, 0, 0, .125);
+    @apply bg-black;
+    @apply bg-opacity-15;
     border-radius: 0.5em;
 }
 

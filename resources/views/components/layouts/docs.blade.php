@@ -19,7 +19,7 @@
 
     <x-nav.header />
 
-    <main class="container mx-auto p-6 md:py-24 lg:px-16 md:pt-0" x-data="{ download: false }">
+    <main class="mx-auto p-6 md:py-24 lg:px-16 md:pt-0 2xl:container" x-data="{ download: false }">
         <div class="gap-12 mb-24 lg:flex">
             <div class="w-full mb-8 lg:max-w-80" wire:scroll>
                 <x-docs-navigation></x-docs-navigation>
