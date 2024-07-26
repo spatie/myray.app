@@ -5,7 +5,7 @@
                 <a class="text-lg font-bold hover:underline" href="{{ route('termsOfUse') }}">Terms of use</a>
             </li>
             <li>
-                <a class="text-lg font-bold hover:underline" href="{{ route('privacy') }}">Privacy Policy</a>
+                <a class="text-lg font-bold hover:underline" href="{{ route('privacy') }}">Privacy policy</a>
 
             </li>
             <li>
