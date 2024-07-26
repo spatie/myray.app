@@ -8,11 +8,12 @@ export default class Animation {
         this.animationEl = args.el || null;
         if (!this.animationEl) return;
 
+        this.codeEl = this.animationEl.querySelector(".js-anim-code");
         this.codeBlocks = this.animationEl.querySelectorAll(".js-anim-block");
         this.windowTargets = this.animationEl.querySelectorAll(".js-anim-message");
         this.loader = this.animationEl.querySelector(".js-animation-loader");
 
-        this.timeline = gsap.timeline();
+        this.timeline = gsap.timeline().delay(0.25);
 
         this.initialize();
 
@@ -51,6 +52,7 @@ export default class Animation {
                 ease: 'none',
                 onStart: () => {
                     line.classList.add("start");
+                    this.codeEl.classList.add("started");
                 },
                 onComplete: () => {
                     line.innerHTML = originalHTML;
@@ -76,7 +78,7 @@ export default class Animation {
                 gsap.to(target, {
                     opacity: 1,
                     y: 0,
-                    duration: 0.5
+                    duration: 0.5,
                 });
 
                 timestamp.innerText = this.getTimestamp();

@@ -4,7 +4,7 @@
     $downloadLinkLinux = '' }}
 
 <template x-if="download">
-    <div class="fixed inset-0 p-8 lg:p-16 z-10 fix-z flex items-center justify-center"
+    <div class="fixed inset-0 p-8 lg:p-16 z-30 fix-z flex items-center justify-center"
         @keydown.window.escape="download = false">
         <div class="absolute inset-0 bg-midnight-dark bg-opacity-95"></div>
         <button class="absolute top-0 right-0 m-6 leading-none text-white text-3xl w-[1em]">&times;</button>

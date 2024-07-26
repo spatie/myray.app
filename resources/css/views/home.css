@@ -3,6 +3,14 @@
     @apply text-[#c9d1d9];
 }
 
+.screen-code-block.started .screen-code-typewriter-block {
+    display: block;
+}
+
+.screen-code-typewriter-block {
+    display: none;
+}
+
 .screen-code-block p.start:after {
     content: "|";
     color: white;
