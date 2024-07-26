@@ -22,7 +22,7 @@
             </div>
 
             <div class="flex items-center gap-8 mb-12">
-                <p>{{ $post->date?->format('d F Y') ?? 'Preview' }}</p>
+                <p>{{ $post->date?->format('j F Y') ?? 'Preview' }}</p>
                 <div class="flex items-center gap-x-6">
                     @foreach ($post->authors as $author)
                         <x-author :image="$author->gravatar_url" :name="$author->name" />
