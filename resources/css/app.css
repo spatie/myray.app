@@ -1,5 +1,6 @@
 @import "./bootstrap.css";
 @import "./markup.css";
+@import "./views/home.css";
 @import "./views/docs.css";
 
 @import "./utilities/highlight.css";

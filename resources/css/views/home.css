@@ -1,0 +1,51 @@
+.screen-code-block {
+    @apply font-mono;
+    @apply text-[#c9d1d9];
+}
+
+.screen-code-block p.start:after {
+    content: "|";
+    color: white;
+    animation: pulse 1.5s infinite;
+    animation-name: pulse;
+}
+
+.screen-code-block p.finish:after {
+    content: "";
+}
+
+.screen-code-block p:empty {
+    @apply mb-6;
+}
+
+.screen-code-comment {
+    @apply text-[#8b949e];
+}
+
+.screen-code-keyword {
+    @apply text-[#ff7b72];
+}
+
+.screen-code-title {
+    @apply text-[#d2a8ff];
+}
+
+.screen-code-variable {
+    @apply text-[#79c0ff];
+}
+
+.screen-code-string {
+    @apply text-[#a5d6ff];
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
