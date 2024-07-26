@@ -4,7 +4,7 @@
 <html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
-    <x-layouts.head :title="$title" :description="$description" />
+    <x-layouts.head :title="$title" :description="$description" :color="'#36107A'" />
 </head>
 
 <body class="antialiased overflow-x-hidden" x-data="{ showSearchBox: false }" @keydown.cmd.k.window.prevent="showSearchBox = true">

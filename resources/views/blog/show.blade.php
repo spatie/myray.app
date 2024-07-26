@@ -1,4 +1,4 @@
-<x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))">
+<x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))" :color="'#36107A'">
 
     <x-slot name="background">
         <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">

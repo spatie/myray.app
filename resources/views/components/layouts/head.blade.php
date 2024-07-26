@@ -18,7 +18,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="msapplication-TileColor" content="#442595">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="{{ $color }}">
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:creator" content="@spatie_be"/>

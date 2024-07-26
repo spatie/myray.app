@@ -1,10 +1,10 @@
-@props(['title', 'description'])
+@props(['title', 'description', 'color'])
 
 <!DOCTYPE html>
 <html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
-    <x-layouts.head :title="$title" :description="$description ?? ''" />
+    <x-layouts.head :title="$title" :description="$description ?? ''" :color="isset($color) ? $color : '#170636'" />
 </head>
 
 <body class="overflow-x-hidden">
