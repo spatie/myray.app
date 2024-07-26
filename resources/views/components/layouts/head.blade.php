@@ -2,7 +2,6 @@
 <x-feed-links />
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="dns-prefetch" href="https://kit.fontawesome.com">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,7 +10,6 @@
 <link rel="canonical" href="{{ url()->current() }}"/>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;400;600;700;800&display=swap" rel="text/css">
-<script src="https://kit.fontawesome.com/c170d0c6e5.js" crossorigin="anonymous"></script>
 
 @vite(['resources/css/app.css'])
 
