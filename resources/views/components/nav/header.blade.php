@@ -12,7 +12,7 @@
                 </a>
                 <ul class="flex gap-2 order-last w-full lg:order-none lg:w-auto">
                     <li><a class="{{ $headerItemClass }} @if (Request::is('docs*')) {{'!bg-opacity-10'}} @endif" href="{{ route('docs.index') }}">Docs</a></li>
-                    <li><a class="{{ $headerItemClass }} " href="#">What's new</a></li>
+                    <li><a class="{{ $headerItemClass }} @if (Request::is('changelog')) {{'!bg-opacity-10'}} @endif" href="{{ route('changelog') }}">What's new</a></li>
                     <li><a class="{{ $headerItemClass }} @if (Request::is('blog*')) {{'!bg-opacity-10'}} @endif" href="{{ route('blog') }}">Blog</a></li>
                 </ul>
 

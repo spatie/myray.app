@@ -18,6 +18,8 @@ Route::redirect('javascript', '/')->name('javascript');
 Route::view('terms-of-use', 'legal.terms-of-use')->name('termsOfUse');
 Route::view('privacy', 'legal.privacy')->name('privacy');
 
+Route::view('changelog', 'changelog.show')->name('changelog');
+
 Route::feeds();
 Route::get('blog', [PostsController::class, 'index'])->name('blog');
 Route::get('blog/{slug}', [PostsController::class, 'detail'])->name('post.show');
