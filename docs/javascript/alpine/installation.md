@@ -40,7 +40,7 @@ You can also configure aspects of Alpine by creating a config object before load
 
 <!-- load axios and alpinejs-ray -->
 ```
-### Installation with package manager
+## Installation with package manager
 
 Install with npm:
 
@@ -48,7 +48,7 @@ Install with npm:
 npm install alpinejs-ray
 ```
 
-#### Importing the plugin
+## Importing the plugin
 
 Although not the recommended way, you can import package normally if installed with a package manager (along with `alpinejs` and `axios`):
 

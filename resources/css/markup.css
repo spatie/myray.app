@@ -35,10 +35,11 @@
     margin-top: 0;
 }
 
-.markup h2 > a, .markup h3 > a {
+.markup h2>a,
+.markup h3>a {
     @apply text-bleak-purple-extra-light;
     @apply transition;
-} 
+}
 
 .markup h1+h2 {
     margin-top: 0;
@@ -94,7 +95,6 @@
 
 .markup :not(pre)>code {
     font-size: 0.85em;
-    word-break: keep-all;
     margin: .175em;
     padding: 0.125em 0.325em;
 }
@@ -105,9 +105,8 @@
 
 .markup td code {
     @apply bg-transparent;
-    @apply break-all;
-    @apply md:break-normal;
-    margin: 0;
+    @apply m-0;
+    @apply p-0;
 }
 
 .markup pre {
@@ -164,25 +163,24 @@
 }
 
 .markup table {
+    @apply flex;
+    @apply flex-col;
     @apply mb-4;
 }
 
 .markup tr {
     @apply flex;
-    @apply flex-wrap;
     @apply gap-x-4;
     @apply leading-tight;
     @apply py-2;
+    @apply flex-wrap;
 }
 
 .markup th,
 .markup td {
     @apply flex-1;
-}
-
-.markup th:last-child, .markup td:last-child {
-    @apply basis-full;
-    @apply md:basis-0;
+    @apply basis-1/2;
+    @apply lg:basis-0;
 }
 
 .markup table thead tr {
