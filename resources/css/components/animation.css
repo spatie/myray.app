@@ -7,15 +7,16 @@
     display: block;
 }
 
-.screen-code-typewriter-block {
-    display: none;
+.screen-code-caret:after {
+    content: "|";
+    color: white;
+    animation: pulse 0.75s infinite;
+    animation-name: pulse;
 }
 
 .screen-code-block p.start:after {
     content: "|";
     color: white;
-    animation: pulse 1.5s infinite;
-    animation-name: pulse;
 }
 
 .screen-code-block p.finish:after {
@@ -24,6 +25,17 @@
 
 .screen-code-block p:empty {
     @apply mb-6;
+}
+
+.screen-code-glow {
+    --glow-blur: 0px;
+    text-shadow: currentColor 0px 0px var(--glow-blur);
+    transition: 0.5s ease-in-out text-shadow;
+}
+
+.screen-code-glow.finish {
+    --glow-blur: 10px;
+    
 }
 
 .screen-code-comment {

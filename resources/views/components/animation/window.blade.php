@@ -12,7 +12,7 @@
                 <div>
                     <img class="h-[1.875rem]" src="/images/app/icon_clear.svg" alt="">
                     <x-animation.tooltip name="previous"
-                        content="Clear your screen and archive messages to reference later." />
+                        content="Clear the screen and archive messages for later reference." />
                 </div>
 
             </div>
@@ -23,7 +23,7 @@
                     <div class="flex items-center px-2 h-[1.875rem]">
                         <img class="h-3" src="/images/app/app_color_filters.svg" alt="">
                         <x-animation.tooltip class="right-0" name="filters"
-                            content="Pass a color with your call and filter them by color." />
+                            content="Attach a color to your Ray calls to filter them." />
                     </div>
                     <div class="px-2 h-4 border-r border-white border-opacity-20"></div>
                 </div>

@@ -13,10 +13,12 @@ export default class Animation {
         this.windowTargets = this.animationEl.querySelectorAll(".js-anim-message");
         this.loader = this.animationEl.querySelector(".js-animation-loader");
 
-        this.timeline = gsap.timeline().delay(0.25);
+        this.timeline = gsap.timeline({
+            paused: false,
+            delay: 0.75
+        });
 
         this.initialize();
-
     }
 
     initialize() {
@@ -38,13 +40,13 @@ export default class Animation {
         const lines = element.querySelectorAll('p');
         const timeline = gsap.timeline();
 
-        lines.forEach((line, i) => {        
+        lines.forEach((line, i) => {
             const originalHTML = line.innerHTML;
             const text = line.textContent;
             line.textContent = '';
 
             timeline.to(line, {
-                duration: 0.04 * text.length,
+                duration: 0.035 * text.length,
                 text: {
                     value: text,
                     delimiter: '',
@@ -53,12 +55,16 @@ export default class Animation {
                 onStart: () => {
                     line.classList.add("start");
                     this.codeEl.classList.add("started");
+                    gsap.set(this.animationEl.querySelector(".screen-code-caret"), {
+                        display: "none"
+                    })
                 },
                 onComplete: () => {
                     line.innerHTML = originalHTML;
                     line.classList.add("finish");
                 }
             });
+
         });
 
         timeline.add(() => {
@@ -85,6 +91,8 @@ export default class Animation {
 
             }
         });
+
+        timeline.set({}, {}, "+=0.75")
 
         return timeline;
     }

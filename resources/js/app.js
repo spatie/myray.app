@@ -1,6 +1,6 @@
 import focus from '@alpinejs/focus'
 import clipboard from "@ryangjchandler/alpine-clipboard"
-import Animation from './partials/animation';
+import Animation from './components/animation';
 
 Alpine.plugin(clipboard);
 Alpine.plugin(focus);

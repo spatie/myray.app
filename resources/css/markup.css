@@ -93,10 +93,10 @@
 }
 
 .markup :not(pre)>code {
-    @apply p-0.5;
     font-size: 0.85em;
     word-break: keep-all;
-    margin: .175rem;
+    margin: .175em;
+    padding: 0.125em 0.325em;
 }
 
 .markup pre code {
@@ -123,15 +123,15 @@
     line-height: 1.8;
 }
 
-.markup li>code::before,
+/* .markup li>code::before,
 .markup p>code::before {
     content: '`';
-}
+} */
 
-.markup li>code::after,
+/* .markup li>code::after,
 .markup p>code::after {
     content: '`';
-}
+} */
 
 .markup blockquote {
     @apply my-8;
