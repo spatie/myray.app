@@ -1,6 +1,7 @@
 import focus from '@alpinejs/focus'
 import clipboard from "@ryangjchandler/alpine-clipboard"
 import Animation from './components/animation';
+import Teaser from './components/teaser';
 
 Alpine.plugin(clipboard);
 Alpine.plugin(focus);
@@ -10,12 +11,19 @@ Alpine.start();
 class App {
     constructor() {
         this.initAnimation();
+        this.initTeaser();
         this.initTooltipPermalinks();
     }
 
     initAnimation() {
         new Animation({
             el: document.querySelector(".js-animation")
+        })
+    }
+
+    initTeaser() {
+        new Teaser({
+            el: document.querySelector(".js-page-teaser")
         })
     }
 

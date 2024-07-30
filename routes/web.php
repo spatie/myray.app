@@ -20,6 +20,8 @@ Route::view('privacy', 'legal.privacy')->name('privacy');
 
 Route::view('changelog', 'changelog.show')->name('changelog');
 
+Route::view('teaser', 'teaser.show')->name('teaser');
+
 Route::feeds();
 Route::get('blog', [PostsController::class, 'index'])->name('blog');
 Route::get('blog/{slug}', [PostsController::class, 'detail'])->name('post.show');
