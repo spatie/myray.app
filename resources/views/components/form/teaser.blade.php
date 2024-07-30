@@ -1,9 +1,9 @@
 <div class="flex flex-col gap-4 text-center">
     <div class="mb-4">
         <h2 class="font-display font-bold text-4xl mb-3 text-balance">
-            Be the first to get access
+            A new Ray is coming soon
         </h2>
-        <p class="text-lg leading-tight">Sign up for the waitlist and get access to <br /> <strong class="font-bold text-orange">the new Ray</strong> when it comes out.
+        <p class="text-lg leading-tight">Sign up for the waitlist and be one of the first to <br /> get access to <strong class="font-bold text-orange">the new Ray</strong>.
         </p>
     </div>
     <form class="flex text-lg" action="">

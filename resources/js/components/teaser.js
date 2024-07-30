@@ -53,7 +53,7 @@ export default class Teaser {
                 opacity: 1,
                 duration: 2
             }, "start").to(this.shapes, {
-                opacity: 0.2,
+                opacity: 0.5,
                 y: 0,
                 duration: 2
             }, "start")

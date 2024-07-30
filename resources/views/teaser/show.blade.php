@@ -64,7 +64,7 @@
                 <span id="indicator" class="absolute w-1 h-1 bottom-1 bg-white rounded-full"></span>
             </div>
             <div class="w-[1px] bg-white bg-opacity-20 my-0.5 mx-1"></div>
-            <a href="https://spatie.be/?ref=myray.app" target="_blank" class="w-12 cursor-pointer hover:opacity-50">
+            <a href="https://spatie.be/?ref=myray.app" target="_blank" class="w-12 cursor-pointer transition hover:opacity-50">
                 <img src="/images/app/app_spatie_icon@0.5x.png" alt="">
             </a>
         </div>
