@@ -11,7 +11,7 @@
 
     <div class="container max-w-4xl mx-auto pb-12">
         <div class="mx-auto px-6 sm:px-12 md:px-16">
-            <x-intro.default title="What's new in Ray" tag="h1" />
+            <x-intro.default title="What's new in Ray" text="Stay up to date with all of the latest improvements we've made to Ray" tag="h1" />
 
             <section class="rounded-2xl overflow-hidden flex-1 border border-bleak-purple-light mb-8">
                 <div class="p-8 md:p-12">
