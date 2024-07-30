@@ -16,7 +16,7 @@
         <div class="container mx-auto p-6 pb-12 lg:px-4 lg:pb-24">
 
             <div class="max-w-[54rem] mx-auto mb-12 md:text-balance md:text-center md:mb-24">
-                <h1 class="font-display font-black text-5xl tracking-tight mb-[0.25em] md:text-7xl">The debugger that
+                <h1 class="font-display font-black text-5xl tracking-tight mb-[0.5em] md:text-7xl">The debugger that
                     lets you
                     <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">fix
                         bugs
