@@ -3,6 +3,7 @@ import gsap from "gsap";
 export default class Teaser {
     constructor(args = {}) {
         this.teaserEl = args.el || null;
+        if (!this.teaserEl) return;
 
         this.shapes = this.teaserEl.querySelector("#bg");
         this.overlayVeil = this.teaserEl.querySelector("#veil");

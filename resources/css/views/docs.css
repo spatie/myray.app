@@ -59,3 +59,10 @@
 .docs-toc:has(ul) {
     display: block;
 }
+
+@screen lg {
+    .docs-sidebar-contents {
+        height: calc(100vh - var(--header-height) - 2em);
+        overflow: scroll;
+    }
+}

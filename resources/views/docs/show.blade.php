@@ -16,6 +16,7 @@
 </div>
         </x-markdown>
 
+        {{-- TODO: Wire to backend --}}
         <div class="flex flex-wrap justify-between w-full max-w-[45rem] border border-bleak-purple-light rounded-xl mb-8 text-sm lg:text-base lg:mb-16">
             <a class="flex-1 pl-6 py-4 rounded-xl bg-gradient-to-r from-transparent to-transparent bg-opacity-0 hover:from-[#A998D320]" href="#">
                 <span class="inline-flex gap-4 items-center group-hover:opacity-75">

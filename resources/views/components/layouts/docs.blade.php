@@ -19,44 +19,26 @@
 
     <x-nav.header />
 
-    <main class="mx-auto p-6 md:py-24 lg:px-16 md:pt-0 2xl:container" x-data="{ download: false }">
-        <div class="gap-12 mb-24 lg:flex">
-            <div class="w-full mb-8 lg:max-w-80" wire:scroll>
-                <x-docs-navigation></x-docs-navigation>
-            </div>
+    <main x-data="{ download: false }">
+        <div class="mx-auto p-6 md:py-24 md:pt-0 md:pb-0 lg:px-16 2xl:container">
+            <div class="gap-12 mb-8 lg:flex">
+                <div class="w-full mb-8 lg:max-w-80">
+                    <x-docs-navigation />
+                </div>
 
-            <div class="w-full min-w-0 flex-1">
-                {{ $slot }}
+                <div class="w-full min-w-0 flex-1">
+                    {{ $slot }}
+                </div>
             </div>
         </div>
 
-        <x-cta.large />
-        <x-nav.footer />
+        <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
+            <x-cta.large />
+            <x-nav.footer />
+        </div>
 
         <x-download.template />
     </main>
-
-    {{-- <div class="relative">
-        <div class="absolute right-0 -top-4">
-            <x-docs.ornament />
-        </div>
-
-        <div class="lg:flex">
-            @persist('scrollbar')
-                <div class="border-r border-gray-200 sticky top-0 lg:h-screen overflow-y-scroll" wire:scroll>
-                    <x-docs-navigation></x-docs-navigation>
-                </div>
-            @endpersist
-
-            <section class="page-content lg:w-full p-5 lg:p-14 lg:pb-24">
-                {{ $slot }}
-
-                <div class="absolute hidden md:block right-0 bottom-24">
-                    <x-docs.ornament />
-                </div>
-            </section>
-        </div>
-    </div> --}}
 
     @livewire('doc-search')
 
@@ -96,7 +78,7 @@
                     }
                 } catch (e) {
                     console.error(e);
-                } 
+                }
 
                 queueMicrotask(() => {
                     state.path = window.location.pathname;

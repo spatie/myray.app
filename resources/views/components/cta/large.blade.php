@@ -7,7 +7,7 @@
         </div>
 
         <div class="lg:shrink-0 lg:max-w-[32rem]">
-            <h2 class="font-display font-black text-5xl tracking-tight mb-[0.5em] md:text-6xl">
+            <h2 class="font-display font-black text-4xl tracking-tight mb-[0.5em] md:text-6xl">
                 <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">Power
                     up</span> your debugging skills
             </h2>

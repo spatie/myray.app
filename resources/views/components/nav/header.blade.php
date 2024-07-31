@@ -18,7 +18,7 @@
 
                 <ul class="flex-1 text-right">
                     <li>
-                        <a class="inline-flex px-6 py-3 lg:py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
+                        <a class="inline-flex px-6 py-3 lg:py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white whitespace-nowrap hover:to-bright-purple-light"
                             href="{{ spatieUrl('https://spatie.be/products/ray') }}">Buy license</a>
                     </li>
                 </ul>
