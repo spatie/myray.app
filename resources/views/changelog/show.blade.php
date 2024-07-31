@@ -68,8 +68,10 @@
 
     </div>
 
-    <div class="max-w-md mx-auto py-12 md:py-16 lg:pb-0">
-        <x-form.newsletter />
+    <div class="container max-w-4xl mx-auto pb-8 mt-8 border-t border-white border-opacity-10 md:pb-0 md:mt-16">
+        <div class="max-w-md mx-auto px-6 py-8 md:py-16 md:px-0 lg:pb-0">
+            <x-form.newsletter />
+        </div>
     </div>
 
 </x-layouts.default>
