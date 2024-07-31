@@ -51,14 +51,15 @@ export default class Teaser {
             }).to(this.window, {
                 y: 0,
                 opacity: 1,
-                duration: 2
+                duration: 3,
+                delay: 0.25
             }, "start").to(this.shapes, {
-                opacity: 0.5,
+                opacity: 0.75,
                 y: 0,
                 duration: 2
             }, "start")
             .to(this.window, {
-                delay: 0.5,
+                delay: 1,
                 scale: 0.99,
                 filter: "blur(2px)"
             })
