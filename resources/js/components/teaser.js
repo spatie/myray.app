@@ -54,15 +54,16 @@ export default class Teaser {
                 opacity: 1,
                 duration: 3,
                 delay: 0.25
-            }, "start").to(this.shapes, {
+            }, "start")
+            .to(this.shapes, {
                 opacity: 0.75,
                 y: 0,
                 duration: 2
             }, "start")
             .to(this.window, {
                 delay: 1,
-                scale: 0.99,
-                filter: "blur(2px)"
+                scale: 0.98,
+                filter: "blur(2px)",
             })
             .to(this.form, {
                 opacity: 1,

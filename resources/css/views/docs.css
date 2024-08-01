@@ -62,7 +62,7 @@
 
 @screen lg {
     .docs-sidebar-contents {
-        height: calc(100vh - var(--header-height) - 2em);
+        height: calc(100vh - 2em);
         overflow: scroll;
     }
 }

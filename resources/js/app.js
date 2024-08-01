@@ -10,19 +10,9 @@ Alpine.start();
 
 class App {
     constructor() {
-        this.getHeaderHeight();
         this.initAnimation();
         this.initTeaser();
         this.initTooltipPermalinks();
-    }
-
-    getHeaderHeight() {
-        const header = document.getElementById("header");
-        const root = document.querySelector(':root');
-
-        if (header) {
-            root.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
-        }
     }
 
     initAnimation() {
