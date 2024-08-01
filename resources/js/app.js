@@ -19,7 +19,10 @@ class App {
     getHeaderHeight() {
         const header = document.getElementById("header");
         const root = document.querySelector(':root');
-        root.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+
+        if (header) {
+            root.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
+        }
     }
 
     initAnimation() {
