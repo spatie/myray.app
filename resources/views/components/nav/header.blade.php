@@ -7,8 +7,8 @@
 
             <nav class="flex flex-wrap gap-4 w-full justify-between">
 
-                <a class="flex align-middle flex-1 basis-1 lg:pl-4" href="/">
-                    <img class="w-32" src="/images/ray-logo.svg" alt="Logo">
+                <a class="flex align-middle flex-1 basis-1 lg:pl-4 group" href="/">
+                    <img class="w-32 group-active:scale-95" src="/images/ray-logo.svg" alt="Logo">
                 </a>
                 <ul class="flex gap-2 order-last w-full lg:order-none lg:w-auto">
                     <li><a class="{{ $headerItemClass }} @if (Request::is('docs*')) {{'!bg-opacity-10'}} @endif" href="{{ route('docs.index') }}">Docs</a></li>

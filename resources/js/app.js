@@ -2,6 +2,7 @@ import focus from '@alpinejs/focus'
 import clipboard from "@ryangjchandler/alpine-clipboard"
 import Animation from './components/animation';
 import Teaser from './components/teaser';
+import confetti from 'canvas-confetti';
 
 Alpine.plugin(clipboard);
 Alpine.plugin(focus);
@@ -13,6 +14,7 @@ class App {
         this.initAnimation();
         this.initTeaser();
         this.initTooltipPermalinks();
+        this.initConfetti();
     }
 
     initAnimation() {
@@ -46,6 +48,27 @@ class App {
                 }, 1500);
             });
         });
+    }
+
+    initConfetti() {
+        const confettiEl = document.querySelector(".js-confetti");
+        console.log(confettiEl);
+
+        if (confettiEl) {
+            confettiEl.addEventListener("click", () => {
+                confetti({
+                    angle: randomInRange(55, 125),
+                    spread: randomInRange(50, 70),
+                    particleCount: randomInRange(50, 100),
+                    origin: { y: 0.6 }
+                });
+            })
+        }
+
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
     }
 
 }

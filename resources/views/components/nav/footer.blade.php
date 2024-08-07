@@ -9,7 +9,7 @@
 
             </li>
             <li>
-                <a class="text-lg" href="#">🎉</a>
+                <button class="text-lg js-confetti" href="#">🎉</button>
             </li>
         </ul>
     </nav>
