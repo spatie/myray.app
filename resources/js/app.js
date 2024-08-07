@@ -51,23 +51,43 @@ class App {
     }
 
     initConfetti() {
+        const scale = 4;
         const confettiEl = document.querySelector(".js-confetti");
-        console.log(confettiEl);
+        const defaults = {
+            origin: { y: 0.6 },
+            shapes: [confetti.shapeFromText({ text: '🕺' }, scale)]
+        };
+
 
         if (confettiEl) {
             confettiEl.addEventListener("click", () => {
-                confetti({
-                    angle: randomInRange(55, 125),
-                    spread: randomInRange(50, 70),
-                    particleCount: randomInRange(50, 100),
-                    origin: { y: 0.6 }
-                });
+
+                function shoot() {
+                    confetti({
+                        ...defaults,
+                        particleCount: 20,
+                        spread: 70,
+                        scalar: scale
+                    });
+
+                    confetti({
+                        ...defaults,
+                        particleCount: 30,
+                        spread: 120,
+                        scalar: scale
+                    });
+                }
+
+                setTimeout(shoot, 0);
+                setTimeout(shoot, 100);
+                setTimeout(shoot, 200);
+
             })
         }
 
-        function randomInRange(min, max) {
-            return Math.random() * (max - min) + min;
-        }
+        // function randomInRange(min, max) {
+        //     return Math.random() * (max - min) + min;
+        // }
 
     }
 

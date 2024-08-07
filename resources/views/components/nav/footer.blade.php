@@ -1,3 +1,4 @@
+@persist('footer')
 <footer class="flex flex-col gap-12 items-center">
     <nav>
         <ul class="flex gap-6">
@@ -17,3 +18,4 @@
         <img class="h-12" src="/images/spatie.svg" alt="Spatie">
     </a>
 </footer>
+@endpersist()
