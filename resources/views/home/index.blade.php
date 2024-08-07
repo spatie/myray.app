@@ -4,7 +4,7 @@
 @endphp
 
 <x-layouts.default title="Ray lets you debug and fix bugs faster"
-    description="Send, format, and filter debug info from local and remote projects. Ray collects all your debugging output in a neat desktop app.">
+    description="Ray collects all your debug output in a neat desktop app. Send, format and filter debug info from local and remote projects.">
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
@@ -23,8 +23,8 @@
                         faster</span>
                 </h1>
                 <p class="text-xl mb-8 lg:text-2xl">
-                    Ray collects all your debugging output in a neat desktop app. Send, format, and filter debug info
-                    from local and remote projects.
+                    <span>Ray collects all your debug output in a neat desktop app. </span>
+                    <span class="inline md:block">Send, format and filter debug info from local and remote projects.</span>
                 </p>
 
                 <div class="flex flex-wrap gap-4 items-center justify-start md:justify-center">
