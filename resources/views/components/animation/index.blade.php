@@ -8,6 +8,7 @@
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
+                <span class="absolute left-0 w-full text-center text-sm text-white text-opacity-50 font-bold">TestCommand.php &mdash; Editor</span>
             </div>
             <div class="p-8">
                 <x-animation.code />
@@ -15,7 +16,7 @@
         </div>
     </div>
 
-    <div class="shadow-large-drop rounded-3xl xl:mt-24 order-first lg:order-last">
+    <div class="shadow-large-drop rounded-3xl order-first lg:order-last xl:mt-24">
         <div
             class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
                 <x-animation.window />

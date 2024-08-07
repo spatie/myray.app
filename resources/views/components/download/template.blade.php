@@ -29,7 +29,8 @@
                                     <img src="/images/logos/logo-apple.svg" alt="Apple">
                                 </div>
                                 <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>Universal</p>
+                                    <p>macOS</p>
+                                    <p class="text-xs">Universal</p>
                                 </div>
                             </a>
                         </div>
@@ -42,7 +43,8 @@
                                     <img src="/images/logos/logo-windows.svg" alt="Windows">
                                 </div>
                                 <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>Intel</p>
+                                    <p>Windows</p>
+                                    <p class="text-xs">x86 (Intel)</p>
                                 </div>
                             </a>
                         </div>
@@ -55,7 +57,8 @@
                                     <img src="/images/logos/logo-linux.svg" alt="Linux">
                                 </div>
                                 <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>AppImage</p>
+                                    <p>Linux</p>
+                                    <p class="text-xs">AppImage</p>
                                 </div>
                             </a>
                         </div>

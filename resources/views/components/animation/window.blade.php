@@ -6,6 +6,13 @@
             class="bg-[#100424] border-b border-[#261A43] py-2 px-2 flex gap-6 items-center justify-between lg:gap-12 lg:px-4">
 
             <div class="flex">
+
+                <div class="hidden items-center gap-2 mr-8 lg:flex">
+                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
+                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
+                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
+                </div>
+
                 <img class="h-[1.875rem]" src="/images/app/icon_pause.svg" alt="">
                 <img class="h-[1.875rem]" src="/images/app/icon_search.svg" alt="">
 
@@ -51,7 +58,8 @@
 
     <div class="bg-gradient-to-b from-[#14052E] to-[#1C0840] h-full static">
 
-        <div class="flex gap-4 h-full w-full items-center justify-center absolute top-0 z-10 pointer-events-none js-animation-loader">
+        <div
+            class="flex gap-4 h-full w-full items-center justify-center absolute top-0 z-10 pointer-events-none js-animation-loader">
             <svg class="text-white" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <style>

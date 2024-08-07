@@ -22,11 +22,10 @@
                         bugs
                         faster</span>
                 </h1>
-                <p class="text-xl mb-8 lg:text-2xl">Send, format, and filter debug info from local and remote projects.
-                    Ray collects
-                    all
-                    your debugging
-                    output in a neat desktop app.</p>
+                <p class="text-xl mb-8 lg:text-2xl">
+                    Ray collects all your debugging output in a neat desktop app. Send, format, and filter debug info
+                    from local and remote projects.
+                </p>
 
                 <div class="flex flex-wrap gap-4 items-center justify-start md:justify-center">
                     <div class="shadow-small-drop">
@@ -44,19 +43,26 @@
             <div class="flex flex-col gap-4 md:items-center ">
                 <p>Works great with</p>
                 <ul class="flex flex-wrap gap-4 items-center md:gap-8">
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/php/laravel/installation"><img src="/images/logos/logo_laravel_white.svg"
-                                alt="Laravel"></a></li>
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/php/vanilla-php/installation"><img src="/images/logos/logo_php_white.svg"
-                                alt="PHP"></a></li>
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/javascript/vanilla-javascript/getting-started"><img src="/images/logos/logo_js_white.svg"
-                                alt="JavaScript"></a></li>
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/javascript/vuejs/getting-started"><img src="/images/logos/logo_vue_white.svg"
-                                alt="Vue"></a></li>
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/javascript/react/getting-started"><img src="/images/logos/logo_react_white.svg"
-                                alt="React"></a></li>
-                    <li><a class="block transition hover:opacity-50" href="{{ route('docs.index') }}/php/wordpress/getting-started"><img src="/images/logos/logo_wordpress_white.svg"
-                                alt="WordPress"></a></li>
-                    <li class="transition text-white text-opacity-50 hover:text-opacity-100"><a href="{{ route('docs.index') }}/getting-started/integrations">&mldr; and more</a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/php/laravel/installation"><img
+                                src="/images/logos/logo_laravel_white.svg" alt="Laravel"></a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/php/vanilla-php/installation"><img
+                                src="/images/logos/logo_php_white.svg" alt="PHP"></a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/javascript/vanilla-javascript/getting-started"><img
+                                src="/images/logos/logo_js_white.svg" alt="JavaScript"></a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/javascript/vuejs/getting-started"><img
+                                src="/images/logos/logo_vue_white.svg" alt="Vue"></a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/javascript/react/getting-started"><img
+                                src="/images/logos/logo_react_white.svg" alt="React"></a></li>
+                    <li><a class="block transition hover:opacity-50"
+                            href="{{ route('docs.index') }}/php/wordpress/getting-started"><img
+                                src="/images/logos/logo_wordpress_white.svg" alt="WordPress"></a></li>
+                    <li class="transition text-white text-opacity-50 hover:text-opacity-100"><a
+                            href="{{ route('docs.index') }}/getting-started/integrations">&mldr; and more</a></li>
                 </ul>
             </div>
         </div>
@@ -158,7 +164,8 @@
                         quickly.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">
-                    <img class="rounded-full w-16" src="https://2.gravatar.com/avatar/874805999527de531a64edc2a0e416a1349ae32cb6e87edaa8c4acbd8dd85819?size=256"
+                    <img class="rounded-full w-16"
+                        src="https://2.gravatar.com/avatar/874805999527de531a64edc2a0e416a1349ae32cb6e87edaa8c4acbd8dd85819?size=256"
                         alt="Freek">
                     <div class="leading-none">
                         <p class="text-lg font-bold">Freek Van der Herten</p>
@@ -174,10 +181,8 @@
         <x-intro.default title="Love from the community"
             text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante." />
 
-        <div 
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" 
-            x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" 
-            x-data="{ testimonialsOpen: false }">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" x-data="{ testimonialsOpen: false }">
             @for ($i = 0; $i < 4; $i++)
                 <div class="flex flex-col gap-6">
                     @foreach ($testimonials->slice($i * $itemsPerColumn, $itemsPerColumn) as $testimonial)
@@ -186,7 +191,8 @@
                             <div class="rounded-xl bg-bleak-purple-dark p-8">
                                 <div class="flex gap-6 items-center mb-6">
                                     <img class="rounded-full w-16"
-                                        src="/images/testimonials/{{ $testimonial->image }}.jpg" alt="{{ $testimonial->name }}">
+                                        src="/images/testimonials/{{ $testimonial->image }}.jpg"
+                                        alt="{{ $testimonial->name }}">
                                     <div class="leading-none">
                                         <p class="text-lg font-bold">{{ $testimonial->name }}</p>
                                         <p class="text-white text-opacity-50">{{ $testimonial->title }}</p>
@@ -199,13 +205,12 @@
                 </div>
             @endfor
 
-            <div 
-                class="bg-gradient-to-b from-transparent to-midnight flex w-full h-3/6 absolute bottom-0 items-end"
+            <div class="bg-gradient-to-b from-transparent to-midnight flex w-full h-3/6 absolute bottom-0 items-end"
                 x-bind:class="testimonialsOpen && 'hidden'">
                 <div class="flex w-full justify-center">
                     <button
                         class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
-                        @click="testimonialsOpen = !testimonialsOpen"> 
+                        @click="testimonialsOpen = !testimonialsOpen">
                         Show all reviews
                     </button>
                 </div>
