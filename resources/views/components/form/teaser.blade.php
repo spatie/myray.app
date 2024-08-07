@@ -3,7 +3,7 @@
         <h2 class="font-display font-bold text-4xl mb-3 text-balance">
             A new Ray is coming soon
         </h2>
-        <p class="text-lg leading-tight">Sign up for the waitlist and be one of the first to <br /> get access to <strong class="font-bold text-orange">the new Ray</strong>.
+        <p class="text-lg leading-tight">Sign up for the waitlist and be one of the first to get access.
         </p>
     </div>
     <form class="flex text-lg" action="">
