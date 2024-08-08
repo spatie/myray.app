@@ -40,7 +40,7 @@
                     <strong>Subscribe</strong> for Ray updates and promotions.
                 </div>
 
-                <form class="mt-4 md:flex items-stretch" method="POST" action="{{ route('subscribe') }}">
+                <form class="mt-4 md:flex items-stretch" method="POST" action="https://spatie.mailcoach.app/subscribe/ade98234-7030-4707-8816-3ae390a16df0">
                     @csrf
                     <input
                         class="flex-grow px-3 h-10

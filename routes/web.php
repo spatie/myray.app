@@ -3,14 +3,9 @@
 use App\Http\Front\Controllers\DocsController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\PostsController;
-use App\Http\Front\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Route;
-use Spatie\Honeypot\ProtectAgainstSpam;
-use Spatie\SiteSearch\Search;
 
 Route::get('/', HomeController::class);
-
-Route::post('subscribe', SubscribeController::class)->middleware(ProtectAgainstSpam::class)->name('subscribe');
 
 Route::redirect('wordpress', '/')->name('wordpress');
 Route::redirect('javascript', '/')->name('javascript');
