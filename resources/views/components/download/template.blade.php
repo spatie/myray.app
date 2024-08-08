@@ -88,7 +88,7 @@
 
                 </div>
 
-                {{-- <form class="mt-4 md:flex items-stretch" method="POST" action="{{ route('subscribe') }}">
+                {{-- <form class="mt-4 md:flex items-stretch" method="POST" action="">
                     @csrf
                     <input
                         class="flex-grow px-3 h-10
@@ -120,7 +120,7 @@
                     </div>
                     <x-form.newsletter />
                 </div>
-                
+
             </div>
         </div>
 

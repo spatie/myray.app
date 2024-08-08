@@ -2,10 +2,10 @@
     <h3 class="font-display font-bold text-2xl leading-[1.2] text-balance">
         Stay in the loop with updates &amp; promotions for Ray
     </h3>
-    <form class="flex" action="">
+    <form class="flex" method="POST" action="https://spatie.mailcoach.app/subscribe/ade98234-7030-4707-8816-3ae390a16df0">
         <div
             class="flex p-1 gap-4 bg-neutrals-white-20 rounded-full w-full ring-neutrals-white-20 ring-inset focus-within:ring-2">
-            <input class="px-6 py-3 w-full h-full bg-transparent rounded-full outline-none" type="email"
+            <input class="px-6 py-3 w-full h-full bg-transparent rounded-full outline-none" type="email" name="email"
                 placeholder="Email address" required>
             <button
                 class="px-5 py-3 bg-gradient-to-r from-orange to-bright-orange hover:to-orange rounded-full border-b border-r border-bright-orange"
