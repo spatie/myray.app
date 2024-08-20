@@ -1,13 +1,6 @@
-import focus from '@alpinejs/focus'
-import clipboard from "@ryangjchandler/alpine-clipboard"
 import Animation from './components/animation';
 import Teaser from './components/teaser';
 import confetti from 'canvas-confetti';
-
-Alpine.plugin(clipboard);
-Alpine.plugin(focus);
-
-Alpine.start();
 
 class App {
     constructor() {

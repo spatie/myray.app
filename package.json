@@ -8,7 +8,6 @@
     },
     "devDependencies": {
         "@alpinejs/focus": "^3.13",
-        "@ryangjchandler/alpine-clipboard": "^2.3",
         "alpinejs": "^3.14",
         "autoprefixer": "^10.4.19",
         "husky": "^9.0",
