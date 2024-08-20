@@ -3,10 +3,10 @@
     <nav>
         <ul class="flex gap-6">
             <li>
-                <a class="text-lg font-bold hover:underline" href="{{ route('termsOfUse') }}">Terms of use</a>
+                <a wire:navigate class="text-lg font-bold hover:underline" href="{{ route('termsOfUse') }}">Terms of use</a>
             </li>
             <li>
-                <a class="text-lg font-bold hover:underline" href="{{ route('privacy') }}">Privacy policy</a>
+                <a wire:navigate class="text-lg font-bold hover:underline" href="{{ route('privacy') }}">Privacy policy</a>
 
             </li>
             <li>

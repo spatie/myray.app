@@ -127,7 +127,7 @@
         </div>
 
         <div class="flex justify-center">
-            <a class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
+            <a wire:navigate class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
                 href="{{ route('docs.index') }}">Explore more features</a>
         </div>
 

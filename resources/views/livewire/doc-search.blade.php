@@ -30,7 +30,7 @@
                             <ul class="search-results flex flex-col gap-4">
                                 @foreach($results->hits as $hit)
                                     <li class="docs-search-results-item">
-                                        <a class="group" href="{{$hit->url}}">
+                                        <a wire:navigate class="group" href="{{$hit->url}}">
                                             <div class="font-semibold leading-tight group-hover:underline">{{str_replace(' - Ray', '', $hit->title())}}</div>
                                             <div class="font-normal text-white opacity-65">{!! $hit->highlightedSnippet() !!}</div>
                                         </a>
