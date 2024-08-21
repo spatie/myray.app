@@ -16,20 +16,23 @@
 </div>
         </x-markdown>
 
-        {{-- TODO: Wire to backend --}}
         <div class="flex flex-wrap justify-between w-full max-w-[45rem] border border-bleak-purple-light rounded-xl mb-8 text-sm lg:text-base lg:mb-16">
-            <a class="flex-1 pl-6 py-4 rounded-xl bg-gradient-to-r from-transparent to-transparent bg-opacity-0 hover:from-[#A998D320]" href="#">
-                <span class="inline-flex gap-4 items-center group-hover:opacity-75">
-                    <svg class="w-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 7 12"><path d="M1.102 6.398a.56.56 0 0 1 0-.794l4.5-4.502a.562.562 0 1 1 .795.795l-4.102 4.1 4.103 4.105a.562.562 0 1 1-.795.795l-4.5-4.499Z"/></svg>
-                    Installation
-                </span>
-            </a>
-            <a class="flex-1 text-right py-4 pr-6 rounded-xl group bg-gradient-to-l from-transparent to-transparent bg-opacity-0 hover:from-[#A998D320]" href="#">
-                <span class="inline-flex gap-4 items-center">
-                    Configuration
-                    <svg class="w-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 7 12"><path d="M6.398 6.398a.56.56 0 0 0 0-.794l-4.5-4.502a.562.562 0 0 0-.795.795l4.102 4.1-4.103 4.105a.562.562 0 0 0 .795.795l4.501-4.499Z"/></svg>
-                </span>
-            </a>
+            @isset($prev)
+                <a wire:navigate class="flex-1 pl-6 py-4 rounded-xl bg-gradient-to-r from-transparent to-transparent bg-opacity-0 hover:from-[#A998D320]" href="{{$prev->url}}">
+                    <span class="inline-flex gap-4 items-center group-hover:opacity-75">
+                        <svg class="w-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 7 12"><path d="M1.102 6.398a.56.56 0 0 1 0-.794l4.5-4.502a.562.562 0 1 1 .795.795l-4.102 4.1 4.103 4.105a.562.562 0 1 1-.795.795l-4.5-4.499Z"/></svg>
+                        {{$prev->menuTitle}}
+                    </span>
+                </a>
+            @endisset
+            @isset($next)
+                <a wire:navigate class="flex-1 text-right py-4 pr-6 rounded-xl group bg-gradient-to-l from-transparent to-transparent bg-opacity-0 hover:from-[#A998D320]" href="{{$next->url}}">
+                    <span class="inline-flex gap-4 items-center">
+                        {{$next->menuTitle}}
+                        <svg class="w-2" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 7 12"><path d="M6.398 6.398a.56.56 0 0 0 0-.794l-4.5-4.502a.562.562 0 0 0-.795.795l4.102 4.1-4.103 4.105a.562.562 0 0 0 .795.795l4.501-4.499Z"/></svg>
+                    </span>
+                </a>
+            @endisset
         </div>
 
     </section>

@@ -8,6 +8,7 @@ class DocsController
 {
     private DocTree $docTree;
 
+
     public function __construct()
     {
         $this->docTree = DocTree::build();
@@ -42,6 +43,11 @@ class DocsController
 
         $category = $this->docTree->findCategory($page->category);
 
+        $index = $category->pages->search(fn ($p) => $p->slug === $page->slug);
+
+        $prev = $category->pages->get($index - 1);
+        $next = $category->pages->get($index + 1);
+
         $categories = [];
         while($category !== null) {
             $categories[] = $category;
@@ -49,6 +55,6 @@ class DocsController
         }
         $categories = array_reverse($categories);
 
-        return view('docs.show', compact('page', 'slug', 'categories'));
+        return view('docs.show', compact('page', 'slug', 'categories', 'prev', 'next'));
     }
 }
