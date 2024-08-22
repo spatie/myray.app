@@ -18,7 +18,7 @@ $branch = match($environment) {
 };
 
 $userAndServer = 'forge@'. $server;
-$repository = "spatie/{$server}";
+$repository = "spatie/myray.app";
 $baseDir = "/home/forge/{$server}";
 $releasesDir = "{$baseDir}/releases";
 $persistentDir = "{$baseDir}/persistent";
