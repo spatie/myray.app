@@ -2,7 +2,21 @@
 require __DIR__.'/vendor/autoload.php';
 \Dotenv\Dotenv::create(\Illuminate\Support\Env::getRepository(), __DIR__)->load();
 
-$server = "myray.app";
+$environment ??= 'staging';
+$branch ??= 'main';
+
+$server = match($environment) {
+    'next' => 'next.myray.app',
+    'production' => 'myray.app',
+    default => 'next.myray.app',
+};
+
+$branch = match($environment) {
+    'next' => 'redesign',
+    'production' => 'main',
+    default => 'redesign',
+};
+
 $userAndServer = 'forge@'. $server;
 $repository = "spatie/{$server}";
 $baseDir = "/home/forge/{$server}";
@@ -41,8 +55,8 @@ deployOnlyCode
 
 @task('startDeployment', ['on' => 'local'])
 {{ logMessage("🏃  Starting deployment...") }}
-git checkout main
-git pull origin main
+git checkout {{ $branch }}
+git pull origin {{ $branch }}
 @endtask
 
 @task('cloneRepository', ['on' => 'remote'])
@@ -152,7 +166,7 @@ ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" rm -rf;
 @task('deployOnlyCode',['on' => 'remote'])
 {{ logMessage("💻  Deploying code changes...") }}
 cd {{ $currentDir }}
-git pull origin main
+git pull origin {{ $branch }}
 php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
