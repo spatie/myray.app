@@ -22,8 +22,6 @@ class AppServiceProvider extends ServiceProvider
             'error' => 'alert-error',
         ]);
 
-        Blade::anonymousComponentPath('docs.components', 'docs');
-
         Blade::directive('markdown', function () {
             return "<?php echo (new \League\CommonMark\CommonMarkConverter())->convertToHtml(<<<HEREDOC";
         });
