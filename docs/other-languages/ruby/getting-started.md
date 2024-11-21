@@ -3,6 +3,10 @@ title: Using Ray With Ruby
 weight: 1
 ---
 
+You can use Ray with Go via this third party package:
+
+[spatie/ruby-ray](https://github.com/spatie/ruby-ray)
+
 The Ruby gem is still in active development. We haven't released a stable version just yet, but you can already install and play around with the `0.x` version.
 
 To start using Ray in any Ruby project, install the `ruby-ray` gem.

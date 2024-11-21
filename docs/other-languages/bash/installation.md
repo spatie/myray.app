@@ -25,8 +25,8 @@ npm install -g node-ray-cli
 npx node-ray-cli --help
 ```
 
-[permafrost-dev/node-ray-cli](https://github.com/permafrost-dev/node-ray-cli)
+Repository: [permafrost-dev/node-ray-cli](https://github.com/permafrost-dev/node-ray-cli)
 
 ## ray-cli
 
-[permafrost-dev/ray-cli](https://github.com/permafrost-dev/ray-cli)
+Repository: [permafrost-dev/ray-cli](https://github.com/permafrost-dev/ray-cli)

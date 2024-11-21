@@ -126,3 +126,5 @@ To stop showing hooks, call `stopShowingHooks()`.
 By default, Ray is disabled in production environments. If you want to use Ray in a production environment, you must explicitly enable it with `ray()->enable()`.
 
 For more information about using the `enable()` function, see the [framework agnostic docs](https://myray.app/docs/php/vanilla-php/usage#enabling--disabling-ray).
+
+Repository: [spatie/wordpress-ray](https://github.com/spatie/wordpress-ray)
