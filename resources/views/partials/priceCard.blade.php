@@ -27,7 +27,7 @@
             transition-transform duration-300">{{ $price->formattedPrice() }}</span>
         @endif
     </a>
-    @if (\Illuminate\Support\Facades\Date::create(2024, 11, 28)->isPast() && \Illuminate\Support\Facades\Date::create(2024, 11, 30)->isFuture())
+    @if (\Illuminate\Support\Facades\Date::create(2024, 11, 29)->isPast() && \Illuminate\Support\Facades\Date::create(2024, 11, 30)->isFuture())
         <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
             <button class="group mt-6
         py-6 px-6 w-full
