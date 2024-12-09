@@ -50,6 +50,41 @@ $users = ray()->showQueries(function (): Illuminate\Support\Collection {
 User::all(); // this query won't be displayed.
 ```
 
+## Conditional queries
+
+You may want to only show queries if a certain condition is met. You can pass a closure that will receive `QueryExecuted` to `showConditionalQueries`.
+
+```php
+// When a binding contains 'joan', the query will be displayed.
+ray()->showConditionalQueries(fn (QueryExecuted $query) => 
+    Arr::first(
+        $query->bindings,
+        fn ($binding) => Str::contains($binding, 'joan')
+    )
+);
+```
+
+This is particularly helpful when dealing with many queries during migrations or data manipulation.
+
+Convenience methods are available for select, insert, update, and delete queries.
+
+```php
+ray()->showInsertQueries();
+// Insert queries will be displayed.
+ray()->stopShowingInsertQueries();
+
+// Update queries will be displayed during execution of handleUpdate().
+ray()->showUpdateQueries(fn () => $this->handleUpdate());
+
+// Select queries will be displayed.
+ray()->showSelectQueries();
+
+// Delete queries will be displayed.
+ray()->showDeleteQueries();
+```
+
+Additionally, these can be enabled in the config file.
+
 ## Counting queries
 
 If you're interested in how many queries a given piece of code executes, and what the runtime of those queries is, you can use `countQueries`. It expects you to pass a closure in which all the executed queries will be counted.
