@@ -3,7 +3,7 @@ title: Using Ray With Ruby
 weight: 1
 ---
 
-You can use Ray with Go via this third party package:
+You can use Ray with Ruby via this third party package:
 
 [spatie/ruby-ray](https://github.com/spatie/ruby-ray)
 
