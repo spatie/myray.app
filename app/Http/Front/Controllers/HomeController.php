@@ -3,13 +3,14 @@
 namespace App\Http\Front\Controllers;
 
 use App\Support\Testimonial;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Spatie\PriceApi\SpatiePriceApi;
 
 class HomeController
 {
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): View
     {
         $purchasableId = config('services.spatie_prices_api.purchasable_id');
 

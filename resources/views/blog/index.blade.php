@@ -19,7 +19,7 @@
             <div class="flex flex-col gap-8 mb-8">
                 @forelse($posts as $post)
 
-                    <a href="{{ route('post.show', $post->slug) }}"
+                    <a href="{{ route('blog.show', $post->slug) }}"
                         class="flex flex-col items-start justify-between rounded-2xl group">
                         <article class="transition bg-bleak-purple bg-opacity-85 rounded-2xl w-full p-8 shadow-top-white md:p-12 group-hover:bg-opacity-100">
                             @isset($post->date)

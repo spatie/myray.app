@@ -3,25 +3,26 @@
 namespace App\Http\Front\Controllers;
 
 use App\Domain\Docs\Models\DocTree;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class DocsController
 {
     private DocTree $docTree;
-
 
     public function __construct()
     {
         $this->docTree = DocTree::build();
     }
 
-    public function index()
+    public function index(): RedirectResponse
     {
         $page = $this->docTree->firstPage();
 
         return redirect()->away($page->url);
     }
 
-    public function show(string $slug)
+    public function show(string $slug): View|RedirectResponse
     {
         $page = $this->docTree->find($slug);
 

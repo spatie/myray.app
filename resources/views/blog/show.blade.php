@@ -14,7 +14,7 @@
 
             <div class="mb-8">
                 <a class="inline-block underline text-bleak-purple-extra-light mb-4 hover:text-white"
-                    href="{{ route('blog') }}">
+                    href="{{ route('blog.index') }}">
                     Back to overview</a>
                 <h1
                     class="font-display font-black text-3xl mb-[0.25em] pb-[0.075em] text-balance text-transparent bg-clip-text bg-gradient-to-r from-orange to-bright-orange md:text-5xl">

@@ -2,13 +2,16 @@
 
 namespace App\Http\Front\Controllers;
 
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Collection;
 use Spatie\ContentApi\ContentApi;
 use Spatie\ContentApi\Data\Post;
 use Spatie\Feed\FeedItem;
 
 class PostsController
 {
-    public function index()
+    public function index(): View
     {
         $posts = ContentApi::getPosts('ray', request('page', 1), theme: 'nord');
 
@@ -17,7 +20,7 @@ class PostsController
         ]);
     }
 
-    public function detail(string $slug)
+    public function detail(string $slug): View|RedirectResponse
     {
         $post = ContentApi::getPost('ray', $slug, theme: 'nord');
 
@@ -26,7 +29,7 @@ class PostsController
 
             $parts = array_slice($parts, 1);
 
-            return redirect(action([self::class, 'detail'], implode('-', $parts)), 301);
+            return redirect(route('blog.show', implode('-', $parts)), 301);
         }
 
         abort_if(is_null($post), 404);
@@ -36,7 +39,7 @@ class PostsController
         ]);
     }
 
-    public static function getFeedItems()
+    public static function getFeedItems(): Collection
     {
         return ContentApi::getPosts('ray', 1, 10_000, theme: 'nord')->map(function (Post $post) {
             return FeedItem::create()
@@ -44,7 +47,7 @@ class PostsController
                 ->title($post->title)
                 ->summary($post->summary)
                 ->updated($post->updated_at)
-                ->link(action([self::class, 'detail'], $post->slug))
+                ->link(route('blog.show', $post->slug))
                 ->authorName($post->authors->first()?->name);
         });
     }

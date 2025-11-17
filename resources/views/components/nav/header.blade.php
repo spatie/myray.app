@@ -13,7 +13,7 @@
                 <ul class="flex gap-2 order-last w-full lg:order-none lg:w-auto">
                     <li><a wire:navigate class="{{ $headerItemClass }} @if (Request::is('docs*')) {{'!bg-opacity-10'}} @endif" href="{{ route('docs.index') }}">Docs</a></li>
                     <li><a wire:navigate class="{{ $headerItemClass }} @if (Request::is('changelog')) {{'!bg-opacity-10'}} @endif" href="{{ route('changelog') }}">What's new</a></li>
-                    <li><a wire:navigate class="{{ $headerItemClass }} @if (Request::is('blog*')) {{'!bg-opacity-10'}} @endif" href="{{ route('blog') }}">Blog</a></li>
+                    <li><a wire:navigate class="{{ $headerItemClass }} @if (Request::is('blog*')) {{'!bg-opacity-10'}} @endif" href="{{ route('blog.index') }}">Blog</a></li>
                 </ul>
 
                 <ul class="flex-1 text-right">
