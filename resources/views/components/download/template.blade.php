@@ -1,5 +1,4 @@
-{{ $downloadLinkMacIntel = '',
-    $downloadLinkMacAppleSilicon = '',
+{{ $downloadLinkMac = '',
     $downloadLinkWindows = '',
     $downloadLinkLinux = '' }}
 
@@ -24,7 +23,7 @@
                         <div
                             class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
                             <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMacIntel }}" download>
+                                href="{{ $downloadLinkMac }}" download>
                                 <div class="py-4">
                                     <img src="/images/logos/logo-apple.svg" alt="Apple">
                                 </div>
@@ -38,7 +37,7 @@
                         <div
                             class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
                             <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMacIntel }}" download>
+                                href="{{ $downloadLinkMac }}" download>
                                 <div class="py-4">
                                     <img src="/images/logos/logo-windows.svg" alt="Windows">
                                 </div>
@@ -52,7 +51,7 @@
                         <div
                             class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
                             <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMacIntel }}" download>
+                                href="{{ $downloadLinkMac }}" download>
                                 <div class="py-4">
                                     <img src="/images/logos/logo-linux.svg" alt="Linux">
                                 </div>
@@ -67,10 +66,8 @@
 
                     <div>
                         {{-- <ul class="mt-2 mb-3 list-inside list-disc">
-                            <li><a class="markup-link" download href="{{ $downloadLinkMacIntel }}"
-                                    onclick="fathom.trackGoal('YMAVPAEJ', 0);">macOS (Intel)</a></li>
-                            <li><a class="markup-link" download href="{{ $downloadLinkMacAppleSilicon }}"
-                                    onclick="fathom.trackGoal('YMAVPAEJ', 0);">macOS (Apple Silicon)</a></li>
+                            <li><a class="markup-link" download href="{{ $downloadLinkMac }}"
+                                    onclick="fathom.trackGoal('YMAVPAEJ', 0);">macOS</a></li>
                             <li><a class="markup-link" download href="{{ $downloadLinkWindows }}"
                                     onclick="fathom.trackGoal('YMAVPAEJ', 0);">Windows</a></li>
                             <li><a class="markup-link" download href="{{ $downloadLinkLinux }}"
