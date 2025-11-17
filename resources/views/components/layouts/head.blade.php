@@ -36,8 +36,5 @@
 <meta property="og:description" content="{{ $description }}"/>
 <meta property="og:image" content="https://myray.app/images/social-card.png"/>
 
-@bukStyles()
-@bukScripts()
-
 <script src="https://cdn.usefathom.com/script.js" data-site="AUCCHTBP" defer></script>
 @vite(['resources/js/app.js'])
