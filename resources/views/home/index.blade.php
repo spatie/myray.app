@@ -3,8 +3,8 @@
     $itemsPerColumn = ceil($testimonialCount / 4);
 @endphp
 
-<x-layouts.default title="Ray lets you debug and fix bugs faster"
-    description="Ray collects all your debug output in a neat desktop app. Send, format and filter debug info from local and remote projects.">
+<x-layouts.default title="Power up your debugging"
+    description=" Send, format and, filter logs from local and remote projects. Ray brings all your debugging together in one neat desktop app.">
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
@@ -16,15 +16,13 @@
         <div class="container mx-auto p-6 pb-12 lg:px-4 lg:pb-24">
 
             <div class="max-w-[54rem] mx-auto mb-12 md:text-balance md:text-center md:mb-24">
-                <h1 class="font-display font-black text-5xl tracking-tight mb-[0.5em] md:text-7xl">The debugger that
-                    lets you
-                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">fix
-                        bugs
-                        faster</span>
+
+                <h1 class="font-display font-black text-5xl tracking-tight mb-[0.5em] md:text-8xl">Power up your
+                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">debugging</span>
                 </h1>
                 <p class="text-xl mb-8 lg:text-2xl">
-                    <span>Ray collects all your debug output in a neat desktop app. </span>
-                    <span class="inline md:block">Send, format and filter debug info from local and remote projects.</span>
+                    <span class="inline md:block">Send, format and, filter logs from local and remote projects.</span>
+                    <span>Ray brings all your debugging together in one neat desktop app.</span>
                 </p>
 
                 <div class="flex flex-wrap gap-4 items-center justify-start md:justify-center">
@@ -32,7 +30,7 @@
                         <x-download.button />
                     </div>
                     <div class="shadow-small-drop">
-                        <a class="transition inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white bg-bleak-purple bg-opacity-50 hover:bg-opacity-80"
+                        <a class="btn-bleak-trans transition inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white"
                             href="{{ spatieUrl('https://spatie.be/products/ray') }}">Buy now for &euro;49</a>
                     </div>
                 </div>
@@ -127,7 +125,7 @@
         </div>
 
         <div class="flex justify-center">
-            <a wire:navigate class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
+            <a wire:navigate class="btn-bright-purple-v inline-flex px-6 py-4 leading-none rounded-full font-bold shadow-top-white"
                 href="{{ route('docs.index') }}">Explore more features</a>
         </div>
 
@@ -209,7 +207,7 @@
                 x-bind:class="testimonialsOpen && 'hidden'">
                 <div class="flex w-full justify-center">
                     <button
-                        class="inline-flex px-6 py-4 leading-none rounded-full bg-gradient-to-b from-bright-purple-light to-bright-purple font-bold shadow-top-white hover:to-bright-purple-light"
+                        class="btn-bright-purple-v inline-flex px-6 py-4 leading-none rounded-full font-bold shadow-top-white"
                         @click="testimonialsOpen = !testimonialsOpen">
                         Show all reviews
                     </button>

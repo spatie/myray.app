@@ -1,4 +1,6 @@
 @import "./bootstrap.css";
+@import "./badges.css";
+@import "./buttons.css";
 @import "./markup.css";
 @import "./components/animation.css";
 @import "./views/docs.css";

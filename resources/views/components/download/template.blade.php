@@ -1,3 +1,5 @@
+@props(['title' => 'Thanks for trying out Ray!', 'disclaimer'])
+
 {{ $downloadLinkMac = '',
     $downloadLinkWindows = '',
     $downloadLinkLinux = '' }}
@@ -15,7 +17,7 @@
 
                     <h2
                         class="font-display font-black text-3xl md:text-4xl mb-8 bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text leading-[1] text-balance">
-                        Thanks for trying out Ray!
+                        {{ $title }}
                     </h2>
 
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -75,12 +77,13 @@
                         </ul> --}}
                     </div>
 
-                    <div class="text-sm text-white text-opacity-75">
-                        <p>By downloading Ray, you agree to our <a href="{{ route('legal.terms') }}"
-                                class="underline text-white text-opacity-75 hover:text-opacity-100">terms of use</a>.
-                        </p>
-                        <p>The free trial lets you send up to 10 messages per session.</p>
-
+                    <div class="text-base text-bleak-purple-extra-light">
+                        @if ($disclaimer)
+                            {!! $disclaimer !!}
+                        @else
+                            <p>By downloading Ray, you agree to our <a href="{{ route('legal.terms') }}" class="underline text-white text-opacity-75 hover:text-opacity-100">terms of use</a>.</p>
+                            <p>The free trial lets you send up to 10 messages per session.</p>
+                        @endif
                     </div>
 
                 </div>

@@ -8,7 +8,7 @@
             <input class="px-6 py-3 w-full h-full bg-transparent rounded-full outline-none" type="email" name="email"
                 placeholder="Email address" required>
             <button
-                class="px-5 py-3 bg-gradient-to-r from-orange to-bright-orange hover:to-orange rounded-full border-b border-r border-bright-orange"
+                class="btn-orange-h px-5 py-3 rounded-full border-b border-r border-bright-orange"
                 type="submit">Subscribe</button>
         </div>
     </form>

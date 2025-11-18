@@ -1,9 +1,9 @@
-<div class="text-base screen-code-block js-anim-code">
+<div class="text-sm screen-code-block md:text-base js-anim-code">
     <p><span class="screen-code-keyword">function</span> <span class="screen-code-title">myAwesomeFunction</span><span class="screen-code-params">()</span> {</p>
     <div class="screen-code-typewriter-block">
         <p></p>
         <div class="js-anim-block">
-            <span class="ml-4 screen-code-caret"></span> 
+            <span class="ml-4 screen-code-caret"></span>
             <p class="ml-4 screen-code-comment">// Send strings, arrays, object,...</p>
             <p class="ml-4"><span class="screen-code-variable">$string</span> = <span class="screen-code-string">'Send about anything to Ray'</span>;</p>
             <p class="ml-4 screen-code-glow"><span class="screen-code-title">ray</span>(<span class="screen-code-variable">$string</span>);</p>
@@ -21,7 +21,7 @@
         <div class="js-anim-block">
             <p class="ml-4 screen-code-comment">// Apply a color and filter</p>
             <p class="ml-4"><span class="screen-code-variable">$table</span> = [</p>
-            <p class="ml-8"><span class="screen-code-variable">'Message'</span> => <span class="screen-code-variable">'A green message'</span>,</p>
+            <p class="ml-8"><span class="screen-code-variable">'Message'</span> => <span class="screen-code-variable">'I prefer orange'</span>,</p>
             <p class="ml-4">];</p>
             <p class="ml-4 screen-code-glow"><span class="screen-code-title">ray</span>()-><span class="screen-code-title">table</span>(<span class="screen-code-variable">$table</span>)-><span class="screen-code-title">green</span>();</p>
         </div>

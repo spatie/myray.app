@@ -51,7 +51,7 @@
 
         <div
             class="bg-[#100424] border-b border-[#261A43] py-2 px-4 flex gap-6 items-center justify-between lg:gap-12 lg:px-6">
-            <strong>Debug Session 01</strong>
+            <strong>My Debug Session</strong>
         </div>
 
     </div>
@@ -112,8 +112,8 @@
                     <div class="mb-2">
                         <code class="block bg-white bg-opacity-5 rounded-md p-3">
                             <pre class="text-[0.85em] font-mono break-all text-[#9CA3AF] leading-6">
-<span class="text-[#818CF8]">array:2</span> [ ▼ 
-    "<span class="text-[#49DE80]">a</span>" =&gt; 1 
+<span class="text-[#818CF8]">array:2</span> [ ▼
+    "<span class="text-[#49DE80]">a</span>" =&gt; 1
     "<span class="text-[#49DE80]">b</span>" =&gt; <span class="text-[#818CF8]">array:1</span> [▶]
 ]
 </pre>
@@ -139,7 +139,7 @@
                     <div class="border border-[#483A6C] rounded-md">
                         <div class="flex items-start gap-2 p-2">
                             <div class="text-bleak-purple-extra-light text-sm min-w-24">Message</div>
-                            <div>A green message</div>
+                            <div>I prefer orange</div>
                         </div>
                         {{-- <div class="flex items-start gap-2 p-2">
                             <div class="text-bleak-purple-extra-light text-sm min-w-24">Type</div>

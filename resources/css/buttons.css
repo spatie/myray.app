@@ -1,0 +1,11 @@
+.btn-orange-h {
+    @apply transition bg-gradient-to-r from-orange to-bright-orange hover:to-orange;
+}
+
+.btn-bright-purple-v {
+    @apply transition bg-gradient-to-b from-bright-purple-light to-bright-purple hover:to-bright-purple-light;
+}
+
+.btn-bleak-trans {
+    @apply transition bg-bleak-purple bg-opacity-50 hover:bg-opacity-80;
+}
