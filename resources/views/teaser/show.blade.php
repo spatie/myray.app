@@ -85,7 +85,7 @@
 
         <x-intro.default
             title="New in Ray 3.0"
-            text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante."
+            text="Now a lot faster and better looking, but we promise it’s not a midlife crisis."
         />
 
         <div class="grid gap-4 mx-auto mb-8 lg:mb-12 lg:grid-cols-2">

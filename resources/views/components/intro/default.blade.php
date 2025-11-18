@@ -5,7 +5,7 @@
             {{ $title }}
         </{{ $tag ?? "h2" }}>
         @if (isset($text))
-            <p class="text-lg leading-snug">
+            <p class="text-lg leading-snug opacity-90">
                 {{ $text }}
             </p>
         @endif
