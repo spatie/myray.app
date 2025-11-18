@@ -1,8 +1,4 @@
-@props(['title' => 'Thanks for trying out Ray!', 'disclaimer'])
-
-{{ $downloadLinkMac = '',
-    $downloadLinkWindows = '',
-    $downloadLinkLinux = '' }}
+@props(['title' => 'Thanks for trying out Ray!', 'disclaimer' => null])
 
 <template x-if="download">
     <div class="fixed inset-0 p-8 lg:p-16 z-30 fix-z flex items-center justify-center"
@@ -13,7 +9,7 @@
         <div class="max-w-[40rem] shadow-large-drop rounded-2xl" @mousedown.away="download = false">
             <div class="bg-gradient-to-b from-midnight to-bright-purple shadow-top-white rounded-2xl overflow-hidden">
 
-                <div class="py-12 px-6 md:py-12 md:px-16 text-center border-b border-white border-opacity-10">
+                <div class="py-12 px-6 md:py-12 md:px-16 text-center border-b border-white border-opacity-0">
 
                     <h2
                         class="font-display font-black text-3xl md:text-4xl mb-8 bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text leading-[1] text-balance">
@@ -39,7 +35,7 @@
                         <div
                             class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
                             <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMac }}" download>
+                                href="{{ $downloadLinkWindows }}" download>
                                 <div class="py-4">
                                     <img src="/images/logos/logo-windows.svg" alt="Windows">
                                 </div>
@@ -53,7 +49,7 @@
                         <div
                             class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
                             <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMac }}" download>
+                                href="{{ $downloadLinkLinux }}" download>
                                 <div class="py-4">
                                     <img src="/images/logos/logo-linux.svg" alt="Linux">
                                 </div>
@@ -114,12 +110,12 @@
                     @enderror
                 </form> --}}
 
-                <div class="py-6 px-6 md:py-12 md:px-24">
+                {{-- <div class="py-6 px-6 md:py-12 md:px-24">
                     <div class="absolute pointer-events-none inset-0 opacity-75">
                         <img class="max-w-none p-0 md:p-8" src="/images/24-background-5.svg" />
                     </div>
                     <x-form.newsletter />
-                </div>
+                </div> --}}
 
             </div>
         </div>

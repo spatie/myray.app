@@ -32,10 +32,14 @@
             </div>
         @endif
 
-        <x-download.template
-            :title="$downloadTitle"
-            :disclaimer="$downloadDisclaimer"
-        />
+        <x-download :title="$downloadTitle">
+            @if ($downloadDisclaimer)
+            <x-slot name="disclaimer">
+                {!! $downloadDisclaimer !!}
+            </x-slot>
+            @endif
+        </x-download>
+
     </main>
 
     {{-- Force Alpine to initialize on every page --}}
