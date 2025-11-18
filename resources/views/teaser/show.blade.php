@@ -7,8 +7,9 @@
 
 <x-layouts.default
     title="Power up your debugging"
-    description="Send, format and, filter logs from local and remote projects. Ray brings all your debugging together in one neat desktop app."
+    description="Send, format and, filter all your debug output in Ray, now fully rebuilt for speed. Download the beta now."
     downloadTitle="Test the next version of Ray"
+    :image="asset('/images/ray-beta-og.jpg')"
     :downloadDisclaimer="$disclaimer"
     :showHeader="false"
     :showCta="false"

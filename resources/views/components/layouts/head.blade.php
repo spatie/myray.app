@@ -1,3 +1,5 @@
+@props(['title', 'description', 'color', 'image' => 'https://myray.app/images/social-card.png'])
+
 <meta charset="utf-8">
 <x-feed-links />
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -26,7 +28,7 @@
 <meta name="twitter:title" content="@yield('title')"/>
 <meta name="twitter:description"
       content="@yield('description')"/>
-<meta name="twitter:image" content="https://myray.app/images/social-card.png"/>
+<meta name="twitter:image" content="{{ $image }}"/>
 
 <meta property="og:site_name" content="Ray">
 <meta property="og:locale" content="en_US">
@@ -34,7 +36,7 @@
 <meta property="og:type" content="product"/>
 <meta property="og:title" content="{{ $title }}"/>
 <meta property="og:description" content="{{ $description }}"/>
-<meta property="og:image" content="https://myray.app/images/social-card.png"/>
+<meta property="og:image" content="{{ $image }}"/>
 
 <script src="https://cdn.usefathom.com/script.js" data-site="AUCCHTBP" defer></script>
 @vite(['resources/js/app.js'])

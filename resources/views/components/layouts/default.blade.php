@@ -1,10 +1,10 @@
-@props(['title', 'description', 'color', 'showHeader' => true, 'showCta' => true, 'showFooter' => true, 'downloadTitle' => null, 'downloadDisclaimer' => null])
+@props(['title', 'description', 'color', 'image' => null, 'showHeader' => true, 'showCta' => true, 'showFooter' => true, 'downloadTitle' => null, 'downloadDisclaimer' => null])
 
 <!DOCTYPE html>
 <html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
-    <x-layouts.head :title="$title" :description="$description ?? ''" :color="isset($color) ? $color : '#170636'" />
+    <x-layouts.head :title="$title" :description="$description ?? ''" :color="isset($color) ? $color : '#170636'" :image="$image" />
 </head>
 
 <body class="overflow-x-hidden">
