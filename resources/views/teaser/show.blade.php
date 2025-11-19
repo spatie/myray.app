@@ -75,7 +75,7 @@
                             href="https://myray.app/docs/php/wordpress/getting-started"><img
                                 class="w-16" src="/images/logos/logo_wordpress_white.svg" alt="WordPress"></a></li>
                     <li class="transition text-white text-opacity-50 hover:text-opacity-100"><a
-                            href="{{ route('docs.index') }}/getting-started/integrations">&mldr; and more</a></li>
+                            href="https://myray.app/docs/getting-started/introduction">&mldr; and more</a></li>
                 </ul>
             </div>
         </div>
