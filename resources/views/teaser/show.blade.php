@@ -18,7 +18,7 @@
 
     <header class="relative max-w-[64rem] mx-auto mt-8 mb-0 z-10 p-6 md:mt-16">
         <div class="flex flex-wrap gap-4 w-full justify-center items-center">
-            <img class="w-48 md:w-64" src="/images/ray3-logo.svg">
+            <img class="w-48 md:w-64" src="{{ url('/images/ray3-logo.svg') }}">
             <span class="badge-purple">Beta</span>
         </div>
     </header>
