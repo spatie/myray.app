@@ -88,6 +88,8 @@ echo "{{ $newReleaseName }}" > public/release-name.txt
 @task('runComposer', ['on' => 'remote'])
 {{ logMessage("🚚  Running Composer...") }}
 cd {{ $newReleaseDir }};
+php artisan clear-compiled
+composer dump-autoload
 composer install --prefer-dist --no-scripts --no-dev -q -o;
 @endtask
 
