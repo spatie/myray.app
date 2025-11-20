@@ -94,6 +94,9 @@ composer install --prefer-dist --no-scripts --no-dev -q -o;
 @task('runYarn', ['on' => 'remote'])
 {{ logMessage("📦  Running Yarn...") }}
 cd {{ $newReleaseDir }};
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use 17
 yarn config set ignore-engines true
 yarn --frozen-lockfile
 @endtask
