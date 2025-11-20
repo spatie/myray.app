@@ -11,6 +11,12 @@ $server = match($environment) {
     default => 'next.myray.app',
 };
 
+$app = match($environment) {
+'next' => 'next.myray.app',
+'production' => 'myray.app',
+default => 'next.myray.app',
+};
+
 $branch = match($environment) {
     'next' => 'redesign',
     'production' => 'main',
@@ -19,7 +25,7 @@ $branch = match($environment) {
 
 $userAndServer = 'forge@'. $server;
 $repository = "spatie/myray.app";
-$baseDir = "/home/forge/{$server}";
+$baseDir = "/home/forge/{$app}";
 $releasesDir = "{$baseDir}/releases";
 $persistentDir = "{$baseDir}/persistent";
 $currentDir = "{$baseDir}/current";
