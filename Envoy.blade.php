@@ -105,6 +105,7 @@ yarn --frozen-lockfile
 @task('generateAssets', ['on' => 'remote'])
 {{ logMessage("🌅  Generating assets...") }}
 cd {{ $newReleaseDir }};
+nvm use 24
 yarn run build
 @endtask
 
