@@ -6,7 +6,7 @@ $environment ??= 'staging';
 $branch ??= 'main';
 
 $server = match($environment) {
-    'next' => 'next.myray.app',
+    'next' => '138.68.99.55',
     'production' => 'myray.app',
     default => 'next.myray.app',
 };
