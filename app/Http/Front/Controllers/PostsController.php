@@ -42,7 +42,7 @@ class PostsController
             return FeedItem::create()
                 ->id($post->slug)
                 ->title($post->title)
-                ->summary($post->summary)
+                ->summary($post->content)
                 ->updated($post->updated_at)
                 ->link(action([self::class, 'detail'], $post->slug))
                 ->authorName($post->authors->first()?->name);
