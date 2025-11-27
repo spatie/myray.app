@@ -27,7 +27,7 @@
             transition-transform duration-300">{{ $price->formattedPrice() }}</span>
         @endif
     </a>
-    @if (\Illuminate\Support\Facades\Date::create(2024, 11, 29)->isPast() && \Illuminate\Support\Facades\Date::create(2024, 11, 30)->isFuture())
+    @if (\Illuminate\Support\Facades\Date::create(2024, 11, 29)->isPast() && \Illuminate\Support\Facades\Date::create(2025, 12, 02)->isFuture())
         <a href="{{spatieUrl('https://spatie.be/products/ray')}}">
             <button class="group mt-6
         py-6 px-6 w-full
@@ -46,7 +46,7 @@
         <div class="mt-3 mb-10 text-xs text-center text-indigo-900 text-opacity-50">
             Available for
             @php
-                $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2024-11-30 00:00' );
+                $expirationDate = \Carbon\Carbon::createFromFormat('Y-m-d H:i', '2025-12-01 23:59' );
             @endphp
             <x-countdown class="inline-block tabular-nums font-bold" :expires="$expirationDate">
                 <span x-text="timer.days">{{ $component->days() }}</span>d</span>
