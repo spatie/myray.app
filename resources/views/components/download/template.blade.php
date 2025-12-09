@@ -19,45 +19,45 @@
                     <div class="flex flex-wrap gap-4 mb-6">
 
                         <div
-                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
-                            <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkMac }}" download>
+                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px]">
+                            <div class="flex flex-col items-center rounded-xl bg-bleak-purple-dark">
                                 <div class="py-4">
                                     <img src="/images/logos/logo-apple.svg" alt="Apple">
+                                    <p class="text-bleak-purple-extra-light font-bold">macOS</p>
                                 </div>
-                                <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>macOS</p>
-                                    <p class="text-xs">Universal</p>
+                                <div class="px-4 py-4 border-t border-white border-opacity-10 w-full">
+                                    <div>
+                                        <a onclick="fathom.trackEvent('download-macos-arm64');" href="{{ $downloadLinkMacArm64 }}" download class="text-sm underline me-1">ARM</a>
+                                        <a onclick="fathom.trackEvent('download-macos-x64');" href="{{ $downloadLinkMacX64 }}" download class="text-sm underline">Intel</a>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div
-                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
-                            <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkWindows }}" download>
+                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px]">
+                            <div class="flex flex-col items-center rounded-xl bg-bleak-purple-dark">
                                 <div class="py-4">
                                     <img src="/images/logos/logo-windows.svg" alt="Windows">
+                                    <p class="text-bleak-purple-extra-light font-bold">Windows</p>
                                 </div>
-                                <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>Windows</p>
-                                    <p class="text-xs">x86 (Intel)</p>
+                                <div class="px-4 py-4 border-t border-white border-opacity-10 w-full">
+                                    <a onclick="fathom.trackEvent('download-windows');" href="{{ $downloadLinkWindows }}" download class="text-sm underline">x86 (Intel)</a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                         <div
-                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] hover:from-orange hover:to-bright-orange">
-                            <a class="flex flex-col items-center rounded-xl bg-bleak-purple-dark"
-                                href="{{ $downloadLinkLinux }}" download>
+                            class="flex-1 rounded-xl overflow-hidden bg-gradient-to-b from-neutrals-white-20 to-red p-[1px]">
+                            <div class="flex flex-col items-center rounded-xl bg-bleak-purple-dark">
                                 <div class="py-4">
                                     <img src="/images/logos/logo-linux.svg" alt="Linux">
+                                    <p class="text-bleak-purple-extra-light font-bold">Linux</p>
                                 </div>
-                                <div class="px-4 py-2 border-t border-white border-opacity-10 w-full">
-                                    <p>Linux</p>
-                                    <p class="text-xs">AppImage</p>
+                                <div class="px-4 py-4 border-t border-white border-opacity-10 w-full">
+                                    <a onclick="fathom.trackEvent('download-linux');" class="text-sm underline" href="{{ $downloadLinkLinux }}" download>AppImage</a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
 
                     </div>
