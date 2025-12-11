@@ -2,10 +2,30 @@
 require __DIR__.'/vendor/autoload.php';
 \Dotenv\Dotenv::create(\Illuminate\Support\Env::getRepository(), __DIR__)->load();
 
-$server = "myray.app";
+$environment ??= 'staging';
+$branch ??= 'main';
+
+$server = match($environment) {
+'next' => '138.68.99.55',
+'production' => '138.68.99.55',
+default => 'next.myray.app',
+};
+
+$app = match($environment) {
+'next' => 'next.myray.app',
+'production' => 'myray.app',
+default => 'next.myray.app',
+};
+
+$branch = match($environment) {
+'next' => 'redesign',
+'production' => 'main',
+default => 'redesign',
+};
+
 $userAndServer = 'forge@'. $server;
-$repository = "spatie/{$server}";
-$baseDir = "/home/forge/{$server}";
+$repository = "spatie/myray.app";
+$baseDir = "/home/forge/{$app}";
 $releasesDir = "{$baseDir}/releases";
 $persistentDir = "{$baseDir}/persistent";
 $currentDir = "{$baseDir}/current";
@@ -41,8 +61,8 @@ deployOnlyCode
 
 @task('startDeployment', ['on' => 'local'])
 {{ logMessage("🏃  Starting deployment...") }}
-git checkout main
-git pull origin main
+git checkout {{ $branch }}
+git pull origin {{ $branch }}
 @endtask
 
 @task('cloneRepository', ['on' => 'remote'])
@@ -56,7 +76,7 @@ cd {{ $releasesDir }};
 mkdir {{ $newReleaseDir }};
 
 # Clone the repo
-git clone --depth 1 git@github.com:{{ $repository }} {{ $newReleaseName }}
+git clone --depth 1 git@github.com:{{ $repository }} --branch {{ $branch }} {{ $newReleaseName }}
 
 # Configure sparse checkout
 cd {{ $newReleaseDir }}
@@ -74,7 +94,8 @@ echo "{{ $newReleaseName }}" > public/release-name.txt
 @task('runComposer', ['on' => 'remote'])
 {{ logMessage("🚚  Running Composer...") }}
 cd {{ $newReleaseDir }};
-composer install --prefer-dist --no-scripts --no-dev -q -o;
+composer dump-autoload
+composer install --prefer-dist --no-scripts;
 @endtask
 
 @task('runYarn', ['on' => 'remote'])
@@ -131,7 +152,7 @@ php artisan config:cache
 php artisan view:cache
 php artisan storage:link
 
-sudo service php8.3-fpm restart
+sudo service php8.4-fpm restart
 sudo supervisorctl restart all
 
 php artisan app:warm-cache
@@ -152,11 +173,11 @@ ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" rm -rf;
 @task('deployOnlyCode',['on' => 'remote'])
 {{ logMessage("💻  Deploying code changes...") }}
 cd {{ $currentDir }}
-git pull origin main
+git pull origin {{ $branch }}
 php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
 php artisan view:cache
-sudo service php8.3-fpm restart
+sudo service php8.4-fpm restart
 sudo supervisorctl restart all
 @endtask
