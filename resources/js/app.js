@@ -1,10 +1,10 @@
-import Clipboard from "@ryangjchandler/alpine-clipboard"
-import focus from '@alpinejs/focus'
-
-Alpine.plugin(Clipboard);
-Alpine.plugin(focus);
-
-Alpine.start();
+// import Clipboard from "@ryangjchandler/alpine-clipboard"
+// import focus from '@alpinejs/focus'
+//
+// Alpine.plugin(Clipboard);
+// Alpine.plugin(focus);
+//
+// Alpine.start();
 
 // PERMALINKS
 document.querySelectorAll('.heading-permalink').forEach((el) => {
