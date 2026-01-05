@@ -63,10 +63,23 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
+        "platform": {
+            "php": "8.4"
+        },
         "allow-plugins": {
             "composer/package-versions-deprecated": true,
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
+        },
+        "audit": {
+            "ignore": [
+                "PKSA-j9hz-k29x-6s58",
+                "PKSA-kq82-8x3t-s3fs",
+                "PKSA-8m7x-943y-brpz",
+                "PKSA-318x-z311-x7rh",
+                "PKSA-y3ty-b1bg-gxtm",
+                "PKSA-5jt2-w99c-cs4s"
+            ]
         }
     },
     "extra": {
