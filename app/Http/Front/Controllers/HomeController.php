@@ -2,6 +2,7 @@
 
 namespace App\Http\Front\Controllers;
 
+use App\Support\Feature;
 use App\Support\Testimonial;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -16,6 +17,7 @@ class HomeController
             'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/v3/download/windows/latest'),
             'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/v3/download/linux/latest'),
             'testimonials' => $this->getTestimonials(),
+            'features' => $this->getFeatures(),
         ]);
     }
 
@@ -243,6 +245,39 @@ class HomeController
                 title: 'Php & Laravel Developer',
             ),
 
+        ]);
+    }
+
+    protected function getFeatures(): Collection
+    {
+        return collect([
+            new Feature(
+                title: 'Remote debugging',
+                description: 'Debug code running on remote servers over SSH and stream all output directly to Ray.',
+                link: 'https://spatie.be/docs/ray/v1/usage/remote-debugging',
+            ),
+            new Feature(
+                title: 'Pause & measure execution',
+                description: 'Powerful tools to pause executing your PHP or Laravel code and to measure time between calls.',
+            ),
+            new Feature(
+                title: 'Debug with AI',
+                description: 'Give AI agents access to your debug messages through Rays integrated MCP server.',
+                isNew: true,
+            ),
+            new Feature(
+                title: 'Archive messages',
+                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
+                isNew: true,
+            ),
+            new Feature(
+                title: 'Jump to your IDE',
+                description: 'Jump straight to the relevant location in your editor from any dumped file, with support for many different IDEs.',
+            ),
+            new Feature(
+                title: 'Proudly multiplatform',
+                description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
+            ),
         ]);
     }
 }

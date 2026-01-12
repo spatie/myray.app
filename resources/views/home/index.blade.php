@@ -136,23 +136,42 @@
         </div>
 
         <div class="grid gap-12 mx-auto mb-8 lg:mb-12 lg:grid-cols-3">
-            @for ($i = 0; $i < 6; $i++)
-                <a href="" class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white transition hover:bg-bleak-purple-dark">
-                    <div class="p-8 py-12 space-y-2 md:text-center">
-                        <h3 class="font-display font-bold text-xl md:text-2xl">Remote debugging</h3>
-                        <p class="text-xl text-white text-opacity-50">Debug code running on remote servers over SSH and stream all output directly to Ray.</p>
+            @foreach ($features as $feature)
+                @if ($feature->link)
+                    <a href="{{ $feature->link }}" class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white transition hover:bg-bleak-purple-dark relative">
+                        @if ($feature->isNew)
+                            <div class="absolute top-0 left-0 m-4">
+                                <span class="bg-gradient-to-r from-bright-purple to-bright-purple-lighter text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
+                            </div>
+                        @endif
+                        <div class="p-8 py-12 space-y-2 md:text-center">
+                            <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
+                            <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
+                        </div>
+                        <div class="absolute top-0 right-0 p-4">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <path d="M11.25 2.25H15.75V6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.5 10.5L15.75 2.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 9.75V14.25C13.5 14.6478 13.342 15.0294 13.0607 15.3107C12.7794 15.592 12.3978 15.75 12 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V6C2.25 5.60218 2.40804 5.22064 2.68934 4.93934C2.97064 4.65804 3.35218 4.5 3.75 4.5H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+                @else
+                    <div class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white relative">
+                        @if ($feature->isNew)
+                            <div class="absolute top-0 left-0 m-4">
+                                <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
+                            </div>
+                        @endif
+                        <div class="p-8 py-12 space-y-2 md:text-center">
+                            <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
+                            <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
+                        </div>
                     </div>
-                    <div class="absolute top-0 right-0 p-4">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.5">
-                            <path d="M11.25 2.25H15.75V6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.5 10.5L15.75 2.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13.5 9.75V14.25C13.5 14.6478 13.342 15.0294 13.0607 15.3107C12.7794 15.592 12.3978 15.75 12 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V6C2.25 5.60218 2.40804 5.22064 2.68934 4.93934C2.97064 4.65804 3.35218 4.5 3.75 4.5H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                        </svg>
-                    </div>
-                </a>
-            @endfor
+                @endif
+            @endforeach
         </div>
 
         <div class="flex justify-center">
