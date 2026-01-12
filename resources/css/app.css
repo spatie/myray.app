@@ -9,5 +9,9 @@
 @import "./utilities/highlight.css";
 
 [x-cloak] {
-  display: none !important;
+    display: none !important;
+}
+
+.orange-text-glow {
+    text-shadow: 0px 0px 12px #FF6C009C;
 }

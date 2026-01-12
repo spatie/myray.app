@@ -33,11 +33,12 @@
         </div>
 
         <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
-            <x-cta.large />
-            <x-nav.footer />
+            <x-cta.large description="Ray makes you a better debugger, no matter your skill. Long-time dumpers and first-time dd() users are welcome here." />
+            {{-- <x-nav.footer /> --}}
         </div>
 
-        <x-download.template />
+        <x-download-modal />
+
     </main>
 
     @livewire('doc-search')

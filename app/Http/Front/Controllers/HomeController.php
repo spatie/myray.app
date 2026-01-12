@@ -6,24 +6,15 @@ use App\Support\Testimonial;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Spatie\PriceApi\SpatiePriceApi;
 
 class HomeController
 {
     public function __invoke(Request $request): View
     {
-        $purchasableId = config('services.spatie_prices_api.purchasable_id');
-
-        $prices = SpatiePriceApi::getPriceForPurchasable($purchasableId);
-
         return view('home.index', [
             'downloadLinkMac' => spatieUrl('https://spatie.be/products/ray/v3/download/macos/latest'),
             'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/v3/download/windows/latest'),
             'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/v3/download/linux/latest'),
-            'couldFetchPrice' => $prices['couldFetchPrice'],
-            'price' => $prices['actual'],
-            'priceWithoutDiscount' => $prices['withoutDiscount'],
-            'discount' => $prices['discount'],
             'testimonials' => $this->getTestimonials(),
         ]);
     }

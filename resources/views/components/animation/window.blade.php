@@ -89,7 +89,7 @@
 
             <div class="leading-[1.4]">
                 <div class="mb-2">
-                    <p>Send about anything to Ray</p>
+                    <p>Send anything to Ray, from PHP and Laravel to JavaScript and more.</p>
                 </div>
                 <div class="flex text-bleak-purple-extra-light text-sm gap-2">
                     <div>

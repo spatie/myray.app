@@ -9,6 +9,18 @@
 
 <body class="overflow-x-hidden">
 
+    @if ($lifetimeOfferActive)
+        <a href="{{ spatieUrl('https://spatie.be/products/ray') }}"
+           class="relative block text-lg py-2 bg-gradient-to-r from-bright-purple-light to-bright-purple text-center z-10 border-b border-white border-opacity-25 overflow-hidden group"
+           target="_blank">
+            <span class="absolute inset-0 bg-gradient-to-r from-bright-purple to-bright-purple-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span class="relative font-bold group-hover:underline">
+                ⚡️ Lifetime Ray licenses available for
+                <x-countdown.timer :expires-at="$lifetimeOfferExpiration" />
+            </span>
+        </a>
+    @endif
+
     @if (isset($background))
         <div class="absolute w-full pointer-events-none">
             {{ $background }}
@@ -32,13 +44,13 @@
             </div>
         @endif
 
-        <x-download :title="$downloadTitle">
+        <x-download-modal :title="$downloadTitle">
             @if ($downloadDisclaimer)
             <x-slot name="disclaimer">
                 {!! $downloadDisclaimer !!}
             </x-slot>
             @endif
-        </x-download>
+        </x-download-modal>
 
     </main>
 

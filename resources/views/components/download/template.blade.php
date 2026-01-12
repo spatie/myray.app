@@ -78,7 +78,7 @@
                             {!! $disclaimer !!}
                         @else
                             <p>By downloading Ray, you agree to our <a href="{{ route('legal.terms') }}" class="underline text-white text-opacity-75 hover:text-opacity-100">terms of use</a>.</p>
-                            <p>The free trial lets you send up to 10 messages per session.</p>
+                            <p>The free trial lets you send up to 20 messages per session.</p>
                         @endif
                     </div>
 

@@ -9,23 +9,13 @@
         </div>
 
         <div class="lg:shrink-0 space-y-8 lg:max-w-[32rem]">
-            <h2 class="font-display font-black text-4xl tracking-tight mb-[0.5em] md:text-6xl">
-                <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">Power
-                    up</span> your debugging
+            <h2 class="font-display font-black text-5xl tracking-tight mb-[0.4em] md:text-6xl">
+                A new home for
+                <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
             </h2>
             <p class="text-2xl opacity-80 leading-tight mb-8">{{ $description }}</p>
-            <div class="flex flex-wrap gap-4 items-center">
-                <div class="shadow-small-drop">
-                    <x-download.button :button="$downloadBtn" />
-                </div>
-                @if ($showBuyBtn)
-                    <div class="shadow-small-drop">
-                        <a class="btn-bleak-trans inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white"
-                            href="{{ spatieUrl('https://spatie.be/products/ray') }}">Buy now for &euro;49</a>
-                    </div>
-                @endif
-                <p class="text-bleak-purple-extra-light">You need an <a class="text-white underline hover:no-underline" href="{{ spatieUrl('https://spatie.be/products/ray') }}" target="_blank">existing Ray license</a> <br /> to use the beta version.</p>
-            </div>
+
+            <x-download.cta :show-byline="true" />
         </div>
 
         <div class="shrink-0 lg:w-[45rem] shadow-large-drop rounded-3xl overflow-hidden">
