@@ -1,12 +1,26 @@
 @props(['title' => 'Thanks for trying out Ray!', 'disclaimer' => null])
 
-<template x-if="download">
-    <div class="fixed inset-0 p-8 lg:p-16 z-30 fix-z flex items-center justify-center"
-        @keydown.window.escape="download = false">
-        <div class="absolute inset-0 bg-midnight-dark bg-opacity-95"></div>
-        <button class="absolute top-0 right-0 m-6 leading-none text-white text-3xl w-[1em]">&times;</button>
+<div x-show="download"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 p-8 lg:p-16 z-30 fix-z flex items-center justify-center"
+    @keydown.window.escape="download = false"
+    style="display: none;">
+    <div class="absolute inset-0 bg-midnight-dark bg-opacity-95"></div>
+    <button class="absolute top-0 right-0 m-6 leading-none text-white text-3xl w-[1em]" @click="download = false">&times;</button>
 
-        <div class="max-w-[40rem] shadow-large-drop rounded-2xl" @mousedown.away="download = false">
+    <div class="max-w-[40rem] shadow-large-drop rounded-2xl"
+        @mousedown.away="download = false"
+        x-transition:enter="transition ease-out duration-300 delay-75"
+        x-transition:enter-start="opacity-0 transform translate-y-4"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform translate-y-4">
             <div class="bg-gradient-to-b from-midnight to-bright-purple shadow-top-white rounded-2xl overflow-hidden">
 
                 <div class="py-12 px-6 md:py-12 md:px-16 text-center border-b border-white border-opacity-0">
@@ -131,5 +145,4 @@
             }, 1000);
         </script>
         --}}
-    </div>
-</template>
+</div>
