@@ -5,26 +5,25 @@
 
 <x-layouts.default
     title="A new home for your debug output"
-    description="Inspect, filter, and interact with debug output sent from PHP, Laravel, JavaScript, and more in a dedicated desktop app.">
+    description="Ray lets you send, inspect, interact with, and filter debug output in a dedicated desktop app.">
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
-        <div class="absolute w-full translate-y-[-35%] pointer-events-none md:p-8">
+        <div class="absolute w-full translate-y-[-32%] pointer-events-none hidden md:block md:p-8">
             <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
-            <img class="opacity-75 mx-auto md:hidden" src="/images/24-background-1-m.svg" alt="">
         </div>
 
         <div class="container mx-auto p-6 pb-12 lg:px-4 lg:pb-24">
 
-            <div class="max-w-[54rem] mx-auto mb-12 md:text-balance md:text-center md:mb-24">
+            <div class="max-w-[54rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
 
                 <a class="btn-bright-purple-v inline-flex px-5 py-3 leading-none rounded-full font-bold shadow-top-white mb-4" href="http://">See what's new in Ray 3.0</a>
 
-                <h1 class="font-display font-black text-5xl tracking-tight mb-[0.4em] md:text-8xl">A new home for
+                <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">A new home for
                     <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
                 </h1>
-                <p class="text-xl mb-12 lg:text-3xl">
-                    <span>Ray lets you inspect, interact with, and filter debug output in a dedicated desktop app.</span>
+                <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
+                    <span>Send all your dumps to Ray and inspect, filter, and manage them in one desktop app.</span>
                 </p>
 
                 <x-download.cta :show-byline="true" :center-buttons="true" />
@@ -33,9 +32,9 @@
 
             <x-animation />
 
-            <div class="flex flex-col gap-6 md:items-center ">
+            <div class="flex flex-col gap-6 items-center">
                 <p class="text-2xl text-center font-bold">Debug using the same syntax <span class="md:block">across languages and frameworks</span></p>
-                <ul class="flex flex-wrap gap-4 items-center md:gap-8">
+                <ul class="flex flex-wrap gap-4 items-center justify-center md:gap-8">
                     <li><a class="block transition hover:opacity-50"
                             href="{{ route('docs.index') }}/php/laravel/installation">
                             <img class="w-16" src="/images/logos/logo_laravel_white.svg" alt="Laravel"></a></li>
@@ -61,8 +60,30 @@
 
     </div>
 
+    <div class="hidden lg:block absolute w-full pointer-events-none overflow-hidden -translate-y-1/2" style="height: 451px;">
+        <svg class="mx-auto" width="1280" height="451" viewBox="0 0 1280 451" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M264.984 268.866L364.266 446.359L231.294 324.856L264.984 268.866Z" stroke="url(#paint0_linear_2125_4467)" stroke-width="1.57538" stroke-miterlimit="10"/>
+            <path d="M1086.54 2.04748L1211.89 292.34L1178.85 45.9237L1086.54 2.04748Z" stroke="url(#paint1_linear_2125_4467)" stroke-width="1.57538" stroke-miterlimit="10"/>
+            <path d="M7.80521 58.0042L256.392 162.444L10.3416 158.221L7.80521 58.0042Z" stroke="url(#paint2_linear_2125_4467)" stroke-width="1.57538" stroke-miterlimit="10"/>
+            <defs>
+                <linearGradient id="paint0_linear_2125_4467" x1="384.52" y1="405.087" x2="229.303" y2="328.915" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#34245C"/>
+                    <stop offset="1" stop-color="#8E80B1"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_2125_4467" x1="1183.27" y1="48.0255" x2="1093.82" y2="236.219" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#34245C"/>
+                    <stop offset="1" stop-color="#8E80B1"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_2125_4467" x1="249.177" y1="93.3117" x2="6.21371" y2="118.669" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#34245C"/>
+                    <stop offset="1" stop-color="#8E80B1"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
     <div class="border-b border-white border-opacity-10">
-        <div class="container mx-auto p-6 md:py-24 lg:px-16">
+        <div class="container mx-auto py-12 px-6 md:py-24 lg:px-16">
 
             <x-intro.default
                 title="The better way to dump()"
@@ -71,7 +92,7 @@
 
             <div class="flex flex-col md:flex-row gap-8 md:gap-16" x-data="{ activeTab: 0 }">
 
-                <ul class="max-w-[400px] text-lg order-2 md:order-1">
+                <ul class="text-lg order-2 md:order-1 md:max-w-[400px]">
                     <li :class="activeTab === 0 ? 'shadow-large-drop' : 'opacity-50'" class="transition hover:opacity-100 rounded-2xl">
                         <button @click="activeTab = 0" class="relative p-8 space-y-2 rounded-2xl text-left overflow-hidden w-full">
                             <div class="absolute inset-0 bg-gradient-to-r from-orange to-bright-orange rounded-2xl transition-opacity duration-500 ease-in-out"
@@ -129,24 +150,23 @@
         </div>
     </div>
 
-    <div class="container mx-auto p-6 md:py-24 lg:px-16">
+    <div class="container mx-auto py-12 px-6 md:py-24 lg:px-16">
 
-        <div class="max-w-prose mx-auto mb-8 md:mb-16 md:text-center">
-            <h2 class="font-display font-bold text-4xl">Some cool things Ray can do</h2>
+        <div class="max-w-prose mx-auto mb-8 md:mb-16 text-center">
+            <h2 class="font-display font-bold text-4xl/[1.15] text-balance">Some cool things Ray can do</h2>
         </div>
 
         <div class="grid gap-12 mx-auto mb-8 lg:mb-12 lg:grid-cols-3">
             @foreach ($features as $feature)
                 @if ($feature->link)
                     <a href="{{ $feature->link }}" class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white transition hover:bg-bleak-purple-dark relative">
-                        @if ($feature->isNew)
-                            <div class="absolute top-0 left-0 m-4">
-                                <span class="bg-gradient-to-r from-bright-purple to-bright-purple-lighter text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
-                            </div>
-                        @endif
                         <div class="p-8 py-12 space-y-2 md:text-center">
                             <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
                             <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
+                            @if ($feature->isNew)
+                                <div class="top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
+                                    <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>                                </div>
+                            @endif
                         </div>
                         <div class="absolute top-0 right-0 p-4">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,14 +180,14 @@
                     </a>
                 @else
                     <div class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white relative">
-                        @if ($feature->isNew)
-                            <div class="absolute top-0 left-0 m-4">
-                                <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
-                            </div>
-                        @endif
                         <div class="p-8 py-12 space-y-2 md:text-center">
                             <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
-                            <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
+                            <p class="text-xl text-white text-opacity-60">{{ $feature->description }}</p>
+                            @if ($feature->isNew)
+                                <div class="top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
+                                    <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 @endif
@@ -199,9 +219,9 @@
                     <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text pb-1 md:block">dump debugger</span>
                 </h2>
                 <div class="text-lg leading-snug mb-8 space-y-3">
-                    <p>Every developer should feel comfortable using the tools they want. Countless tools promise to make you work faster and better. Most of them don’t.</p>
-                    <p>If you’re used to step debuggers like Xdebug, dump debugging might feel slow or awkward. That’s fine. Different workflows for different people.</p>
-                    <p>Ray takes the instant feedback and zero setup of writing <code class="text-[0.85em] text-bleak-purple-extra-light">console.log()</code> and <code class="text-[0.85em] text-bleak-purple-extra-light">dd()</code>, and adds powerful methods that work across the languages you use every day, plus a community that keeps extending it.</p>
+                    <p>Dump debugging has always been a valid way to debug and figure out your code. It’s fast, obvious, and requires no setup. For many developers, that simplicity is hard to beat.</p>
+                    <p>Ray takes the instant feedback and zero setup of writing <code class="text-[0.9em] text-[#c1a8ff]">console.log()</code> and <code class="text-[0.9em] text-[#c1a8ff]">dd()</code>, and adds powerful methods that work across the languages you use every day, plus a community that keeps extending it.</p>
+                    <p>And if you’re used to step debuggers like Xdebug, dump debugging might feel slow or awkward. That’s fine. Different workflows for different people.</p>
                     <p>Ray won’t magically make you a better developer. It just makes dump debugging a far more enjoyable experience.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">
@@ -219,8 +239,7 @@
 
     <div class="mx-auto p-6 md:py-24 md:pb-0 lg:px-6">
 
-        <x-intro.default title="Love from the community"
-            text="Sed pretium, lacus nec accumsan commodo, diam tortor auctor ex, eu consectetur risus urna a ante." />
+        <x-intro.default title="Love from our users" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" x-data="{ testimonialsOpen: false }">

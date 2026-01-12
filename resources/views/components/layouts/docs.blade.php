@@ -7,7 +7,7 @@
     <x-layouts.head :title="$title" :description="$description" :color="'#36107A'" />
 </head>
 
-<body class="antialiased overflow-x-hidden" x-data="{ showSearchBox: false }" @keydown.cmd.k.window.prevent="showSearchBox = true">
+<body class="overflow-x-hidden bottom-gradient" x-data="{ showSearchBox: false }" @keydown.cmd.k.window.prevent="showSearchBox = true">
 
     <div class="absolute w-full pointer-events-none">
         <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
@@ -33,7 +33,7 @@
         </div>
 
         <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
-            <x-cta.large description="Ray makes you a better debugger, no matter your skill. Long-time dumpers and first-time dd() users are welcome here." />
+            <x-cta.large />
             {{-- <x-nav.footer /> --}}
         </div>
 

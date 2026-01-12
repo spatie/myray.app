@@ -262,7 +262,7 @@ class HomeController
             ),
             new Feature(
                 title: 'Debug with AI',
-                description: 'Give AI agents access to your debug messages through Rays integrated MCP server.',
+                description: 'Give your AI agents access to all your debug messages in Ray through the integrated MCP server.',
                 isNew: true,
             ),
             new Feature(

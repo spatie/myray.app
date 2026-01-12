@@ -1,4 +1,4 @@
-@props(['description' => null, 'downloadBtn' => null, 'showBuyBtn' => true])
+@props(['description' => 'Send all your dumps to Ray and inspect, filter, and manage them in one desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
 
 <div class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
     <div
@@ -13,7 +13,7 @@
                 A new home for
                 <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
             </h2>
-            <p class="text-2xl opacity-80 leading-tight mb-8">{{ $description }}</p>
+            <p class="text-2xl leading-tight mb-8">{{ $description }}</p>
 
             <x-download.cta :show-byline="true" />
         </div>

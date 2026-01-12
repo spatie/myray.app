@@ -7,12 +7,6 @@
 
             <div class="flex">
 
-                <div class="hidden items-center gap-2 mr-8 lg:flex">
-                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
-                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
-                    <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
-                </div>
-
                 <img class="h-[1.875rem]" src="/images/app/icon_pause.svg" alt="">
                 <img class="h-[1.875rem]" src="/images/app/icon_search.svg" alt="">
 

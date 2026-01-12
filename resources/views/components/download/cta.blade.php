@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-6">
     <div class="space-y-4">
-        <div class="flex flex-wrap gap-4 items-start {{ $centerButtons ? 'justify-start md:justify-center' : 'justify-start' }}">
+        <div class="flex flex-wrap gap-4 items-start {{ $centerButtons ? 'justify-center' : 'justify-start' }}">
             <div class="shadow-small-drop">
                 <x-download.button />
             </div>
