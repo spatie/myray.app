@@ -1,4 +1,4 @@
-@props(['description' => 'Send all your dumps to Ray and inspect, filter, and manage them in one desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
+@props(['description' => 'Send your dumps to Ray and work with them in a dedicated desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
 
 <div class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
     <div

@@ -261,6 +261,10 @@ class HomeController
                 description: 'Powerful tools to pause executing your PHP or Laravel code and to measure time between calls.',
             ),
             new Feature(
+                title: 'No dumping required',
+                description: 'Receive output automatically (like queries, jobs, exceptions, and more) without having to add calls in your code.',
+            ),
+            new Feature(
                 title: 'Debug with AI',
                 description: 'Give your AI agents access to all your debug messages in Ray through the integrated MCP server.',
                 isNew: true,
@@ -274,10 +278,10 @@ class HomeController
                 title: 'Jump to your IDE',
                 description: 'Jump straight to the relevant location in your editor from any dumped file, with support for many different IDEs.',
             ),
-            new Feature(
-                title: 'Proudly multiplatform',
-                description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
-            ),
+            // new Feature(
+            //     title: 'Proudly multiplatform',
+            //     description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
+            // ),
         ]);
     }
 }

@@ -5,7 +5,7 @@
 
 <x-layouts.default
     title="A new home for your debug output"
-    description="Ray lets you send, inspect, interact with, and filter debug output in a dedicated desktop app.">
+    description="Send your dumps to Ray and work with them in a dedicated desktop app.">
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
@@ -23,7 +23,7 @@
                     <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
                 </h1>
                 <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
-                    <span>Send all your dumps to Ray and inspect, filter, and manage them in one desktop app.</span>
+                    <span>Send your dumps to Ray and work with them in a dedicated desktop app.</span>
                 </p>
 
                 <x-download.cta :show-byline="true" :center-buttons="true" />
@@ -99,7 +99,7 @@
                                  :class="activeTab === 0 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
                                 <h3 class="font-display font-bold text-2xl">Beyond strings and arrays</h3>
-                                <p :class="activeTab === 0 && 'font-bold'">Ray formats everything you send it, with specific views and methods for Laravel, PHP, JavaScript, and others. Try dumping queries, emails, events, or stack traces!</p>
+                                <p :class="activeTab === 0 && 'font-bold'">Ray beautifully renders anything you send it, and supports Laravel, PHP, JavaScript and more. Try dumping queries, emails, events or stack traces!</p>
                             </div>
                         </button>
                     </li>
@@ -215,14 +215,14 @@
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
             </div>
             <div class="p-8 lg:p-12">
-                <h2 class="font-display font-black text-3xl leading-[1] mb-[0.5em] text-balance md:text-5xl">In defence of the
-                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text pb-1 md:block">dump debugger</span>
+                <h2 class="font-display font-black text-3xl leading-[1] mb-[0.5em] text-balance md:text-5xl">A love letter to
+                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text pb-1 md:block">dump debugging</span>
                 </h2>
                 <div class="text-lg leading-snug mb-8 space-y-3">
                     <p>Dump debugging has always been a valid way to debug and figure out your code. It’s fast, obvious, and requires no setup. For many developers, that simplicity is hard to beat.</p>
-                    <p>Ray takes the instant feedback and zero setup of writing <code class="text-[0.9em] text-[#c1a8ff]">console.log()</code> and <code class="text-[0.9em] text-[#c1a8ff]">dd()</code>, and adds powerful methods that work across the languages you use every day, plus a community that keeps extending it.</p>
-                    <p>And if you’re used to step debuggers like Xdebug, dump debugging might feel slow or awkward. That’s fine. Different workflows for different people.</p>
-                    <p>Ray won’t magically make you a better developer. It just makes dump debugging a far more enjoyable experience.</p>
+                    <p>Ray keeps the instant feedback of writing <code class="text-[0.9em] text-[#c1a8ff]">console.log()</code> and <code class="text-[0.9em] text-[#c1a8ff]">dd()</code>, but moves your output out of the browser and into a dedicated app. We added lots of useful methods for different languages and frameworks, which all use the same syntax.</p>
+                    <p>Ray is simple to extend and customise to suit your workflow, and has inspired our community to build support for many languages and frameworks.</p>
+                    <p>We love using Ray and so will you.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">
                     <img class="rounded-full w-16"
@@ -239,7 +239,7 @@
 
     <div class="mx-auto p-6 md:py-24 md:pb-0 lg:px-6">
 
-        <x-intro.default title="Love from our users" />
+        <x-intro.default title="Nice words from our users" />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" x-data="{ testimonialsOpen: false }">
