@@ -109,7 +109,7 @@
                                  :class="activeTab === 1 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
                                 <h3 class="font-display font-bold text-2xl">Find and filter messages</h3>
-                                <p :class="activeTab === 1 && 'font-bold'">Ray automatically labels your messages where useful, and lets you filter by type, origin, or custom label to instantly search through all your messages.</p>
+                                <p :class="activeTab === 1 && 'font-bold'">Filter messages by type, origin, or custom labels to narrow results, and use search to instantly find anything across all your messages.</p>
                             </div>
                         </button>
                     </li>
