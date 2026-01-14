@@ -13,9 +13,18 @@ class PostsController
 {
     public function index(): View
     {
-        $posts = ContentApi::getPosts('ray', request('page', 1), theme: 'nord');
+        $posts = ContentApi::getPosts('ray', request('page', 1), 8, theme: 'nord');
 
         return view('blog.index', [
+            'posts' => $posts,
+        ]);
+    }
+
+    public function loadMore(): View
+    {
+        $posts = ContentApi::getPosts('ray', request('page', 1), 8, theme: 'nord');
+
+        return view('blog.partials.posts', [
             'posts' => $posts,
         ]);
     }

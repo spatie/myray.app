@@ -22,6 +22,7 @@ Route::feeds();
 
 Route::prefix('blog')->name('blog.')->group(function () {
     Route::get('/', [PostsController::class, 'index'])->name('index');
+    Route::get('/load-more', [PostsController::class, 'loadMore'])->name('load-more');
     Route::get('/{slug}', [PostsController::class, 'detail'])->name('show');
 });
 
