@@ -213,6 +213,7 @@
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
+                <span class="absolute left-0 w-full text-center text-sm text-white text-opacity-50 font-bold">LoveLetter.md</span>
             </div>
             <div class="p-8 lg:p-12">
                 <h2 class="font-display font-black text-3xl leading-[1] mb-[0.5em] text-balance md:text-5xl">A love letter to
@@ -222,7 +223,7 @@
                     <p>Dump debugging has always been a valid way to debug and figure out your code. It’s fast, obvious, and requires no setup. For many developers, that simplicity is hard to beat.</p>
                     <p>Ray keeps the instant feedback of writing <code class="text-[0.9em] text-[#c1a8ff]">console.log()</code> and <code class="text-[0.9em] text-[#c1a8ff]">dd()</code>, but moves your output out of the browser and into a dedicated app. We added lots of useful methods for different languages and frameworks, which all use the same syntax.</p>
                     <p>Ray is simple to extend and customise to suit your workflow, and has inspired our community to build support for many languages and frameworks.</p>
-                    <p>We love using Ray and so will you.</p>
+                    <p>We love using Ray and we hope you will too.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">
                     <img class="rounded-full w-16"
