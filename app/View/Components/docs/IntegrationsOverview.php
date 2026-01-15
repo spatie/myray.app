@@ -17,13 +17,33 @@ class IntegrationsOverview extends Component
      */
     public function render(): View|Closure|string
     {
-        $docs = app('sheets')->collection('docs')->all()->sortBy('weight')->filter(function ($doc) {
-            return
-                count($doc->parts) === 3 &&
-                ($doc->parts[0] === 'php' || $doc->parts[0] === 'javascript' || $doc->parts[0] === 'other-languages') &&
-                $doc->parts[count($doc->parts) -1] === '_index.md';
-        });
+        $allDocs = app('sheets')->collection('docs')->all()->sortBy('weight');
 
-        return view('components.docs.integrations-overview', compact('docs'));
+        $categories = ['php', 'javascript', 'other-languages'];
+        $grouped = [];
+
+        foreach ($categories as $category) {
+            $categoryDoc = $allDocs->first(fn($doc) =>
+                $doc->parts[0] === $category &&
+                count($doc->parts) === 2 &&
+                $doc->parts[1] === '_index.md'
+            );
+
+            $integrations = $allDocs->filter(fn($doc) =>
+                count($doc->parts) === 3 &&
+                $doc->parts[0] === $category &&
+                $doc->parts[2] === '_index.md'
+            )->sortBy([
+                fn($doc) => $doc->thirdParty ?? false ? 1 : 0,
+                ['weight', 'asc'],
+            ]);
+
+            $grouped[] = [
+                'title' => $categoryDoc?->title ?? ucfirst($category),
+                'docs' => $integrations,
+            ];
+        }
+
+        return view('components.docs.integrations-overview', compact('grouped'));
     }
 }

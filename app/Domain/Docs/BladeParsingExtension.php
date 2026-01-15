@@ -22,6 +22,7 @@ class BladeParsingExtension implements ExtensionInterface
 
     protected array $components = [
         '<x-docs.integrations-overview />',
+        '<x-docs.integrations-featured />',
     ];
 
     public function register(EnvironmentBuilderInterface $environment): void

@@ -23,6 +23,8 @@ class Category
 
     public ?Category $parent = null;
 
+    public bool $thirdParty = false;
+
     public function __construct() 
     {
         $this->categories = new Collection();

@@ -1,4 +1,4 @@
-<x-layouts.default title="Ray Blog" description="Read about new features, upcoming updates, and useful tips for using Ray." :color="'#36107A'">
+<x-layouts.default title="Blog" description="Read about new features, upcoming updates, and useful tips for using Ray." :color="'#36107A'">
 
     <x-slot name="background">
         <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">

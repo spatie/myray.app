@@ -66,6 +66,7 @@ class DocTree
             $category->weight = $doc->weight;
             $category->title = $doc->menuTitle ?? $doc->title;
             $category->slug = str_replace('/_index', '', $doc->slug);
+            $category->thirdParty = $doc->thirdParty ?? false;
             $this->flatCategories->put($category->slug, $category);
             return;
         }
