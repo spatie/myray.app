@@ -3,7 +3,9 @@ title: Using Ray With Yii
 weight: 1
 ---
 
-If you use Yii2, this is the way.
+You can use Ray with Yii via this third party package:
+
+[spatie/yii-ray](https://github.com/spatie/yii-ray)
 
 ## Installing the package
 

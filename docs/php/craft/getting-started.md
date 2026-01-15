@@ -3,7 +3,9 @@ title: Using Ray With Craft CMS
 weight: 1
 ---
 
-If you use Craft CMS, this is the way.
+You can use Ray with Craft CMS via this third party package:
+
+[spatie/craft-ray](https://github.com/spatie/craft-ray)
 
 ## Installing the package
 
@@ -30,3 +32,4 @@ craft plugin/install craft-ray
 ## Usage
 
 Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
+

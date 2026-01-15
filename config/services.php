@@ -53,8 +53,4 @@ return [
         'redirect' => env('GITHUB_REDIRECT_URI'),
     ],
 
-    'mailcoach' => [
-        'subscription_uuid' => env('MAILCOACH_SUBSCRIPTION_UUID'),
-    ],
-
 ];

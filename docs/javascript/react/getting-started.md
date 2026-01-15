@@ -9,3 +9,5 @@ The third-party React package for Ray, `react-ray`, uses the [package for Node.j
 
 - `useRay` - send data to the Ray app whenever it updates.
 - `useRayWithElement` - send the contents of an element ref to the Ray app, optionally updating the item in place when its dependencies change.
+
+Repository: [permafrost-dev/react-ray](https://github.com/permafrost-dev/react-ray)

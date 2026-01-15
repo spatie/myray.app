@@ -3,6 +3,10 @@ title: Using Ray With Go
 weight: 1
 ---
 
+You can use Ray with Go via this third party package:
+
+[octoper/go-ray](https://github.com/octoper/go-ray)
+
 When using Go Modules, you do not need to install anything to start using Ray with your Go program. Import the module
 and the go will automatically download the latest version of the module when you next build your program.
 
