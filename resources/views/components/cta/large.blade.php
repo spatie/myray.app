@@ -1,4 +1,4 @@
-@props(['description' => 'Send your dumps to Ray and work with them in a dedicated desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
+@props(['description' => 'Ray keeps all your debug output neatly organized in a dedicated desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
 
 <div class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
     <div
@@ -10,8 +10,8 @@
 
         <div class="lg:shrink-0 space-y-8 lg:max-w-[32rem]">
             <h2 class="font-display font-black text-5xl tracking-tight mb-[0.4em] md:text-6xl">
-                A new home for
-                <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
+                Debug without breaking
+                <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your flow</span>
             </h2>
             <p class="text-2xl leading-tight mb-8">{{ $description }}</p>
 

@@ -15,15 +15,16 @@
 
         <div class="container mx-auto p-6 pb-12 lg:px-4 lg:pb-24">
 
-            <div class="max-w-[54rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
+            <div class="max-w-[80rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
 
                 <a class="btn-bright-purple-v inline-flex px-5 py-3 leading-none rounded-full font-bold shadow-top-white mb-4" href="http://">See what's new in Ray 3.0</a>
 
-                <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">A new home for
-                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your debug output</span>
+                <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">Debug without breaking
+                    <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your flow</span>
                 </h1>
+
                 <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
-                    <span>Send your dumps to Ray and work with them in a dedicated desktop app.</span>
+                    <span>Ray keeps all your debug output neatly organized <br /> in a dedicated desktop app.</span>
                 </p>
 
                 <x-download.cta :show-byline="true" :center-buttons="true" />
@@ -87,7 +88,7 @@
 
             <x-intro.default
                 title="The better way to dump()"
-                text="Debug without breaking your flow or your app"
+                text="Because debug output doesn’t belong in your app"
             />
 
             <div class="flex flex-col md:flex-row gap-8 md:gap-16" x-data="{ activeTab: 0 }">
