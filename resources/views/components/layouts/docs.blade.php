@@ -34,7 +34,7 @@
 
         <div class="container mx-auto p-2 pb-12 lg:py-24 lg:px-16">
             <x-cta.large />
-            {{-- <x-nav.footer /> --}}
+            <x-nav.footer />
         </div>
 
         <x-download-modal />
