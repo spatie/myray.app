@@ -120,7 +120,7 @@
                                  :class="activeTab === 2 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
                                 <h3 class="font-display font-bold text-2xl">Extend and customize</h3>
-                                <p :class="activeTab === 2 && 'font-bold'">Customize how messages are displayed, extend Ray using macros, or build your own client to send data from languages or frameworks Ray doesn't support yet.</p>
+                                <p :class="activeTab === 2 && 'font-bold'">Change the theme to fit your style, extend Ray with macros, or create your own client to send data from languages or frameworks Ray doesn’t yet support.</p>
                             </div>
                         </button>
                     </li>
@@ -132,13 +132,13 @@
                             <div class="flex flex-col transition-transform duration-700 ease-in-out h-full"
                                  :style="`transform: translateY(calc(-${activeTab} * ${$refs.carousel?.clientHeight || 0}px))`">
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_test_2.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_1.png" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_test_3.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_2.png" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_test_4.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_4.png" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                             </div>
                         </div>
