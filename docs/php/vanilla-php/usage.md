@@ -1,7 +1,7 @@
 ---
 menuTitle: Usage
 title: Using Ray with PHP
-weight: 2
+weight: 1
 ---
 
 This page covers the most common ways to use Ray with PHP. To display something in Ray, use the `ray()` function. It accepts everything: strings, arrays, objects, and more.

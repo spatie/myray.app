@@ -68,10 +68,3 @@ Give messages a color using color functions (e.g. `$ray->red()` in PHP), then us
 Some messages types are automatically assigned a badge. You can filter your window to show only these messages by simply clicking on the badge.
 
 ![screenshot](/images/screenshots/docs_filter_type.png)
-
-
-### Remove Ray calls from code
-
-You'll see a link at the bottom of every message showing where the `ray()` call originated. Click on this link to jump straight to that location in your IDE, which makes it easy to find and remove any leftover Ray calls. We also proide other ways to [automatically clean up Ray calls](/docs/php/vanilla-php/automatically-remove-ray-calls) in your PHP code.
-
-If you forget to remove a `ray()` call in a [Laravel app](/docs/php/laravel/installation) and push to production, don't worry. Ray won't transmit anything in a production environment. 
