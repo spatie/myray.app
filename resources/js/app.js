@@ -7,6 +7,7 @@ class App {
         this.initAnimation();
         this.initTeaser();
         this.initTooltipPermalinks();
+        this.initCodeCopyButtons();
         this.initConfetti();
     }
 
@@ -40,6 +41,25 @@ class App {
                     div.remove();
                 }, 1500);
             });
+        });
+    }
+
+    initCodeCopyButtons() {
+        document.querySelectorAll(".markup pre").forEach((pre) => {
+            const code = pre.querySelector("code");
+            const content = code ? code.textContent : pre.textContent;
+
+            const button = document.createElement("button");
+            button.className = "copy-code-button";
+            button.textContent = "Copy";
+            button.addEventListener("click", () => {
+                navigator.clipboard.writeText(content);
+                button.textContent = "Copied!";
+                setTimeout(() => {
+                    button.textContent = "Copy";
+                }, 1500);
+            });
+            pre.appendChild(button);
         });
     }
 
