@@ -3,30 +3,30 @@ title: Using Ray With Bash
 weight: 1
 ---
 
-You can send information from Bash to Ray via one of these third party packages:
+[Bash](https://www.gnu.org/software/bash/) is the most widely used shell scripting language. Use Ray to help you debug your shell scripts and CLI tools, or to send Ray commands from your CLI from anywhere.
 
-## node-ray-cli
+## node-ray-cli (JS)
 
-Install the package normally with `npm`:
+<x-docs.github-repo repo="permafrost-dev/node-ray-cli" />
+
+Install the package with `npm`:
 
 ```bash
 npm install node-ray-cli
 ```
 
-…install it globally to be able to access it from any script/directory:
+Install it globally to access it from any script/directory:
 
 ```bash
 npm install -g node-ray-cli
 ```
 
-…or run it without installing using `npx`:
+Or run it without installing using `npx`:
 
 ```bash
 npx node-ray-cli --help
 ```
 
-Repository: [permafrost-dev/node-ray-cli](https://github.com/permafrost-dev/node-ray-cli)
+## ray-cli (PHP)
 
-## ray-cli
-
-Repository: [permafrost-dev/ray-cli](https://github.com/permafrost-dev/ray-cli)
+<x-docs.github-repo repo="permafrost-dev/ray-cli" />

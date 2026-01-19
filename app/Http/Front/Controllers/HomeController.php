@@ -252,9 +252,20 @@ class HomeController
     {
         return collect([
             new Feature(
+                title: 'Debug with AI',
+                description: 'Give AI agents access to Ray and send and read information on your window through the integrated MCP server.',
+                link: '/docs/features/mcp',
+                isNew: true,
+            ),
+            new Feature(
+                title: 'Archive messages',
+                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
+                isNew: true,
+            ),
+            new Feature(
                 title: 'Remote debugging',
-                description: 'Debug code running on remote servers over SSH and stream all output directly to Ray.',
-                link: 'https://spatie.be/docs/ray/v1/usage/remote-debugging',
+                description: 'Debug code running on remote servers over SSH and stream all debug output directly to Ray.',
+                link: '/docs/features/remote',
             ),
             new Feature(
                 title: 'Pause & measure execution',
@@ -263,16 +274,6 @@ class HomeController
             new Feature(
                 title: 'No dumping required',
                 description: 'Receive output automatically (like queries, jobs, exceptions, and more) without having to add calls in your code.',
-            ),
-            new Feature(
-                title: 'Debug with AI',
-                description: 'Give your AI agents access to all your debug messages in Ray through the integrated MCP server.',
-                isNew: true,
-            ),
-            new Feature(
-                title: 'Archive messages',
-                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
-                isNew: true,
             ),
             new Feature(
                 title: 'Jump to your IDE',

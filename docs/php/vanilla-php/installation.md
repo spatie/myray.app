@@ -4,11 +4,9 @@ menuTitle: Installation
 weight: 1
 ---
 
-You can install support for Ray with PHP in two ways: globally or per project. 
+[PHP](https://www.php.net/) is one of the world's most popular programming languages, powering millions of websites. Use Ray to help you debug any PHP project, from simple scripts to complex applications.
 
-If you use Laravel or other PHP-based frameworks and CMS'es that Ray supports, we recommend you install [the specific integration](/docs/getting-started/integrations) for it as these offer more functionality for that specific framework or CMS than the generic PHP package does.
-
-If a framework specific package is detected, it will be used instead of the global Ray.
+> Using Laravel, WordPress, Yii, or another supported framework or CMS? Install the [dedicated integration](/docs/getting-started/integrations) for extra framework-specific features.
 
 ## Global installation
 
@@ -19,13 +17,19 @@ composer global require spatie/global-ray
 global-ray install
 ```
 
-## Installation in a single project
+Note: If a PHP-specific framework package (e.g. Laravel, WordPress) is detected in your project, it will be used instead of the global Ray package.
+
+<x-docs.github-repo repo="spatie/global-ray" />
+
+## Install in a single project
 
 To use Ray in a single PHP project, install the `ray` package in the project.
 
 ```bash
 composer require spatie/ray
 ```
+
+<x-docs.github-repo repo="spatie/ray" />
 
 > ## What's next?
 > Now that Ray is running in your PHP, explore what else it can do!

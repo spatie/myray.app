@@ -3,14 +3,14 @@ title: Using Ray With Grav
 weight: 1
 ---
 
-You can use Ray with [Grav CMS](https://getgrav.org/) using this third party package: 
+[Grav](https://getgrav.org/) is a modern, flat-file CMS built with PHP. Use Ray to help you debug when you're developing a Grav website or plugin. This is a third-party package with community support only.
 
-[trilbymedia/grav-plugin-grav-ray](https://github.com/trilbymedia/grav-plugin-grav-ray)
+<x-docs.github-repo repo="trilbymedia/grav-plugin-grav-ray" />
 
-Install the plugin via the [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm), through your system's terminal, navigate to the root of your Grav-installation, and enter:
+## Installing the plugin
+
+Install the plugin via the [GPM](https://learn.getgrav.org/17/cli-console/grav-cli-gpm). Navigate to the root of your Grav installation and enter:
 
 ```bash
 bin/gpm install grav-ray
 ```
-
-Repository: [trilbymedia/grav-plugin-grav-ray](https://github.com/trilbymedia/grav-plugin-grav-ray)

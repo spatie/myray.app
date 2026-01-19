@@ -4,8 +4,11 @@ title: Using Ray with PHP
 weight: 1
 ---
 
-This page covers the most common ways to use Ray with PHP. To display something in Ray, use the `ray()` function. It accepts everything: strings, arrays, objects, and more.
+This page covers how to use Ray with PHP. There are many different methods available, and this page attempts to showcase most of them. See the [reference chart](/docs/php/vanilla-php/reference) for a full list of methods.
 
+## Basic output
+
+To display something in Ray, use the `ray()` function. It accepts many different data types: strings, arrays, objects, and more.
 
 ```php
 ray('Hello world');
@@ -15,7 +18,7 @@ ray(['a' => 1, 'b' => 2])->color('red');
 ray($anObject);
 ```
 
-The result will look something like this:
+Passing those will look something like this:
 
 ![screenshot](/images/screenshots/docs_php_introduction.png)
 
@@ -25,221 +28,95 @@ The `ray()` function accepts multiple arguments. There are displayed as separate
 ray('as', 'many' , 'arguments', 'as', 'you', 'like');
 ```
 
-## Caller & stack trace
+## Customizing output
 
-### See the caller of a function
+Ray has some useful methods that you can use to add more context or differentiate messages from one another.
 
-Sometimes you want to know where your code is being called. You can quickly determine that by using the `caller`
-function.
+### Expanding arrays and objects
 
-```php
-ray()->caller();
-```
+When sending an array or object to Ray, it will be displayed in a collapsed state.
 
-![screenshot](/images/screenshots/docs_php_caller.png)
-
-If you want to see the entire backtrace, use the `trace` (or `backtrace`).
+To open up a node, you can use the `expand` method.
 
 ```php
-ray()->trace();
+// will open up the first level of nodes
+ray($arrayOrObject)->expand();
+
+// will open up the first three levels of nodes
+ray($arrayOrObject)->expand(3);
+
+// will open the node with key named `myKey`
+ray($arrayOrObject)->expand('myKey');
+
+// open up all nodes with the given names
+ray($arrayOrObject)->expand('myKey', 'anotherKey');
+
+// you can use dot notation to expand deeper nodes
+ray($arrayOrObject)->expand('myKey.nestedKey');
 ```
 
-![screenshot](/images/screenshots/docs_php_trace.png)
+You can also use the `expandAll()` method to expand all levels.
 
-## Execution control
+### Using colors
 
-### Pausing execution
-
-You can pause execution of a script by using the `pause` method.
+You can colorize things you sent to Ray by using one of the color functions.
 
 ```php
-ray()->pause();
+ray('this is green')->green();
+ray('this is yellow')->yellow();
+ray('this is red')->red();
+ray('this is blue')->blue();
+ray('this is purple')->purple();
+ray('this is gray')->gray();
 ```
 
-![screenshot](/images/screenshots/docs_php_pause.png)
+![screenshot](/images/screenshots/docs_php_colors.png)
 
-If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
-exception in your app to halt execution.
+### Using sizes
 
-If you are using Windows, **you must set the maximum execution time to a high value**, as the paused time will count against the maximum execution time.
-
-### Halting the PHP process
-
-You can stop the PHP process by calling `die`.
+Ray can display things in different sizes.
 
 ```php
-ray($anything)->die();
+ray('small')->small();
+ray('regular');
+ray('large')->large();
 ```
 
-Alternatively, you can use the `rd` function.
+![screenshot](/images/screenshots/docs_php_sizes.png)
+
+### Adding a label
+
+You can customize the label displayed next to item with the `label` function.
 
 ```php
-rd($anything);
+ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 ```
 
-## Measuring & counting
+![screenshot](/images/screenshots/docs_php_label.png)
 
-### Counting execution times
+### Displaying a table
 
-You can display a count of how many times a piece of code was called using `count`.
-
-Here's an example:
+You can send an associative array to Ray with the `table` function.
 
 ```php
-foreach (range(1, 2) as $i) {
-    ray()->count();
-
-    foreach (range(1, 4) as $j) {
-        ray()->count();
-    }
-}
+ray()->table([
+    'First' => 'First value',
+    'Second' => 'Second value',
+    'Third' => 'Third value',
+]);
 ```
 
-This is how that looks like in Ray.
+![screenshot](/images/screenshots/docs_php_table.png)
 
-![screenshot](/images/screenshots/docs_php_count.png)
-
-Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
-executed.
-
-Here's an example:
+As a second argument, you can pass a label that will be displayed next to the table.
 
 ```php
-foreach (range(1, 4) as $i) {
-    ray()->count('first');
-
-    foreach (range(1, 2) as $j) {
-        ray()->count('first');
-
-        ray()->count('second');
-    }
-}
+ray()->table(['John', 'Paul', 'George', 'Ringo'], 'Beatles');
 ```
-
-You may access the value of a named counter using the  `counterValue` function.
-
-```php
-foreach (range(1, 4) as $i) {
-    ray()->count('first');
-
-    if (ray()->counterValue('first') === 2) {
-        echo "counter value is two!";
-    }
-}
-```
-
-This is how that looks like in Ray.
-
-![screenshot](/images/screenshots/docs_php_named_count.png)
-
-
-### Measuring performance and memory usage
-
-You can use the `measure` function to display runtime and memory usage. When `measure` is called again, the time between
-this and previous call is also displayed.
-
-```php
-ray()->measure();
-
-sleep(1);
-
-ray()->measure();
-
-sleep(2);
-
-ray()->measure();
-```
-
-![screenshot](/images/screenshots/docs_php_measure.png)
-
-The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
-memory used.
-
-```php
-ray()->measure(function() {
-    sleep(5);
-});
-```
-
-## Inspecting values
-
-### Display the class name of an object
-
-To quickly send the class name of an object to ray, use the `className` function.
-
-```php
-ray()->className($anObject)
-```
-
-### Displaying the private properties & methods
-
-Using Ray, you can easily see the value of a private property or the result of a private method.
-
-Consider this simple class:
-
-```php
-class PrivateClass
-{
-    private string $privateProperty = 'this is the value of the private property';
-
-    private function privateMethod()
-    {
-        return 'this is the result of the private method';
-    }
-}
-```
-
-Here's how you can send the value of the private property to Ray.
-
-```php
-$privateClass = new PrivateClass();
-
-ray()->invade($privateClass)->privateProperty;
-```
-
-The `invade()` method can also display the results of private methods in Ray.
-
-```php
-$privateClass = new PrivateClass();
-
-ray()->invade($privateClass)->privateMethod();
-```
-
-If you want to colorize the result, simply tack on one of the color methods.
-
-```php
-$privateClass = new PrivateClass();
-
-ray()->invade($privateClass)->privateProperty->red();
-ray()->invade($privateClass)->privateMethod()->green();
-
-```
-
-### Showing raw values
-
-When you sent certain values to Ray, such as Carbon instances or Eloquent models, these values will be displayed in nice way. To see all private, protected, and public properties of such values, you can use the `raw()` method.
-
-```php
-$eloquentModel = User::create(['email' => 'john@example.com']);
-
-ray(new Carbon, $eloquentModel)); // will be formatted nicely
-
-ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
-```
-
-### Showing PHP info
-
-Using `phpinfo()` you can quickly see some information about your PHP environment.
-You can also pass ini options to see the value of those options.
-
-```php
-ray()->phpinfo();
-ray()->phpinfo('xdebug.enabled', 'default_mimetype');
-```
-
-![screenshot](/images/screenshots/docs_php_phpinfo.png)
 
 ## Output formats
+
+You can even pass some less common data types to Ray, and they will be properly formatted.
 
 ### Working with JSON
 
@@ -353,6 +230,326 @@ To display raw text while preserving whitespace formatting, use the `text` metho
 ```php
 ray()->text('<em>this string is html encoded</em>');
 ray()->text('  whitespace formatting' . PHP_EOL . '   is preserved as well.');
+```
+
+## Inspecting values
+
+### Display the class name of an object
+
+To quickly send the class name of an object to ray, use the `className` function.
+
+```php
+ray()->className($anObject)
+```
+
+### Displaying the private properties & methods
+
+Using Ray, you can easily see the value of a private property or the result of a private method.
+
+Consider this simple class:
+
+```php
+class PrivateClass
+{
+    private string $privateProperty = 'this is the value of the private property';
+
+    private function privateMethod()
+    {
+        return 'this is the result of the private method';
+    }
+}
+```
+
+Here's how you can send the value of the private property to Ray.
+
+```php
+$privateClass = new PrivateClass();
+
+ray()->invade($privateClass)->privateProperty;
+```
+
+The `invade()` method can also display the results of private methods in Ray.
+
+```php
+$privateClass = new PrivateClass();
+
+ray()->invade($privateClass)->privateMethod();
+```
+
+If you want to colorize the result, simply tack on one of the color methods.
+
+```php
+$privateClass = new PrivateClass();
+
+ray()->invade($privateClass)->privateProperty->red();
+ray()->invade($privateClass)->privateMethod()->green();
+
+```
+
+### Showing raw values
+
+When you sent certain values to Ray, such as Carbon instances or Eloquent models, these values will be displayed in nice way. To see all private, protected, and public properties of such values, you can use the `raw()` method.
+
+```php
+$eloquentModel = User::create(['email' => 'john@example.com']);
+
+ray(new Carbon, $eloquentModel)); // will be formatted nicely
+
+ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
+```
+
+### Showing PHP info
+
+Using `phpinfo()` you can quickly see some information about your PHP environment.
+You can also pass ini options to see the value of those options.
+
+```php
+ray()->phpinfo();
+ray()->phpinfo('xdebug.enabled', 'default_mimetype');
+```
+
+![screenshot](/images/screenshots/docs_php_phpinfo.png)
+
+## Caller & stack trace
+
+### See the caller of a function
+
+Sometimes you want to know where your code is being called. You can quickly determine that by using the `caller`
+function.
+
+```php
+ray()->caller();
+```
+
+![screenshot](/images/screenshots/docs_php_caller.png)
+
+If you want to see the entire backtrace, use the `trace` (or `backtrace`).
+
+```php
+ray()->trace();
+```
+
+![screenshot](/images/screenshots/docs_php_trace.png)
+
+## Measuring & counting
+
+### Counting execution times
+
+You can display a count of how many times a piece of code was called using `count`.
+
+Here's an example:
+
+```php
+foreach (range(1, 2) as $i) {
+    ray()->count();
+
+    foreach (range(1, 4) as $j) {
+        ray()->count();
+    }
+}
+```
+
+This is how that looks like in Ray.
+
+![screenshot](/images/screenshots/docs_php_count.png)
+
+Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
+executed.
+
+Here's an example:
+
+```php
+foreach (range(1, 4) as $i) {
+    ray()->count('first');
+
+    foreach (range(1, 2) as $j) {
+        ray()->count('first');
+
+        ray()->count('second');
+    }
+}
+```
+
+You may access the value of a named counter using the  `counterValue` function.
+
+```php
+foreach (range(1, 4) as $i) {
+    ray()->count('first');
+
+    if (ray()->counterValue('first') === 2) {
+        echo "counter value is two!";
+    }
+}
+```
+
+This is how that looks like in Ray.
+
+![screenshot](/images/screenshots/docs_php_named_count.png)
+
+
+### Measuring performance and memory usage
+
+You can use the `measure` function to display runtime and memory usage. When `measure` is called again, the time between
+this and previous call is also displayed.
+
+```php
+ray()->measure();
+
+sleep(1);
+
+ray()->measure();
+
+sleep(2);
+
+ray()->measure();
+```
+
+![screenshot](/images/screenshots/docs_php_measure.png)
+
+The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
+memory used.
+
+```php
+ray()->measure(function() {
+    sleep(5);
+});
+```
+
+## Limiting output
+
+### Limiting the number of sent payloads
+
+To limit the number of payloads sent by a particular `ray()` call, use the `limit` function.  It works well for debugging loops.
+
+```php
+foreach (range(1, 10) as $i) {
+    ray()->limit(3)->text("A #{$i}"); // counts to 3
+    ray()->limit(6)->text("B #{$i}"); // counts to 6
+    ray()->text("C #{$i}"); // counts to 10
+}
+```
+
+If the argument passed to `limit()` is a negative number or zero, limiting is disabled.
+
+### Using a rate limiter
+
+A rate limiter can help to reduce the amount of sent messages. This would avoid spamming the desktop app, which can be helpful when using Ray in loops.
+
+```php
+Ray::rateLimiter()->max(10); // only 10 messages will be sent
+```
+
+```php
+Ray::rateLimiter()->perSecond(10); // only 10 messages per second will be sent
+```
+
+To remove the rate limits again
+```php
+Ray::rateLimiter()->clear();
+```
+
+A message to the desktop app will be sent once to notify the user the rate limit has been reached.
+
+### Sending a payload once
+
+To only send a payload once, use the `once` function.  This is useful for debugging loops.
+
+`once()` may be called with arguments:
+
+
+```php
+foreach (range(1, 10) as $i) {
+    ray()->once($i); // only sends "1"
+}
+```
+
+You can also use `once` without arguments. Any function you chain on `once` will also only be called once.
+
+```php
+foreach (range(1, 10) as $i) {
+    ray()->once()->html("<strong>{$i}</strong>"); // only sends "<strong>1</strong>"
+}
+```
+
+## Conditional output
+
+### Conditionally showing items
+
+You can conditionally show things using the `showIf` method. If you pass a truthy value, the item will be displayed.
+
+```php
+ray('will be shown')->showIf(true);
+ray('will not be shown')->showIf(false);
+```
+
+You can also pass a callable to `showIf`. If the callable returns a truthy value, it will be shown. Otherwise, it will
+not.
+
+### Conditionally sending items to Ray
+
+If for any reason you do not want to send payloads to Ray _unless_ a condition is met, use the `if()` method.
+
+You can call `if()` in two ways: only with a conditional, or with a conditional and a callback.  A conditional can be either a truthy
+value or a callable that returns a truthy value.
+
+
+Note that when `if()` is called with only a conditional, **all** following chained methods will only execute if the conditional
+is true.  When using a callback with `if()`, all additional chained methods will be called.
+
+```php
+foreach(range(1, 100) as $number) {
+    ray()->if($number < 10)->text("value is less than ten: $number")->blue();
+
+    ray()->if(function() use ($number) {
+        return $number == 25;
+    })->text("value is twenty-five!")->green();
+
+    // display "value: #" for every item, and display
+    // even numbered values as red
+    ray()->text("value: $number")
+        ->if($number % 2 === 0)
+        ->red();
+}
+```
+
+You can even chain multiple `if()` calls without callbacks:
+
+```php
+foreach(range(1, 10) as $number) {
+    // display "value: #" for every item, and display even values as red
+    // and odd values as blue, except for 10 -- which is shown with large
+    // text and in green.
+    ray()
+        ->text("value: $number")
+        ->if($number % 2 === 0)
+            ->red()
+        ->if($number % 2 !== 0)
+            ->blue()
+        ->if($number === 10)
+            ->large()
+            ->green();
+}
+```
+
+Or chain multiple calls to `if()` with callbacks that don't affect the chained methods following them:
+
+```php
+foreach(range(1, 100) as $number) {
+    // display "value: #" for all items and make each item green.
+    // items less than 20 will have their text changed.
+    // when the value is an even number, the item will be displayed with large text.
+    ray()->text("value: $number")
+        ->if($number < 10, function($ray) use ($number) {
+            $ray->text("value is less than ten: $number");
+        })
+        ->if($number >= 10 && $number < 20, function($ray) use ($number) {
+            $ray->text("value is less than 20: $number");
+        })
+        ->if($number % 2 === 0, function($ray) {
+            $ray->large();
+        })
+        ->green();
+}
 ```
 
 ## Handling exceptions
@@ -483,85 +680,35 @@ ray('this one will be remove if the number is 2')->removeWhen($number === 2);
 ray('this one will be remove if the number is 2')->removeWhen(fn() => … // return true to remove the item);
 ```
 
-## Conditional output
+## Execution control
 
-### Conditionally showing items
+### Pausing execution
 
-You can conditionally show things using the `showIf` method. If you pass a truthy value, the item will be displayed.
+You can pause execution of a script by using the `pause` method.
 
 ```php
-ray('will be shown')->showIf(true);
-ray('will not be shown')->showIf(false);
+ray()->pause();
 ```
 
-You can also pass a callable to `showIf`. If the callable returns a truthy value, it will be shown. Otherwise, it will
-not.
+![screenshot](/images/screenshots/docs_php_pause.png)
 
-### Conditionally sending items to Ray
+If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
+exception in your app to halt execution.
 
-If for any reason you do not want to send payloads to Ray _unless_ a condition is met, use the `if()` method.
+If you are using Windows, **you must set the maximum execution time to a high value**, as the paused time will count against the maximum execution time.
 
-You can call `if()` in two ways: only with a conditional, or with a conditional and a callback.  A conditional can be either a truthy
-value or a callable that returns a truthy value.
+### Halting the PHP process
 
-
-Note that when `if()` is called with only a conditional, **all** following chained methods will only execute if the conditional
-is true.  When using a callback with `if()`, all additional chained methods will be called.
+You can stop the PHP process by calling `die`.
 
 ```php
-foreach(range(1, 100) as $number) {
-    ray()->if($number < 10)->text("value is less than ten: $number")->blue();
-
-    ray()->if(function() use ($number) {
-        return $number == 25;
-    })->text("value is twenty-five!")->green();
-
-    // display "value: #" for every item, and display
-    // even numbered values as red
-    ray()->text("value: $number")
-        ->if($number % 2 === 0)
-        ->red();
-}
+ray($anything)->die();
 ```
 
-You can even chain multiple `if()` calls without callbacks:
+Alternatively, you can use the `rd` function.
 
 ```php
-foreach(range(1, 10) as $number) {
-    // display "value: #" for every item, and display even values as red
-    // and odd values as blue, except for 10 -- which is shown with large
-    // text and in green.
-    ray()
-        ->text("value: $number")
-        ->if($number % 2 === 0)
-            ->red()
-        ->if($number % 2 !== 0)
-            ->blue()
-        ->if($number === 10)
-            ->large()
-            ->green();
-}
-```
-
-Or chain multiple calls to `if()` with callbacks that don't affect the chained methods following them:
-
-```php
-foreach(range(1, 100) as $number) {
-    // display "value: #" for all items and make each item green.
-    // items less than 20 will have their text changed.
-    // when the value is an even number, the item will be displayed with large text.
-    ray()->text("value: $number")
-        ->if($number < 10, function($ray) use ($number) {
-            $ray->text("value is less than ten: $number");
-        })
-        ->if($number >= 10 && $number < 20, function($ray) use ($number) {
-            $ray->text("value is less than 20: $number");
-        })
-        ->if($number % 2 === 0, function($ray) {
-            $ray->large();
-        })
-        ->green();
-}
+rd($anything);
 ```
 
 ## Flow helpers
@@ -592,6 +739,39 @@ function foo() {
     return ray()->pass('return value'),
 }
 ```
+
+## Custom functions
+
+In all PHP projects, `ray` will proxy all calls to the `Spatie\Ray\Ray` class. This class is macroable: you can dynamically add your own functions to it.
+
+Here's a silly example where the passed value will be displayed in uppercase in the Ray app.
+
+```php
+Spatie\Ray\Ray::macro('uppercase', function(string $value) {
+    $uppercasedValue = strtoupper($value);
+
+    $this->send($uppercasedValue);
+
+    return $this;
+});
+
+ray()->uppercase('this string will be displayed uppercase in ray')
+```
+
+If you want add a label next to the item, use `sendCustom` in your macro.
+
+```php
+// Import this at the top of your file
+use Spatie\Ray\Ray
+
+Ray::macro('myCustomFunction', function() {
+    $this->sendCustom('my custom content', 'hey');
+});
+
+ray()->myCustomFunction();
+```
+
+![screenshot](/images/screenshots/docs_php_custom.png)
 
 ## Managing the Ray app
 
@@ -660,7 +840,7 @@ ray()->disabled(); // false
 
 ### Displaying a notification
 
-You can use Ray to display a system notification. 
+You can use Ray to display a system notification.
 
 ```php
 ray()->notify('This is my notification');
@@ -673,5 +853,3 @@ For those times when success is to be celebrated.
 ```php
 ray()->confetti();
 ```
-
-![screenshot](/screenshots/confetti.png)

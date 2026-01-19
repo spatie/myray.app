@@ -23,6 +23,7 @@ class BladeParsingExtension implements ExtensionInterface
     protected array $components = [
         '<x-docs.integrations-overview />',
         '<x-docs.integrations-featured />',
+        '<x-docs.github-repo',
     ];
 
     public function register(EnvironmentBuilderInterface $environment): void
@@ -80,6 +81,6 @@ class BladeParsingExtension implements ExtensionInterface
             return false;
         }
 
-        return in_array($node->getLiteral(), $this->components);
+        return Str::startsWith($node->getLiteral(), $this->components);
     }
 }

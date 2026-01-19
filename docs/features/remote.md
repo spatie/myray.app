@@ -1,5 +1,5 @@
 ---
-title: Remote Servers
+title: Remote debugging
 weight: 5
 ---
 

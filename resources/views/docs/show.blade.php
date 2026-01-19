@@ -3,6 +3,15 @@
     <section>
         <x-markdown class="w-full highlight gap-x-20 flex flex-col xl:flex-row">
 <article class="markup min-w-0 w-full max-w-[45rem]">
+
+@if(end($categories)->thirdParty ?? false)
+<div class="mb-3">
+<span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full">
+    Community
+</span>
+</div>
+@endif
+
 <h1>{{ $page->title }}</h1>
 {!! $page->contents !!}
 </article>

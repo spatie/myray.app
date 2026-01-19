@@ -3,10 +3,10 @@ title: Using Ray With Drupal
 weight: 1
 ---
 
-You can use Ray with Drupal via this third party package:
+[Drupal](https://www.drupal.org/) is a powerful open-source CMS built with PHP, used for building complex websites and applications. Use Ray to help you debug when you're developing a Drupal theme or module. This is a third-party package with community support only.
 
-[https://www.drupal.org/project/ray_debugger/](https://www.drupal.org/project/ray_debugger/)
+## Installing the module
 
-Ray for Drupal is available as a Drupal module. With Ray for Drupal, Ray becomes available in Drupal theme files, Twig, and your theme or module JavaScript files.
+Ray for Drupal is available as a [Drupal module](https://www.drupal.org/project/ray_debugger/). With Ray for Drupal, Ray becomes available in Drupal theme files, Twig, and your theme or module JavaScript files.
 
-The Ray debugger module is a third-party integration maintained by couloir007 and ericpugh. For more instructions and documentation refer to [the Ray Debugger module on drupal.org](https://www.drupal.org/project/ray_debugger/).
+For installation instructions and documentation, refer to [the Ray Debugger module on drupal.org](https://www.drupal.org/project/ray_debugger/).

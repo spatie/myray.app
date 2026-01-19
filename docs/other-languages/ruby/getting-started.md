@@ -3,13 +3,13 @@ title: Using Ray With Ruby
 weight: 1
 ---
 
-You can use Ray with Ruby via this third party package:
+[Ruby](https://www.ruby-lang.org/) is a dynamic, open-source programming language focused on simplicity and productivity. Use Ray to help you debug your Ruby applications.
 
-[spatie/ruby-ray](https://github.com/spatie/ruby-ray)
+<x-docs.github-repo repo="spatie/ruby-ray" />
 
 The Ruby gem is still in active development. We haven't released a stable version just yet, but you can already install and play around with the `0.x` version.
 
-To start using Ray in any Ruby project, install the `ruby-ray` gem.
+## Installing the gem
 
 Add this line to your application's Gemfile:
 

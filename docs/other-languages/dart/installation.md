@@ -3,21 +3,21 @@ title: Using Ray With Dart
 weight: 1
 ---
 
-You can send information from Dart to Ray via this third party package:
+[Dart](https://dart.dev/) is a client-optimized language for building fast apps on any platform. Use Ray to help you debug your Dart and Flutter applications. This is a third-party package with community support only.
 
-Github: [neonarray/ray-dart](https://github.com/neonarray/ray-dart)
+<x-docs.github-repo repo="neonarray/ray-dart" />
 
 Pub.dev: [ray_dart](https://pub.dev/packages/ray_dart)
 
-## ray-dart
+## Installing the package
 
-Install the package normally with dart cli:
+Install the package with the Dart CLI:
 
 ```bash
 dart pub add ray_dart
 ```
 
-…install it globally to be able to access it from any script/directory:
+Install it globally to access it from any script/directory:
 
 ```bash
 dart pub global activate ray_dart

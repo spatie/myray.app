@@ -26,8 +26,8 @@
     @apply font-display;
     @apply font-bold;
     @apply text-2xl;
-    @apply mt-10;
-    @apply mb-6;
+    @apply mt-6;
+    @apply mb-4;
     @apply relative;
 }
 
@@ -42,7 +42,8 @@
 
 .markup h1:first-child,
 .markup h2:first-child,
-.markup h3:first-child {
+.markup h3:first-child,
+.markup div + h1 {
     margin-top: 0;
 }
 

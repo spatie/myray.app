@@ -3,13 +3,12 @@ title: Configuration
 weight: 2
 ---
 
-For Laravel projects you can create a `ray.php` file in your project directory (not in the `config` directory) using the following template as [the Ray config file](/docs/php/vanilla-php/configuration). Since the configuration file is developer specific, you might want to add it to the `.gitignore` of the project.
+Create a `ray.php` file in your project root using the following template. This file can contain personal preferences, so you may want to add it to `.gitignore`. If you want to share configuration with your team, place the file in the `config` directory instead.
 
-Note: if everyone working on the project needs the same configuration, you can put the file in the `config` directory as well.
+## Default configuration
 
 ```php
 <?php
-// Save this in a file called "ray.php" in the root directory of your project; not in the Laravel "config" directory
 
 return [
     /*

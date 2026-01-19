@@ -1,13 +1,72 @@
 ---
-title: Using Ray With React
+title: Using Ray with React
 weight: 1
 ---
 
-The third-party React package for Ray, `react-ray`, uses the [package for Node.js](/docs/javascript/nodejs) for most core functionality.
+[React](https://react.dev/) is a JavaScript library for building user interfaces. Use Ray to help you debug when developing React applications and components.
 
-`react-ray` supports React 16+ and provides two hooks:
+<x-docs.github-repo repo="permafrost-dev/react-ray" />
 
-- `useRay` - send data to the Ray app whenever it updates.
-- `useRayWithElement` - send the contents of an element ref to the Ray app, optionally updating the item in place when its dependencies change.
+## Installing the package
 
-Repository: [permafrost-dev/react-ray](https://github.com/permafrost-dev/react-ray)
+```bash
+npm install react-ray
+```
+
+```bash
+yarn add react-ray
+```
+
+## Using the hooks
+
+This integration supports React 16+ and provides two hooks:
+
+### useRay
+
+Send data to the Ray app whenever it updates.
+
+```js
+import { useRay } from 'react-ray';
+
+function MyComponent() {
+    const [count, setCount] = useState(0);
+
+    useRay(count);
+
+    return (
+        <button onClick={() => setCount(count + 1)}>
+            Count: {count}
+        </button>
+    );
+}
+```
+
+### useRayWithElement
+
+Send the contents of an element ref to the Ray app, optionally updating the item in place when its dependencies change.
+
+```js
+import { useRef } from 'react';
+import { useRayWithElement } from 'react-ray';
+
+function MyComponent() {
+    const elementRef = useRef(null);
+
+    useRayWithElement(elementRef, []);
+
+    return (
+        <div ref={elementRef}>
+            Content to send to Ray
+        </div>
+    );
+}
+```
+
+## Usage
+
+All [JavaScript methods](/docs/javascript/vanilla-javascript/usage) are available when using React.
+
+> ## What's next?
+> Now that Ray is installed in your React project, see what you can use it for.
+> * [Learn how to use Ray with JavaScript](/docs/javascript/vanilla-javascript/usage)
+> * [View all available methods](/docs/javascript/vanilla-javascript/reference)

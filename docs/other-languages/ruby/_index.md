@@ -1,5 +1,5 @@
 ---
 title: Ruby
-weight: 17
+weight: 10
 repository: https://github.com/spatie/ruby-ray
 ---

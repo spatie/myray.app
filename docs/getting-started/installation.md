@@ -45,5 +45,5 @@ Some methods are specific to the integration you use, so it's worth checking out
 > ## What's next?
 > Now that Ray is running, explore what else it can do!
 > * [Explore all integrations and how they work](/docs/getting-started/integrations)
-> * [Read about features and useful tips and tricks](/docs/getting-started/tips-tricks)
+> * [Configure Ray and learn workflow tips](/docs/getting-started/configuration)
 > * [Get Ray up and running in different environments](/docs/environments)
