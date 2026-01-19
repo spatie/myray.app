@@ -119,7 +119,7 @@
                             <div class="absolute inset-0 bg-gradient-to-r from-orange to-bright-orange rounded-2xl transition-opacity duration-500 ease-in-out"
                                  :class="activeTab === 2 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
-                                <h3 class="font-display font-bold text-2xl">Extend and customize</h3>
+                                <h3 class="font-display font-bold text-2xl">Customize and extend</h3>
                                 <p :class="activeTab === 2 && 'font-bold'">Change the theme to fit your style, extend Ray with macros, or create your own client to send data from languages or frameworks Ray doesn’t yet support.</p>
                             </div>
                         </button>
@@ -223,7 +223,7 @@
                 <div class="text-lg leading-snug mb-8 space-y-3">
                     <p>Dump debugging has always been a valid way to debug and figure out your code. It’s fast, obvious, and requires no setup. For many developers, that simplicity is hard to beat.</p>
                     <p>Ray keeps the instant feedback of writing <code class="text-[0.9em] text-[#c1a8ff]">console.log()</code> and <code class="text-[0.9em] text-[#c1a8ff]">dd()</code>, but moves your output out of the browser and into a dedicated app. We added lots of useful methods for different languages and frameworks, which all use the same syntax.</p>
-                    <p>Ray is simple to extend and customise to suit your workflow, and has inspired our community to build support for many languages and frameworks.</p>
+                    <p>Ray is simple to customise to suit your style and workflow, and has inspired our community to build support for many languages and frameworks.</p>
                     <p>We love using Ray and we hope you will too.</p>
                 </div>
                 <div class="flex gap-6 items-center mb-0">

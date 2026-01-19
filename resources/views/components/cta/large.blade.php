@@ -8,7 +8,7 @@
             <img class="w-[85rem] max-w-none p-0 mx-auto md:top-[-10rem]" src="/images/24-background-4.svg" />
         </div>
 
-        <div class="lg:shrink-0 space-y-8 lg:max-w-[32rem]">
+        <div class="lg:shrink-0 space-y-8 lg:max-w-[34rem]">
             <h2 class="font-display font-black text-5xl tracking-tight mb-[0.4em] md:text-6xl">
                 Debug without breaking
                 <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your flow</span>

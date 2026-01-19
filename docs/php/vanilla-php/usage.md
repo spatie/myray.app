@@ -1,28 +1,33 @@
 ---
 menuTitle: Usage
-title: Using Ray With PHP
+title: Using Ray with PHP
 weight: 2
 ---
 
-To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects… you name it.
+This page covers the most common ways to use Ray with PHP. To display something in Ray, use the `ray()` function. It accepts everything: strings, arrays, objects, and more.
+
 
 ```php
-ray('a string');
+ray('Hello world');
 
-ray(['an array']);
+ray(['a' => 1, 'b' => 2])->color('red');
 
 ray($anObject);
 ```
 
-![screenshot](/screenshots/usage.png)
+The result will look something like this:
 
-`ray` accepts multiple arguments. Each argument will be displayed in the Ray app.
+![screenshot](/images/screenshots/docs_php_introduction.png)
+
+The `ray()` function accepts multiple arguments. There are displayed as separate messages.
 
 ```php
 ray('as', 'many' , 'arguments', 'as', 'you', 'like');
 ```
 
-## See the caller of a function
+## Caller & stack trace
+
+### See the caller of a function
 
 Sometimes you want to know where your code is being called. You can quickly determine that by using the `caller`
 function.
@@ -31,7 +36,7 @@ function.
 ray()->caller();
 ```
 
-![screenshot](/screenshots/caller.png)
+![screenshot](/images/screenshots/docs_php_caller.png)
 
 If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 
@@ -39,9 +44,11 @@ If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 ray()->trace();
 ```
 
-![screenshot](/screenshots/trace.png)
+![screenshot](/images/screenshots/docs_php_trace.png)
 
-## Pausing execution
+## Execution control
+
+### Pausing execution
 
 You can pause execution of a script by using the `pause` method.
 
@@ -49,14 +56,14 @@ You can pause execution of a script by using the `pause` method.
 ray()->pause();
 ```
 
-![screenshot](/screenshots/pause.png)
+![screenshot](/images/screenshots/docs_php_pause.png)
 
 If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
 exception in your app to halt execution.
 
-If you are using Windows, you must set the maximum execution time to a high value, as the paused time will count against the maximum execution time.
+If you are using Windows, **you must set the maximum execution time to a high value**, as the paused time will count against the maximum execution time.
 
-## Halting the PHP process
+### Halting the PHP process
 
 You can stop the PHP process by calling `die`.
 
@@ -70,7 +77,9 @@ Alternatively, you can use the `rd` function.
 rd($anything);
 ```
 
-## Counting execution times
+## Measuring & counting
+
+### Counting execution times
 
 You can display a count of how many times a piece of code was called using `count`.
 
@@ -88,7 +97,7 @@ foreach (range(1, 2) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/screenshots/count.png)
+![screenshot](/images/screenshots/docs_php_count.png)
 
 Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
 executed.
@@ -121,9 +130,10 @@ foreach (range(1, 4) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/screenshots/named-count.png)
+![screenshot](/images/screenshots/docs_php_named_count.png)
 
-## Measuring performance and memory usage
+
+### Measuring performance and memory usage
 
 You can use the `measure` function to display runtime and memory usage. When `measure` is called again, the time between
 this and previous call is also displayed.
@@ -140,7 +150,7 @@ sleep(2);
 ray()->measure();
 ```
 
-![screenshot](/screenshots/measure.png)
+![screenshot](/images/screenshots/docs_php_measure.png)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
@@ -151,9 +161,9 @@ ray()->measure(function() {
 });
 ```
 
-![screenshot](/screenshots/measure-closure.png)
+## Inspecting values
 
-## Display the class name of an object
+### Display the class name of an object
 
 To quickly send the class name of an object to ray, use the `className` function.
 
@@ -161,7 +171,7 @@ To quickly send the class name of an object to ray, use the `className` function
 ray()->className($anObject)
 ```
 
-## Displaying the private properties & methods
+### Displaying the private properties & methods
 
 Using Ray, you can easily see the value of a private property or the result of a private method.
 
@@ -205,7 +215,223 @@ ray()->invade($privateClass)->privateMethod()->green();
 
 ```
 
-## Updating displayed items
+### Showing raw values
+
+When you sent certain values to Ray, such as Carbon instances or Eloquent models, these values will be displayed in nice way. To see all private, protected, and public properties of such values, you can use the `raw()` method.
+
+```php
+$eloquentModel = User::create(['email' => 'john@example.com']);
+
+ray(new Carbon, $eloquentModel)); // will be formatted nicely
+
+ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
+```
+
+### Showing PHP info
+
+Using `phpinfo()` you can quickly see some information about your PHP environment.
+You can also pass ini options to see the value of those options.
+
+```php
+ray()->phpinfo();
+ray()->phpinfo('xdebug.enabled', 'default_mimetype');
+```
+
+![screenshot](/images/screenshots/docs_php_phpinfo.png)
+
+## Output formats
+
+### Working with JSON
+
+Want to display the JSON representation of anything you'd like in Ray? Use `toJson`. You can provide any value that can
+be converted to JSON with [json_encode](https://www.php.net/json_encode).
+
+```php
+ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
+```
+
+![screenshot](/images/screenshots/docs_php_output_json.png)
+
+The `toJson` function can also accept multiple arguments.
+
+```php
+// all of these will be displayed in Ray
+$object = new \stdClass();
+$object->company = 'Spatie';
+
+ray()->toJson(
+    ['a' => 1, 'b' => ['c' => 3]],
+    ['d' => ['e' => 5]],
+    $object
+);
+```
+
+You can send a valid JSON string to Ray with the `json` function.
+
+It will be displayed nicely and collapsable in Ray.
+
+```php
+$jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
+
+ray()->json($jsonString);
+```
+
+![screenshot](/images/screenshots/docs_php_output_from_json.png)
+
+The `json` function can also accept multiple valid JSON strings.
+
+```php
+// all of these will be displayed in Ray
+ray()->json($jsonString, $anotherJsonString, $yetAnotherJsonString);
+```
+
+### Working with XML
+
+You can send a valid XML string to Ray with the `xml` function.
+
+It will be displayed as formatted XML and collapsable in Ray.
+
+```php
+$xmlString = '<one><two><three>3</three></two></one>';
+
+ray()->xml($xmlString);
+```
+
+### Working with Carbon instances
+
+[Carbon](https://carbon.nesbot.com/docs/) is a popular datetime package. You can send these instances to Ray with `carbon()`.
+
+```php
+ray()->carbon(new \Carbon\Carbon());
+```
+
+![screenshot](/images/screenshots/docs_php_output_carbon.png)
+
+### Working with files
+
+You can display the contents of any file in Ray with the `file` function.
+
+```php
+ray()->file('somefile.txt');
+```
+
+### Displaying images
+
+To display an image, call the `image` function and pass a fully-qualified filename, url, or a valid base64-encoded image as its only argument.
+
+```php
+ray()->image('https://placekitten.com/200/300');
+ray()->image('/home/user/kitten.jpg');
+
+// display base64-encoded images
+ray()->image('data:image/png;base64,iVBORw0KGgoAAA…truncated');
+ray()->image('iVBORw0KGgoAAA…truncated');
+```
+
+### Displaying a link
+
+You can render a clickable link in Ray, by using the `link` (or `url`) methods.
+
+```php
+ray()->link('spatie.be'); // we'll assume that you meant `https://spatie.be`
+ray()->link('spatie.be', 'Spatie homepage'); // optionally, you can pass a label
+ray()->url('myray.app'); // `url` is an alias of `link`
+```
+
+### Rendering HTML
+
+To render a piece of HTML directly in Ray, you can use the `html` method.
+
+```php
+ray()->html('<b>Bold string<b>');
+```
+
+### Displaying text content
+
+To display raw text while preserving whitespace formatting, use the `text` method.  If the text contains HTML, it will be displayed as-is and is not rendered.
+
+```php
+ray()->text('<em>this string is html encoded</em>');
+ray()->text('  whitespace formatting' . PHP_EOL . '   is preserved as well.');
+```
+
+## Handling exceptions
+
+### Displaying exceptions
+
+You can display information about an Exception in Ray, including a snippet of source code showing where it was thrown.
+
+```php
+try {
+  throw new \Exception('test');
+} catch(\Exception $e) {
+  ray()->exception($e);
+}
+```
+
+### Callables and handling exceptions
+
+You can use Ray to handle exceptions using when passing a callable to `ray` using the `catch` function.  If no exceptions are thrown, the result of the callable is sent to the Ray app.
+
+`catch` accepts several parameters to customize how and which exceptions are handled.  If no parameters are passed, all Exceptions are swallowed and execution continues.
+
+```php
+ray($callable)->catch();
+// execution will continue.
+```
+
+You can also pass a callable to `catch` to customize the handling of an Exception.  If you typehint the `$exception` variable, only Exceptions of that type will be handled.  PHP 8 union types are supported.
+
+```php
+ray($callable)->catch(function(MyException $exception) {
+   // do something with $exception if it is of the MyException type
+});
+
+ray($callable)->catch(function($exception) {
+   // handle any exception type
+});
+```
+
+The `catch` callable also accepts a second, optional parameter - `$ray` - that provides access to the current instance of the `Ray` class if you'd like more control over
+
+If you prefer to swallow all exceptions of a given type without specifying a callback, simply pass the Exception class name or names:
+```php
+ray($callable)->catch(CustomExceptionOne::class);
+
+ray($callable)->catch([
+    CustomExceptionOne::class,
+    CustomExceptionTwo::class,
+]);
+```
+
+You can even pass multiple callables and/or classnames as an array to `catch` and they will be treated as possible handlers for any Exceptions:
+
+```php
+ray($callable)->catch([
+    function(CustomExceptionOne $exception) {
+       // handle CustomExceptionOne exceptions
+    },
+    function(CustomExceptionTwo $exception) {
+       // handle CustomExceptionTwo exceptions
+    },
+    \Exception::class,
+]);
+```
+
+If you would like to immediately throw any unhandled exceptions from the callable after calling `ray`, chain the `throwExceptions` function onto the `ray` call.  If `throwExceptions` is not chained, it will be called when PHP finishes executing the script or application.
+
+```php
+// immediately throw unhandled exceptions
+ray($callable)
+    ->catch(CustomExceptionOne::class)
+    ->throwExceptions();
+```
+
+After calling `catch`, you may continue to chain methods that will be called regardless of whether there was an exception handled or not.
+
+## Updating & removing items
+
+### Updating displayed items
 
 You can update values that are already displayed in Ray. To do this, you must hold on the instance returned by the `ray`
 function and call send on it.
@@ -232,7 +458,34 @@ sleep(1);
 $ray->red()->large()
 ```
 
-## Conditionally showing items
+### Removing items
+
+You can remove an item that is already displayed in Ray. To do this, call the `remove` function on an instance return by
+the `ray` function.
+
+```php
+$ray = ray('will be removed after 1 sec');
+
+sleep(1);
+
+$ray->remove();
+```
+
+You can also conditionally remove items with the `removeWhen` function (or the `removeIf` alias).
+
+```php
+ray('this one will be remove if the number is 2')->removeWhen($number === 2);
+```
+
+`removeWhen` also accepts a callable.
+
+```php
+ray('this one will be remove if the number is 2')->removeWhen(fn() => … // return true to remove the item);
+```
+
+## Conditional output
+
+### Conditionally showing items
 
 You can conditionally show things using the `showIf` method. If you pass a truthy value, the item will be displayed.
 
@@ -244,7 +497,7 @@ ray('will not be shown')->showIf(false);
 You can also pass a callable to `showIf`. If the callable returns a truthy value, it will be shown. Otherwise, it will
 not.
 
-## Conditionally sending items to Ray
+### Conditionally sending items to Ray
 
 If for any reason you do not want to send payloads to Ray _unless_ a condition is met, use the `if()` method.
 
@@ -311,33 +564,9 @@ foreach(range(1, 100) as $number) {
 }
 ```
 
+## Flow helpers
 
-## Removing items
-
-You can remove an item that is already displayed in Ray. To do this, call the `remove` function on an instance return by
-the `ray` function.
-
-```php
-$ray = ray('will be removed after 1 sec');
-
-sleep(1);
-
-$ray->remove();
-```
-
-You can also conditionally remove items with the `removeWhen` function (or the `removeIf` alias).
-
-```php
-ray('this one will be remove if the number is 2')->removeWhen($number === 2);
-```
-
-`removeWhen` also accepts a callable.
-
-```php
-ray('this one will be remove if the number is 2')->removeWhen(fn() => … // return true to remove the item);
-```
-
-## Returning items
+### Returning items
 
 To make all methods chainable, the `ray()` function returns an instance of `Spatie\Ray\Ray`. To quickly send something
 to Ray and have that something return as a value, use the `pass` function.
@@ -364,112 +593,15 @@ function foo() {
 }
 ```
 
-## Showing PHP info
+## Managing the Ray app
 
-Using `phpinfo()` you can quickly see some information about your PHP environment.
-You can also pass ini options to see the value of those options.
+### Creating a new screen
 
-```php
-ray()->phpinfo();
-ray()->phpinfo('xdebug.enabled', 'default_mimetype');
-```
-
-![screenshot](/screenshots/phpinfo.png)
-
-
-## Displaying exceptions
-
-You can display information about an Exception in Ray, including a snippet of source code showing where it was thrown.
-
-```php
-try {
-  throw new \Exception('test');
-} catch(\Exception $e) {
-  ray()->exception($e);
-}
-```
-
-## Callables and handling exceptions
-
-You can use Ray to handle exceptions using when passing a callable to `ray` using the `catch` function.  If no exceptions are thrown, the result of the callable is sent to the Ray app.
-
-`catch` accepts several parameters to customize how and which exceptions are handled.  If no parameters are passed, all Exceptions are swallowed and execution continues.
-
-```php
-ray($callable)->catch();
-// execution will continue.
-```
-
-You can also pass a callable to `catch` to customize the handling of an Exception.  If you typehint the `$exception` variable, only Exceptions of that type will be handled.  PHP 8 union types are supported.
-
-```php
-ray($callable)->catch(function(MyException $exception) {
-   // do something with $exception if it is of the MyException type
-});
-
-ray($callable)->catch(function($exception) {
-   // handle any exception type
-});
-```
-
-The `catch` callable also accepts a second, optional parameter - `$ray` - that provides access to the current instance of the `Ray` class if you'd like more control over
-
-If you prefer to swallow all exceptions of a given type without specifying a callback, simply pass the Exception class name or names:
-```php
-ray($callable)->catch(CustomExceptionOne::class);
-
-ray($callable)->catch([
-    CustomExceptionOne::class,
-    CustomExceptionTwo::class,
-]);
-```
-
-You can even pass multiple callables and/or classnames as an array to `catch` and they will be treated as possible handlers for any Exceptions:
-
-```php
-ray($callable)->catch([
-    function(CustomExceptionOne $exception) {
-       // handle CustomExceptionOne exceptions
-    },
-    function(CustomExceptionTwo $exception) {
-       // handle CustomExceptionTwo exceptions
-    },
-    \Exception::class,
-]);
-```
-
-If you would like to immediately throw any unhandled exceptions from the callable after calling `ray`, chain the `throwExceptions` function onto the `ray` call.  If `throwExceptions` is not chained, it will be called when PHP finishes executing the script or application.
-
-```php
-// immediately throw unhandled exceptions
-ray($callable)
-    ->catch(CustomExceptionOne::class)
-    ->throwExceptions();
-```
-
-After calling `catch`, you may continue to chain methods that will be called regardless of whether there was an exception handled or not.
-
-## Showing raw values
-
-When you sent certain values to Ray, such as Carbon instances or Eloquent models, these values will be displayed in nice way. To see all private, protected, and public properties of such values, you can use the `raw()` method.
-
-```php
-$eloquentModel = User::create(['email' => 'john@example.com']);
-
-ray(new Carbon, $eloquentModel)); // will be formatted nicely
-
-ray()->raw(new Carbon, $eloquentModel) // no custom formatting, all properties will be shown in Ray.
-```
-
-## Creating a new screen
-
-You can use `newScreen` (or `clearScreen`) to programmatically create a new screen.
+You can use `newScreen` (or `clearScreen`) to programmatically create a new screen. Your previous messages are automatically saved and moved to the message archive.
 
 ```php
 ray()->newScreen();
 ```
-
-You can see values that were previously displayed, by clicking the little back button in the header of Ray.
 
 Optionally, you can give a screen a name:
 
@@ -477,7 +609,7 @@ Optionally, you can give a screen a name:
 ray()->newScreen('My debug screen');
 ```
 
-![screenshot](/screenshots/newScreen.png)
+![screenshot](/images/screenshots/docs_screen_cleared_title.png)
 
 You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
 current request. In a Laravel app, a good place for this might be the service provider.
@@ -485,15 +617,7 @@ current request. In a Laravel app, a good place for this might be the service pr
 When using PHPUnit to run tests, you might use `newScreen` to get a new screen each time your run a test to debug some
 code.
 
-### Clearing everything including history
-
-To clear the current screen and all previous screens, call `clearAll`.
-
-```php
-ray()->clearAll();
-```
-
-## Showing and hiding the app
+### Showing and hiding the app
 
 You can show and hide the Ray app via code.
 
@@ -502,7 +626,7 @@ ray()->showApp(); // Ray will be brought to the foreground
 ray()->hideApp(); // Ray will be hidden
 ```
 
-## Enabling & disabling Ray
+### Enabling & disabling Ray
 
 You can enable and disable sending stuff to Ray with the `enable` and `disable` functions.
 
@@ -532,19 +656,19 @@ ray()->enabled(); // true
 ray()->disabled(); // false
 ```
 
-## Displaying a notification
+## Fun stuff
 
-You can use Ray to display a notification.
+### Displaying a notification
+
+You can use Ray to display a system notification. 
 
 ```php
 ray()->notify('This is my notification');
 ```
 
-![screenshot](/screenshots/notification.jpg)
+### Shooting confetti
 
-## Shooting confetti
-
-For those times that success is to be celebrated.
+For those times when success is to be celebrated.
 
 ```php
 ray()->confetti();

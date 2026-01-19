@@ -7,7 +7,7 @@
 {!! $page->contents !!}
 </article>
 
-<div class="docs-toc text-sm w-full max-w-48 order-first mb-8 lg:order-none">
+<div class="docs-toc text-sm w-full order-first mb-8 lg:order-none lg:max-w-48">
 <div class="lg:top-6 lg:sticky">
 <h2 class="text-base font-semibold mb-3">On this page</h2>
 

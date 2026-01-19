@@ -1,4 +1,4 @@
-@props(['title' => 'Thanks for downloading Ray!', 'disclaimer' => null])
+@props(['title' => 'Thanks for trying out Ray!', 'disclaimer' => null])
 
 <div x-show="download"
     x-transition:enter="transition ease-out duration-300"

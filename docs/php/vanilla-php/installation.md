@@ -1,10 +1,14 @@
 ---
-title: Using Ray With PHP
+title: Installing Ray for PHP
 menuTitle: Installation
 weight: 1
 ---
 
-To communicate with the Ray desktop app, we're going to use a function named `ray()`.
+You can install support for Ray with PHP in two ways: globally or per project. 
+
+If you use Laravel or other PHP-based frameworks and CMS'es that Ray supports, we recommend you install [the specific integration](/docs/getting-started/integrations) for it as these offer more functionality for that specific framework or CMS than the generic PHP package does.
+
+If a framework specific package is detected, it will be used instead of the global Ray.
 
 ## Global installation
 
@@ -15,20 +19,17 @@ composer global require spatie/global-ray
 global-ray install
 ```
 
-You can now use all of `ray()`'s [framework agnostic capabilities](/docs/php/vanilla-php/usage).
-
-To use framework specific functionality, such as [viewing queries in Laravel](/docs/php/laravel/queries#showing-queries), or [displaying mails in WordPress](/docs/php/wordpress), you should still [install the relevant package or library](/docs/getting-started/installation#connect-your-application-to-ray).
-
-If a framework specific package is detected, it will be used instead of the global Ray.
-
 ## Installation in a single project
 
-To start using Ray in a single PHP project, install the `ray` package in the project.
+To use Ray in a single PHP project, install the `ray` package in the project.
 
 ```bash
 composer require spatie/ray
 ```
 
-You should be able to use the `ray` function without any other steps.
+> ## What's next?
+> Now that Ray is running in your PHP, explore what else it can do!
+> * [Learn how to use Ray with PHP](/docs/php/vanilla-php/usage)
+> * [View all available methods](/docs/php/vanilla-php/reference)
+> * [Add a config file to your project](/docs/php/vanilla-php/configuration)
 
-If you use Laravel, you should use install [the Laravel specific package](/docs/php/laravel/installation) instead of `spatie/ray`.

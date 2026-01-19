@@ -1,42 +1,77 @@
 ---
-title: Tips & Tricks
+title: Using Ray
 weight: 2
 ---
 
-[Ray](https://myray.app) is a very simple app to use. You can use any of the `ray` calls that are documented in [the usage section](/docs/php/vanilla-php/usage).
+Ray is a simple desktop app that displays your debug output in a clean, organized way. This page covers the how to navigate interface, some settings to review, and some other useful tips.
 
-## Clearing the screen
+## Explore the interface
 
-When debugging, you probably will need a couple of attempts to find the source of the bug. For each attempt, you could opt to use a new screen, so you will only see the output of your current attempt. There are three ways for creating a new screen.
+When you first open Ray, you'll see the welcome screen with some useful tips. This screen will appear each time you open the app and will disappear when you send messages.
 
-1. Clicking the `+` button in the menubar
-2. By executing `ray()->newScreen()` somewhere in your code. Optionally, you can pass a screen name as an argument to `newScreen`.
-3. By pressing `Cmd+K` on Mac or `Ctrl+K` on Windows when the Ray app is active.  When the Ray app is not the active one, press `Cmd+Shift+K on Mac or `Ctrl+Shift+K` on Windows to clear the screen.
+![screenshot](/images/screenshots/docs_welcome.png)
 
-## Using color filters
+Here is an overview of every item in the menu bar:
 
-You can give an item a color using one of the [color functions](/docs/php/vanilla-php/usage#using-colors). On top of the screen you can turn on a color filter to only see items with a specific color.
+- **Pause/Resume**: Temporarily stop accepting new messages.
+- **Search**: Find messages containing specific text.
+- **Clear screen**: Move all current messages to the archive.
+- **Color labels**: Filter messages by color (e.g. messages sent with `ray('hello')->color('red')`).
+- **Archive**: View all archived messages.
+- **Settings**: Configure Ray to your preferences.
+- **Servers**: Connect directly to configured remote servers.
+- **Pin**: Keep the Ray window on top of other windows.
 
-## Keep Ray on top
+## Settings
 
-If you want Ray always to be on top, just toggle on the `Keep on top` toggle on the menubar. In our experience, this is pretty handy to make sure that Ray is always visible, event when switching applications or workspaces.
+When you first start using Ray, it's worth configuring a few settings.
 
-## Cleaning up after yourself
+1. **Set up your preferred IDE**
 
-At the bottom of every item that displayed in Ray, you'll see a link that, when clicked, will take you to where this item was sent to ray. You can use this to, after debugging, quickly find locations where `ray()` calls are made, so you can remove them.
+Each message shows where it got called from. Clicking on the link will take you straight to the relevant line in your code. Ray needs to know what IDE you use, which you can select from the settings menu. We support PhpStorm, Visual Studio Code, Cursor, Zed and Sublime, and others.
 
-![screenshot](/screenshots/tips-1.png)
+2. **Review and customize shortcuts**
 
-When a Ray screen is displaying many items, it might be bothersome to click each item. In this case, you can click "List files" to get a unique list of locations where a Ray call is in your source code.
+Ray has a few global shortcuts and hotkeys that you can customise. Useful shortcuts to review are:
 
-![screenshot](/screenshots/tips-2.png)
+- Showing or hiding the Ray window
+- Pinning and unpinning the Ray window
+- Clearing all messages
+- Customising the layout of your messages at any time
 
-Should you forget to remove a `ray()` call in a Laravel app, and push your code to production, no worries. Ray will not try to transmit any info in a production environment.
+3. **Appearance**
 
-## Hiding the app using the hotkey
+Ray comes with a few built-in themes and some accessibility options. 
 
-You can press `Cmd+Shift+L` to hide or show the app, no matter which application is the active on.
+By default, Ray uses the dark 'Midnight' theme. You can choose to synchronise the theme with your OS's settings. You can also choose to display names for the labels instead of using only color.
 
-You can customize this key in the preferences.
+## Tips & Tricks
 
-![screenshot](/screenshots/shortcuts.png)
+### Clear the screen
+
+When debugging, you'll often want to start fresh between attempts. Use `ray()->newScreen()` to archive existing messages and start with a clean window. You can also press `Cmd+K` on Mac or `Ctrl+K` on Windows to clear the screen when Ray is active. 
+
+![screenshot](/images/screenshots/docs_screen_cleared.png)
+
+You can optionally pass a screen name: `ray()->newScreen('Second attempt')`.
+
+![screenshot](/images/screenshots/docs_screen_title.png)
+
+### Filter by color
+
+Give messages a color using color functions (e.g. `$ray->red()` in PHP), then use the color filter in the menubar to show only messages of a specific color.
+
+![screenshot](/images/screenshots/docs_color_labels.png)
+
+### Filter by type
+
+Some messages types are automatically assigned a badge. You can filter your window to show only these messages by simply clicking on the badge.
+
+![screenshot](/images/screenshots/docs_filter_type.png)
+
+
+### Remove Ray calls from code
+
+You'll see a link at the bottom of every message showing where the `ray()` call originated. Click on this link to jump straight to that location in your IDE, which makes it easy to find and remove any leftover Ray calls. We also proide other ways to [automatically clean up Ray calls](/docs/php/vanilla-php/automatically-remove-ray-calls) in your PHP code.
+
+If you forget to remove a `ray()` call in a [Laravel app](/docs/php/laravel/installation) and push to production, don't worry. Ray won't transmit anything in a production environment. 

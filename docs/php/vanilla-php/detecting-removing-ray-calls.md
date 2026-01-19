@@ -1,22 +1,41 @@
 ---
-title: Configure X-Ray To Detect Ray Calls
-menuTitle: Detect With X-ray
-weight: 10
+title: Detecting & removing Ray calls
+menuTitle: Detecting Ray calls
+weight: 8
 ---
 
-Ray provides a first-party package named [x-ray](https://github.com/spatie/x-ray), allowing you detect remaining Ray calls in your application.
+To avoid shipping your code with `ray()` calls in it, you can use various tools to detect and remove them from your codebase.
 
-The primary use case is when calls to Ray cannot be left in source code before deploying, even if Ray is disabled. This package does NOT remove the calls, it simply displays their locations so they can be removed manually.
+## Detecting Ray calls
+
+### Using PHPStan
+
+Ray provides a custom PHPStan rule that lets you detect remaining Ray calls in your application.
+
+```
+rules:
+    - Spatie\Ray\PHPStan\RemainingRayCallRule
+```
+
+All remaining Ray calls would then be reported by [PHPStan](https://phpstan.org).
+
+![screenshot](/images/screenshots/phpstan-failing-result.jpg)
+
+### Using X-Ray
+
+Ray provides a first-party package named [x-ray](https://github.com/spatie/x-ray), allowing you to detect remaining Ray calls in your application. This package does **NOT** remove the calls, it simply displays their locations so they can be removed manually.
 
 The exit code of the x-ray command is zero if no Ray calls are found, and non-zero if calls are found. This allows the package to be used in an automated environment such as Github Workflows.
 
-## Installation
+#### Installation
+
+Install the package in your PHP or Laravel project:
 
 ```bash
 composer require spatie/x-ray --dev
 ```
 
-## Usage
+#### Usage
 
 Specify one or more valid path names and/or filenames to scan:
 
@@ -40,7 +59,7 @@ Display each filename & pass/fail status, along with compact results:
 ./vendor/bin/x-ray ./app --compact --verbose
 ```
 
-## Available options
+#### Available options
 
 | Flag | Description
 |---|---|
@@ -52,4 +71,24 @@ Display each filename & pass/fail status, along with compact results:
 |`--summary` or `-s` | Display a summary of the files/calls discovered |
 |`--verbose` or `-v` | Display each filename and pass/fail status while scanning. Implies `--no-progress`. |
 
-See the complete documentation with examples, including Github Workflow Action examples, at [spatie/x-ray](https://github.com/spatie/x-ray).
+Find examples for how to add x-ray to your Github workflows at [spatie/x-ray](https://github.com/spatie/x-ray).
+
+## Removing Ray calls
+
+### Using Rector
+
+If you are already using [Rector](https://getrector.com/) this can be done by adding a rule to your `rector.php` config file:
+
+```php
+use Spatie\Ray\Rector\RemoveRayCallRector;
+
+$rectorConfig->rule(RemoveRayCallRector::class);
+```
+
+### Using the remove script
+
+If you are not using Rector you can use the script provided by the package:
+
+```bash
+./vendor/bin/remove-ray.sh <path>
+```
