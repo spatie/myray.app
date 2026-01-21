@@ -10,6 +10,21 @@ Route::get('/', HomeController::class)->name('home');
 Route::redirect('wordpress', '/')->name('wordpress');
 Route::redirect('javascript', '/')->name('javascript');
 
+// Docs redirects
+Route::redirect('/docs/getting-started/introduction', '/docs/getting-started/installation', 301);
+Route::redirect('/docs/getting-started/tips-tricks', '/docs/getting-started/using-ray', 301);
+Route::redirect('/docs/environments/remote', '/docs/features/remote', 301);
+
+Route::redirect('/docs/php/vanilla-php/data-types', '/docs/php/vanilla-php/usage#output-formats', 301);
+Route::redirect('/docs/php/vanilla-php/customizing-output', '/docs/php/vanilla-php/usage#customizing-output', 301);
+Route::redirect('/docs/php/vanilla-php/limiting-output', '/docs/php/vanilla-php/usage#limiting-output', 301);
+Route::redirect('/docs/php/vanilla-php/custom', '/docs/php/vanilla-php/usage#custom-functions', 301);
+Route::redirect('/docs/php/vanilla-php/phpstan', '/detecting-removing-ray-calls', 301);
+Route::redirect('/docs/php/vanilla-php/x-ray', '/detecting-removing-ray-calls', 301);
+
+Route::redirect('/docs/php/laravel/queries', '/docs/php/laravel/usage#debugging-queries', 301);
+Route::redirect('/docs/php/laravel/blade', '/docs/php/laravel/usage#using-ray-in-blade-views', 301);
+
 Route::name('legal.')->group(function () {
     Route::view('terms-of-use', 'legal.terms-of-use')->name('terms');
     Route::view('privacy', 'legal.privacy')->name('privacy');
