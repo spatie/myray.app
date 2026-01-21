@@ -4,7 +4,7 @@ menuTitle: Getting Started
 weight: 1
 ---
 
-The [Ray app](https://myray.app) is not a language-specific debugging app - as long as there's an integration library, it can be used with any language.
+Ray is not a language-specific debugging app - as long as there's an integration library, it can be used with any language.
 
 If you're interested in developing a Ray library for your language of choice, this document will help guide you through the process.  As an example, we'll be creating an example Ray integration library for JavaScript/Node.js; however, the concepts apply to any language.
 
@@ -14,7 +14,7 @@ If you're interested in developing a Ray library for your language of choice, th
 
 ## Creating a JavaScript integration for Ray
 
-In this guide, we'll create a new JavaScript library that communicates with Ray.  There are already comprehensive third-party libraries in this space, such as [node-ray](https://github.com/permafrost-dev/node-ray), but this will serve well as an example.
+In this guide, we'll create a new JavaScript library that communicates with Ray. There are already comprehensive libraries in this space, like as [node-ray](https://github.com/permafrost-dev/node-ray), but this will serve well as an example.
 
 ## Goals
 
