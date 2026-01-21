@@ -8,7 +8,6 @@
     @apply mt-10;
     @apply mb-6;
     @apply md:text-5xl;
-    @apply text-white;
     padding-bottom: 0.075em;
     text-wrap: balance;
 }
