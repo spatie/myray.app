@@ -253,7 +253,7 @@ class HomeController
         return collect([
             new Feature(
                 title: 'Debug with AI',
-                description: 'Give AI agents access to Ray and send and read information on your window through the integrated MCP server.',
+                description: 'Connect AI agents to Ray via MCP to render output, read window contents, and automate actions.',
                 link: '/docs/features/mcp',
                 isNew: true,
             ),
