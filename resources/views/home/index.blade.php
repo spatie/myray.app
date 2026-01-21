@@ -43,7 +43,7 @@
                             href="{{ route('docs.index') }}/php/vanilla-php/installation">
                             <img class="w-16" src="/images/logos/logo_php_white.svg" alt="PHP"></a></li>
                     <li><a class="block transition hover:opacity-50"
-                            href="{{ route('docs.index') }}/javascript/vanilla-javascript/getting-started">
+                            href="{{ route('docs.index') }}/javascript/vanilla-javascript">
                             <img class="w-16" src="/images/logos/logo_js_white.svg" alt="JavaScript"></a></li>
                     <li><a class="block transition hover:opacity-50"
                             href="{{ route('docs.index') }}/javascript/vuejs/getting-started">
@@ -214,7 +214,7 @@
                 src="/images/24-background-1.svg" />
         </div>
 
-        <div class="bg-midnight lg:max-w-prose mx-auto border border-bleak-purple-light rounded-md shadow-large-drop">
+        <div class="bg-midnight lg:max-w-prose mx-auto border border-bleak-purple-light rounded-md shadow-large-drop overflow-hidden">
             <div class="flex items-center px-3 gap-2 bg-white bg-opacity-10 h-8 border-b border-bleak-purple-light">
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>

@@ -2,7 +2,7 @@
 
     <section>
         <x-markdown class="w-full highlight gap-x-20 flex flex-col xl:flex-row">
-<article class="markup min-w-0 w-full max-w-[45rem]">
+<article class="markup min-w-0 w-full max-w-[45rem] text-bright-purple-extra-light">
 
 @if(end($categories)->thirdParty ?? false)
 <div class="mb-3">

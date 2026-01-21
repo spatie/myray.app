@@ -88,10 +88,18 @@ class App {
 
                 navigator.clipboard.writeText(document.documentURI + target);
 
+                // Scroll to the target section
+                const targetElement = document.getElementById(target.replace("#", ""));
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                }
+
+                // Update the URL hash without triggering a page jump
+                history.pushState(null, null, target);
+
                 // Add a span with a text to the clicked element
                 const div = document.createElement("div");
                 div.classList.add("copy-tooltip");
-                div.textContent = "Copied URL!";
                 el.prepend(div);
 
                 setTimeout(() => {

@@ -8,6 +8,7 @@
     @apply mt-10;
     @apply mb-6;
     @apply md:text-5xl;
+    @apply text-white;
     padding-bottom: 0.075em;
     text-wrap: balance;
 }
@@ -20,6 +21,7 @@
     @apply mt-10;
     @apply mb-6;
     @apply relative;
+    @apply text-white;
 }
 
 .markup h3 {
@@ -29,6 +31,7 @@
     @apply mt-6;
     @apply mb-4;
     @apply relative;
+    @apply text-white;
 }
 
 .markup h4 {
@@ -161,7 +164,7 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.15rem 0.5rem;
     font-size: 0.7rem;
     font-family: inherit;
     background: rgba(255, 255, 255, 0.1);

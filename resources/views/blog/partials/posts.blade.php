@@ -12,7 +12,7 @@
                 <div class="mb-6">
                     <h3 class="font-display font-bold text-xl mb-[0.5em] md:text-3xl">
                         {{ $post->title }}</h3>
-                    <p class="text-white text-opacity-50 !leading-6 md:text-lg">
+                    <p class="text-bright-purple-extra-light/75 !leading-6 md:text-lg">
                         {{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
                 </div>
                 <div class="relative mt-2 flex items-center gap-x-6">

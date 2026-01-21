@@ -27,6 +27,7 @@ module.exports = {
                 },
 
                 'bright-purple': {
+                    'extra-light': '#D7C6F0',
                     'light': '#4D00C9',
                     'DEFAULT': '#36107A'
                 },
