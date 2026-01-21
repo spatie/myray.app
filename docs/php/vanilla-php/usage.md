@@ -176,7 +176,7 @@ ray()->xml($xmlString);
 
 ### Working with Carbon instances
 
-[Carbon](https://carbon.nesbot.com/docs/) is a popular datetime package. You can send these instances to Ray with `carbon()`.
+[Carbon](https://carbon.nesbot.com/) is a popular datetime package. You can send these instances to Ray with `carbon()`.
 
 ```php
 ray()->carbon(new \Carbon\Carbon());

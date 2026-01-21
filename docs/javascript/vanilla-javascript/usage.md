@@ -207,7 +207,7 @@ sleep(2);
 ray().measure();
 ```
 
-![screenshot](/docs/ray/v1/images/measure.jpg)
+![screenshot](/images/screenshots/docs_php_measure.png)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
