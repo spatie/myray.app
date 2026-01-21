@@ -10,8 +10,7 @@
 
         <div class="lg:shrink-0 space-y-8 lg:max-w-[34rem]">
             <h2 class="font-display font-black text-5xl tracking-tight mb-[0.4em] md:text-6xl">
-                Debug without breaking
-                <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">your flow</span>
+                Debug without <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">breaking your flow</span>
             </h2>
             <p class="text-2xl leading-tight mb-8">{{ $description }}</p>
 
