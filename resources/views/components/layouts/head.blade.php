@@ -1,4 +1,4 @@
-@props(['title', 'description', 'color', 'image' => 'https://myray.app/images/social-card.png'])
+@props(['title', 'description', 'color', 'image' => asset('images/social-card.jpg')])
 
 <meta charset="utf-8">
 <x-feed-links />
@@ -15,9 +15,9 @@
 
 @vite(['resources/css/app.css'])
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset("/apple-touch-icon.png") }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset("/favicon-32x32.png") }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset("/favicon-16x16.png") }}">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="msapplication-TileColor" content="#442595">
 <meta name="theme-color" content="{{ $color }}">
@@ -40,3 +40,5 @@
 
 <script src="https://cdn.usefathom.com/script.js" data-site="AUCCHTBP" defer></script>
 @vite(['resources/js/app.js'])
+
+{{ $schema ?? '' }}

@@ -1,5 +1,37 @@
 <x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))" :color="'#36107A'">
 
+    @php
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'BlogPosting',
+            'headline' => $post->title,
+            'description' => htmlspecialchars_decode(strip_tags($post->summary)),
+            'image' => $post->header_image ?? $post->og_image ?? asset('images/social-card.jpg'),
+            'datePublished' => $post->date?->toIso8601String(),
+            'dateModified' => $post->updated_at?->toIso8601String(),
+            'author' => $post->authors->map(fn ($author) => [
+                '@type' => 'Person',
+                'name' => $author->name,
+            ])->values()->all(),
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Spatie',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('images/spatie.svg'),
+                ],
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => url()->current(),
+            ],
+        ];
+    @endphp
+
+    <x-slot name="schema">
+        <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
+    </x-slot>
+
     <x-slot name="background">
         <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
             <div class="w-full translate-y-[-18rem]">

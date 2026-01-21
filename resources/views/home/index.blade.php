@@ -4,8 +4,8 @@
 @endphp
 
 <x-layouts.default
-    title="A new home for your debug output"
-    description="Send your dumps to Ray and work with them in a dedicated desktop app.">
+    title="Debug without breaking your flow"
+    description="Ray keeps all your debug output neatly organized in a dedicated desktop app.">
 
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 

@@ -50,7 +50,7 @@ class HomeController
             new Testimonial(
                 name: 'Nuno Maduro',
                 text: 'Ray is a part of my <strong class="font-bold">Essentials</strong> toolbox. It has the
-        snapiness of a real debugger, but the simplicity of dd()',
+        snappiness of a real debugger, but the simplicity of dd()',
                 image: 'nuno',
                 url: 'https://twitter.com/enunomaduro',
                 title: 'Software engineer at Laravel',
@@ -148,7 +148,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Charlie Joseph',
-                text: 'Day to day, Ray has been my must-have tool when working with projects. Being able to quickly debug to a seperate, non intrusive window really persuaded me with Ray.',
+                text: 'Day to day, Ray has been my must-have tool when working with projects. Being able to quickly debug to a separate, non intrusive window really persuaded me with Ray.',
                 image: 'charlie',
                 url: 'https://twitter.com/heychazza',
                 title: 'Developer at Analyse.net',

@@ -1,4 +1,31 @@
-<x-layouts.docs :title="$page->title" description="Understand and fix bugs faster using Ray">
+<x-layouts.docs :title="$page->title" description="Ray keeps all your debug output neatly organized in a dedicated desktop app.">
+
+    @php
+        $description = Str::limit(strip_tags($page->contents), 160);
+
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'TechArticle',
+            'headline' => $page->title,
+            'description' => $description,
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => 'Spatie',
+                'logo' => [
+                    '@type' => 'ImageObject',
+                    'url' => asset('images/spatie.svg'),
+                ],
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id' => url()->current(),
+            ],
+        ];
+    @endphp
+
+    <x-slot name="schema">
+        <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}</script>
+    </x-slot>
 
     <section>
         <x-markdown class="w-full highlight gap-x-20 flex flex-col xl:flex-row">

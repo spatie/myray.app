@@ -4,7 +4,11 @@
 <html lang="en" class="bg-midnight text-white antialiased scroll-smooth">
 
 <head>
-    <x-layouts.head :title="$title" :description="$description ?? ''" :color="isset($color) ? $color : '#170636'" :image="$image" />
+    <x-layouts.head :title="$title" :description="$description ?? ''" :color="isset($color) ? $color : '#170636'" :image="$image">
+        @if (isset($schema))
+            <x-slot:schema>{{ $schema }}</x-slot:schema>
+        @endif
+    </x-layouts.head>
 </head>
 
 <body class="overflow-x-hidden bottom-gradient">

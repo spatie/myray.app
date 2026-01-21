@@ -1,5 +1,6 @@
 ---
-title: Installation
+menuTitle: Installation
+title: Installing Ray
 weight: 1
 ---
 
