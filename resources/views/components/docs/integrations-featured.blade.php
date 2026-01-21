@@ -2,10 +2,11 @@
     <div class="grid grid-cols-3 gap-8 my-8 lg:grid-cols-3">
         @foreach ($docs as $doc)
             <a wire:navigate href="{{ $doc->url }}" class="relative text-center group leading-tight">
-                <div
-                    class="flex-1 rounded-2xl overflow-hidden mb-3 bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] group-hover:from-orange group-hover:to-bright-orange">
+                <div class="relative flex-1 rounded-2xl overflow-hidden mb-3 p-[1px]">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-neutrals-white-20 to-transparent transition-opacity duration-150 group-hover:opacity-0"></div>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-orange to-bright-orange opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                     <div
-                        class="flex flex-col align-items-center justify-center items-center py-4 rounded-2xl bg-bleak-purple bg-opacity-75 group-hover:bg-opacity-100">
+                        class="relative flex flex-col align-items-center justify-center items-center py-4 rounded-2xl bg-bleak-purple/85">
                         <img class="w-full p-2 max-w-16 md:max-w-24" src="/images/logos/icons/logo-{{ $doc->parts[1] }}.svg"
                             alt="{{ $doc->title }}">
                     </div>

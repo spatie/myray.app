@@ -8,10 +8,11 @@
                         Community
                     </span>
                 @endif
-                <div
-                    class="flex-1 rounded-2xl overflow-hidden mb-2 bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] group-hover:from-orange group-hover:to-bright-orange">
+                <div class="relative flex-1 rounded-2xl overflow-hidden mb-2 p-[1px]">
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-neutrals-white-20 to-transparent transition-opacity duration-150 group-hover:opacity-0"></div>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-orange to-bright-orange opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                     <div
-                        class="flex flex-col align-items-center justify-center items-center rounded-2xl bg-bleak-purple bg-opacity-75 aspect-square group-hover:bg-opacity-100">
+                        class="relative flex flex-col align-items-center justify-center items-center rounded-2xl bg-bleak-purple/85 aspect-square">
                         <img class="w-full p-2 max-w-16 md:max-w-20" src="/images/logos/icons/logo-{{ $doc->parts[1] }}.svg"
                             alt="{{ $doc->title }}">
                     </div>

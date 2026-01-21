@@ -258,14 +258,14 @@ class HomeController
                 isNew: true,
             ),
             new Feature(
-                title: 'Archive messages',
-                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
-                isNew: true,
-            ),
-            new Feature(
                 title: 'Remote debugging',
                 description: 'Debug code running on remote servers over SSH and stream all debug output directly to Ray.',
                 link: '/docs/features/remote',
+            ),
+            new Feature(
+                title: 'Archive messages',
+                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
+                isNew: true,
             ),
             new Feature(
                 title: 'Pause & measure execution',

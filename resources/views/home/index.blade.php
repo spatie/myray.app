@@ -160,23 +160,28 @@
         <div class="grid gap-12 mx-auto mb-8 lg:mb-12 lg:grid-cols-3">
             @foreach ($features as $feature)
                 @if ($feature->link)
-                    <a href="{{ $feature->link }}" class="bg-bleak-purple-dark/50 rounded-2xl overflow-hidden flex-1 shadow-top-white transition hover:bg-bleak-purple-dark relative">
-                        <div class="p-8 py-12 space-y-2 md:text-center">
-                            <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
-                            <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
-                            @if ($feature->isNew)
-                                <div class="top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
-                                    <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>                                </div>
-                            @endif
-                        </div>
-                        <div class="absolute top-0 right-0 p-4">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g opacity="0.5">
-                                <path d="M11.25 2.25H15.75V6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L15.75 2.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.5 9.75V14.25C13.5 14.6478 13.342 15.0294 13.0607 15.3107C12.7794 15.592 12.3978 15.75 12 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V6C2.25 5.60218 2.40804 5.22064 2.68934 4.93934C2.97064 4.65804 3.35218 4.5 3.75 4.5H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                            </svg>
+                    <a href="{{ $feature->link }}" class="group relative flex-1 rounded-2xl p-[1px]">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-neutrals-white-20 to-transparent transition-opacity duration-150 group-hover:opacity-0"></div>
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-orange to-bright-orange opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
+                        <div class="bg-bleak-purple-dark/85 rounded-2xl overflow-hidden shadow-top-white relative h-full">
+                            <div class="p-8 py-12 space-y-2 md:text-center">
+                                <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
+                                <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
+                                @if ($feature->isNew)
+                                    <div class="flex top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
+                                        <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray 3.0</span>
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="absolute top-0 right-0 p-4">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.5">
+                                    <path d="M11.25 2.25H15.75V6.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.5 10.5L15.75 2.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.5 9.75V14.25C13.5 14.6478 13.342 15.0294 13.0607 15.3107C12.7794 15.592 12.3978 15.75 12 15.75H3.75C3.35218 15.75 2.97064 15.592 2.68934 15.3107C2.40804 15.0294 2.25 14.6478 2.25 14.25V6C2.25 5.60218 2.40804 5.22064 2.68934 4.93934C2.97064 4.65804 3.35218 4.5 3.75 4.5H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                </svg>
+                            </div>
                         </div>
                     </a>
                 @else
@@ -185,8 +190,8 @@
                             <h3 class="font-display font-bold text-xl md:text-2xl">{{ $feature->title }}</h3>
                             <p class="text-xl text-white text-opacity-60">{{ $feature->description }}</p>
                             @if ($feature->isNew)
-                                <div class="top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
-                                    <span class="bg-gradient-to-r from-bright-purple/60 to-bright-purple-light/40 text-white text-xs font-bold px-3 py-1 rounded-full">New in Ray 3.0</span>
+                                <div class="flex top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
+                                    <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray 3.0</span>
                                 </div>
                             @endif
                         </div>
