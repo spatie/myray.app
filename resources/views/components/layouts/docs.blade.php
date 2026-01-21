@@ -42,59 +42,6 @@
     </main>
 
     @livewire('doc-search')
-
-    <script>
-        document.addEventListener('alpine:init', () => {
-            let state = Alpine.reactive({
-                path: window.location.pathname
-            });
-
-            function strip(path) {
-                parts = path.replace(/https?:\/\//, '').split('/');
-                parts.shift();
-
-                return parts.join('/');
-            }
-
-            function section(path) {
-                parts = path.split('/');
-                parts.pop();
-
-                return parts.join('/');
-            }
-
-            let scrollPosition = 0;
-
-            document.addEventListener('livewire:navigating', () => {
-                scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-            });
-
-            document.addEventListener('livewire:navigated', () => {
-                try {
-                    if (window.location.hash) {
-                        setTimeout(() => {
-                            document.getElementById(window.location.hash.replace('#', ''))
-                                .scrollIntoView();
-                        });
-                    }
-                } catch (e) {
-                    console.error(e);
-                }
-
-                queueMicrotask(() => {
-                    state.path = window.location.pathname;
-                });
-            });
-
-            Alpine.magic('current', (el) => (expected = '') => {
-                return strip(state.path) === strip(expected);
-            });
-
-            Alpine.magic('currentSection', (el) => (expected = '') => {
-                return section(strip(state.path)) === section(strip(expected));
-            });
-        });
-    </script>
 </body>
 
 </html>

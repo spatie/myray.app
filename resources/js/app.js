@@ -2,6 +2,56 @@ import Animation from "./components/animation";
 import Teaser from "./components/teaser";
 import confetti from "canvas-confetti";
 
+
+document.addEventListener("alpine:init", () => {
+    const state = Alpine.reactive({
+        path: window.location.pathname,
+    });
+
+    function strip(path) {
+        let parts = path.replace(/https?:\/\//, "").split("/");
+        parts.shift();
+        return parts.join("/");
+    }
+
+    function section(path) {
+        let parts = path.split("/");
+        parts.pop();
+        return parts.join("/");
+    }
+
+    // Register $current magic - checks if the given path matches current URL
+    Alpine.magic("current", (el) => (expected = "") => {
+        return strip(state.path) === strip(expected);
+    });
+
+    // Register $currentSection magic - checks if we're in the same section
+    Alpine.magic("currentSection", (el) => (expected = "") => {
+        return section(strip(state.path)) === section(strip(expected));
+    });
+
+    // Update state when navigating with Livewire
+    document.addEventListener("livewire:navigated", () => {
+        // Handle hash scrolling
+        try {
+            if (window.location.hash) {
+                setTimeout(() => {
+                    document
+                        .getElementById(window.location.hash.replace("#", ""))
+                        ?.scrollIntoView();
+                });
+            }
+        } catch (e) {
+            console.error(e);
+        }
+
+        // Update the reactive path state
+        queueMicrotask(() => {
+            state.path = window.location.pathname;
+        });
+    });
+});
+
 class App {
     constructor() {
         this.initAnimation();
