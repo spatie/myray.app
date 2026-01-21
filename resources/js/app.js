@@ -30,6 +30,10 @@ document.addEventListener("alpine:init", () => {
         return section(strip(state.path)) === section(strip(expected));
     });
 
+    function updatePath() {
+        state.path = window.location.pathname;
+    }
+
     // Update state when navigating with Livewire
     document.addEventListener("livewire:navigated", () => {
         // Handle hash scrolling
@@ -46,9 +50,11 @@ document.addEventListener("alpine:init", () => {
         }
 
         // Update the reactive path state
-        queueMicrotask(() => {
-            state.path = window.location.pathname;
-        });
+        queueMicrotask(updatePath);
+    });
+
+    window.addEventListener("popstate", () => {
+        queueMicrotask(updatePath);
     });
 });
 
