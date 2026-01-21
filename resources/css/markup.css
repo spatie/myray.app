@@ -139,6 +139,10 @@
     background-color: transparent;
 }
 
+.markup pre.shiki code {
+    @apply border-0;
+}
+
 .markup td code {
     @apply bg-transparent;
     @apply m-0;
