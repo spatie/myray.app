@@ -90,8 +90,14 @@
     @apply mb-4;
 }
 
+.markup > p:first-of-type,
+.markup > :first-child > p:first-of-type {
+    @apply text-lg;
+}
+
+
 .markup strong {
-    @apply font-semibold;
+    @apply font-semibold text-white;
 }
 
 .markup ol {
@@ -139,7 +145,8 @@
     background-color: transparent;
 }
 
-.markup pre.shiki code {
+.markup pre.shiki code,
+.markup table code {
     @apply border-0;
 }
 
@@ -207,6 +214,10 @@
     @apply to-midnight-extra-light;
     @apply shadow-large-drop;
     border-radius: 0.75em;
+}
+
+.markup blockquote > p {
+    @apply !text-base;
 }
 
 .markup blockquote>*:last-child {

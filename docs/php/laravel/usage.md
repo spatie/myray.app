@@ -21,7 +21,7 @@ ray()->showQueries();
 User::firstWhere('email', 'john@example.com');
 ```
 
-![screenshot](/images/screenshots/docs_laravel_query.png);
+![screenshot](/images/screenshots/docs_laravel_query.png)
 
 To stop showing queries, call `stopShowingQueries`.
 
