@@ -129,11 +129,11 @@ class App {
     }
 
     initConfetti() {
-        const scale = 4;
+        const scale = 1;
         const confettiEl = document.querySelector(".js-confetti");
         const defaults = {
             origin: { y: 0.6 },
-            shapes: [confetti.shapeFromText({ text: "🕺" }, scale)],
+            // shapes: [confetti.shapeFromText({ text: "🕺" }, scale)],
         };
 
         if (confettiEl) {
@@ -149,7 +149,7 @@ class App {
                     confetti({
                         ...defaults,
                         particleCount: 30,
-                        spread: 120,
+                        spread: 160,
                         scalar: scale,
                     });
                 }
