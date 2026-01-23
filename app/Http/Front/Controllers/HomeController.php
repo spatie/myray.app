@@ -251,12 +251,12 @@ class HomeController
     protected function getFeatures(): Collection
     {
         return collect([
-            new Feature(
-                title: 'Debug with AI',
-                description: 'Connect AI agents to Ray via MCP to render output, read window contents, and automate actions.',
-                link: '/docs/features/mcp',
-                isNew: true,
-            ),
+            // new Feature(
+            //     title: 'Debug with AI',
+            //     description: 'Connect AI agents to Ray via MCP to render output, read window contents, and automate actions.',
+            //     link: '/docs/features/mcp',
+            //     isNew: true,
+            // ),
             new Feature(
                 title: 'Remote debugging',
                 description: 'Debug code running on remote servers over SSH and stream all debug output directly to Ray.',
@@ -279,10 +279,10 @@ class HomeController
                 title: 'Jump to your IDE',
                 description: 'Jump straight to the relevant location in your editor from any dumped file, with support for many different IDEs.',
             ),
-            // new Feature(
-            //     title: 'Proudly multiplatform',
-            //     description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
-            // ),
+            new Feature(
+                title: 'Proudly multiplatform',
+                description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
+            ),
         ]);
     }
 }

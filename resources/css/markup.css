@@ -1,3 +1,7 @@
+.markup * {
+    font-synthesis: none;
+}
+
 .markup h1 {
     @apply inline-block;
     @apply text-4xl;
@@ -92,7 +96,7 @@
 
 .markup > p:first-of-type,
 .markup > :first-child > p:first-of-type {
-    @apply text-lg;
+    @apply text-[1.125em];
 }
 
 
@@ -118,6 +122,10 @@
 .markup ul>li>ul {
     margin-bottom: 0;
     padding-left: 1em;
+}
+
+.markup ul > li p, .markup ol > li p {
+    display: inline;
 }
 
 .markup a {
@@ -170,10 +178,19 @@
     position: relative;
 }
 
+.copy-code-toolbar {
+    position: sticky;
+    top: 0;
+    left: 100%;
+    height: 0;
+    width: 0;
+    overflow: visible;
+}
+
 .copy-code-button {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0;
+    right: 0;
     padding: 0.15rem 0.5rem;
     font-size: 0.7rem;
     font-family: inherit;
@@ -224,14 +241,25 @@
     margin-bottom: 0;
 }
 
-.markup p>img,
-.markup p~img,
+.markup blockquote li {
+    @apply mb-0;
+}
+
+.markup p > img,
 .markup video,
 .markup iframe {
     @apply border border-bleak-purple-light;
     @apply my-8;
     padding: 0.25em;
     border-radius: 0.75em;
+}
+
+.markup img {
+    @apply my-8;
+}
+
+.markup img ~ h3 {
+    @apply mt-12;
 }
 
 .markup .heading-permalink {

@@ -3,7 +3,7 @@
     @persist('scrollbar')
     <div class="bg-midnight rounded-2xl docs-sidebar-contents" wire:scroll>
 
-        <div class="p-6 border-b border-white border-opacity-10 z-10 lg:bg-midnight lg:bg-opacity-80 lg:sticky lg:top-0">
+        <div class="p-6 border-b border-white border-opacity-10 z-10 lg:bg-midnight lg:bg-opacity-95 lg:sticky lg:top-0">
             <button @click="showSearchBox = true"
                 class="transition-border border border-white border-opacity-20 rounded-full py-3 px-4 w-full hover:border-opacity-50">
                 <div class="flex items-center">

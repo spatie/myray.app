@@ -114,6 +114,9 @@ class App {
             const code = pre.querySelector("code");
             const content = code ? code.textContent : pre.textContent;
 
+            const toolbar = document.createElement("div");
+            toolbar.className = "copy-code-toolbar";
+
             const button = document.createElement("button");
             button.className = "copy-code-button";
             button.textContent = "Copy";
@@ -124,7 +127,9 @@ class App {
                     button.textContent = "Copy";
                 }, 1500);
             });
-            pre.appendChild(button);
+
+            toolbar.appendChild(button);
+            pre.prepend(toolbar);
         });
     }
 

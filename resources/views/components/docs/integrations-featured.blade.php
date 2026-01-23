@@ -7,7 +7,7 @@
                     <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-orange to-bright-orange opacity-0 transition-opacity duration-150 group-hover:opacity-100"></div>
                     <div
                         class="relative flex flex-col align-items-center justify-center items-center py-4 rounded-2xl bg-bleak-purple/85">
-                        <img class="w-full p-2 max-w-16 md:max-w-24" src="/images/logos/icons/logo-{{ $doc->parts[1] }}.svg"
+                        <img class="w-full p-2 max-w-16 !m-1 md:max-w-24" src="/images/logos/icons/logo-{{ $doc->parts[1] }}.svg"
                             alt="{{ $doc->title }}">
                     </div>
                 </div>

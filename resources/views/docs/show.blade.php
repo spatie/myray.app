@@ -29,6 +29,13 @@
 
     <section>
         <x-markdown class="w-full highlight gap-x-20 flex flex-col xl:flex-row">
+
+<div>
+
+<div class="hidden justify-between border-b border-bleak-purple-extra-light/20 mb-6 pb-1 lg:flex">
+    <a class="inline-block text-sm text-bleak-purple-extra-light no-underline transition hover:text-white" href="{{ url('/docs/' . $categories[0]->slug) }}">{{ $categories[0]->title }}</a>
+</div>
+
 <article class="markup min-w-0 w-full max-w-[45rem] text-bright-purple-extra-light">
 
 @if(end($categories)->thirdParty ?? false)
@@ -42,6 +49,7 @@
 <h1>{{ $page->title }}</h1>
 {!! $page->contents !!}
 </article>
+</div>
 
 <div class="docs-toc text-sm w-full order-first mb-8 lg:order-none lg:max-w-48">
 <div class="lg:top-6 lg:sticky">

@@ -16,23 +16,31 @@ The MCP server exposes multiple tools that agents can call, including:
 - Sending notifications
 - Clearing messages
 
+![screenshot](/images/screenshots/docs_settings_mcp.png)
+
 ## Ray as an AI output window
 
-One of the most common use cases is using Ray as an output window for AI agents.
+One of the most common use cases is using Ray as an output window for AI agents. Instead of dumping this content into their own terminal window or seperate files, agents can render it directly in Ray.
 
-This is especially useful when agents generate:
+This is especially useful when AI agents generate:
 
 - HTML and CSS
 - UI prototypes
-- Mermaid diagrams
+- ERD/Mermaid diagrams
 
-Instead of dumping this content into their own terminal window or seperate files, agents can render it directly in Ray.
+Ray will try to parse many of the requests to use the most appropriate output format.
+
+![screenshot](/images/screenshots/docs_mcp_mermaid.png)
 
 ## Reading and analyzing output
 
-Agents can also read everything displayed in Ray windows. This enables workflows like:
+Agents can also access your Ray windows and read everything displayed in them. 
+
+This enables workflows like:
 
 - Analyzing error messages or stack traces
 - Reviewing debug output
 - Inspecting generated files or intermediate results
 - Suggesting fixes based on output
+
+![screenshot](/images/screenshots/docs_mcp_terminal_read.png)
