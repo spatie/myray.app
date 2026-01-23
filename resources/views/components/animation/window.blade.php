@@ -1,9 +1,9 @@
-<div class="w-full overflow-hidden rounded-xl lg:min-w-[45rem] lg:h-[30rem] group/window js-anim-window"
+<div class="w-full overflow-hidden rounded-xl lg:min-w-[45rem] lg:h-[32rem] group/window js-anim-window"
     x-data="{ tooltip: '' }" @mouseover="tooltip = ''" @mouseover.away="tooltip = ''">
 
     <div class="sticky top-0 z-10">
         <div
-            class="bg-[#100424] border-b border-[#261A43] py-2 px-2 flex gap-6 items-center justify-between lg:gap-12 lg:px-4">
+            class="hidden bg-[#100424] border-b border-[#261A43] py-2 px-2 gap-6 items-center justify-between lg:flex lg:gap-12 lg:px-4">
 
             <div class="flex">
 
@@ -77,11 +77,12 @@
 
         <div class="flex gap-6 px-6 py-4 border-b border-[#261A43] opacity-0 -translate-y-1 z-[3] js-anim-message">
             <div class="my-2">
-                <div class="bg-[#A1A1AA] outline outline-2 outline-offset-1 outline-[#A1A1AA50] w-2 h-2 rounded-full">
+                <div class="bg-[#49DE80] outline outline-2 outline-offset-1 outline-[#49DE8050] w-2 h-2 rounded-full">
                 </div>
             </div>
 
             <div class="leading-[1.4]">
+                <div class="inline-block text-xs py-1.5 pt-[0.33rem] px-3 border text-green-500 border-green-500 rounded-full mb-2 leading-none">Hello</div>
                 <div class="mb-2">
                     <p>Send anything to Ray, from PHP and Laravel to JavaScript and more.</p>
                 </div>
@@ -97,7 +98,7 @@
 
         <div class="flex gap-6 px-6 py-4 border-b border-[#261A43] opacity-0 -translate-y-1 z-[2] js-anim-message">
             <div class="my-2">
-                <div class="bg-[#A1A1AA] outline outline-2 outline-offset-1 outline-[#A1A1AA50] w-2 h-2 rounded-full">
+                <div class="bg-[#49DE80] outline outline-2 outline-offset-1 outline-[#49DE8050] w-2 h-2 rounded-full">
                 </div>
             </div>
 
@@ -124,8 +125,7 @@
 
         <div class="flex gap-6 px-6 py-4 border-b border-[#261A43] opacity-0 -translate-y-1 js-anim-message">
             <div class="my-2">
-                <div class="bg-[#49DE80] outline outline-2 outline-offset-1 outline-[#49DE8050] w-2 h-2 rounded-full">
-                </div>
+                <div class="bg-[#60A5FA] outline outline-2 outline-offset-1 outline-[#60A5FA50] w-2 h-2 rounded-full"></div>
             </div>
 
             <div class="leading-[1.4]">

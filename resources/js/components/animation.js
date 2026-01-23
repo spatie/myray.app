@@ -4,6 +4,8 @@ import TextPlugin from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
 export default class Animation {
+    static LG_BREAKPOINT = 1024;
+
     constructor(args = {}) {
         this.animationEl = args.el || null;
         if (!this.animationEl) return;
@@ -12,6 +14,8 @@ export default class Animation {
         this.codeBlocks = this.animationEl.querySelectorAll(".js-anim-block");
         this.windowTargets = this.animationEl.querySelectorAll(".js-anim-message");
         this.loader = this.animationEl.querySelector(".js-animation-loader");
+        this.loadButton = this.animationEl.querySelector(".js-anim-load");
+        this.loadIcon = this.animationEl.querySelector(".js-anim-load-icon");
 
         this.timeline = gsap.timeline({
             paused: false,
@@ -19,6 +23,35 @@ export default class Animation {
         });
 
         this.initialize();
+        this.bindEvents();
+
+        if (!this.isLargeViewport()) {
+            this.timeline.progress(1);
+        }
+    }
+
+    isLargeViewport() {
+        return window.innerWidth >= Animation.LG_BREAKPOINT;
+    }
+
+    bindEvents() {
+        if (this.loadButton) {
+            this.loadButton.addEventListener("click", () => this.finish());
+        }
+    }
+
+    finish() {
+        if (this.loadIcon) {
+            gsap.to(this.loadIcon, {
+                rotation: 360,
+                duration: 0.5,
+                ease: "power2.out",
+                onComplete: () => {
+                    gsap.set(this.loadIcon, { rotation: 0 });
+                },
+            });
+        }
+        this.timeline.progress(1);
     }
 
     initialize() {

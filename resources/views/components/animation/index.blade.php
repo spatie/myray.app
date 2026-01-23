@@ -9,6 +9,12 @@
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <div class="bg-bleak-purple-extra-light rounded-full w-3 h-3"></div>
                 <span class="absolute left-0 w-full text-center text-sm text-white text-opacity-50 font-bold">TestCommand.php &mdash; Editor</span>
+                <button class="absolute right-0 py-2 px-2 text-sm text-white/50 hover:text-white transition-colors js-anim-load">
+                    <svg class="w-4 h-4 js-anim-load-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+                        <path d="M21 3v5h-5"/>
+                    </svg>
+                </button>
             </div>
             <div class="p-6 md:p-8">
                 <x-animation.code />

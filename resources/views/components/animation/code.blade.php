@@ -6,7 +6,7 @@
             <span class="ml-4 screen-code-caret"></span>
             <p class="ml-4 screen-code-comment">// Send strings, arrays, objects,...</p>
             <p class="ml-4"><span class="screen-code-variable">$string</span> = <span class="screen-code-string">'Send anything to Ray, from PHP and Laravel to JavaScript and more.'</span>;</p>
-            <p class="ml-4 screen-code-glow"><span class="screen-code-title">ray</span>(<span class="screen-code-variable">$string</span>);</p>
+            <p class="ml-4 screen-code-glow"><span class="screen-code-title">ray</span>(<span class="screen-code-variable">$string</span>)-><span class="screen-code-title">label</span>(<span class="screen-code-string">'Hello'</span>);</p>
         </div>
         <p></p>
         <div class="js-anim-block">
@@ -23,7 +23,9 @@
             <p class="ml-4"><span class="screen-code-variable">$table</span> = [</p>
             <p class="ml-8"><span class="screen-code-variable">'Message'</span> => <span class="screen-code-variable">'I prefer orange'</span>,</p>
             <p class="ml-4">];</p>
-            <p class="ml-4 screen-code-glow"><span class="screen-code-title">ray</span>()-><span class="screen-code-title">table</span>(<span class="screen-code-variable">$table</span>)-><span class="screen-code-title">green</span>();</p>
+            <p class="ml-4 screen-code-glow">
+                <span class="screen-code-title">ray</span>()-><span class="screen-code-title">table</span>(<span class="screen-code-variable">$table</span>)-><span class="screen-code-title">blue</span>();
+            </p>
         </div>
         <p></p>
     </div>

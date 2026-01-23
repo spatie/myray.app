@@ -22,7 +22,7 @@
                 <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">Debug without <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">breaking your flow</span></h1>
 
                 <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
-                    <span>Ray keeps all your debug output neatly organized <br /> in a dedicated desktop app.</span>
+                    <span>Ray keeps all your debug output neatly organized <br class="hidden lg:block" /> in a dedicated desktop app.</span>
                 </p>
 
                 <x-download.cta :show-byline="true" :center-buttons="true" />
