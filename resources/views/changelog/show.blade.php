@@ -17,8 +17,12 @@
                 text="Stay up to date with all of the latest improvements we've made to Ray" tag="h1"
             />
 
-            @if($versions->first()?->isMajorRelease())
-                @php $pinnedVersion = $versions->first(); @endphp
+            @php
+                $pinnedVersion = $versions->first()?->isMajorRelease() ? $versions->first() : null;
+                $otherVersions = $pinnedVersion ? $versions->skip(1) : $versions;
+            @endphp
+
+            @if($pinnedVersion)
                 <section class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
                     <div class="bg-midnight-dark bg-opacity-75 rounded-2xl overflow-hidden flex-1">
                         <div class="p-8 md:p-12">
@@ -49,7 +53,7 @@
 
             <h2 class="text-lg font-bold">All releases</h2>
 
-            @foreach($versions as $version)
+            @foreach($otherVersions as $version)
                 <section class="rounded-2xl overflow-hidden flex-1 border border-bleak-purple-light">
                     <div class="p-4 md:p-8 md:py-6">
                         <div class="mb-4 space-y-2">
