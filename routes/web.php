@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Front\Controllers\ChangelogController;
+use App\Http\Front\Controllers\ChangelogWebhookController;
 use App\Http\Front\Controllers\DocsController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\PostsController;
@@ -30,7 +32,10 @@ Route::name('legal.')->group(function () {
     Route::view('privacy', 'legal.privacy')->name('privacy');
 });
 
-Route::view('changelog', 'changelog.show')->name('changelog');
+Route::get('changelog', ChangelogController::class)->name('changelog');
+Route::post('webhooks/changelog', ChangelogWebhookController::class)
+    ->middleware('throttle:6,1')
+    ->name('webhooks.changelog');
 Route::view('teaser', 'teaser.show')->name('teaser');
 
 Route::feeds();
