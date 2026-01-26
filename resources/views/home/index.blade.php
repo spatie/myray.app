@@ -17,7 +17,7 @@
 
             <div class="max-w-[80rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
 
-                <a class="btn-bright-purple-v inline-flex px-5 py-3 leading-none rounded-full font-bold shadow-top-white mb-4" href="http://">See what's new in Ray 3.0</a>
+                <a class="btn-bright-purple-v inline-flex px-5 py-3 leading-none rounded-full font-bold shadow-top-white mb-4" href="/blog/introducing-ray-30">See what's new in Ray 3.0</a>
 
                 <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">Debug without <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">breaking your flow</span></h1>
 
@@ -154,8 +154,8 @@
 
             <x-intro.default
                 label="New in Ray 3.0"
-                title="Output window for your AI"
-                text="Directly see AI output without having to look at a tiny terminal window"
+                title="See what your AI generates"
+                text="Interact with AI output without having to look at a tiny terminal window"
             />
 
             <div class="flex flex-col md:flex-row gap-8 md:gap-16" x-data="{ activeTab: 0 }">
@@ -177,7 +177,7 @@
                                  :class="activeTab === 1 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
                                 <h3 class="font-display font-bold text-2xl">Mermaid & ERD diagrams</h3>
-                                <p :class="activeTab === 1 && 'font-bold'">Ask your AI to explain a complex database structure and see structured output in ERD or Mermaid with built-in support.</p>
+                                <p :class="activeTab === 1 && 'font-bold'">Ask AI to explain complex database schemas and see structured output in ERD or Mermaid with a built-in viewer.</p>
                             </div>
                         </button>
                     </li>
@@ -187,7 +187,7 @@
                                  :class="activeTab === 2 ? 'opacity-100' : 'opacity-0'"></div>
                             <div class="relative z-10 space-y-2">
                                 <h3 class="font-display font-bold text-2xl">Anything you can generate</h3>
-                                <p :class="activeTab === 2 && 'font-bold'">With our MCP server, your AI agents have access to almost any Ray method, so the sky is the limit of what you can generate and output.</p>
+                                <p :class="activeTab === 2 && 'font-bold'">With our MCP server, your AI agents have access to your windows and tools, so the sky is the limit of what you can have AI read, generate and output.</p>
                             </div>
                         </button>
                     </li>
