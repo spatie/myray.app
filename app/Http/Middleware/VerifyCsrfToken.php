@@ -15,5 +15,6 @@ class VerifyCsrfToken extends Middleware
 
     protected $except = [
         'paddle-webhooks',
+        'webhooks/changelog',
     ];
 }
