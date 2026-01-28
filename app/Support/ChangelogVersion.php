@@ -14,6 +14,7 @@ class ChangelogVersion
 
     public function isMajorRelease(): bool
     {
+        ray('isMajorRelease', $this->version, preg_match('/^\d+\.0\.0$/', $this->version) === 1);
         return preg_match('/^\d+\.0\.0$/', $this->version) === 1;
     }
 

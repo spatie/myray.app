@@ -18,8 +18,8 @@
             />
 
             @php
-                $pinnedVersion = $versions->first()?->isMajorRelease() ? $versions->first() : null;
-                $otherVersions = $pinnedVersion ? $versions->skip(1) : $versions;
+                $pinnedVersion = $versions->first(fn ($v) => $v->isMajorRelease());
+                $otherVersions = $pinnedVersion ? $versions->reject(fn ($v) => $v === $pinnedVersion) : $versions;
             @endphp
 
             @if($pinnedVersion)
