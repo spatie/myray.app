@@ -43,7 +43,7 @@
     </nav>
 </div>
 
-<article class="markup min-w-0 w-full max-w-[45rem] text-bright-purple-extra-light">
+<article class="markup min-w-0 w-full max-w-[45rem] text-bright-purple-extra-light" id="site-search-docs-content">
 
 @if(end($categories)->thirdParty ?? false)
 <div class="mb-3">

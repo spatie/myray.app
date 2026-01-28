@@ -1,5 +1,7 @@
 <?php
 
+use App\Support\Search\DocsSearchIndexer;
+
 return [
     /*
      * When crawling your site, we will ignore content that is on these URLs.
@@ -59,7 +61,7 @@ return [
      * This indexer will be used when none is specified in the `profile_class` attribute
      * of a `SiteSearchIndex` model.
      */
-    'default_indexer' => Spatie\SiteSearch\Indexers\DefaultIndexer::class,
+    'default_indexer' => DocsSearchIndexer::class,
 
     /*
      * A driver is responsible for writing all scraped content
