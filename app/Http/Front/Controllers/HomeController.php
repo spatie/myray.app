@@ -2,29 +2,22 @@
 
 namespace App\Http\Front\Controllers;
 
+use App\Support\Feature;
 use App\Support\Testimonial;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Spatie\PriceApi\SpatiePriceApi;
 
 class HomeController
 {
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): View
     {
-        $purchasableId = config('services.spatie_prices_api.purchasable_id');
-
-        $prices = SpatiePriceApi::getPriceForPurchasable($purchasableId);
-
-        return view('front.home.index', [
-            'downloadLinkMacIntel' => spatieUrl('https://spatie.be/products/ray/download/macosIntel/latest'),
-            'downloadLinkMacAppleSilicon' => spatieUrl('https://spatie.be/products/ray/download/macosAppleSilicon/latest'),
-            'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/download/windows/latest'),
-            'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/download/linux/latest'),
-            'couldFetchPrice' => $prices['couldFetchPrice'],
-            'price' => $prices['actual'],
-            'priceWithoutDiscount' => $prices['withoutDiscount'],
-            'discount' => $prices['discount'],
+        return view('home.index', [
+            'downloadLinkMac' => spatieUrl('https://spatie.be/products/ray/v3/download/macos/latest'),
+            'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/v3/download/windows/latest'),
+            'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/v3/download/linux/latest'),
             'testimonials' => $this->getTestimonials(),
+            'features' => $this->getFeatures(),
         ]);
     }
 
@@ -33,14 +26,14 @@ class HomeController
         return collect([
             new Testimonial(
                 name: 'Taylor Otwell',
-                text: 'Ray is <strong class=" font-black text-2xl block">Life</strong>',
+                text: '<span class="text-2xl">Ray is life</span>',
                 image: 'taylor',
                 url: 'https://twitter.com/taylorotwell',
                 title: 'Laravel Founder & Creator',
             ),
             new Testimonial(
                 name: 'Michael Dyrynda',
-                text: 'As an amateur developer that swears by <code>dd()</code>, I was thrilled to hear about Ray. Now
+                text: 'As an amateur developer that swears by dd(), I was thrilled to hear about Ray. Now
     I can <strong class="font-semibold">feel like a real developer</strong>, even without using \'real\'
     debugging tools!',
                 image: 'michael',
@@ -56,8 +49,8 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Nuno Maduro',
-                text: 'Ray is a part of my <strong class="font-semibold">Essentials</strong> toolbox. It has the
-        snapiness of a real debugger, but the simplicity of <code>dd()</code>',
+                text: 'Ray is a part of my <strong class="font-bold">Essentials</strong> toolbox. It has the
+        snappiness of a real debugger, but the simplicity of dd()',
                 image: 'nuno',
                 url: 'https://twitter.com/enunomaduro',
                 title: 'Software engineer at Laravel',
@@ -127,7 +120,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Caneco',
-                text: 'dd() is for now, ray() is forever… or at least until you clear your log screen.',
+                text: 'dd() is for now, Ray() is forever… or at least until you clear your log screen.',
                 image: 'caneco',
                 url: 'https://twitter.com/caneco',
                 title: 'Full Stack Developer at Mediacare',
@@ -148,14 +141,14 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Daniel Koop',
-                text: 'I have just started using ray and I just love the simplicity of the tool. It is a neat way for debugging without a configuration hassle and I love the pause feature rather than running sleep.',
+                text: 'I have just started using Ray and I just love the simplicity of the tool. It is a neat way for debugging without a configuration hassle and I love the pause feature rather than running sleep.',
                 image: 'mrkoopie',
                 url: 'https://twitter.com/mrkoopie',
                 title: 'WordPress and Laravel developer',
             ),
             new Testimonial(
                 name: 'Charlie Joseph',
-                text: 'Day to day, Ray has been my must-have tool when working with projects. Being able to quickly debug to a seperate, non intrusive window really persuaded me with Ray.',
+                text: 'Day to day, Ray has been my must-have tool when working with projects. Being able to quickly debug to a separate, non intrusive window really persuaded me with Ray.',
                 image: 'charlie',
                 url: 'https://twitter.com/heychazza',
                 title: 'Developer at Analyse.net',
@@ -204,7 +197,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'Andre Biel',
-                text: 'Despite being awesome in so many different ways, ray is the missing dd() for pure API applications.',
+                text: 'Despite being awesome in so many different ways, Ray is the missing dd() for pure API applications.',
                 image: 'andre',
                 url: 'https://twitter.com/the_real_biel',
                 title: 'Co-founder Nice Outside',
@@ -225,7 +218,7 @@ class HomeController
             ),
             new Testimonial(
                 name: 'JL',
-                text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in chrome. Wordpress, Laravel, Yii: I've used ray everywhere and it's done nothing but make me more productive.",
+                text: "Ray is a 'ray' of sunshine that saves me time digging into log files or the response tab in Chrome. Wordpress, Laravel, Yii: I've used Ray everywhere and it's done nothing but make me more productive.",
                 image: 'jl',
                 url: 'https://twitter.com/JLadHDeveloper',
                 title: 'Full Stack Wildcard Developer',
@@ -252,6 +245,44 @@ class HomeController
                 title: 'Php & Laravel Developer',
             ),
 
+        ]);
+    }
+
+    protected function getFeatures(): Collection
+    {
+        return collect([
+            // new Feature(
+            //     title: 'Debug with AI',
+            //     description: 'Connect AI agents to Ray via MCP to render output, read window contents, and automate actions.',
+            //     link: '/docs/features/mcp',
+            //     isNew: true,
+            // ),
+            new Feature(
+                title: 'Remote debugging',
+                description: 'Debug code running on remote servers over SSH and stream all debug output directly to Ray.',
+                link: '/docs/features/remote',
+            ),
+            new Feature(
+                title: 'Archive messages',
+                description: 'Save previously sent messages to compare output or debug hard-to-reproduce issues.',
+                isNew: true,
+            ),
+            new Feature(
+                title: 'Pause & measure execution',
+                description: 'Powerful tools to pause executing your PHP or Laravel code and to measure time between calls.',
+            ),
+            new Feature(
+                title: 'No dumping required',
+                description: 'Receive output automatically (like queries, jobs, exceptions, and more) without having to add calls in your code.',
+            ),
+            new Feature(
+                title: 'Jump to your IDE',
+                description: 'Jump straight to the relevant location in your editor from any dumped file, with support for many different IDEs.',
+            ),
+            new Feature(
+                title: 'Proudly multiplatform',
+                description: 'Ray runs on macOS, Windows, and Linux, keeping your debugging setup the same on every machine.',
+            ),
         ]);
     }
 }

@@ -1,4 +1,4 @@
 ---
 title: JavaScript
-weight: 3
+weight: 4
 ---

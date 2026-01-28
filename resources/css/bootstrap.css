@@ -4,16 +4,14 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/JetBrainsMono-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
     font-display: swap;
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../fonts/JetBrainsMono-Italic.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/JetBrainsMono-Italic.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Italic.woff2') format('woff2');
     font-display: swap;
     font-weight: 400;
     font-style: italic;
@@ -29,10 +27,41 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/JetBrainsMono-Medium.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2');
     font-display: swap;
     font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('../fonts/pt-root-ui_medium.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Root UI';
+    src: url('../fonts/pt-root-ui_bold.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../fonts/HankenGrotesk-Bold.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('../fonts/HankenGrotesk-Black.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -42,12 +71,12 @@
 
 html {
     box-sizing: border-box;
-    font-size: 16px;
-    font-size: min(max(1rem, 2vw), 1.25rem);
+    /* font-size: 16px; */
+    /* font-size: min(max(1rem, 2vw), 1.25rem); */
 
-    @supports (font-size: clamp(1rem, 2vw, 1.25rem)) {
+    /* @supports (font-size: clamp(1rem, 2vw, 1.25rem)) {
         font-size: clamp(1rem, 2vw, 1.25rem);
-    }
+    } */
 }
 
 @layer utilities {

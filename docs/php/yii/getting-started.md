@@ -1,11 +1,11 @@
 ---
-title: Using Ray With Yii
+title: Using Ray with Yii
 weight: 1
 ---
 
-You can use Ray with Yii via this third party package:
+[Yii](https://www.yiiframework.com/) is a high-performance PHP framework for developing modern web applications. Use Ray to help you debug when you're developing a Yii application, extension or module.
 
-[spatie/yii-ray](https://github.com/spatie/yii-ray)
+<x-docs.github-repo repo="spatie/yii-ray" />
 
 ## Installing the package
 
@@ -13,9 +13,9 @@ You can use Ray with Yii via this third party package:
 composer require spatie/yii-ray
 ```
 
-By installing Ray this way it will also be installed in your production environment. This way your application will not break if you forget to remove a `ray` call.  The package will not attempt to transmit information to Ray when the app environment is set to anything other than `dev`.
+This installs Ray as a project dependency, meaning it will also be installed in your production environment. Your application won't break if you forget to remove a `ray` call. The package doesn't send data when the environment isn't set to `dev`.
 
-You could opt to install `yii-ray` as a dev dependency. If you go this route, make sure to remove every `ray` call in the code before deploying.
+If you prefer, install it as a dev dependency by adding `--dev` to the composer command. Note that with a dev dependency, any `ray` calls left in your code will cause errors in production, so you'll need to remove them before deploying. We have some options for [detecting Ray calls](/docs/php/vanilla-php/detecting-removing-ray-calls) in your app.
 
 ```bash
 composer require spatie/yii-ray --dev
@@ -23,4 +23,11 @@ composer require spatie/yii-ray --dev
 
 ## Usage
 
-Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
+All [generic PHP methods](/docs/php/vanilla-php/usage) are available when using Yii.
+
+To enable `ray()`, `dd()` and `dump()` globally in any file, see the [global installation instructions](/docs/php/vanilla-php/installation#global-installation).
+
+> ## What's next?
+> Now that Ray is installed in your Yii project, see what you can use it for.
+> * [Learn how to use Ray with PHP](/docs/php/vanilla-php/usage)
+> * [View all available methods](/docs/php/vanilla-php/reference)

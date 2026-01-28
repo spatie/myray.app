@@ -1,15 +1,16 @@
 ---
-title: Installation
+menuTitle: Installation
+title: Installing Ray
 weight: 1
 ---
 
-Ray helps you debug your web application easier and faster. It's a companion app available for Mac, Linux, and Windows, and supports common languages and frameworks as PHP, Laravel, WordPress, JavaScript and Node.js.
+Ray keeps all your debug output neatly organized in a dedicated desktop app, and is available for Mac, Linux, and Windows. Debug using the same syntax across languages and frameworks.
 
 ## Install the Ray application
 
-You can give Ray a try by downloading [our free trial](https://myray.app/). After installing the application, link your app with Ray by installing the right package give it a try by running your first calls. Enjoying Ray? Get full access to the app by [purchasing a license](https://spatie.be/products/ray).
+Download Ray for free and give it a try! You can send up to 20 messages each session during the trial. Enjoying Ray? [Purchase a license](https://spatie.be/products/ray) to unlock the app and get full access.
 
-Find download links to the Ray application for our support platforms below:
+Find download links to the Ray application for our supported platforms below:
 
 * [macOS (Apple Silicon)](https://spatie.be/products/ray/download/macosAppleSilicon/latest)
 * [macOS (Intel)](https://spatie.be/products/ray/download/macosIntel/latest)
@@ -18,17 +19,17 @@ Find download links to the Ray application for our support platforms below:
 
 You can also install Ray with Homebrew on macOS: `brew install --cask ray`.
 
-## Connect your application to Ray
+## Install the Ray package
 
-You need to install a package/library for your specific language or framework that allows your project to communicate with Ray. Most integrations are installed with a package manager, but the steps may be different depending on the integration.
+Install a package for your language or framework to connect your project to Ray. 
 
-Ray support the following languages and frameworks:
+<x-docs.integrations-featured />
 
-<x-integrations-overview></x-integrations-overview>
+## Sending your first dump
 
-## Sending your first call
+To make sure everything is working properly, let's send a dump from your application to Ray. 
 
-To make sure everything is functioning correctly, just send a request to Ray from your application. The `ray()` command differs by language, but for PHP, you can write the following function and execute it in your application:
+The syntax varies slightly by language. Here's an example for PHP:
 
 ```php
 ray('Hello world!');
@@ -36,12 +37,14 @@ ray('Hello world!');
 
 This will display the following in Ray:
 
-![screenshot](/screenshots/helloworld.png)
+![screenshot](/images/screenshots/docs_hello.png)
 
-Every time you use Ray, the details of each call will show up in this window. There are various types of calls, each presenting information in useful ways. Some of them are unique for each integration, so make sure to check out the documentation for your integration to see what's possible.
+Every dump you send will appear here. Try sending different types of data and see how they display!
+
+Some methods are specific to the integration you use, so it's worth checking out the instructions for your integration to see what's possible.
 
 > ## What's next?
-> After you've set up Ray and connected it to your project, the next things to do are to understand what Ray can do in the language or framework you chose. You can also check out additional features within the Ray application itself.
-> * [Check out the integrations](/docs/getting-started/integrations)
-> * [Read about some useful tips and tricks](/docs/getting-started/tips-tricks)
-> * [Check how to set up your environment](/docs/environments)
+> Now that Ray is running, explore what else it can do!
+> * [Explore all integrations and how they work](/docs/getting-started/integrations)
+> * [Learn how to use Ray](/docs/getting-started/using-ray)
+> * [Get Ray up and running in different environments](/docs/environments)

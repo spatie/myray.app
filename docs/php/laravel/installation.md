@@ -1,52 +1,54 @@
 ---
-title: Using Ray With Laravel
+title: Installing Ray for Laravel
 menuTitle: Installation
 weight: 1
 ---
 
-If you use Laravel, this is the way.
+[Laravel](https://laravel.com/) is the most popular PHP framework, known for its elegant syntax and powerful features. Use Ray to help you debug when you're developing a Laravel application or package.
 
-## Installing the package in single Laravel project
+<x-docs.github-repo repo="spatie/laravel-ray" />
+
+## Install in a single project
 
 ```bash
 composer require spatie/laravel-ray
 ```
 
-By installing Ray like this it will also be installed in your production environment. This way your application will not break if you forget to remove a `ray` call.  The package will not attempt to transmit information to Ray when the app environment is set to `production`.
+This installs Ray as a project dependency, meaning it will also be installed in your production environment. Your application won't break if you forget to remove a `ray` call. The package doesn't send data when the environment isn't set to `dev`.
 
-You could opt to install `laravel-ray` as a dev dependency. If you go this route, make sure to remove every `ray` call in the code before deploying.
+If you prefer, install it as a dev dependency by adding `--dev` to the composer command. Note that with a dev dependency, any `ray` calls left in your code will cause errors in production, so you'll need to remove them before deploying. We have some options for [detecting Ray calls](/docs/php/vanilla-php/detecting-removing-ray-calls) in your app.
 
 ```bash
 composer require spatie/laravel-ray --dev
 ```
 
-## Use ray(), dd() and dump() in any file.
+## Global installation
 
-Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
+To make `ray()`, `dump()` and `dd()` available in any PHP file on your system, you can install the global Ray package. See the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) for setup details.
 
-## Creating a config file
+## Publishing the config file
 
-Optionally, you can run an artisan command to publish [the config file](/docs/php/laravel/configuration) in to the project root.
+Optionally, publish [the config file](/docs/php/laravel/configuration) to your project root.
 
 ```bash
 php artisan ray:publish-config
 ```
 
-You can also add `--docker` or `--homestead` option to set up a base configuration for those dev environments.
+Add the `--docker` or `--homestead` option to set up a base configuration for those environments.
 
 ```bash
 php artisan ray:publish-config --docker
-# or
+```
+
+```bash
 php artisan ray:publish-config --homestead
 ```
 
-## Using Ray in an Orchestra powered test suite
+## Using Ray in an Orchestra test suite
 
-In order to use a Laravel specific functionality you must call Ray's service provider in your base test case.
+To use Laravel-specific functionality in an Orchestra-powered test suite, register Ray's service provider in your base test case.
 
 ```php
-// add this to your base test case
-
 protected function getPackageProviders($app)
 {
     return [
@@ -54,3 +56,9 @@ protected function getPackageProviders($app)
     ];
 }
 ```
+
+> ## What's next?
+> Now that Ray is installed in your Laravel project, explore what else it can do!
+> * [Learn how to use Ray with Laravel](/docs/php/laravel/usage)
+> * [View all available methods (PHP)](/docs/php/vanilla-php/reference)
+> * [Customize your configuration](/docs/php/laravel/configuration)

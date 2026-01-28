@@ -1,10 +1,12 @@
 ---
-title: Using Ray With PHP
+title: Installing Ray for PHP
 menuTitle: Installation
 weight: 1
 ---
 
-To communicate with the Ray desktop app, we're going to use a function named `ray()`.
+[PHP](https://www.php.net/) is one of the world's most popular programming languages, powering millions of websites. Use Ray to help you debug any PHP project, from simple scripts to complex applications.
+
+> Using Laravel, WordPress, Yii, or another supported framework or CMS? Install the [dedicated integration](/docs/getting-started/integrations) for extra framework-specific features.
 
 ## Global installation
 
@@ -15,20 +17,23 @@ composer global require spatie/global-ray
 global-ray install
 ```
 
-You can now use all of `ray()`'s [framework agnostic capabilities](/docs/php/vanilla-php/usage).
+Note: If a PHP-specific framework package (e.g. Laravel, WordPress) is detected in your project, it will be used instead of the global Ray package.
 
-To use framework specific functionality, such as [viewing queries in Laravel](/docs/php/laravel/queries#showing-queries), or [displaying mails in WordPress](/docs/php/wordpress), you should still [install the relevant package or library](/docs/getting-started/installation#connect-your-application-to-ray).
+<x-docs.github-repo repo="spatie/global-ray" />
 
-If a framework specific package is detected, it will be used instead of the global Ray.
+## Install in a single project
 
-## Installation in a single project
-
-To start using Ray in a single PHP project, install the `ray` package in the project.
+To use Ray in a single PHP project, install the `ray` package in the project.
 
 ```bash
 composer require spatie/ray
 ```
 
-You should be able to use the `ray` function without any other steps.
+<x-docs.github-repo repo="spatie/ray" />
 
-If you use Laravel, you should use install [the Laravel specific package](/docs/php/laravel/installation) instead of `spatie/ray`.
+> ## What's next?
+> Now that Ray is running in your PHP, explore what else it can do!
+> * [Learn how to use Ray with PHP](/docs/php/vanilla-php/usage)
+> * [View all available methods](/docs/php/vanilla-php/reference)
+> * [Add a config file to your project](/docs/php/vanilla-php/configuration)
+

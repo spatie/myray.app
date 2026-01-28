@@ -3,11 +3,10 @@ title: Configuration
 weight: 2
 ---
 
-In framework agnostic projects you can use this template as the Ray config file.
+Here is an example of a Ray configuration file for use with PHP projects. Save it as `ray.php` in the root of your project.
 
 ```php
 <?php
-// Save this in a file called "ray.php"
 
 return [
     /*

@@ -9,7 +9,10 @@ trait HasCategoriesAndPages
 {
     public function sort(): void
     {
-        $this->categories = $this->categories->sortBy('weight');
+        $this->categories = $this->categories->sortBy([
+            fn($category) => $category->thirdParty ?? false ? 1 : 0,
+            ['weight', 'asc'],
+        ]);
         $this->pages = $this->pages->sortBy('weight');
 
         foreach ($this->categories as $subCategory) {

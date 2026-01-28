@@ -6,9 +6,9 @@ $environment ??= 'staging';
 $branch ??= 'main';
 
 $server = match($environment) {
-'next' => '138.68.99.55',
-'production' => '138.68.99.55',
-default => 'next.myray.app',
+    'next' => '138.68.99.55',
+    'production' => 'myray.app',
+    default => 'next.myray.app',
 };
 
 $app = match($environment) {
@@ -18,9 +18,9 @@ default => 'next.myray.app',
 };
 
 $branch = match($environment) {
-'next' => 'redesign',
-'production' => 'main',
-default => 'redesign',
+    'next' => 'redesign',
+    'production' => 'main',
+    default => 'redesign',
 };
 
 $userAndServer = 'forge@'. $server;
@@ -94,8 +94,8 @@ echo "{{ $newReleaseName }}" > public/release-name.txt
 @task('runComposer', ['on' => 'remote'])
 {{ logMessage("🚚  Running Composer...") }}
 cd {{ $newReleaseDir }};
+composer dump-autoload
 composer install --prefer-dist --no-scripts;
-composer dump-autoload;
 @endtask
 
 @task('runYarn', ['on' => 'remote'])

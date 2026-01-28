@@ -1,35 +1,39 @@
 ---
-title: Using Ray With Craft CMS
+title: Using Ray with Craft CMS
 weight: 1
 ---
 
-You can use Ray with Craft CMS via this third party package:
+[Craft CMS](https://craftcms.com/) is a flexible, user-friendly CMS built with PHP on the [Yii framework](/docs/php/yii/getting-started). Use Ray to help you debug when you're developing a Craft CMS website, module or plugin.
 
-[spatie/craft-ray](https://github.com/spatie/craft-ray)
+<x-docs.github-repo repo="spatie/craft-ray" />
 
 ## Installing the package
 
-You can install Ray through the plugin store, or opt to install through composer.
-
-```bash
-composer require spatie/craft-ray
-```
-
-By installing Ray this way it will also be installed in your production environment. This way your application will not break if you forget to remove a `ray` call.  The package will not attempt to transmit information to Ray when the app environment is set to anything other than `dev`.
-
-You could opt to install `craft-ray` as a dev dependency. If you go this route, make sure to remove every `ray` call in the code before deploying.
-
-```bash
-composer require spatie/craft-ray --dev
-```
-
-## Install the plugin
+You can add the Ray package through the [plugin store](https://plugins.craftcms.com/craft-ray), or through Composer.
 
 ```bash
 craft plugin/install craft-ray
 ```
 
+```bash
+composer require spatie/craft-ray
+```
+
+This installs Ray as a project dependency, meaning it will also be installed in your production environment. Your application won't break if you forget to remove a `ray` call. The package doesn't send data when the environment isn't set to `dev`.
+
+If you prefer, install it as a dev dependency by adding `--dev` to the composer command. Note that with a dev dependency, any `ray` calls left in your code will cause errors in production, so you'll need to remove them before deploying. We have some options for [detecting Ray calls](/docs/php/vanilla-php/detecting-removing-ray-calls) in your app.
+
+```bash
+composer require spatie/craft-ray --dev
+```
+
 ## Usage
 
-Head over to the [global installation instructions](/docs/php/vanilla-php/installation#global-installation) to learn how to enable `ray()`, `dd()` and `dump()` in any file.
+All [generic PHP methods](/docs/php/vanilla-php/usage) are available when using Craft CMS.
 
+To enable `ray()`, `dd()` and `dump()` globally in any file, see the [global installation instructions](/docs/php/vanilla-php/installation#global-installation).
+
+> ## What's next?
+> Now that Ray is installed in your Craft CMS project, see what you can use it for.
+> * [Learn how to use Ray with PHP](/docs/php/vanilla-php/usage)
+> * [View all available methods](/docs/php/vanilla-php/reference)

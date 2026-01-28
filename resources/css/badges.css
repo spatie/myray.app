@@ -1,0 +1,4 @@
+.badge-purple {
+    @apply text-sm font-black font-display leading-[0.9] tracking-[12%] uppercase;
+    @apply py-2 px-3.5 font-black bg-gradient-to-b from-bright-purple-light to-bright-purple rounded-full;
+}

@@ -9,9 +9,10 @@ class Category
 {
     use HasCategoriesAndPages;
 
-    // @var Collection<string, Category>
+    /** @var Collection<string, Category> */
     public Collection $categories;
 
+    /** @var Collection<string, \App\Domain\Docs\Sheets\DocsPage> */
     public Collection $pages;
 
     public int $weight = 99;
@@ -20,9 +21,12 @@ class Category
 
     public string $slug = '';
 
-    public Category $parent;
+    public ?Category $parent = null;
 
-    public function __construct() {
+    public bool $thirdParty = false;
+
+    public function __construct() 
+    {
         $this->categories = new Collection();
         $this->pages = new Collection();
     }

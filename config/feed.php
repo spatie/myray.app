@@ -19,7 +19,7 @@ return [
             'url' => '/feed',
 
             'title' => 'myray.app',
-            'description' => 'Fix bugs faster using Ray.',
+            'description' => 'Read about new features, upcoming updates, and useful tips for using Ray.',
             'language' => 'en-US',
 
             /*

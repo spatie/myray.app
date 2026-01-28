@@ -1,0 +1,137 @@
+.docs-nav-items {
+    margin: 0.5em 0;
+}
+
+.docs-nav-sub-category-item {
+    padding: 0.0625em 0;
+}
+
+.docs-nav-sub-category-item>a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:underline;
+}
+
+.docs-nav-sub-category-item>a.active {
+    @apply text-orange;
+    @apply hover:no-underline;
+}
+
+.docs-nav-item {
+    @apply border-l;
+    @apply border-white;
+    @apply border-opacity-20;
+    padding: 0.0625em 1rem;
+}
+
+.docs-nav-item>a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:underline;
+}
+
+.docs-nav-item.active {
+    @apply border-orange;
+}
+
+.docs-nav-item.active>a {
+    @apply text-orange;
+    @apply hover:no-underline;
+}
+
+.docs-search-results-item em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.docs-toc {
+    display: none;
+}
+
+.docs-toc:has(ul) {
+    display: block;
+}
+
+/* Top-level list */
+.docs-toc > div > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Top-level items (h2 links) */
+.docs-toc > div > ul > li {
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+}
+
+.docs-toc > div > ul > li > a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:underline;
+    display: block;
+    transition: color 0.15s ease;
+}
+
+/* Active h2 link */
+.docs-toc > div > ul > li.active > a {
+    @apply text-orange;
+}
+
+/* Nested list (h3 links) - collapsed by default */
+.docs-toc > div > ul > li > ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 0.5em;
+    margin-top: -0.5em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out, opacity 0.2s ease-out, margin-top 0.25s ease-out;
+    opacity: 0;
+}
+
+/* Expanded state */
+.docs-toc > div > ul > li.expanded > ul {
+    max-height: 500px;
+    margin-top: 0;
+    opacity: 1;
+    transition: max-height 0.3s ease-in, opacity 0.2s ease-in, margin-top 0.3s ease-in;
+}
+
+/* Nested items (h3 links) */
+.docs-toc > div > ul > li > ul > li {
+    margin-bottom: 0.4em;
+    line-height: 1.2;
+}
+
+.docs-toc > div > ul > li > ul > li > a {
+    @apply text-bleak-purple-extra-light;
+    @apply hover:underline;
+    font-size: 1em;
+    opacity: 0.85;
+    transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Active h3 link */
+.docs-toc > div > ul > li > ul > li.active > a {
+    @apply text-orange;
+    opacity: 1;
+}
+
+/* Toggle indicator for items with children */
+.docs-toc > div > ul > li.has-children > a::before {
+    content: "+";
+    position: absolute;
+    display: inline-block;
+    /* margin-right: 0.4em; */
+    left: -1em;
+    font-weight: bold;
+}
+
+.docs-toc > div > ul > li.has-children.expanded > a::before {
+    content: "−";
+}
+
+@screen lg {
+    .docs-sidebar-contents {
+        height: calc(100vh - 2em);
+        overflow: scroll;
+    }
+}

@@ -1,0 +1,61 @@
+.highlight pre {
+    color: #E1E4E8;
+    background-color: #13052B;
+
+}
+
+.highlight .hl-keyword {
+    color: #7FDBCA;
+}
+
+.highlight .hl-property {
+    color: #B392F0;
+}
+
+.highlight .hl-attribute {
+    font-style: italic;
+}
+
+.highlight .hl-type {
+    color: #9ECBFF;
+}
+
+.highlight .hl-generic {
+    color: #B392F0;
+}
+
+.highlight .hl-value {
+    color: #9ECBFF;
+}
+
+.highlight .hl-variable {
+    color: #E1E4E8;
+}
+
+.highlight .hl-comment {
+    color: #888888;
+}
+
+.highlight .hl-blur {
+    filter: blur(2px);
+}
+
+.highlight .hl-strong {
+    font-weight: bold;
+}
+
+.highlight .hl-em {
+    font-style: italic;
+}
+
+.highlight .hl-addition {
+    display: inline-block;
+    min-width: 100%;
+    background-color: #00FF0033;
+}
+
+.highlight .hl-deletion {
+    display: inline-block;
+    min-width: 100%;
+    background-color: #FF000022;
+}

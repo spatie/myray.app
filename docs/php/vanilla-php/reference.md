@@ -1,11 +1,11 @@
 ---
-title: Reference
+title: Methods
 weight: 2
 ---
 
-To display something in Ray use the `ray()` function. It accepts everything: strings, arrays, objects… you name it.
+This page lists all the methods available on the `ray()` function in PHP.
 
-## Reference
+## Available methods
 
 | Call                                                | Description                                                                                                               |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
@@ -68,13 +68,15 @@ To display something in Ray use the `ray()` function. It accepts everything: str
 | `ray()->url($url, $label = null)`                   | Display a clickable URL in Ray                                                                                            |
 | `ray()->xml($xmlString)`                            | Display formatted XML in Ray                                                                                              |
 
-## Updating a Ray instance
+### Methods applied to Ray instances
+
+Create a Ray instance by moving it to a variable, e.g. `$ray = ray('Hello')`.
 
 | Call | Description |
 | --- | --- |
-| `$ray->large()` | Update the size of a Ray instance. Use `large()` or `small`   |
-| `$ray->red()` | Update the color of a Ray instance. Use `green()`, `orange()`, `red()`, `blue()`,`purple()` or `gray()`   |
-| `$ray->remove()` | Remove an item from Ray   |
+| `$ray->large()` | Update the size of a Ray instance. Use `large()` or `small()`.  |
+| `$ray->red()` | Update the color of a Ray instance. Use `green()`, `yellow()`, `red()`, `blue()`, `purple()` or `gray().`   |
+| `$ray->remove()` | Remove the Ray instance from the window.  |
 | `$ray->removeIf(true)` | Conditionally remove an item based on a truthy value or callable   |
 | `$ray->removeWhen(true)` | Conditionally remove an item based on a truthy value or callable   |
 | `$ray->send()` | Update the content of a Ray instance  |

@@ -3,11 +3,13 @@
 namespace App\Providers;
 
 use App\Models\User;
+use App\Support\LifetimeOffer;
 use App\Support\Vimeo\Vimeo;
 use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Flash\Flash;
 
@@ -22,8 +24,6 @@ class AppServiceProvider extends ServiceProvider
             'error' => 'alert-error',
         ]);
 
-        Blade::component('app.components.buyButton', 'buy-button');
-
         Blade::directive('markdown', function () {
             return "<?php echo (new \League\CommonMark\CommonMarkConverter())->convertToHtml(<<<HEREDOC";
         });
@@ -31,5 +31,9 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('endmarkdown', function () {
             return 'HEREDOC); ?>';
         });
+
+        // Share lifetime offer status with all views
+        View::share('lifetimeOfferActive', LifetimeOffer::isActive());
+        View::share('lifetimeOfferExpiration', LifetimeOffer::expirationDate());
     }
 }

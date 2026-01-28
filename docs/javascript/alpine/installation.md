@@ -1,17 +1,18 @@
 ---
-title: Installation
+title: Installing Ray for Alpine.js
+menuTitle: Installation
 weight: 1
 ---
 
-You can send information from Alpine.js to Ray via this third party package:
+[Alpine.js](https://alpinejs.dev/) is a lightweight JavaScript framework for composing behavior directly in your markup. Use Ray to help you debug when developing Alpine.js applications and components.
 
-[permafrost-dev/alpinejs-ray](https://github.com/permafrost-dev/alpinejs-ray)
+<x-docs.github-repo repo="permafrost-dev/alpinejs-ray" />
 
 ## Installation via CDN
 
-The preferred way to use this package is to load it via a CDN.  You'll need to load the `axios` library as well.
+The preferred way to use this package is to load it via a CDN. You'll need to load the `axios` library as well.
 
-For Alpine version 2 use:
+For Alpine version 2:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios@latest/dist/axios.min.js"></script>
@@ -20,7 +21,7 @@ For Alpine version 2 use:
 <!-- load alpine.js here -->
 ```
 
-For Alpine version 3 use:
+For Alpine version 3:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios@latest/dist/axios.min.js"></script>
@@ -40,23 +41,20 @@ You can also configure aspects of Alpine by creating a config object before load
 
 <!-- load axios and alpinejs-ray -->
 ```
-### Installation with package manager
 
-Install with npm:
-
-```bash
-npm install alpinejs-ray
-```
-
-#### Importing the plugin
-
-Although not the recommended way, you can import package normally if installed with a package manager (along with `alpinejs` and `axios`):
-
-First, install `alpinejs-ray` with npm _(or your preferred package manager)_:
+## Installation with package manager
 
 ```bash
 npm install alpinejs-ray
 ```
+
+```bash
+yarn add alpinejs-ray
+```
+
+## Importing the plugin
+
+If installed with a package manager, import the package along with `alpinejs` and `axios`:
 
 ```js
 import Alpine from 'alpinejs';
@@ -70,3 +68,22 @@ window.Alpine = Alpine;
 Alpine.plugin(AlpineRayPlugin);
 Alpine.start();
 ```
+
+Once installed, you can use `$ray()` within your Alpine components:
+
+```html
+<div x-data="{ count: 0 }">
+    <button @click="count++; $ray(count)">
+        Increment
+    </button>
+</div>
+```
+
+## Usage
+
+All [JavaScript methods](/docs/javascript/vanilla-javascript/usage) are available when using Alpine.js.
+
+> ## What's next?
+> Now that Ray is installed in your Alpine.js project, see what you can use it for.
+> * [Learn how to use Ray with JavaScript](/docs/javascript/vanilla-javascript/usage)
+> * [View all available methods](/docs/javascript/vanilla-javascript/reference)

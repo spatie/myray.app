@@ -15,6 +15,6 @@ class DocsNavigation extends Component
 
         $slug = request()->route()->parameter('slug');
 
-        return view('components.docs-navigation', compact('navigation', 'slug'));
+        return view('components.docs.navigation.index', compact('navigation', 'slug'));
     }
 }

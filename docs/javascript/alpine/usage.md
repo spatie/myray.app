@@ -1,9 +1,8 @@
 ---
-title: Usage
-weight: 3
+menuTitle: Usage
+title: Using Ray with Alpine.js
+weight: 2
 ---
-
-The third-party Alpine.js [package](https://github.com/permafrost-dev/alpinejs-ray) for Ray uses the [package for Node.js](/docs/javascript/nodejs/getting-started) for most core functionality.
 
 Once the plugin is installed, you may access the helper function as `$ray()` from within your Alpine components.
 

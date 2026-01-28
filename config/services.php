@@ -47,7 +47,7 @@ return [
 
     'github' => [
         'username' => env('GITHUB_USERNAME'),
-        'token' => env('GITHUB_TOKEN'),
+        'token' => env('GITHUB_ACCESS_TOKEN'),
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_SECRET'),
         'redirect' => env('GITHUB_REDIRECT_URI'),
