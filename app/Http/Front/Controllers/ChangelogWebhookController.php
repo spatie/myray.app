@@ -25,7 +25,7 @@ class ChangelogWebhookController
 
         Cache::flexible(
             key: 'changelog-versions',
-            ttl: [now()->addMinutes(15), now()->addHour()],
+            ttl: [now()->addMinutes(15), now()->addHours(5)],
             callback: fn () => $versions,
         );
 
