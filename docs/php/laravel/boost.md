@@ -1,4 +1,5 @@
 ---
+menuTitle: Laravel Boost
 title: Laravel Boost skill
 weight: 3
 ---
@@ -183,10 +184,8 @@ If Claude cannot connect to Ray:
 3. If using Docker, ensure your `RAY_HOST` is set correctly in your `.env` file
 4. Check your firewall settings aren't blocking the connection
 
-## Learn More
-
-For more information about Ray's capabilities and API, see:
-
-- [Laravel Usage Guide](/docs/php/laravel/usage)
-- [Configuration Options](/docs/php/laravel/configuration)
-- [Remote Debugging](/docs/environments/docker)
+> ## What's next?
+> For more information about Ray's capabilities and API, see:
+> - [Laravel Usage Guide](/docs/php/laravel/usage)
+> - [Configuration Options](/docs/php/laravel/configuration)
+> - [Remote Debugging](/docs/environments/docker)
