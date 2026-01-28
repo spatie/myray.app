@@ -367,7 +367,7 @@
 
         <x-intro.default title="Nice words from our users" />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        <div data-no-index class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             x-bind:class="!testimonialsOpen && 'max-h-[45rem] overflow-hidden'" x-data="{ testimonialsOpen: false }">
             @for ($i = 0; $i < 4; $i++)
                 <div class="flex flex-col gap-6">

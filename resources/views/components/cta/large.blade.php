@@ -1,6 +1,6 @@
 @props(['description' => 'Ray keeps all your debug output neatly organized in a dedicated desktop app.', 'downloadBtn' => null, 'showBuyBtn' => true])
 
-<div class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
+<div data-no-index class="rounded-xl bg-gradient-to-b from-neutrals-white-20 to-red p-[1px] shadow-large-drop overflow-hidden mb-12 lg:mb-20">
     <div
         class="flex flex-col lg:flex-row items-center gap-12 p-12 overflow-hidden bg-gradient-to-b from-midnight to-midnight-extra-light rounded-xl lg:gap-24 lg:p-24 lg:pr-0">
 
