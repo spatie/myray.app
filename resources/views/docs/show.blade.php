@@ -39,7 +39,7 @@
                href="{{ $category->firstPage()->url }}">{{ $category->title }}</a>
             <span class="text-bleak-purple-extra-light/50">/</span>
         @endforeach
-        <span class="text-white">{{ $page->title }}</span>
+        <span class="text-white">{{ $page->menuTitle ?? $page->title }}</span>
     </nav>
 </div>
 
