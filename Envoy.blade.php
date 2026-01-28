@@ -2,25 +2,24 @@
 require __DIR__.'/vendor/autoload.php';
 \Dotenv\Dotenv::create(\Illuminate\Support\Env::getRepository(), __DIR__)->load();
 
-$environment ??= 'staging';
+$environment ??= 'production';
 $branch ??= 'main';
 
 $server = match($environment) {
     'next' => '138.68.99.55',
     'production' => 'myray.app',
-    default => 'next.myray.app',
 };
 
 $app = match($environment) {
 'next' => 'next.myray.app',
 'production' => 'myray.app',
-default => 'next.myray.app',
+default => 'myray.app',
 };
 
 $branch = match($environment) {
     'next' => 'redesign',
     'production' => 'main',
-    default => 'redesign',
+    default => 'main',
 };
 
 $userAndServer = 'forge@'. $server;
