@@ -41,11 +41,41 @@ class DocsSearchIndexer implements Indexer
 
     public function entries(): array
     {
-        return attempt(function () {
+        $content = attempt(function () {
             $this->removeIgnoredContent($this->domCrawler);
 
             return $this->domCrawler->filter('#site-search-docs-content')->html();
         });
+
+        if (is_null($content)) {
+            return [];
+        }
+
+        $content = strip_tags($content);
+
+        $entries = array_map('trim', explode(PHP_EOL, $content));
+
+        $entries = array_filter($entries);
+
+        $entries = array_filter($entries, function (string $entry) {
+            if (str_starts_with($entry, '{"')) {
+                return false;
+            }
+
+            if (str_starts_with($entry, '/')) {
+                return false;
+            }
+
+            if (str_starts_with($entry, '.')) {
+                return false;
+            }
+
+            return strlen($entry) > 3;
+        });
+
+        $entries = array_filter($entries);
+
+        return array_values($entries);
     }
 
     public function extra(): array
