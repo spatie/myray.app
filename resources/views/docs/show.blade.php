@@ -32,8 +32,15 @@
 
 <div>
 
-<div class="hidden justify-between border-b border-bleak-purple-extra-light/20 mb-6 pb-1 lg:flex">
-    <a class="inline-block text-sm text-bleak-purple-extra-light no-underline transition hover:text-white" href="{{ url('/docs/' . $categories[0]->slug) }}">{{ $categories[0]->title }}</a>
+<div class="hidden border-b border-bleak-purple-extra-light/20 mb-6 pb-1 lg:flex">
+    <nav class="flex items-center gap-2 text-sm">
+        @foreach($categories as $category)
+            <a class="text-bleak-purple-extra-light no-underline transition hover:text-white"
+               href="{{ $category->firstPage()->url }}">{{ $category->title }}</a>
+            <span class="text-bleak-purple-extra-light/50">/</span>
+        @endforeach
+        <span class="text-white">{{ $page->title }}</span>
+    </nav>
 </div>
 
 <article class="markup min-w-0 w-full max-w-[45rem] text-bright-purple-extra-light">
