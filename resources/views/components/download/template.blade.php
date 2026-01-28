@@ -7,7 +7,7 @@
     x-transition:leave="transition ease-in duration-200"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-    class="fixed inset-0 p-8 lg:p-16 z-30 fix-z flex items-center justify-center"
+    class="fixed inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center"
     @keydown.window.escape="download = false"
     style="display: none;">
     <div class="absolute inset-0 bg-midnight-dark bg-opacity-75"></div>

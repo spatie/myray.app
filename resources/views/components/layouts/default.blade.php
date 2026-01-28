@@ -14,15 +14,11 @@
 <body class="overflow-x-hidden bottom-gradient">
 
     @if ($lifetimeOfferActive)
-        <a href="{{ spatieUrl('https://spatie.be/products/ray') }}"
-           class="relative block text-lg py-2 bg-gradient-to-r from-bright-purple-light to-bright-purple text-center z-10 border-b border-white border-opacity-25 overflow-hidden group"
-           target="_blank">
-            <span class="absolute inset-0 bg-gradient-to-r from-bright-purple to-bright-purple-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span class="relative font-bold group-hover:underline">
-                ⚡️ Lifetime Ray licenses available for
-                <x-countdown.timer :expires-at="$lifetimeOfferExpiration" />
-            </span>
-        </a>
+        <x-promo-banner
+            url="https://spatie.be/products/ray"
+            :text="config('ray.lifetime_offer.text')"
+            :expires-at="$lifetimeOfferExpiration"
+        />
     @endif
 
     @if (isset($background))

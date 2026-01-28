@@ -13,6 +13,14 @@
 
 <body class="overflow-x-hidden bottom-gradient" x-data="{ showSearchBox: false }" @keydown.cmd.k.window.prevent="showSearchBox = true">
 
+    @if ($lifetimeOfferActive)
+        <x-promo-banner
+            url="https://spatie.be/products/ray"
+            :text="config('ray.lifetime_offer.text')"
+            :expires-at="$lifetimeOfferExpiration"
+        />
+    @endif
+
     <div class="absolute w-full pointer-events-none">
         <div class="bg-gradient-to-b from-midnight-extra-light to-midnight md:flex md:justify-center">
             <div class="w-full translate-y-[-18rem]">
