@@ -18,7 +18,7 @@ class ChangelogWebhookController
         $markdown = $fetchChangelog->execute(
             owner: 'spatie',
             repo: 'ray-app',
-            branch: 'v3/release',
+            branch: 'main',
         );
 
         $versions = $parseChangelog->execute($markdown);
