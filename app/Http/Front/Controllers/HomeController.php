@@ -254,7 +254,7 @@ class HomeController
             // new Feature(
             //     title: 'Debug with AI',
             //     description: 'Connect AI agents to Ray via MCP to render output, read window contents, and automate actions.',
-            //     link: '/docs/features/mcp',
+            //     link: '/docs/features/ai',
             //     isNew: true,
             // ),
             new Feature(

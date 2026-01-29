@@ -27,6 +27,8 @@ Route::redirect('/docs/php/vanilla-php/x-ray', '/detecting-removing-ray-calls', 
 Route::redirect('/docs/php/laravel/queries', '/docs/php/laravel/usage#debugging-queries', 301);
 Route::redirect('/docs/php/laravel/blade', '/docs/php/laravel/usage#using-ray-in-blade-views', 301);
 
+Route::redirect('/docs/features/mcp', '/docs/features/ai', 301);
+
 Route::name('legal.')->group(function () {
     Route::view('terms-of-use', 'legal.terms-of-use')->name('terms');
     Route::view('privacy', 'legal.privacy')->name('privacy');
