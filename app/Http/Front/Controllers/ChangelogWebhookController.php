@@ -16,9 +16,9 @@ class ChangelogWebhookController
         Cache::forget('changelog-versions');
 
         $markdown = $fetchChangelog->execute(
-            owner: 'spatie',
-            repo: 'ray-app',
-            branch: 'main',
+            owner: config('services.github.changelog_owner'),
+            repo: config('services.github.changelog_repo'),
+            branch: config('services.github.changelog_branch'),
         );
 
         $versions = $parseChangelog->execute($markdown);

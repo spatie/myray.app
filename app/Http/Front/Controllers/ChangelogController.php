@@ -18,9 +18,9 @@ class ChangelogController
             ttl: [now()->addMinutes(15), now()->addHour()],
             callback: function () use ($fetchChangelog, $parseChangelog) {
                 $markdown = $fetchChangelog->execute(
-                    owner: 'spatie',
-                    repo: 'ray-app',
-                    branch: 'v3/release',
+                    owner: config('services.github.changelog_owner'),
+                    repo: config('services.github.changelog_repo'),
+                    branch: config('services.github.changelog_branch'),
                 );
 
                 return $parseChangelog->execute($markdown);
