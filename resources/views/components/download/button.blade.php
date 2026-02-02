@@ -1,4 +1,4 @@
-@props(['button' => 'Download trial'])
+@props(['button' => 'Download Ray'])
 
 <button data-role="download-link"
     class="btn-orange-h inline-flex gap-2 text-xl px-6 py-4 font-bold rounded-md shadow-top-white align-middle"

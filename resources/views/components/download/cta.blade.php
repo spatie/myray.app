@@ -27,7 +27,7 @@
     </div>
 
     @if($showByline)
-        <p class="text-bleak-purple-extra-light">
+        <p class="text-bleak-purple-extra-light max-w-prose mx-auto">
             {!! $byline !!}
         </p>
     @endif

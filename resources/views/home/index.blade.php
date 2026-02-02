@@ -10,7 +10,7 @@
     <div class="bg-gradient-to-b from-midnight to-midnight-extra-light border-b border-white border-opacity-15">
 
         <div class="absolute w-full translate-y-[-32%] pointer-events-none hidden md:block md:p-8">
-            <img class="opacity-75 max-w-[90rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
+            <img class="opacity-75 max-w-[120rem] mx-auto hidden md:block" src="/images/24-background-1.svg" alt="">
         </div>
 
         <div class="container mx-auto p-6 pb-12 lg:px-4 lg:pb-24">
