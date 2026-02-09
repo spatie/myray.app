@@ -12,22 +12,22 @@ Download Ray for free and give it a try! You can send up to 20 messages each ses
 
 Find download links to the Ray application for our supported platforms below:
 
-* [macOS (Apple Silicon)](https://spatie.be/products/ray/download/macosAppleSilicon/latest)
-* [macOS (Intel)](https://spatie.be/products/ray/download/macosIntel/latest)
-* [Windows](https://spatie.be/products/ray/download/windows/latest)
-* [Linux](https://spatie.be/products/ray/download/linux/latest)
+-   [macOS (Apple Silicon)](https://spatie.be/products/ray/v3/download/macos-arm)
+-   [macOS (Intel)](https://spatie.be/products/ray/v3/download/macos-x64/latest)
+-   [Windows](https://spatie.be/products/ray/v3/download/windows/latest)
+-   [Linux](https://spatie.be/products/ray/v3/download/linux/latest)
 
 You can also install Ray with Homebrew on macOS: `brew install --cask ray`.
 
 ## Install the Ray package
 
-Install a package for your language or framework to connect your project to Ray. 
+Install a package for your language or framework to connect your project to Ray.
 
 <x-docs.integrations-featured />
 
 ## Sending your first dump
 
-To make sure everything is working properly, let's send a dump from your application to Ray. 
+To make sure everything is working properly, let's send a dump from your application to Ray.
 
 The syntax varies slightly by language. Here's an example for PHP:
 
