@@ -44,7 +44,6 @@ Every dump you send will appear here. Try sending different types of data and se
 Some methods are specific to the integration you use, so it's worth checking out the instructions for your integration to see what's possible.
 
 > ## What's next?
->
 > Now that Ray is running, explore what else it can do!
 > * [Explore all integrations and how they work](/docs/getting-started/integrations)
 > * [Learn how to use Ray](/docs/getting-started/using-ray)
