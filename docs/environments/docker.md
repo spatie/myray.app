@@ -3,6 +3,8 @@ title: Docker
 weight: 1
 ---
 
+## Ray config
+
 When developing using Docker, the Ray host should point to the internal IP of your Docker host by using 'host.docker.internal' in [the config file](/docs/php/vanilla-php/configuration).
 
 ```php
@@ -23,12 +25,12 @@ return [
     /*
      *  Absolute base path for your sites or projects in Homestead, Vagrant, Docker, or another remote development server.
      */
-    'remote_path' => null,
+    'remote_path' => '...',
 
     /*
      *  Absolute base path for your sites or projects on your local computer where your IDE or code editor is running on.
      */
-    'local_path' => null,
+    'local_path' => '...',
 ];
 ```
 
@@ -44,9 +46,12 @@ Then `remote_path` should be `/var/www` and `local_path` should be the absolute 
 mount as `/var/www`, which is where your `docker-compose.yml` is located in the example (you can find this by
 running `pwd` inside that directory if you are on Linux).
 
+## System config
+
 Add `127.0.0.1 	host.docker.internal` to `/etc/hosts`file.
 
-On Linux, you will also need to add an 'extra_hosts' parameter to your PHP container definitions to expose 'host.docker.internal'. Please make sure you are using Docker `20.03` or higher.
+On Linux, you will also need to add an 'extra_hosts' parameter to your PHP container definitions to expose 'host.docker.internal'. Please make sure you are using Docker `20.03` or higher. If you are using DDEV this is already taken care of.
+
 ```yaml
 #docker-compose.yml
 
@@ -83,6 +88,8 @@ services:
                 - "host.docker.internal:host-gateway"
 ```
 
+## Firewall config
+
 If it does not work after that, you could try to open your *GatewayPorts* inside your ssh config.
 
 Go to your SSH config:
@@ -94,4 +101,10 @@ nano /etc/hosts/sshd_config
 Search for *GatewayPorts* and set it from **no** to **yes**
 ```text
 GatewayPorts yes
+```
+
+If you're using UFW firewall you need to allow Ray's port:
+
+```shell
+sudo ufw allow in from any to 172.17.0.1/16 port 23517 comment 'Spatie Ray'
 ```
