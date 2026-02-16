@@ -1,4 +1,4 @@
-<x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))" :color="'#36107A'">
+<x-layouts.default :title="$post->title" :description="htmlspecialchars_decode(strip_tags($post->summary))" :color="'#36107A'" :image="$post->og_image ?? $post->header_image">
 
     @php
         $schema = [
