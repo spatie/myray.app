@@ -2,32 +2,14 @@
 
 namespace App\Http\Front\Controllers;
 
-use App\Actions\FetchChangelogAction;
-use App\Actions\ParseChangelogAction;
+use App\Actions\SyncChangelogAction;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Cache;
 
 class ChangelogWebhookController
 {
-    public function __invoke(
-        FetchChangelogAction $fetchChangelog,
-        ParseChangelogAction $parseChangelog,
-    ): JsonResponse {
-        Cache::forget('changelog-versions');
-
-        $markdown = $fetchChangelog->execute(
-            owner: config('services.github.changelog_owner'),
-            repo: config('services.github.changelog_repo'),
-            branch: config('services.github.changelog_branch'),
-        );
-
-        $versions = $parseChangelog->execute($markdown);
-
-        Cache::flexible(
-            key: 'changelog-versions',
-            ttl: [now()->addMinutes(15), now()->addHours(5)],
-            callback: fn () => $versions,
-        );
+    public function __invoke(SyncChangelogAction $syncChangelog): JsonResponse
+    {
+        $versions = $syncChangelog->execute();
 
         return response()->json([
             'success' => true,

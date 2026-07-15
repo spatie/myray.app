@@ -2,33 +2,15 @@
 
 namespace App\Http\Front\Controllers;
 
-use App\Actions\FetchChangelogAction;
-use App\Actions\ParseChangelogAction;
+use App\Actions\GetChangelogAction;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Facades\Cache;
 
 class ChangelogController
 {
-    public function __invoke(
-        FetchChangelogAction $fetchChangelog,
-        ParseChangelogAction $parseChangelog,
-    ): View {
-        $versions = Cache::flexible(
-            key: 'changelog-versions',
-            ttl: [now()->addMinutes(15), now()->addHour()],
-            callback: function () use ($fetchChangelog, $parseChangelog) {
-                $markdown = $fetchChangelog->execute(
-                    owner: config('services.github.changelog_owner'),
-                    repo: config('services.github.changelog_repo'),
-                    branch: config('services.github.changelog_branch'),
-                );
-
-                return $parseChangelog->execute($markdown);
-            },
-        );
-
+    public function __invoke(GetChangelogAction $getChangelog): View
+    {
         return view('changelog.show', [
-            'versions' => $versions,
+            'versions' => $getChangelog->execute(),
         ]);
     }
 }
