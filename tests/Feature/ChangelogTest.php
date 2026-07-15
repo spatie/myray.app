@@ -6,6 +6,7 @@ use App\Actions\ParseChangelogAction;
 use App\Actions\SyncChangelogAction;
 use App\Support\ChangelogVersion;
 use Carbon\Carbon;
+use Illuminate\Support\Defer\DeferredCallbackCollection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Exceptions;
 use Mockery\MockInterface;
@@ -81,7 +82,7 @@ it('renders cached versions while a failed stale refresh is reported', function 
         ->assertSee('1.0.0')
         ->assertDontSee('We couldn’t load the changelog');
 
-    defer()->invoke();
+    app(DeferredCallbackCollection::class)->invoke();
 
     Exceptions::assertReported(RuntimeException::class);
     expect(Cache::get(SyncChangelogAction::CacheKey))->toBe($this->versions);

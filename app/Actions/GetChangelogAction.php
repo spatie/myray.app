@@ -7,6 +7,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Throwable;
 
+use function Illuminate\Support\defer;
+
 class GetChangelogAction
 {
     public const RefreshAfterMinutes = 15;
