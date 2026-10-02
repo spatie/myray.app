@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a94a2303a58ec97acbf1e6405104c3bb",
+    "content-hash": "4e013fb13cb213c2dbfb7bf6eca27348",
     "packages": [
         {
             "name": "brick/math",
@@ -2708,86 +2708,6 @@
             "time": "2026-09-28T18:12:47+00:00"
         },
         {
-            "name": "meilisearch/meilisearch-php",
-            "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/meilisearch/meilisearch-php.git",
-                "reference": "7b698e3d19ec1399931e4d921d5c37d875212295"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/meilisearch/meilisearch-php/zipball/7b698e3d19ec1399931e4d921d5c37d875212295",
-                "reference": "7b698e3d19ec1399931e4d921d5c37d875212295",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.4 || ^8.0",
-                "php-http/discovery": "^1.7",
-                "psr/http-client": "^1.0",
-                "symfony/polyfill-php81": "^1.33"
-            },
-            "require-dev": {
-                "http-interop/http-factory-guzzle": "^1.2.0",
-                "php-cs-fixer/shim": "^3.59.3",
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-deprecation-rules": "^2.0",
-                "phpstan/phpstan-phpunit": "^2.0",
-                "phpstan/phpstan-strict-rules": "^2.0",
-                "phpunit/phpunit": "^9.5 || ^10.5",
-                "symfony/http-client": "^5.4|^6.0|^7.0"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Use Guzzle ^7 as HTTP client",
-                "http-interop/http-factory-guzzle": "Factory for guzzlehttp/guzzle",
-                "symfony/http-client": "Use Symfony Http client"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MeiliSearch\\": "src/",
-                    "Meilisearch\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Clémentine Urquizar",
-                    "email": "clementine@meilisearch.com"
-                },
-                {
-                    "name": "Bruno Casali",
-                    "email": "bruno@meilisearch.com"
-                },
-                {
-                    "name": "Laurent Cazanove",
-                    "email": "lau.cazanove@gmail.com"
-                },
-                {
-                    "name": "Tomas Norkūnas",
-                    "email": "norkunas.tom@gmail.com"
-                }
-            ],
-            "description": "PHP wrapper for the Meilisearch API",
-            "keywords": [
-                "api",
-                "client",
-                "instant",
-                "meilisearch",
-                "php",
-                "search"
-            ],
-            "support": {
-                "issues": "https://github.com/meilisearch/meilisearch-php/issues",
-                "source": "https://github.com/meilisearch/meilisearch-php/tree/v1.17.0"
-            },
-            "time": "2026-08-04T04:12:21+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "3.12.1",
             "source": {
@@ -3154,60 +3074,6 @@
                 "source": "https://github.com/nette/utils/tree/v4.1.5"
             },
             "time": "2026-07-17T23:02:45+00:00"
-        },
-        {
-            "name": "nicmart/tree",
-            "version": "0.10.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nicmart/Tree.git",
-                "reference": "2ef11e329d26005ef49dbacd0223bcfd2515b6cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nicmart/Tree/zipball/2ef11e329d26005ef49dbacd0223bcfd2515b6cc",
-                "reference": "2ef11e329d26005ef49dbacd0223bcfd2515b6cc",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0 || ~8.5.0"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.48.2",
-                "ergebnis/license": "^2.7.0",
-                "ergebnis/php-cs-fixer-config": "^6.28.1",
-                "fakerphp/faker": "^1.24.1",
-                "infection/infection": "~0.26.19",
-                "phpunit/phpunit": "^9.6.19",
-                "psalm/plugin-phpunit": "~0.19.0",
-                "vimeo/psalm": "^5.26.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Tree\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolò Martini",
-                    "email": "nicmartnic@gmail.com"
-                },
-                {
-                    "name": "Andreas Möller",
-                    "email": "am@localheinz.com"
-                }
-            ],
-            "description": "A basic but flexible php tree data structure and a fluent tree builder implementation.",
-            "support": {
-                "issues": "https://github.com/nicmart/Tree/issues",
-                "source": "https://github.com/nicmart/Tree/tree/0.10.1"
-            },
-            "time": "2025-11-25T08:51:01+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -4666,74 +4532,6 @@
             "time": "2026-03-11T13:48:28+00:00"
         },
         {
-            "name": "spatie/browsershot",
-            "version": "5.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/browsershot.git",
-                "reference": "dcf7a65fd1d0fc8fd113739b84982377728d0b2f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/browsershot/zipball/dcf7a65fd1d0fc8fd113739b84982377728d0b2f",
-                "reference": "dcf7a65fd1d0fc8fd113739b84982377728d0b2f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-fileinfo": "*",
-                "ext-json": "*",
-                "php": "^8.2",
-                "spatie/temporary-directory": "^2.0",
-                "symfony/process": "^6.0|^7.0|^8.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^3.0|^4.0",
-                "spatie/image": "^3.6",
-                "spatie/pdf-to-text": "^1.52",
-                "spatie/phpunit-snapshot-assertions": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Browsershot\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://github.com/freekmurze",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Convert a webpage to an image or pdf using headless Chrome",
-            "homepage": "https://github.com/spatie/browsershot",
-            "keywords": [
-                "chrome",
-                "convert",
-                "headless",
-                "image",
-                "pdf",
-                "puppeteer",
-                "screenshot",
-                "webpage"
-            ],
-            "support": {
-                "source": "https://github.com/spatie/browsershot/tree/5.4.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-05-26T13:13:33+00:00"
-        },
-        {
             "name": "spatie/commonmark-shiki-highlighter",
             "version": "2.5.2",
             "source": {
@@ -4859,33 +4657,45 @@
         },
         {
             "name": "spatie/crawler",
-            "version": "8.5.0",
+            "version": "9.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/crawler.git",
-                "reference": "18198a2198adff1637c0028cb60d2c9559721556"
+                "reference": "937bcf5786e66bca20da50db004f6d1443e81418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/crawler/zipball/18198a2198adff1637c0028cb60d2c9559721556",
-                "reference": "18198a2198adff1637c0028cb60d2c9559721556",
+                "url": "https://api.github.com/repos/spatie/crawler/zipball/937bcf5786e66bca20da50db004f6d1443e81418",
+                "reference": "937bcf5786e66bca20da50db004f6d1443e81418",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^7.3",
-                "guzzlehttp/psr7": "^2.0",
-                "illuminate/collections": "^10.0|^11.0|^12.0|^13.0",
-                "nicmart/tree": "^0.10",
-                "php": "^8.2",
-                "spatie/browsershot": "^5.0.5",
+                "guzzlehttp/guzzle": "^7.8.2 || ^8.0",
+                "guzzlehttp/psr7": "^2.6.3 || ^3.0",
+                "php": "^8.4",
+                "psr/http-client": "^1.0",
                 "spatie/robots-txt": "^2.0",
-                "symfony/dom-crawler": "^6.0|^7.0|^8.0"
+                "symfony/css-selector": "^7.0|^8.0",
+                "symfony/dom-crawler": "^7.0|^8.0"
             },
             "require-dev": {
-                "pestphp/pest": "^2.0|^3.0|^4.0",
+                "pestphp/pest": "^4.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "spatie/invade": "^2.1",
                 "spatie/ray": "^1.37"
             },
+            "suggest": {
+                "spatie/browsershot": "Required for JavaScript rendering with BrowsershotRenderer (^5.0.5)"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-v9": "9.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Spatie\\Crawler\\": "src"
@@ -4911,7 +4721,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/crawler/issues",
-                "source": "https://github.com/spatie/crawler/tree/8.5.0"
+                "source": "https://github.com/spatie/crawler/tree/9.4.2"
             },
             "funding": [
                 {
@@ -4923,7 +4733,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-21T22:52:37+00:00"
+            "time": "2026-08-07T07:19:51+00:00"
         },
         {
             "name": "spatie/error-solutions",
@@ -5477,35 +5287,35 @@
         },
         {
             "name": "spatie/laravel-site-search",
-            "version": "2.7.0",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-site-search.git",
-                "reference": "4af56299155c5f089ba567a1cf42a2b4eda920a9"
+                "reference": "a1efb171d7f509e5314012f10dd8022b76a5a29b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-site-search/zipball/4af56299155c5f089ba567a1cf42a2b4eda920a9",
-                "reference": "4af56299155c5f089ba567a1cf42a2b4eda920a9",
+                "url": "https://api.github.com/repos/spatie/laravel-site-search/zipball/a1efb171d7f509e5314012f10dd8022b76a5a29b",
+                "reference": "a1efb171d7f509e5314012f10dd8022b76a5a29b",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/psr7": "^2.5",
-                "illuminate/contracts": "^11.0|^12.0|^13.0",
-                "illuminate/http": "^11.0|^12.0|^13.0",
-                "laravel/prompts": "^0.1.23|^0.3",
-                "php": "^8.3",
-                "spatie/crawler": "^8.0",
-                "spatie/laravel-package-tools": "^1.15"
+                "illuminate/contracts": "^12.0|^13.0",
+                "illuminate/http": "^12.0|^13.0",
+                "laravel/prompts": "^0.1.23|^0.3.13",
+                "php": "^8.4",
+                "spatie/crawler": "^9.0",
+                "spatie/laravel-package-tools": "^1.93"
             },
             "require-dev": {
-                "guzzlehttp/guzzle": "^7.7",
-                "meilisearch/meilisearch-php": "^1.1.1",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^9.0|^10.0|^11.0",
-                "pestphp/pest": "^3.7|^4.0",
-                "pestphp/pest-plugin-laravel": "^3.1|^4.0",
-                "spatie/laravel-ray": "^1.32.4"
+                "guzzlehttp/guzzle": "^7.10",
+                "larastan/larastan": "^3.0",
+                "meilisearch/meilisearch-php": "^1.16.1",
+                "nunomaduro/collision": "^8.9.1",
+                "orchestra/testbench": "^10.9|^11.0",
+                "pestphp/pest": "^4.4.1",
+                "pestphp/pest-plugin-laravel": "^4.1",
+                "spatie/laravel-ray": "^1.43.6"
             },
             "suggest": {
                 "meilisearch/meilisearch-php": "Required to use the MeiliSearch engine."
@@ -5513,12 +5323,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "aliases": {
-                        "SiteSearch": "Spatie\\SiteSearch\\SiteSearchFacade"
-                    },
                     "providers": [
                         "Spatie\\SiteSearch\\SiteSearchServiceProvider"
                     ]
+                },
+                "branch-alias": {
+                    "dev-sqlite": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5552,7 +5362,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-site-search/issues",
-                "source": "https://github.com/spatie/laravel-site-search/tree/2.7.0"
+                "source": "https://github.com/spatie/laravel-site-search/tree/3.0.3"
             },
             "funding": [
                 {
@@ -5560,7 +5370,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-22T08:57:00+00:00"
+            "time": "2026-06-10T07:55:17+00:00"
         },
         {
             "name": "spatie/macroable",
@@ -5945,67 +5755,6 @@
                 }
             ],
             "time": "2026-03-23T09:12:05+00:00"
-        },
-        {
-            "name": "spatie/temporary-directory",
-            "version": "2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/temporary-directory.git",
-                "reference": "32cbb9645b28839cf4f476708e99a2c70e6802c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/32cbb9645b28839cf4f476708e99a2c70e6802c9",
-                "reference": "32cbb9645b28839cf4f476708e99a2c70e6802c9",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\TemporaryDirectory\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Vanderbist",
-                    "email": "alex@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Easily create, use and destroy temporary directories",
-            "homepage": "https://github.com/spatie/temporary-directory",
-            "keywords": [
-                "php",
-                "spatie",
-                "temporary-directory"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/temporary-directory/issues",
-                "source": "https://github.com/spatie/temporary-directory/tree/2.4.0"
-            },
-            "funding": [
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-22T07:55:44+00:00"
         },
         {
             "name": "spatie/url",
@@ -8211,86 +7960,6 @@
                 }
             ],
             "time": "2026-09-25T15:50:05+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php81",
-            "version": "v1.38.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php81.git",
-                "reference": "6bfb9c766cacffbc8e118cb87217d08ed84e5cd7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/6bfb9c766cacffbc8e118cb87217d08ed84e5cd7",
-                "reference": "6bfb9c766cacffbc8e118cb87217d08ed84e5cd7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php81\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.38.1"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-05-26T12:45:58+00:00"
         },
         {
             "name": "symfony/polyfill-php84",
@@ -14176,6 +13845,86 @@
                 }
             ],
             "time": "2026-09-29T06:25:14+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php81",
+            "version": "v1.38.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php81.git",
+                "reference": "6bfb9c766cacffbc8e118cb87217d08ed84e5cd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/6bfb9c766cacffbc8e118cb87217d08ed84e5cd7",
+                "reference": "6bfb9c766cacffbc8e118cb87217d08ed84e5cd7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php81\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.1+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.38.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-05-26T12:45:58+00:00"
         },
         {
             "name": "symfony/stopwatch",

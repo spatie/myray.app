@@ -45,7 +45,7 @@
                                         >
                                             <div class="font-semibold leading-tight group-hover:underline">{{ str_replace(' - Ray', '', $hit->title()) }}</div>
                                             @isset($hit->_formatted['entry'])
-                                                <div class="font-normal text-white opacity-65">{!! $hit->_formatted['entry'] !!}</div>
+                                                <div class="font-normal text-white opacity-65">{!! str_replace(['&lt;em&gt;', '&lt;/em&gt;'], ['<em>', '</em>'], e($hit->_formatted['entry'])) !!}</div>
                                             @endisset
                                         </a>
                                     </li>
