@@ -46,7 +46,8 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->trustProxies(at: '*');
     })
     ->withSchedule(function (\Illuminate\Console\Scheduling\Schedule $schedule) {
-        $schedule->command(\Spatie\SiteSearch\Commands\CrawlCommand::class)->everyThreeHours();
+        $schedule->command('site-search:crawl', ['--sync'])->everyThreeHours()->withoutOverlapping();
+        $schedule->command('app:prune-expired-cache-entries')->daily();
     })
     ->withCommands([
         __DIR__.'/../app/Console/Commands',
