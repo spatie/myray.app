@@ -40,16 +40,6 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
-        'license-api' => [
-            'driver' => 'license-api-key',
-        ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
-        ],
     ],
 
     /*

@@ -48,8 +48,6 @@ Route::prefix('blog')->name('blog.')->group(function () {
     Route::get('/{slug}', [PostsController::class, 'detail'])->name('show');
 });
 
-Route::get('login', fn() => redirect()->to('/admin/login'))->name('login');
-
 Route::prefix('docs')->name('docs.')->group(function () {
     Route::get('/', [DocsController::class, 'index'])->name('index');
     Route::get('/{slug}', [DocsController::class, 'show'])
