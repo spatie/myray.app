@@ -20,7 +20,7 @@
         "livewire/livewire": "^3.8",
         "spatie/commonmark-wire-navigate": "^1.0",
         "spatie/laravel-feed": "^4.5",
-        "spatie/laravel-ignition": "^2.12",
+        "spatie/laravel-flare": "^3.6",
         "spatie/laravel-markdown": "^2.5",
         "spatie/laravel-site-search": "^3.0",
         "spatie/sheets": "^1.11",
