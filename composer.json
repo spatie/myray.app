@@ -22,7 +22,6 @@
         "spatie/laravel-feed": "^4.5",
         "spatie/laravel-flare": "^3.6",
         "spatie/laravel-markdown": "^2.5",
-        "spatie/laravel-site-search": "^3.0",
         "spatie/sheets": "^1.11",
         "spatie/spatie-content-api": "^3.0.0",
         "spatie/spatie-price-api": "^1.0",

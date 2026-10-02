@@ -3,16 +3,6 @@
     @persist('scrollbar')
     <div class="bg-midnight rounded-2xl docs-sidebar-contents" wire:scroll>
 
-        <div class="p-6 border-b border-white border-opacity-10 z-10 lg:bg-midnight lg:bg-opacity-95 lg:sticky lg:top-0">
-            <button @click="showSearchBox = true"
-                class="transition-border border border-white border-opacity-20 rounded-full py-3 px-4 w-full hover:border-opacity-50">
-                <div class="flex items-center">
-                    <x-icons.search />
-                    <span class="opacity-70 text-sm ml-2">Click to search</span>
-                </div>
-            </button>
-        </div>
-
         <button @click="navOpen = !navOpen"
             class="p-6 w-full text-left font-semibold text-lg flex justify-between items-center lg:hidden">
             <span>Documentation</span>

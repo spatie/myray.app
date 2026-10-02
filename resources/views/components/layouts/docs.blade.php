@@ -11,7 +11,7 @@
     </x-layouts.head>
 </head>
 
-<body class="overflow-x-hidden bottom-gradient" x-data="{ showSearchBox: false }" @keydown.cmd.k.window.prevent="showSearchBox = true">
+<body class="overflow-x-hidden bottom-gradient">
 
     @if ($lifetimeOfferActive)
         <x-promo-banner
@@ -53,7 +53,6 @@
 
     </main>
 
-    @livewire('doc-search')
 </body>
 
 </html>

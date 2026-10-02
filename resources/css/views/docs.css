@@ -37,11 +37,6 @@
     @apply hover:no-underline;
 }
 
-.docs-search-results-item em {
-    font-weight: bold;
-    font-style: normal;
-}
-
 .docs-toc {
     display: none;
 }
