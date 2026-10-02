@@ -9,3 +9,7 @@ This repo contains the source code of https://myray.app
 - Create a database with `php artisan migrate`
 - Install dependencies with `composer install` and `npm install`
 - Generate assets with `npm run build`, or run a development server with `npm run dev`
+
+## Deployment
+
+This site runs on [Laravel Cloud](https://cloud.laravel.com). Every push to `main` is deployed automatically.
