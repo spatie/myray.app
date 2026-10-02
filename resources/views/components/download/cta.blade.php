@@ -8,11 +8,14 @@
                 <div class="shadow-small-drop">
                     <a class="btn-bleak-trans transition inline-block text-xl px-6 py-4 font-bold rounded-md shadow-top-white"
                         href="{{ spatieUrl('https://spatie.be/products/ray') }}" target="_blank">
-                        Buy Ray for
-                        @if ($discount->active)
+                        @if (! $couldFetchPrice)
+                            Buy Ray
+                        @elseif ($discount->active)
+                            Buy Ray for
                             <span class="line-through opacity-50">{{ $priceWithoutDiscount->formattedPrice() }}</span>
                             <span class="text-orange orange-text-glow">{{ $priceActual->formattedPrice() }}</span>
                         @else
+                            Buy Ray for
                             {{ $priceWithoutDiscount->formattedPrice() }}
                         @endif
                     </a>

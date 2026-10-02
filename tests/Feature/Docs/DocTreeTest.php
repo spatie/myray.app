@@ -17,11 +17,11 @@ it('can retrieve a default/first page', function () {
 });
 
 it('can find a page by slug', function () {
-    $page = $this->docTree->find('getting-started/local-environments');
-    expect($page->title)->toEqual('Local Environments');
+    $page = $this->docTree->find('getting-started/installation');
+    expect($page->title)->toEqual('Installing Ray');
 });
 
 it('can find a category by slug', function () {
    $category = $this->docTree->findCategory('getting-started');
-   ray($category);
+   expect($category->title)->toEqual('Getting started');
 });
