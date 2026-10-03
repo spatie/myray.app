@@ -21,7 +21,7 @@ ray()->showQueries();
 User::firstWhere('email', 'john@example.com');
 ```
 
-![screenshot](/images/screenshots/docs_laravel_query.png)
+![screenshot](/images/screenshots/docs_laravel_query.webp)
 
 To stop showing queries, call `stopShowingQueries`.
 
@@ -109,7 +109,7 @@ $user = ray()->countQueries(function (): User {
 });
 ```
 
-![screenshot](/images/screenshots/docs_laravel_count_query.png)
+![screenshot](/images/screenshots/docs_laravel_count_query.webp)
 
 ### Manually showing a query
 
@@ -122,7 +122,7 @@ User::query()
     ->first();
 ```
 
-![screenshot](/images/screenshots/docs_laravel_query_manual.png)
+![screenshot](/images/screenshots/docs_laravel_query_manual.webp)
 
 You can call `ray()` multiple times to see how a query is being built up.
 
@@ -135,7 +135,7 @@ User::query()
         ->first();
 ```
 
-![screenshot](/images/screenshots/docs_laravel_query_manual_multiple.png)
+![screenshot](/images/screenshots/docs_laravel_query_manual_multiple.webp)
 
 ### Showing duplicate queries
 
@@ -221,7 +221,7 @@ event(new TestEvent());
 event(new TestEventWithParameter('my argument'));
 ```
 
-![screenshot](/images/screenshots/docs_laravel_events.png)
+![screenshot](/images/screenshots/docs_laravel_events.webp)
 
 To stop showing events, call `stopShowingEvents`.
 
@@ -258,7 +258,7 @@ dispatch(new TestJob('my-test-job'));
 
 ```
 
-![screenshot](/images/screenshots/docs_laravel_jobs.png)
+![screenshot](/images/screenshots/docs_laravel_jobs.webp)
 
 To stop showing jobs, call `stopShowingJobs`.
 
@@ -298,7 +298,7 @@ Cache::get('my-key');
 Cache::get('another-key');
 ```
 
-![screenshot](/images/screenshots/docs_laravel_cache.png)
+![screenshot](/images/screenshots/docs_laravel_cache.webp)
 
 To stop showing cache events, call `stopShowingCache`.
 
@@ -312,7 +312,7 @@ Using the `model` function, you can display the attributes and relations of a mo
 ray()->model($user);
 ```
 
-![screenshot](/images/screenshots/docs_laravel_models.png)
+![screenshot](/images/screenshots/docs_laravel_models.webp)
 
 The `model` function can also accept multiple models and even collections.
 
@@ -340,7 +340,7 @@ collect(['a', 'b', 'c'])
     ->ray('uppercased collection'); // displays the modified collection
 ```
 
-![screenshot](/images/screenshots/docs_laravel_collections.png)
+![screenshot](/images/screenshots/docs_laravel_collections.webp)
 
 ### Displaying context
 
@@ -354,7 +354,7 @@ ray()->context(); // displays all context
 ray()->context('key', 'key2'); // displays only the given keys
 ```
 
-![screenshot](/images/screenshots/docs_laravel_context.png)
+![screenshot](/images/screenshots/docs_laravel_context.webp)
 
 Context can also be invisible. You can display those values using the `hiddenContext` method.
 
@@ -364,7 +364,7 @@ ray()->hiddenContext(); // displays all hidden context
 ray()->hiddenContext('key', 'key2'); // displays only the given hidden keys
 ```
 
-![screenshot](/images/screenshots/docs_laravel_context_hidden.png)
+![screenshot](/images/screenshots/docs_laravel_context_hidden.webp)
 
 ## Rendering & views
 
@@ -379,7 +379,7 @@ ray()->showViews();
 view('welcome', ['name' => 'John Doe'])->render();
 ```
 
-![screenshot](/images/screenshots/docs_laravel_views.png)
+![screenshot](/images/screenshots/docs_laravel_views.webp)
 
 To stop showing views, call `stopShowingViews`.
 
@@ -403,7 +403,7 @@ You can use the `@measure` directive as a shortcut for the `ray()->measure()` me
 
 This will result in the following output:
 
-![screenshot](/images/screenshots/docs_php_measure.png)
+![screenshot](/images/screenshots/docs_php_measure.webp)
 
 ### Displaying mailables
 
@@ -413,7 +413,7 @@ Mails that are sent to the log mailer are automatically shown in Ray, you can al
 ray()->mailable(new TestMailable());
 ```
 
-![screenshot](/images/screenshots/docs_laravel_mailable.png)
+![screenshot](/images/screenshots/docs_laravel_mailable.webp)
 
 ### Displaying markdown
 
@@ -423,7 +423,7 @@ View the rendered version of a markdown string in Ray by calling the `markdown` 
 ray()->markdown('# Hello World');
 ```
 
-![screenshot](/images/screenshots/docs_laravel_markdown.png)
+![screenshot](/images/screenshots/docs_laravel_markdown.webp)
 
 ### Usage with a Stringable
 
@@ -437,7 +437,7 @@ Str::of('Lorem')
    ->ray();
 ```
 
-![screenshot](/images/screenshots/docs_laravel_stringable.png)
+![screenshot](/images/screenshots/docs_laravel_stringable.webp)
 
 ### Displaying environment variables
 
@@ -461,7 +461,7 @@ ray()->showHttpClientRequests();
 Http::get('https://example.com/api/users');
 ```
 
-![screenshot](/images/screenshots/docs_laravel_requests.png)
+![screenshot](/images/screenshots/docs_laravel_requests.webp)
 
 To stop showing HTTP client events, call `stopShowingHttpClientRequests`.
 

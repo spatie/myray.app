@@ -130,17 +130,17 @@
                             <div class="flex flex-col transition-transform duration-700 ease-in-out h-full"
                                  :style="`transform: translateY(calc(-${activeTab} * ${$refs.carousel?.clientHeight || 0}px))`">
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_1.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_1.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_2.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_2.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_5.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_5.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                             </div>
                         </div>
-                        <img src="/images/ray_desktop_bg.jpg" class="w-full h-full object-cover rounded-xl overflow-hidden" alt="">
+                        <img src="/images/ray_desktop_bg.webp" class="w-full h-full object-cover rounded-xl overflow-hidden" alt="">
                     </div>
                 </div>
 
@@ -199,17 +199,17 @@
                             <div class="flex flex-col transition-transform duration-700 ease-in-out h-full"
                                  :style="`transform: translateY(calc(-${activeTab} * ${$refs.carousel?.clientHeight || 0}px))`">
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_ai_1.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_ai_1.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_ai_2.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_ai_2.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                                 <div class="flex-shrink-0" :style="`height: ${$refs.carousel?.clientHeight || 0}px`">
-                                    <img src="/images/screenshots/screen_home_feature_ai_3.png" alt="" class="w-full h-full object-contain mt-4">
+                                    <img src="/images/screenshots/screen_home_feature_ai_3.webp" alt="" class="w-full h-full object-contain mt-4">
                                 </div>
                             </div>
                         </div>
-                        <img src="/images/ray_desktop_bg.jpg" class="w-full h-full object-cover rounded-xl overflow-hidden" alt="">
+                        <img src="/images/ray_desktop_bg.webp" class="w-full h-full object-cover rounded-xl overflow-hidden" alt="">
                     </div>
                 </div>
 
@@ -377,7 +377,7 @@
                             <div class="rounded-xl bg-bleak-purple-dark p-8">
                                 <div class="flex gap-6 items-center mb-6">
                                     <img class="rounded-full w-16"
-                                        src="/images/testimonials/{{ $testimonial->image }}.jpg"
+                                        src="/images/testimonials/{{ $testimonial->image }}.webp"
                                         alt="{{ $testimonial->name }}">
                                     <div class="leading-none">
                                         <p class="text-lg font-bold">{{ $testimonial->name }}</p>

@@ -20,7 +20,7 @@ ray($anObject);
 
 Passing those will look something like this:
 
-![screenshot](/images/screenshots/docs_php_introduction.png)
+![screenshot](/images/screenshots/docs_php_introduction.webp)
 
 The `ray()` function accepts multiple arguments. There are displayed as separate messages.
 
@@ -70,7 +70,7 @@ ray('this is purple')->purple();
 ray('this is gray')->gray();
 ```
 
-![screenshot](/images/screenshots/docs_php_colors.png)
+![screenshot](/images/screenshots/docs_php_colors.webp)
 
 ### Using sizes
 
@@ -82,7 +82,7 @@ ray('regular');
 ray('large')->large();
 ```
 
-![screenshot](/images/screenshots/docs_php_sizes.png)
+![screenshot](/images/screenshots/docs_php_sizes.webp)
 
 ### Adding a label
 
@@ -92,7 +92,7 @@ You can customize the label displayed next to item with the `label` function.
 ray(['John', 'Paul', 'George', 'Ringo'])->label('Beatles');
 ```
 
-![screenshot](/images/screenshots/docs_php_label.png)
+![screenshot](/images/screenshots/docs_php_label.webp)
 
 ### Displaying a table
 
@@ -106,7 +106,7 @@ ray()->table([
 ]);
 ```
 
-![screenshot](/images/screenshots/docs_php_table.png)
+![screenshot](/images/screenshots/docs_php_table.webp)
 
 As a second argument, you can pass a label that will be displayed next to the table.
 
@@ -127,7 +127,7 @@ be converted to JSON with [json_encode](https://www.php.net/json_encode).
 ray()->toJson(['a' => 1, 'b' => ['c' => 3]]);
 ```
 
-![screenshot](/images/screenshots/docs_php_output_json.png)
+![screenshot](/images/screenshots/docs_php_output_json.webp)
 
 The `toJson` function can also accept multiple arguments.
 
@@ -153,7 +153,7 @@ $jsonString = json_encode(['a' => 1, 'b' => ['c' => 3]]);
 ray()->json($jsonString);
 ```
 
-![screenshot](/images/screenshots/docs_php_output_from_json.png)
+![screenshot](/images/screenshots/docs_php_output_from_json.webp)
 
 The `json` function can also accept multiple valid JSON strings.
 
@@ -182,7 +182,7 @@ ray()->xml($xmlString);
 ray()->carbon(new \Carbon\Carbon());
 ```
 
-![screenshot](/images/screenshots/docs_php_output_carbon.png)
+![screenshot](/images/screenshots/docs_php_output_carbon.webp)
 
 ### Working with files
 
@@ -308,7 +308,7 @@ ray()->phpinfo();
 ray()->phpinfo('xdebug.enabled', 'default_mimetype');
 ```
 
-![screenshot](/images/screenshots/docs_php_phpinfo.png)
+![screenshot](/images/screenshots/docs_php_phpinfo.webp)
 
 ## Caller & stack trace
 
@@ -321,7 +321,7 @@ function.
 ray()->caller();
 ```
 
-![screenshot](/images/screenshots/docs_php_caller.png)
+![screenshot](/images/screenshots/docs_php_caller.webp)
 
 If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 
@@ -329,7 +329,7 @@ If you want to see the entire backtrace, use the `trace` (or `backtrace`).
 ray()->trace();
 ```
 
-![screenshot](/images/screenshots/docs_php_trace.png)
+![screenshot](/images/screenshots/docs_php_trace.webp)
 
 ## Measuring & counting
 
@@ -351,7 +351,7 @@ foreach (range(1, 2) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/images/screenshots/docs_php_count.png)
+![screenshot](/images/screenshots/docs_php_count.webp)
 
 Optionally, you can pass a name to `count`. Ray will display a count of how many times a `count` with that name was
 executed.
@@ -384,7 +384,7 @@ foreach (range(1, 4) as $i) {
 
 This is how that looks like in Ray.
 
-![screenshot](/images/screenshots/docs_php_named_count.png)
+![screenshot](/images/screenshots/docs_php_named_count.webp)
 
 
 ### Measuring performance and memory usage
@@ -404,7 +404,7 @@ sleep(2);
 ray()->measure();
 ```
 
-![screenshot](/images/screenshots/docs_php_measure.png)
+![screenshot](/images/screenshots/docs_php_measure.webp)
 
 The `measure` call optionally accepts a callable. Ray will output the time needed to run the callable and the maximum
 memory used.
@@ -690,7 +690,7 @@ You can pause execution of a script by using the `pause` method.
 ray()->pause();
 ```
 
-![screenshot](/images/screenshots/docs_php_pause.png)
+![screenshot](/images/screenshots/docs_php_pause.webp)
 
 If you press the "Continue" button in Ray, execution will continue. When you press "Stop execution", Ray will throw an
 exception in your app to halt execution.
@@ -771,7 +771,7 @@ Ray::macro('myCustomFunction', function() {
 ray()->myCustomFunction();
 ```
 
-![screenshot](/images/screenshots/docs_php_custom.png)
+![screenshot](/images/screenshots/docs_php_custom.webp)
 
 ## Managing the Ray app
 
@@ -789,7 +789,7 @@ Optionally, you can give a screen a name:
 ray()->newScreen('My debug screen');
 ```
 
-![screenshot](/images/screenshots/docs_screen_cleared_title.png)
+![screenshot](/images/screenshots/docs_screen_cleared_title.webp)
 
 You could opt to use `newScreen` very early on in a request so you'll only see items that were sent to Ray in the
 current request. In a Laravel app, a good place for this might be the service provider.

@@ -19,7 +19,7 @@ rules:
 
 All remaining Ray calls would then be reported by [PHPStan](https://phpstan.org).
 
-![screenshot](/images/screenshots/phpstan-failing-result.jpg)
+![screenshot](/images/screenshots/phpstan-failing-result.webp)
 
 ### Using X-Ray
 

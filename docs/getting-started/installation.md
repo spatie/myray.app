@@ -37,7 +37,7 @@ ray('Hello world!');
 
 This will display the following in Ray:
 
-![screenshot](/images/screenshots/docs_hello.png)
+![screenshot](/images/screenshots/docs_hello.webp)
 
 Every dump you send will appear here. Try sending different types of data and see how they display!
 

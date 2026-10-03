@@ -17,11 +17,11 @@ That’s it! You can now run the ray skill to enable the Ray skills in your AI t
 
 In Claude Code, this is as simple as running:
 
-![screenshot](/images/screenshots/docs_ai_ray_skills_claude_code_example_run.png)
+![screenshot](/images/screenshots/docs_ai_ray_skills_claude_code_example_run.webp)
 
 Which will result in the following:
 
-![screenshot](/images/screenshots/docs_ai_ray_skills_claude_code_example_result.png)
+![screenshot](/images/screenshots/docs_ai_ray_skills_claude_code_example_result.webp)
 
 More information can be found here: [ray-skills](https://github.com/spatie/ray-skills).
 
@@ -36,7 +36,7 @@ The MCP server exposes multiple tools that agents can call, including:
 -   Sending notifications
 -   Clearing messages
 
-![screenshot](/images/screenshots/docs_settings_mcp.png)
+![screenshot](/images/screenshots/docs_settings_mcp.webp)
 
 ## Ray as an AI output window
 
@@ -50,7 +50,7 @@ This is especially useful when AI agents generate:
 
 Ray will try to parse many of the requests to use the most appropriate output format.
 
-![screenshot](/images/screenshots/docs_mcp_mermaid.png)
+![screenshot](/images/screenshots/docs_mcp_mermaid.webp)
 
 ## Reading and analyzing output (MCP only)
 
@@ -63,4 +63,4 @@ This enables workflows like:
 -   Inspecting generated files or intermediate results
 -   Suggesting fixes based on output
 
-![screenshot](/images/screenshots/docs_mcp_terminal_read.png)
+![screenshot](/images/screenshots/docs_mcp_terminal_read.webp)
