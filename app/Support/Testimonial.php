@@ -15,6 +15,6 @@ class Testimonial
 
     public function image(): string
     {
-        return "/images/testimonials/{$this->image}.jpg";
+        return "/images/testimonials/{$this->image}.webp";
     }
 }

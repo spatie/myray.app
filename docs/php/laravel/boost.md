@@ -47,13 +47,13 @@ Run the Boost installation command in your Laravel project:
 php artisan boost:install
 ```
 
-![Boost Installation](/images/screenshots/boost-install.jpg)
+![Boost Installation](/images/screenshots/boost-install.webp)
 
 This will prompt you to configure Boost features. Select "Agent Skills" to enable skills.
 
 When asked which third-party skills to install, select `spatie/laravel-ray (skills)`:
 
-![Ray Skill Selection](/images/screenshots/use-ray-skill.jpg)
+![Ray Skill Selection](/images/screenshots/use-ray-skill.webp)
 
 The Ray skill will be installed and available globally for all your projects.
 

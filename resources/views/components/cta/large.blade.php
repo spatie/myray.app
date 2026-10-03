@@ -23,7 +23,7 @@
             <div
                 class="rounded-3xl bg-gradient-to-b from-neutrals-white-20 to-transparent p-3 shadow-top-white">
                 <div class="rounded-xl overflow-hidden">
-                    <img src="/images/screenshots/screen_cta.png" alt="">
+                    <img src="/images/screenshots/screen_cta.webp" alt="">
                 </div>
             </div>
         </div>

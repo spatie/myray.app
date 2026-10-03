@@ -5,7 +5,7 @@ weight: 2
 
 When you first open Ray, you're greeted by a friendly welcome screen with some useful tips. This screen will appear each time you open the app and will disappear when you send messages.
 
-![screenshot](/images/screenshots/docs_welcome.png)
+![screenshot](/images/screenshots/docs_welcome.webp)
 
 ## The interface
 
@@ -24,25 +24,25 @@ Here is an overview of every item in the menu bar in the main window:
 
 When debugging, it is often useful to start fresh between attempts. To clear the screen, click the 'Clear screen' icon (the broom). To archive your existing messages, use the `ray()->newScreen()` function in your app, or press the default shortcut: `Cmd+K` on a Mac or `Ctrl+K` on Windows.
 
-![screenshot](/images/screenshots/docs_screen_cleared.png)
+![screenshot](/images/screenshots/docs_screen_cleared.webp)
 
 ### Archiving messages
 
 When you clear the screen, your messages are automatically saved and sent to the archive. Messages remain functional and there is no limit to how many can be saved.
 
-![screenshot](/images/screenshots/docs_archive.png)
+![screenshot](/images/screenshots/docs_archive.webp)
 
 ### Filter messages by color
 
 Give messages a color using color functions (e.g. `$ray->red()` in PHP), then use the color filter in the menubar to show only messages of a specific color.
 
-![screenshot](/images/screenshots/docs_color_labels.png)
+![screenshot](/images/screenshots/docs_color_labels.webp)
 
 ### Filter messages by type
 
 Some messages types are automatically assigned a badge. You can filter your window to show only these messages by simply clicking on the badge.
 
-![screenshot](/images/screenshots/docs_filter_type.png)
+![screenshot](/images/screenshots/docs_filter_type.webp)
 
 ## Settings
 
