@@ -15,7 +15,7 @@
         "gehrisandro/tailwind-merge-laravel": "^1.4",
         "graham-campbell/github": "^13.1",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^13.0",
+        "laravel/framework": "^13.38.0",
         "laravel/tinker": "^3.0",
         "livewire/livewire": "^3.8",
         "spatie/commonmark-wire-navigate": "^1.0",
