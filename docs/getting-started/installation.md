@@ -19,6 +19,17 @@ Find download links to the Ray application for our supported platforms below:
 
 You can also install Ray with Homebrew on macOS: `brew install --cask ray`.
 
+### Linux: "squashfuse" or "fuse: memory allocation failed"
+
+If the AppImage does not start and shows `squashfuse 0.5.2` or `fuse: memory allocation failed`, AppImageLauncher 2.x is intercepting it. AppImageLauncher 2.x cannot start AppImages that are built with the current AppImage runtime. Ray itself is fine.
+
+To fix it, do one of these:
+
+-   Uninstall AppImageLauncher and restart your computer.
+-   Update AppImageLauncher to version 3.0.0-alpha-4 or newer.
+
+To add Ray to your app menu without AppImageLauncher, use [Gear Lever](https://github.com/mijorus/gearlever).
+
 ## Install the Ray package
 
 Install a package for your language or framework to connect your project to Ray.
