@@ -2,6 +2,7 @@
 
 use App\Http\Front\Controllers\ChangelogController;
 use App\Http\Front\Controllers\ChangelogWebhookController;
+use App\Http\Front\Controllers\Context7Controller;
 use App\Http\Front\Controllers\DocsController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\PostsController;
@@ -50,6 +51,7 @@ Route::prefix('blog')->name('blog.')->group(function () {
 
 Route::prefix('docs')->name('docs.')->group(function () {
     Route::get('/', [DocsController::class, 'index'])->name('index');
+    Route::get('/context7.json', Context7Controller::class)->name('context7');
     Route::get('/{slug}', [DocsController::class, 'show'])
         ->where('slug', '.*')
         ->name('show');
