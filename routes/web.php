@@ -5,6 +5,7 @@ use App\Http\Front\Controllers\ChangelogWebhookController;
 use App\Http\Front\Controllers\DocsController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\PostsController;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
@@ -50,6 +51,12 @@ Route::prefix('blog')->name('blog.')->group(function () {
 
 Route::prefix('docs')->name('docs.')->group(function () {
     Route::get('/', [DocsController::class, 'index'])->name('index');
+    Route::get('/context7.json', function (): JsonResponse {
+        return response()->json([
+            'url' => 'https://context7.com/websites/myray_app',
+            'public_key' => 'pk_HhX3Ptt0SOj5AslquUAbG',
+        ]);
+    })->name('context7');
     Route::get('/{slug}', [DocsController::class, 'show'])
         ->where('slug', '.*')
         ->name('show');
