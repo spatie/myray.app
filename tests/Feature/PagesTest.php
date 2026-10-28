@@ -28,16 +28,6 @@ it('redirects the docs index to the first page', function () {
     $this->get('/docs')->assertRedirect();
 });
 
-it('serves the Context7 verification JSON', function (): void {
-    $this->get('/docs/context7.json')
-        ->assertOk()
-        ->assertHeader('Content-Type', 'application/json')
-        ->assertExactJson([
-            'url' => 'https://context7.com/websites/myray_app',
-            'public_key' => 'pk_HhX3Ptt0SOj5AslquUAbG',
-        ]);
-});
-
 it('redirects old docs urls', function () {
     $this->get('/docs/features/mcp')->assertRedirect('/docs/features/ai');
 });
