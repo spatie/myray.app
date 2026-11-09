@@ -5,11 +5,13 @@ namespace App\Domain\Blog;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Date;
+use League\CommonMark\Extension\CommonMark\Node\Block\FencedCode;
 use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
 use League\CommonMark\Extension\Table\TableExtension;
 use Spatie\LaravelMarkdown\MarkdownRenderer;
 use Spatie\Sheets\Sheet;
 use Spatie\Sheets\Sheets;
+use Tempest\Highlight\CommonMark\CodeBlockRenderer;
 
 class Post extends Sheet
 {
@@ -55,9 +57,12 @@ class Post extends Sheet
     protected function renderMarkdown(string $markdown): string
     {
         return (new MarkdownRenderer(
-            highlightTheme: 'nord',
+            highlightCode: false,
             renderAnchors: false,
             extensions: [TableExtension::class, StrikethroughExtension::class],
+            blockRenderers: [
+                ['class' => FencedCode::class, 'renderer' => CodeBlockRenderer::class, 'priority' => 10],
+            ],
         ))->toHtml($markdown);
     }
 }

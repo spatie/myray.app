@@ -27,7 +27,7 @@
         "spatie/yaml-front-matter": "^2.0",
         "symfony/http-client": "^7.4|^8.0",
         "symfony/yaml": "^7.4|^8.0",
-        "tempest/highlight": "^1.0"
+        "tempest/highlight": "^2.30"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.7",

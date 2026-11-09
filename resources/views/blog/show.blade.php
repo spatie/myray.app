@@ -71,7 +71,7 @@
                 </div>
             @endif
 
-            <div class="markup text-lg max-w-2xl mx-auto text-bright-purple-extra-light">
+            <div class="markup highlight text-lg max-w-2xl mx-auto text-bright-purple-extra-light">
                 {!! $post->content !!}
             </div>
 

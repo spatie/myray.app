@@ -95,7 +95,7 @@ After a successful import, compare its `content/blog` and `public/media/blog` wi
 
 Run `npm ci`, `npm run build`, and `php vendor/bin/pest`. The build only compiles frontend assets; blog HTML is rendered on demand. In a preview environment, verify every post URL and asset, all five current pagination pages, the final disabled/hidden load-more control, and a legacy numeric redirect. Check a code-heavy post, Blade examples, GIFs, video playback, social images, and a narrow viewport.
 
-Compare `/feed` against a saved live feed: the same entry IDs, links, authors, publication ordering and original `updated_at` values must remain. IDs intentionally use `/<slug>` while links use `/blog/<slug>`; do not normalize them. Feed bodies should have absolute media and internal link URLs. Test with the old content host blocked and an empty Laravel cache, then repeat with a warm cache. Confirm no page or feed references the old host. Shiki needs Node.js and the installed `shiki` package at runtime, including after deployments and restarts.
+Compare `/feed` against a saved live feed: the same entry IDs, links, authors, publication ordering and original `updated_at` values must remain. IDs intentionally use `/<slug>` while links use `/blog/<slug>`; do not normalize them. Feed bodies should have absolute media and internal link URLs. Test with the old content host blocked, `node_modules` absent, and an empty Laravel cache, then repeat with a warm cache. Confirm no page or feed references the old host. Markdown and syntax highlighting run entirely in PHP.
 
 ## 4. Deploy and switch ownership
 
