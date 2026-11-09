@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+temporary_directory=$(mktemp -d)
+trap 'rm -rf "$temporary_directory"' EXIT
+
+echo 'Installing PHP 8.5 and extensions'
+packages=(php8.5-cli php8.5-mbstring php8.5-xml php8.5-curl php8.5-zip php8.5-mysql php8.5-sqlite3)
+missing=()
+for package in "${packages[@]}"; do
+    if ! dpkg-query -W -f='${Status}' "$package" 2>/dev/null | grep -q 'install ok installed'; then
+        missing+=("$package")
+    fi
+done
+
+if ((${#missing[@]})); then
+    curl -fsSL https://packages.sury.org/debsuryorg-archive-keyring.deb -o "$temporary_directory/keyring.deb"
+    sudo dpkg -i "$temporary_directory/keyring.deb"
+    echo 'deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ bookworm main' | sudo tee /etc/apt/sources.list.d/php.list >/dev/null
+    sudo apt-get update -qq
+    sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y "${missing[@]}"
+fi
+
+sudo update-alternatives --set php /usr/bin/php8.5
+
+if ! command -v composer >/dev/null; then
+    echo 'Installing Composer'
+    curl -fsSL https://getcomposer.org/installer -o "$temporary_directory/composer-setup.php"
+    expected_checksum=$(curl -fsSL https://composer.github.io/installer.sig)
+    actual_checksum=$(php -r 'echo hash_file("sha384", $argv[1]);' "$temporary_directory/composer-setup.php")
+    test "$expected_checksum" = "$actual_checksum"
+    php "$temporary_directory/composer-setup.php" --install-dir="$temporary_directory" --filename=composer
+    sudo install -m 755 "$temporary_directory/composer" /usr/local/bin/composer
+fi
+
+echo 'Installing locked PHP dependencies'
+time composer install --no-interaction --prefer-dist
+
+echo 'Preparing local environment'
+if [[ ! -f .env ]]; then
+    cp .env.example .env
+fi
+if ! grep -Eq '^APP_KEY=.+$' .env; then
+    php artisan key:generate --no-interaction
+fi
+
+echo 'Installing locked frontend dependencies and building assets'
+time npm ci --no-audit --no-fund
+time npm run build
