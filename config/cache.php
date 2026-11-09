@@ -42,11 +42,6 @@ return [
             'serialize' => false,
         ],
 
-        'blog' => [
-            'driver' => 'file',
-            'path' => base_path('bootstrap/cache/blog'),
-        ],
-
         'database' => [
             'driver' => 'database',
             'table' => 'cache',

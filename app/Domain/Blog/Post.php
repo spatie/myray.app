@@ -56,7 +56,6 @@ class Post extends Sheet
     {
         return (new MarkdownRenderer(
             highlightTheme: 'nord',
-            cacheStoreName: 'blog',
             renderAnchors: false,
             extensions: [TableExtension::class, StrikethroughExtension::class],
         ))->toHtml($markdown);

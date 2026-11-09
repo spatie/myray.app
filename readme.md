@@ -20,6 +20,8 @@ Blog posts live in `content/blog/<slug>.md`, with YAML front matter and a Markdo
 
 Only posts with `published: true` and a `date` at or before the current time appear on the site or in `/feed`. This repository is public: unpublished files are still visible on GitHub, so do not commit confidential drafts.
 
-`npm run build` also runs `php artisan blog:cache`, rendering all posts with Shiki into `bootstrap/cache/blog`. Keep this directory in the deployment artifact: it lets production serve highlighted code without Node.js or `node_modules`. Rebuild after changing posts or rendering configuration. Do not clear the `blog` cache store in production without rebuilding it.
+Markdown is rendered on demand and cached using Laravel's default cache store. The cache is disposable: a cold request renders it again, and changing the Markdown produces a new cache key. There is no blog HTML build step. Shiki highlighting requires Node.js and the installed `shiki` package at runtime.
+
+Laravel Cloud serves static media through its CDN and purges the edge cache on deployment by default. Give replacement media a new filename and update its references, since clearing the CDN does not clear visitors' browser caches. Blog pages and the feed currently use uncached HTTP responses; the Markdown cache avoids repeating the rendering work.
 
 See [the blog migration runbook](BLOG_MIGRATION.md) for the one-time export, cutover, and rollback procedure.

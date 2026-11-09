@@ -93,13 +93,13 @@ The output directory must not exist. The importer checks slug sets, publication 
 
 After a successful import, compare its `content/blog` and `public/media/blog` with this repository. Replace only those imported directories, accounting explicitly for any posts removed from publication. Review the diff before committing. Do not overwrite edits made locally since the CMS freeze.
 
-Run `npm ci`, `npm run build`, and `php vendor/bin/pest`. The build must report the expected number of cached posts. In a preview environment, verify every post URL and asset, all five current pagination pages, the final disabled/hidden load-more control, and a legacy numeric redirect. Check a code-heavy post, Blade examples, GIFs, video playback, social images, and a narrow viewport.
+Run `npm ci`, `npm run build`, and `php vendor/bin/pest`. The build only compiles frontend assets; blog HTML is rendered on demand. In a preview environment, verify every post URL and asset, all five current pagination pages, the final disabled/hidden load-more control, and a legacy numeric redirect. Check a code-heavy post, Blade examples, GIFs, video playback, social images, and a narrow viewport.
 
-Compare `/feed` against a saved live feed: the same entry IDs, links, authors, publication ordering and original `updated_at` values must remain. IDs intentionally use `/<slug>` while links use `/blog/<slug>`; do not normalize them. Feed bodies should have absolute media and internal link URLs. Test with the old content host blocked and with `node_modules` removed after the build. Confirm no page or feed references the old host.
+Compare `/feed` against a saved live feed: the same entry IDs, links, authors, publication ordering and original `updated_at` values must remain. IDs intentionally use `/<slug>` while links use `/blog/<slug>`; do not normalize them. Feed bodies should have absolute media and internal link URLs. Test with the old content host blocked and an empty Laravel cache, then repeat with a warm cache. Confirm no page or feed references the old host. Shiki needs Node.js and the installed `shiki` package at runtime, including after deployments and restarts.
 
 ## 4. Deploy and switch ownership
 
-Merge the approved PR into `main` to use the existing automatic deployment. Keep the build command's `npm run build`; it now includes `blog:cache`. No additional deployment migration or production command is required. Ensure `bootstrap/cache/blog` survives packaging, and do not flush that store after the build.
+Merge the approved PR into `main` to use the existing automatic deployment. Keep the existing frontend build command. No HTML build artifacts, cache warming, database migration, or additional production command is required. The application must be able to render posts with an empty cache.
 
 After deployment succeeds, repeat the public checks above on the production site. Confirm that the new commit is deployed and that the actual HTML points at local media. Check logs for failed requests. Only then tell editors to create and update posts in this repository rather than the old CMS.
 
