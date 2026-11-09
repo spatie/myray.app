@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Docs\Sheets;
+namespace App\Support;
 
 use Spatie\Sheets\ContentParser;
 use Spatie\YamlFrontMatter\YamlFrontMatter;

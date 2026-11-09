@@ -2,36 +2,32 @@
 
 namespace App\Http\Front\Controllers;
 
+use App\Domain\Blog\Post;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
-use Spatie\ContentApi\ContentApi;
-use Spatie\ContentApi\Data\Post;
 use Spatie\Feed\FeedItem;
 
 class PostsController
 {
     public function index(): View
     {
-        $posts = ContentApi::getPosts('ray', request('page', 1), 8, theme: 'nord');
-
         return view('blog.index', [
-            'posts' => $posts,
+            'posts' => $this->paginatedPosts(),
         ]);
     }
 
     public function loadMore(): View
     {
-        $posts = ContentApi::getPosts('ray', request('page', 1), 8, theme: 'nord');
-
         return view('blog.partials.posts', [
-            'posts' => $posts,
+            'posts' => $this->paginatedPosts(),
         ]);
     }
 
     public function detail(string $slug): View|RedirectResponse
     {
-        $post = ContentApi::getPost('ray', $slug, theme: 'nord');
+        $post = Post::all()->firstWhere('slug', $slug);
 
         if (! $post && is_numeric(explode('-', $slug)[0])) {
             $parts = explode('-', $slug);
@@ -50,14 +46,32 @@ class PostsController
 
     public static function getFeedItems(): Collection
     {
-        return ContentApi::getPosts('ray', 1, 10_000, theme: 'nord')->map(function (Post $post) {
+        return Post::all()->map(function (Post $post) {
+            $content = preg_replace_callback(
+                '/\b(src|href|poster)="(\/(?!\/)[^"]*)"/',
+                fn (array $match) => $match[1].'="'.url($match[2]).'"',
+                $post->content,
+            );
+
             return FeedItem::create()
                 ->id($post->slug)
                 ->title($post->title)
-                ->summary($post->content)
+                ->summary($content)
                 ->updated($post->updated_at)
                 ->link(route('blog.show', $post->slug))
-                ->authorName($post->authors->first()?->name);
+                ->authorName($post->authors[0]['name']);
         });
+    }
+
+    protected function paginatedPosts(): Paginator
+    {
+        $page = Paginator::resolveCurrentPage();
+
+        return new Paginator(
+            Post::all()->slice(($page - 1) * 8, 9)->values(),
+            perPage: 8,
+            currentPage: $page,
+            options: ['path' => Paginator::resolveCurrentPath()],
+        );
     }
 }

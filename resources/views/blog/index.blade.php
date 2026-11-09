@@ -17,7 +17,7 @@
                 tag="h1" />
 
             <div x-data="{
-                page: 1,
+                page: {{ $posts->currentPage() }},
                 hasMorePages: {{ $posts->hasMorePages() ? 'true' : 'false' }},
                 loading: false,
 

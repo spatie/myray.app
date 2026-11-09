@@ -14,10 +14,9 @@
                 {{ htmlspecialchars_decode(strip_tags($post->summary)) }}</p>
         </div>
         <div class="relative mt-2 flex items-center gap-x-6">
-            <?php /** @var \Spatie\ContentApi\Data\Author $author */ ?>
             <div class="flex items-center gap-x-6">
             @foreach ($post->authors as $author)
-                <x-author :image="$author->gravatar_url" :name="$author->name" />
+                <x-author :image="$author['avatar']" :name="$author['name']" />
             @endforeach
             </div>
         </div>

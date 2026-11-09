@@ -41,6 +41,12 @@ return [
             'root' => base_path('docs'),
         ],
 
+        'blog' => [
+            'driver' => 'local',
+            'root' => base_path('content/blog'),
+            'throw' => true,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

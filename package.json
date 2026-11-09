@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "vite build && php artisan blog:cache",
         "format": "prettier 'resources/**/*.{css,js,json,css,ts,tsx}' '*.{js,css}' --write"
     },
     "devDependencies": {

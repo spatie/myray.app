@@ -9,9 +9,9 @@
             'image' => $post->header_image ?? $post->og_image ?? asset('images/social-card.jpg'),
             'datePublished' => $post->date?->toIso8601String(),
             'dateModified' => $post->updated_at?->toIso8601String(),
-            'author' => $post->authors->map(fn ($author) => [
+            'author' => collect($post->authors)->map(fn ($author) => [
                 '@type' => 'Person',
-                'name' => $author->name,
+                'name' => $author['name'],
             ])->values()->all(),
             'publisher' => [
                 '@type' => 'Organization',
@@ -59,7 +59,7 @@
                     <p>{{ $post->date?->format('j F Y') ?? 'Preview' }}</p>
                     <div class="flex items-center gap-x-6">
                         @foreach ($post->authors as $author)
-                            <x-author :image="$author->gravatar_url" :name="$author->name" />
+                            <x-author :image="$author['avatar']" :name="$author['name']" />
                         @endforeach
                     </div>
                 </div>

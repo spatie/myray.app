@@ -7,7 +7,6 @@ beforeEach(function () {
 
     Http::fake([
         'spatie.be/api/price/*' => Http::response([], 404),
-        'content.spatie.be/*' => Http::response(['data' => [], 'meta' => ['last_page' => 1]]),
     ]);
 });
 
