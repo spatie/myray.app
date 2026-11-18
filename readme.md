@@ -24,5 +24,3 @@ Only posts with `published: true` and a `date` at or before the current time app
 Markdown is rendered on demand and cached using Laravel's default cache store. The cache is disposable: a cold request renders it again, and changing the Markdown produces a new cache key. Syntax highlighting uses `tempest/highlight` in PHP, as the docs do. There is no blog HTML build step or runtime Node.js dependency.
 
 Laravel Cloud serves static media through its CDN and purges the edge cache on deployment by default. Give replacement media a new filename and update its references, since clearing the CDN does not clear visitors' browser caches. Blog pages and the feed currently use uncached HTTP responses; the Markdown cache avoids repeating the rendering work.
-
-See [the blog migration runbook](BLOG_MIGRATION.md) for the one-time export, cutover, and rollback procedure.
