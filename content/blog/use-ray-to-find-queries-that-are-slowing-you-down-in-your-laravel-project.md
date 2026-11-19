@@ -50,7 +50,7 @@ By nature, this wouldn’t be the fastest query, especially because we forgot to
 
 Because the execution time went over the threshold of 100ms we set up Ray will make us aware of this slow query:
 
-![](/media/blog/ray/use-ray-to-find-queries-that-are-slowing-you-down-in-your-laravel-project/cwy0tfoukgzlwimnhbvcvb5kff38c1gdcsenrkva.png)
+![Ray showing a slow MySQL query that took 121.8 ms](/media/blog/ray/use-ray-to-find-queries-that-are-slowing-you-down-in-your-laravel-project/ray-slow-mysql-query.png)
 
 
 

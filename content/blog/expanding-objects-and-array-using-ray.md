@@ -23,7 +23,7 @@ ray(app());
 
 This is what that looks like in Ray.
 
-![](/media/blog/ray/expanding-objects-and-array-using-ray/wel2vqjrnsifgi9ysq3siipa6tz6o02oag85ro66.jpg)
+![Ray showing the Laravel application container with its properties collapsed](/media/blog/ray/expanding-objects-and-array-using-ray/ray-laravel-application-collapsed.jpg)
 
 
 
@@ -37,7 +37,7 @@ ray(app())->expand('reboundCallBacks');
 
 And now that `reboundCallBacks ` property is automatically opened in Ray, there is no need to manually open it anymore.
 
-![](/media/blog/ray/expanding-objects-and-array-using-ray/ffhq78bqb4kuetqtismiwyq9ickr5mfs3rln9mgd.jpg)
+![Ray showing the Laravel application container with the reboundCallbacks property expanded](/media/blog/ray/expanding-objects-and-array-using-ray/ray-expand-rebound-callbacks.jpg)
 
 
 
@@ -47,7 +47,7 @@ You can also pass multiple keys, and even use dot notation to reach nested nodes
 ray(app())->expand('reboundCallbacks', 'extenders.url');
 ```
 
-![](/media/blog/ray/expanding-objects-and-array-using-ray/ohwujphoeuo97tigsk2eugjyk9lbs37ncycbtxv1.jpg)
+![Ray showing the Laravel application container with reboundCallbacks and extenders.url expanded](/media/blog/ray/expanding-objects-and-array-using-ray/ray-expand-multiple-properties.jpg)
 
 
 
@@ -72,7 +72,7 @@ As demonstrated above, you can use `expand` to specify which nodes should be ope
 ray($myArray)->expand('parentKey.childKey');
 ```
 
-![](/media/blog/ray/expanding-objects-and-array-using-ray/viy9kt5ongobdww7qg8oyialqsze1ytszluwcson.jpg)
+![Ray showing an array with parentKey.childKey expanded and anotherParentKey collapsed](/media/blog/ray/expanding-objects-and-array-using-ray/ray-expand-nested-array-key.jpg)
 
 
 
@@ -84,7 +84,7 @@ Here's an example that will expand all nodes.
 ray($myArray)->expand(2);
 ```
 
-![](/media/blog/ray/expanding-objects-and-array-using-ray/6z0yfjhpoieufgvxtjbzig8z6wm0ukddyfcff7gt.jpg)
+![Ray showing a nested array expanded two levels deep](/media/blog/ray/expanding-objects-and-array-using-ray/ray-expand-array-two-levels.jpg)
 
 
 

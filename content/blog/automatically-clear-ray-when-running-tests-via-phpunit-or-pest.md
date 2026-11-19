@@ -30,13 +30,13 @@ it('will send an invoice when the order is created', function () {
 
 Here's what the output in Ray could be like.
 
-![](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/yafa0nhxy3sk3ybg1zf9sv3cnypau07vizfa8ze1.jpg)
+![Ray showing debug output from CreateOrderAction: validating user, checking inventory, calculating tax, validating payment, creating order and sending email](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/ray-create-order-action-debug-output.jpg)
 
 
 
 Imagine you need a few attempts to fix the bug. You will execute the test multiple times after each little change you try. After a while, Ray will be flooding with output like this.
 
-![](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/s0qyxd4y7tlnu8wn3fznylimlds0wbpjxofhvgv5.jpg)
+![Ray filling up with the same CreateOrderAction output from repeated test runs](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/ray-repeated-test-run-output.jpg)
 
 
 
@@ -64,7 +64,7 @@ it('will send an invoice when the order is created', function () {
 
 When running the code above, we only see the output of the latest run of the test. Nice!
 
-![](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/juecybvsreqxyvexdlllt9xpejvhq2osy79omefr.jpg)
+![Ray showing only the output of the latest test run below a "Starting test" label](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/ray-cleared-before-each-test.jpg)
 
 
 
@@ -92,7 +92,7 @@ class TestCase extends BaseTestCase
 
 When we now run our test, we see the name of the test as the title.
 
-![](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/cy1ygorr449xp6d9swn8nue7l4gnchgiuis0emua.jpg)
+![Ray showing the test name "it will send an invoice when the order is created" above the test output](/media/blog/ray/automatically-clear-ray-when-running-tests-via-phpunit-or-pest/ray-test-name-as-label.jpg)
 
 
 

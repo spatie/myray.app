@@ -26,7 +26,7 @@ composer require spatie/laravel-ray
 
 After that, there's no configuration needed. Whenever your Laravel app will now send a mailable, it will be displayed in Ray. Here's how that looks.
 
-![](/media/blog/ray/testing-mails-in-laravel-using-ray/lgy4a5cn8rgid3ykxs7jx5jzeouu1gw0ugcwycix.jpg)
+![Laravel password reset notification mail displayed in Ray](/media/blog/ray/testing-mails-in-laravel-using-ray/ray-laravel-password-reset-mail.jpg)
 
 
 
