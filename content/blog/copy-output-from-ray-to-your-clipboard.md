@@ -20,7 +20,7 @@ If you update to the latest version of the Ray app and PHP package you will now 
 
 For example, if you log a variable that looks like this in Ray:
 
-![](/media/blog/ray/copy-output-from-ray-to-your-clipboard/ysmgfn6gvhvsitbpyp7sxgbwy2yyomdougzhgemq.png)
+![Ray showing a PHP array with the copy to clipboard button in the top right corner](/media/blog/ray/copy-output-from-ray-to-your-clipboard/ray-copy-to-clipboard-button.png)
 
 
 

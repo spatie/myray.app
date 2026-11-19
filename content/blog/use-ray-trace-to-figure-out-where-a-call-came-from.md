@@ -36,7 +36,7 @@ class NotifyUserAction
 
 Now the only thing you have to do is use the application and look at Ray. Once your application hits the trace method, a nice backtrace will be shown in Ray.
 
-![](/media/blog/ray/use-ray-trace-to-figure-out-where-a-call-came-from/lir2tj2q43hqula1wcihrah1p9xugpvfmgf3j5ow.png)
+![Ray showing the backtrace of a NotifyUserAction call through the Laravel middleware pipeline](/media/blog/ray/use-ray-trace-to-figure-out-where-a-call-came-from/ray-trace-laravel-backtrace.png)
 
 
 

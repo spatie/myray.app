@@ -81,7 +81,7 @@ And this is the content of that `livewire.search` Blade view:
 
 And here's how it looks like rendered in the browser.
 
-![](/media/blog/ray/debugging-livewire-components-using-ray/7qa8xp3xk7eafb8kxyblnhvqy0arybae5o6c1uum.jpg)
+![Livewire search component in the browser showing quotes that match "happiness"](/media/blog/ray/debugging-livewire-components-using-ray/livewire-search-component-in-browser.jpg)
 
 
 
@@ -102,7 +102,7 @@ public function render()
 
 In Ray, you can now see all of the properties and configuration of the component.
 
-![](/media/blog/ray/debugging-livewire-components-using-ray/cxbtgywgqzkozpdhqhcxkby6pnlkyht99v3qkioj.jpg)
+![Ray showing all properties of the Livewire SearchComponent](/media/blog/ray/debugging-livewire-components-using-ray/ray-livewire-component-properties.jpg)
 
 
 
@@ -127,7 +127,7 @@ public function render()
 
 In Ray, you can now see the values change in real time.
 
-![](/media/blog/ray/debugging-livewire-components-using-ray/dxeafb5t2liczhqv4bqtjt5lpvjiruvhe2mkrtuq.gif)
+![Typing "happiness" in the Livewire search field while Ray shows each new value of searchingFor](/media/blog/ray/debugging-livewire-components-using-ray/ray-livewire-property-live-updates.gif)
 
 
 
@@ -149,7 +149,7 @@ public function render()
 
 In this recording, you can see that in action.
 
-![](/media/blog/ray/debugging-livewire-components-using-ray/yqvq7wr1jeuqoxxzxvyiftxkebtyrovlau6fyuur.gif)
+![Ray clearing its screen on every Livewire render, so only the final search value "happiness" remains](/media/blog/ray/debugging-livewire-components-using-ray/ray-clear-screen-on-livewire-render.gif)
 
 
 

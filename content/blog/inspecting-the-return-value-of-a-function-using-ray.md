@@ -50,7 +50,7 @@ ray('hi there')->red();
 
 This will be displayed in Ray as
 
-![](/media/blog/ray/inspecting-the-return-value-of-a-function-using-ray/dsykcfbtqwjxyjkwz6ob4wniw1jyyup6dmvgqlhj.jpg)
+![Ray showing "Hi there" marked red](/media/blog/ray/inspecting-the-return-value-of-a-function-using-ray/ray-red-output.jpg)
 
 
 

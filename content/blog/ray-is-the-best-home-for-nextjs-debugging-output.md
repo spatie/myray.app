@@ -16,7 +16,7 @@ Next.js development comes with a unique challenge when it comes to debug logging
 
 Ray solves that problem: it can show your backend and frontend logs into a single standalone app, providing a unified and beautiful logging output.
 
-![](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/3uxmgc2ny7ygkayqdffmwh1k64fumujbcmbuhxti.png)
+![Tweet by Sam Apostel about how hard it is to find console.log output across RSC, SSR and the browser in Next.js](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/nextjs-debug-output-tweet.png)
 
 
 
@@ -30,7 +30,7 @@ Ray's smart formatting options enable you to display log data such as dates, boo
 
 Additionally, Ray automatically adds information about the log's origin and render type. This enables quick links to the exact line of code that made the log happen.
 
-![](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/1qcgiitagkkr4yaverkoganrdkbheuf7nlhhs6fb.png)
+![Ray showing Next.js logs from a React Server Component, server-side rendering and the browser in one window](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/ray-nextjs-rsc-ssr-browser-logs.png)
 
 
 
@@ -40,7 +40,7 @@ With the ability to show and filter logs by color labels, you can easily organiz
 
 First, download and open the Ray app, then run `npm install next-ray` in your Next.js project and add the project root path to your `.env` file under `LOCAL_PATH=`.
 
-![](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/lfdx7j0ruu0eryoo514c2tdvvyzpf2kwxe6focdd.png)
+![LOCAL_PATH set to the project root in .env.local](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/nextjs-env-local-path.png)
 
 
 
@@ -70,7 +70,7 @@ You can use  `useRay(someState, { replace: false })` directly under  `useState` 
 
 We provide a`<Ray>` component, that goes around components that quickly change like a loading state. You'll get a visual timeline of the component's behavior while fetching data. If you use tailwind or inline styles, they will be visible in the Ray app.
 
-![](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/dfsuhsnandbnoswlbkezvz2hjimhissmuz2gar5l.png)
+![A React component with counters and buttons rendered as HTML in Ray](/media/blog/ray/ray-is-the-best-home-for-nextjs-debugging-output/ray-react-component-html-output.png)
 
 
 

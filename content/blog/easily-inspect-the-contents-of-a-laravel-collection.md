@@ -35,7 +35,7 @@ $collection->reverse();
 
 That will work: the collection's contents will be displayed in Ray.
 
-![](/media/blog/ray/easily-inspect-the-contents-of-a-laravel-collection/u5shahlqpzzym9tfihbe482yqrdhzvpjwt26xwcd.jpg)
+![Ray showing the contents of a Laravel collection with the items A, B and C](/media/blog/ray/easily-inspect-the-contents-of-a-laravel-collection/ray-laravel-collection-contents.jpg)
 
 
 
@@ -61,7 +61,7 @@ collect(['a', 'b', 'c'])
    ->ray('reversed');
 ```
 
-![](/media/blog/ray/easily-inspect-the-contents-of-a-laravel-collection/fie7leohmldkbgairdbb5a4herta7bvoy9yof6do.jpg)
+![Ray showing a Laravel collection at each step of a chain, labeled original, uppercased and reversed](/media/blog/ray/easily-inspect-the-contents-of-a-laravel-collection/ray-laravel-collection-chain-steps.jpg)
 
 
 
