@@ -29,7 +29,7 @@ class Cta extends Component
         $this->priceWithoutDiscount = $prices['withoutDiscount'];
         $this->couldFetchPrice = $prices['couldFetchPrice'];
         $this->showByline = $showByline;
-        $this->byline = $byline ?? 'Licenses are valid for 1 year and managed through <a class="text-white underline hover:no-underline" href="' . spatieUrl('https://spatie.be/products/ray') . '" target="_blank">Spatie</a>. Licenses purchased before Ray 3 remain valid. VAT is calculated at checkout.';
+        $this->byline = $byline ?? 'Licenses are valid for 1 year and managed through <a class="text-white underline hover:no-underline" href="' . spatieUrl('https://spatie.be/products/ray') . '" target="_blank">Spatie</a>. Licenses purchased before Ray remain valid. VAT is calculated at checkout.';
         $this->centerButtons = $centerButtons;
 
         // Lifetime offer configuration

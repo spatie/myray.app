@@ -85,7 +85,7 @@
     <div class="container mx-auto p-12 !pb-0 md:py-24 lg:px-16">
 
         <x-intro.default
-            title="New in Ray 3.0"
+            title="New in Ray"
             text="Now a lot faster and better looking, but we promise it’s not a midlife crisis."
         />
 
@@ -104,7 +104,7 @@
             <div class="col-span-2 bg-bleak-purple-dark rounded-2xl overflow-hidden flex-wrap md:col-span-1">
                 <div class="p-8 space-y-3 md:p-12">
                     <h3 class="font-display font-bold text-xl md:text-3xl">Better performance</h3>
-                    <p class="text-xl text-white text-opacity-50">Rebuilt for speed, Ray 3.0 works and loads a lot faster. No more lag when you’re dumping 1,000 logs at once.</p>
+                    <p class="text-xl text-white text-opacity-50">Rebuilt for speed, Ray works and loads a lot faster. No more lag when you’re dumping 1,000 logs at once.</p>
                 </div>
                 <div class="absolute inset-0 h-[480px] hidden md:block pointer-events-none">
                     <img class="w-full object-cover object-top h-[inherit]" src="/images/teaser_performance_bg.png" alt="">
