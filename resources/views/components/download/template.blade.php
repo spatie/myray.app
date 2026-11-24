@@ -44,7 +44,7 @@
                             platform="Windows"
                             logo="/images/logos/logo-windows.svg"
                             :links="[
-                                ['label' => 'x86 (Intel)', 'url' => $downloadLinkWindows, 'event' => 'download-windows'],
+                                ['label' => '.exe', 'url' => $downloadLinkWindows, 'event' => 'download-windows'],
                             ]"
                         />
 
