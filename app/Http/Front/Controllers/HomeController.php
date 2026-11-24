@@ -13,9 +13,9 @@ class HomeController
     public function __invoke(Request $request): View
     {
         return view('home.index', [
-            'downloadLinkMac' => spatieUrl('https://spatie.be/products/ray/v3/download/macos/latest'),
-            'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/v3/download/windows/latest'),
-            'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/v3/download/linux/latest'),
+            'downloadLinkMac' => spatieUrl('https://spatie.be/products/ray/v4/download/macos/latest'),
+            'downloadLinkWindows' => spatieUrl('https://spatie.be/products/ray/v4/download/windows/latest'),
+            'downloadLinkLinux' => spatieUrl('https://spatie.be/products/ray/v4/download/linux/latest'),
             'testimonials' => $this->getTestimonials(),
             'features' => $this->getFeatures(),
         ]);

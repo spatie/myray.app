@@ -17,8 +17,6 @@
 
             <div class="max-w-[80rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
 
-                <a class="btn-bright-purple-v inline-flex px-5 py-3 leading-none rounded-full font-bold shadow-top-white mb-4" href="/blog/introducing-ray-30">See what's new in Ray 3.0</a>
-
                 <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">Debug without <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">breaking your flow</span></h1>
 
                 <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
@@ -153,7 +151,7 @@
         <div class="container mx-auto py-12 px-6 md:py-24 lg:px-16">
 
             <x-intro.default
-                label="New in Ray 3.0"
+                label="New in Ray"
                 title="See what your AI generates"
                 text="Interact with AI output without having to look at a tiny terminal window"
             />
@@ -258,7 +256,7 @@
                                 <p class="text-xl text-white text-opacity-50">{{ $feature->description }}</p>
                                 @if ($feature->isNew)
                                     <div class="flex top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
-                                        <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray 3.0</span>
+                                        <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray</span>
                                     </div>
                                 @endif
                             </div>
@@ -280,7 +278,7 @@
                             <p class="text-xl text-white text-opacity-60">{{ $feature->description }}</p>
                             @if ($feature->isNew)
                                 <div class="flex top-0 left-0 !m-0 pt-4 md:p-4 md:absolute">
-                                    <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray 3.0</span>
+                                    <span class="text-xs bg-orange/20 text-orange px-2 py-0.5 rounded-full z-10">New in Ray</span>
                                 </div>
                             @endif
                         </div>
