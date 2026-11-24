@@ -12,10 +12,9 @@ Download Ray for free and give it a try! You can send up to 20 messages each ses
 
 Find download links to the Ray application for our supported platforms below:
 
--   [macOS (Apple Silicon)](https://spatie.be/products/ray/v3/download/macos-arm64/latest)
--   [macOS (Intel)](https://spatie.be/products/ray/v3/download/macos-x64/latest)
--   [Windows](https://spatie.be/products/ray/v3/download/windows/latest)
--   [Linux](https://spatie.be/products/ray/v3/download/linux/latest)
+-   [macOS](https://spatie.be/products/ray/v4/download/macos/latest)
+-   [Windows](https://spatie.be/products/ray/v4/download/windows/latest)
+-   [Linux](https://spatie.be/products/ray/v4/download/linux/latest)
 
 You can also install Ray with Homebrew on macOS: `brew install --cask ray`.
 

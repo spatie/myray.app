@@ -36,8 +36,7 @@
                             platform="macOS"
                             logo="/images/logos/logo-apple.svg"
                             :links="[
-                                ['label' => 'ARM', 'url' => $downloadLinkMacArm64, 'event' => 'download-macos-arm64'],
-                                ['label' => 'Intel', 'url' => $downloadLinkMacX64, 'event' => 'download-macos-x64'],
+                                ['label' => 'Universal', 'url' => $downloadLinkMac, 'event' => 'download-macos-universal'],
                             ]"
                         />
 
