@@ -1,5 +1,4 @@
 import Animation from "./components/animation";
-import Teaser from "./components/teaser";
 import confetti from "canvas-confetti";
 
 
@@ -61,7 +60,6 @@ document.addEventListener("alpine:init", () => {
 class App {
     constructor() {
         this.initAnimation();
-        this.initTeaser();
         this.initTooltipPermalinks();
         this.initCodeCopyButtons();
         this.initConfetti();
@@ -71,12 +69,6 @@ class App {
     initAnimation() {
         new Animation({
             el: document.querySelector(".js-animation"),
-        });
-    }
-
-    initTeaser() {
-        new Teaser({
-            el: document.querySelector(".js-page-teaser"),
         });
     }
 
