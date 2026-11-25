@@ -22,7 +22,7 @@
                 </div>
                 @if ($lifetimeOfferActive)
                     <p class="text-sm font-bold bg-bleak-purple/40 text-bright-purple-extra-light p-2 py-1.5 mt-[2px] rounded-md">
-                        Launch sale! Lifetime licenses also available
+                        Black Friday sale! Lifetime licenses also available
                     </p>
                 @endif
             </div>

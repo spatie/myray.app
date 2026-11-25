@@ -7,17 +7,17 @@ return [
     | Lifetime Offer Configuration
     |--------------------------------------------------------------------------
     |
-    | Configure the lifetime license offer period. Set both start_date and
-    | end_date to enable the special offer. Set to null to disable.
+    | Override the current lifetime license campaign dates as needed.
+    | The offer is hidden outside this period.
     |
     | Format: 'Y-m-d H:i:s' or any format parseable by Carbon
     |
     */
 
     'lifetime_offer' => [
-        'start_date' => env('RAY_LIFETIME_OFFER_START', null), // e.g., '2024-11-29 00:00:00'
-        'end_date' => env('RAY_LIFETIME_OFFER_END', null),     // e.g., '2024-12-02 23:59:59'
-        'text' => env('RAY_LIFETIME_OFFER_TEXT', '⚡️ Ray launch sale! Discounts and lifetime licenses available for'),
+        'start_date' => env('RAY_LIFETIME_OFFER_START') ?: '2026-11-25 00:00:00+01:00',
+        'end_date' => env('RAY_LIFETIME_OFFER_END') ?: '2026-12-02 00:00:00+01:00',
+        'text' => env('RAY_LIFETIME_OFFER_TEXT', '⚡️ Ray Black Friday sale! Discounts and lifetime licenses available for'),
     ],
 
 ];
