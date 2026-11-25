@@ -17,6 +17,8 @@
 
             <div class="max-w-[80rem] mx-auto mb-12 text-center md:text-balance md:mb-24">
 
+                <x-announcement-pill :url="route('blog.show', 'introducing-ray-4')" text="Ray 4 is here!" />
+
                 <h1 class="font-display font-black text-6xl tracking-tight mb-[0.4em] md:text-8xl">Debug without <span class="bg-gradient-to-r from-orange to-bright-orange text-transparent bg-clip-text">breaking your flow</span></h1>
 
                 <p class="text-2xl mb-8 md:mb-12 lg:text-3xl">
