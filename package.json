@@ -7,16 +7,16 @@
         "format": "prettier 'resources/**/*.{css,js,json,css,ts,tsx}' '*.{js,css}' --write"
     },
     "devDependencies": {
-        "@alpinejs/focus": "^3.13",
-        "alpinejs": "^3.14",
-        "autoprefixer": "^10.4.19",
-        "husky": "^9.0",
+        "@alpinejs/focus": "^3.17",
+        "alpinejs": "^3.17",
+        "autoprefixer": "^10.7.0",
+        "husky": "^9.1",
         "laravel-vite-plugin": "^3.2.1",
-        "lint-staged": "^15.0",
-        "postcss": "^8.4.39",
-        "prettier": "^2.0",
-        "shiki": "^1.1",
-        "tailwindcss": "^3.4.4",
+        "lint-staged": "^15.5",
+        "postcss": "^8.5.33",
+        "prettier": "^2.8",
+        "shiki": "^1.29",
+        "tailwindcss": "^3.4.19",
         "vite": "^8.3.8"
     },
     "husky": {
@@ -25,7 +25,7 @@
         }
     },
     "dependencies": {
-        "canvas-confetti": "^1.9.3",
-        "gsap": "^3.12.5"
+        "canvas-confetti": "^1.9.4",
+        "gsap": "^3.15.1"
     }
 }
